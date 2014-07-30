@@ -1,0 +1,35 @@
+name = RedHen Raiser
+description = Team Based Fundraising
+core = 7.x
+
+; Core
+dependencies[] = block
+dependencies[] = contact
+dependencies[] = dblog
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = taxonomy
+
+; Contrib
+dependencies[] = admin_menu
+dependencies[] = context
+dependencies[] = context_ui
+dependencies[] = ctools
+dependencies[] = devel
+dependencies[] = diff
+dependencies[] = entity
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = login_destination
+dependencies[] = pathauto
+dependencies[] = strongarm
+dependencies[] = token
+dependencies[] = views
+dependencies[] = views_ui
+
+files[] = redhen_raiser.profile

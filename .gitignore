@@ -1,2 +1,2 @@
-modules
-!modules/redhen_raiser
+modules/libraries
+modules/contrib

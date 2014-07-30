@@ -9,7 +9,7 @@ function redhen_raiser_install() {
   variable_set('views_ui_show_advanced_help_warning', '0');
 
   // Set the admin theme. (NOTE: We don't want to enable it.)
-  variable_set('admin_theme', 'shiny');
+  variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
 
   // Set homepage

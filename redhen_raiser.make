@@ -100,5 +100,4 @@ libraries[chosen][type] = "library"
 ;-----------------------------------------
 ; Themes
 ;-----------------------------------------
-projects[shiny][version] = 1.5
 projects[zen][version] = 5.5

@@ -28,6 +28,9 @@ function redhen_raiser_custom_install(&$install_state) {
         'region' => ''))
       ->execute();
   }
+  if (module_exists('redhen_raiser_custom_install')) {
+    module_enable(array('redhen_raiser_custom_install'), TRUE);
+  }
   drupal_flush_all_caches();
   features_revert();
 }

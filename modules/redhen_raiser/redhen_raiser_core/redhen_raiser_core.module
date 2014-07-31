@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the RedHen Raiser Core feature.
  */
+
+include_once 'redhen_raiser_core.features.inc';
 
 /**
  * Implements hook_menu().
@@ -21,34 +23,32 @@ function redhen_raiser_core_menu() {
   return $items;
 }
 
+/**
+ * Return the UI for creating a fundraiser.
+ * 
+ * If the user is not authenticated, gives them an authentication workflow.
+ */
 function redhen_raiser_core_fundraise_now_page() {
   if (user_is_anonymous()) {
-    $login_options = array(
-      'query' => array(
-        'destination' => 'fundraise',
-      ),
-    );
     $register_options = array(
       'query' => array(
-        'destination' => 'fundraise',
         'action' => 'register',
       ),
     );
     if (isset($_GET['action'])) {
       switch ($_GET['action']) {
         case "register":
-          $form = redhen_raiser_register_form($login_options, 'fundraise');
+          $form = redhen_raiser_register_form(array(), 'fundraise');
           break;
 
         case "reset":
-          $form = redhen_raiser_password_form($login_options, $register_options, 'fundraise');
+          $form = redhen_raiser_password_form(array(), $register_options, 'fundraise');
           break;
       }
     }
     else {
       $password_options = array(
         'query' => array(
-          'destination' => 'fundraise',
           'action' => 'reset',
         ),
       );
@@ -57,14 +57,18 @@ function redhen_raiser_core_fundraise_now_page() {
     return drupal_render($form);
   }
   else {
-    return "hello";
+    return 'go for it';
   }
 }
 
+/**
+ * A customized version of the login form.
+ */
 function redhen_raiser_login_form($register_options = array(), $reset_options = array(), $override_link = FALSE) {
   $content = drupal_get_form('user_login');
   $content['name']['#description'] = NULL;
   $content['pass']['#description'] = NULL;
+  $content['actions']['submit']['#value'] = "Log In";
   $content['register'] = array(
     '#type' => 'link',
     '#title' => t("Don't have an account? Create one."),
@@ -79,16 +83,18 @@ function redhen_raiser_login_form($register_options = array(), $reset_options = 
     '#options' => $reset_options,
     '#weight' => 21,
   );
-  $block['subject'] = t('Login');
-  $block['content'] = $content;
   return $content;
 }
 
+/**
+ * A customized version of the registration form.
+ */
 function redhen_raiser_register_form($login_options = array(), $override_link = FALSE) {
   $content = drupal_get_form('user_register_form');
   $content['account']['name']['#description'] = NULL;
   $content['account']['mail']['#description'] = NULL;
   $content['account']['pass']['#description'] = NULL;
+  $content['actions']['submit']['#value'] = "Create Account";
   $content['login'] = array(
     '#type' => 'link',
     '#title' => t("Already have an account? Sign in."),
@@ -96,16 +102,25 @@ function redhen_raiser_register_form($login_options = array(), $override_link = 
     '#options' => $login_options,
     '#weight' => 20,
   );
-  $block['subject'] = t('Create Account');
-  $block['content'] = $content;
+  $content['actions']['cancel'] = array(
+    '#type' => 'link',
+    '#title' => t('Cancel'),
+    '#href' => $override_link ? $override_link : 'home',
+    '#weight' => 100,
+  );
   return $content;
 }
 
+
+/**
+ * A customized version of the password reset form.
+ */
 function redhen_raiser_password_form($login_options = array(), $register_options = array(), $override_link = FALSE) {
   module_load_include('inc', 'user', 'user.pages');
   $content = drupal_get_form('user_pass');
   $content['account']['mail']['#description'] = NULL;
   $content['account']['pass']['#description'] = NULL;
+  $content['actions']['submit']['#value'] = "Reset Password";
   $content['login'] = array(
     '#type' => 'link',
     '#title' => t("Already have an account? Sign in."),
@@ -120,7 +135,11 @@ function redhen_raiser_password_form($login_options = array(), $register_options
     '#options' => $register_options,
     '#weight' => 21,
   );
-  $block['subject'] = t('Reset Password');
-  $block['content'] = $content;
+  $content['actions']['cancel'] = array(
+    '#type' => 'link',
+    '#title' => t('Cancel'),
+    '#href' => $override_link ? $override_link : 'home',
+    '#weight' => 100,
+  );
   return $content;
 }

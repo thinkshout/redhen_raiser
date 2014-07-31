@@ -1,0 +1,8 @@
+name = RedHen Raiser Core
+description = Field cores, basic block displays, sitewide contexts.
+core = 7.x
+package = RedHen Raiser
+version = 7.x-1.0-alpha1
+project = redhen_raiser_core
+features[features_api][] = api:2
+project path = profiles/redhen_raiser/modules/redhen_raiser

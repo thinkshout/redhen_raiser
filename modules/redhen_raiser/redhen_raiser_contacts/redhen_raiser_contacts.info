@@ -1,0 +1,15 @@
+name = RedHen Raiser Contacts
+description = RedHen Contact types and custom configuration
+core = 7.x
+package = RedHen Raiser
+version = 7.x-1.0-alpha1
+project = redhen_raiser_contacts
+dependencies[] = entity
+dependencies[] = features
+dependencies[] = redhen_contact
+dependencies[] = redhen_fields
+features[features_api][] = api:2
+features[field_base][] = redhen_contact_email
+features[field_instance][] = redhen_contact-contact-redhen_contact_email
+features[redhen_contact_type][] = contact
+project path = profiles/redhen_raiser/modules/redhen_raiser/

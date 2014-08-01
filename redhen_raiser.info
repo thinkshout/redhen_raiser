@@ -27,10 +27,21 @@ dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = login_destination
-dependencies[] = pathauto
+dependencies[] = redhen
+dependencies[] = redhen_contact
+dependencies[] = redhen_fields
 dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
+
+; RedHen Raiser
+dependencies[] = redhen_raiser_core
+dependencies[] = redhen_raiser_contacts
+
+; RedHen Raiser permissions
+dependencies[] = redhen_raiser_core_access
+dependencies[] = redhen_raiser_crm_access
+
 
 files[] = redhen_raiser.profile

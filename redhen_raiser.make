@@ -47,6 +47,11 @@ projects[login_destination][patch][] = "https://www.drupal.org/files/issues/logi
 ;projects[pathauto][version] = ""
 projects[pathauto][subdir] = "contrib"
 
+; redhen
+;projects[redhen][version] = "1.7"
+projects[redhen][subdir] = "contrib"
+projects[redhen][patch][] = "https://www.drupal.org/files/issues/only_notify_redhen_users_of_contact_creation.patch"
+
 ; strongarm requires ctools
 ;projects[strongarm][version] = ""
 projects[strongarm][subdir] = "contrib"

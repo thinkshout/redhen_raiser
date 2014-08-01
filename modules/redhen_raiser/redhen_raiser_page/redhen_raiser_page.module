@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RedHen Raiser Page feature.
+ */
+
+include_once 'redhen_raiser_page.features.inc';

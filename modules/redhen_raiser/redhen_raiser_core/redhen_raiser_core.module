@@ -13,7 +13,7 @@ function redhen_raiser_core_menu() {
   $items = array();
 
   $items['fundraise'] = array(
-    'title' => 'Fundraise Now',
+    'title' => 'Become a Fundraiser',
     'access callback' => TRUE,
     'page callback' => 'redhen_raiser_core_fundraise_now_page',
     'page arguments' => array(),
@@ -95,6 +95,17 @@ function redhen_raiser_register_form($login_options = array(), $override_link = 
   $content['account']['mail']['#description'] = NULL;
   $content['account']['pass']['#description'] = NULL;
   $content['actions']['submit']['#value'] = "Create Account";
+  // Fix up the RedHen form:
+  unset($content['redhen_contact']['#title']);
+  $content['redhen_contact']['#weight'] = $content['account']['#weight'] - .1;
+  $allowed_fields = array('name');
+  foreach (element_children($content['redhen_contact']['form']) as $fieldname) {
+    $field = &$content['redhen_contact']['form'][$fieldname];
+    if (!in_array($fieldname, $allowed_fields) && !$field['#required']) {
+      $field['#access'] = FALSE;
+    }
+  }
+  $content['redhen_contact']['form']['name']['middle_name']['#access'] = FALSE;
   $content['login'] = array(
     '#type' => 'link',
     '#title' => t("Already have an account? Sign in."),
@@ -108,6 +119,8 @@ function redhen_raiser_register_form($login_options = array(), $override_link = 
     '#href' => $override_link ? $override_link : 'home',
     '#weight' => 100,
   );
+  $content['redhen_contact']['account'] = $content['account'];
+  unset ($content['account']);
   return $content;
 }
 

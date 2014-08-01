@@ -24,35 +24,36 @@ function redhen_raiser_core_menu() {
 }
 
 /**
+ * Implements hook_menu_alter().
+ */
+function redhen_raiser_core_menu_alter(&$items) {
+  ksort($items);
+  $items['user/login']['title'] = "Log In";
+  $items['user/register']['title'] = "Create Account";
+  $items['user/register']['type'] = MENU_SUGGESTED_ITEM;
+  $items['user/password']['type'] = MENU_NORMAL_ITEM;
+}
+
+/**
  * Return the UI for creating a fundraiser.
  * 
  * If the user is not authenticated, gives them an authentication workflow.
  */
 function redhen_raiser_core_fundraise_now_page() {
   if (user_is_anonymous()) {
-    $register_options = array(
-      'query' => array(
-        'action' => 'register',
-      ),
-    );
     if (isset($_GET['action'])) {
       switch ($_GET['action']) {
         case "register":
-          $form = redhen_raiser_register_form(array(), 'fundraise');
+          $form = redhen_raiser_register_form('fundraise');
           break;
 
         case "reset":
-          $form = redhen_raiser_password_form(array(), $register_options, 'fundraise');
+          $form = redhen_raiser_password_form('fundraise');
           break;
       }
     }
     else {
-      $password_options = array(
-        'query' => array(
-          'action' => 'reset',
-        ),
-      );
-      $form = redhen_raiser_login_form($register_options, $password_options, 'fundraise');
+      $form = redhen_raiser_login_form('fundraise');
     }
     return drupal_render($form);
   }
@@ -60,99 +61,130 @@ function redhen_raiser_core_fundraise_now_page() {
     return 'go for it';
   }
 }
+// todo: assert this module runs hooks after redhen_contact
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function redhen_raiser_core_form_user_login_alter(&$form, &$form_state, $form_id) {
+  $form['name']['#description'] = NULL;
+  $form['pass']['#description'] = NULL;
+  $form['register'] = array(
+    '#type' => 'link',
+    '#title' => t("Don't have an account? Create one."),
+    '#href' => 'user/register',
+    '#weight' => 20,
+  );
+  $form['reset'] = array(
+    '#type' => 'link',
+    '#title' => t("Forgot your password? Reset it."),
+    '#href' => 'user/password',
+    '#weight' => 21,
+  );
+  $form['actions']['cancel'] = array(
+    '#type' => 'link',
+    '#title' => t('Cancel'),
+    '#href' => '<front>',
+    '#weight' => 100,
+  );
+  $form['actions']['submit']['#value'] = "Log In";
+}
 
 /**
  * A customized version of the login form.
  */
-function redhen_raiser_login_form($register_options = array(), $reset_options = array(), $override_link = FALSE) {
+function redhen_raiser_login_form($override_link = FALSE) {
   $content = drupal_get_form('user_login');
-  $content['name']['#description'] = NULL;
-  $content['pass']['#description'] = NULL;
-  $content['actions']['submit']['#value'] = "Log In";
-  $content['register'] = array(
-    '#type' => 'link',
-    '#title' => t("Don't have an account? Create one."),
-    '#href' => $override_link ? $override_link : 'user/register',
-    '#options' => $register_options,
-    '#weight' => 20,
-  );
-  $content['reset'] = array(
-    '#type' => 'link',
-    '#title' => t("Forgot your password? Reset it."),
-    '#href' => $override_link ? $override_link : 'user/password',
-    '#options' => $reset_options,
-    '#weight' => 21,
-  );
+  $content['register']['#href'] = $override_link ? $override_link : 'user/register';
+  $content['register']['#options']['query']['action'] = 'register';
+  $content['reset']['#href'] = $override_link ? $override_link : 'user/password';
+  $content['reset']['#options']['query']['action'] = 'reset';
   return $content;
 }
 
 /**
- * A customized version of the registration form.
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * We universally make some customizations to the registration form.
  */
-function redhen_raiser_register_form($login_options = array(), $override_link = FALSE) {
-  $content = drupal_get_form('user_register_form');
-  $content['account']['name']['#description'] = NULL;
-  $content['account']['mail']['#description'] = NULL;
-  $content['account']['pass']['#description'] = NULL;
-  $content['actions']['submit']['#value'] = "Create Account";
+function redhen_raiser_core_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+  $form['account']['name']['#description'] = NULL;
+  $form['account']['mail']['#description'] = NULL;
+  $form['account']['pass']['#description'] = NULL;
+  $form['actions']['submit']['#value'] = "Create Account";
   // Fix up the RedHen form:
-  unset($content['redhen_contact']['#title']);
-  $content['redhen_contact']['#weight'] = $content['account']['#weight'] - .1;
+  unset($form['redhen_contact']['#title']);
+  $form['redhen_contact']['form']['#weight'] = $form['account']['#weight'] - .1;
   $allowed_fields = array('name');
-  foreach (element_children($content['redhen_contact']['form']) as $fieldname) {
-    $field = &$content['redhen_contact']['form'][$fieldname];
-    if (!in_array($fieldname, $allowed_fields) && !$field['#required']) {
+  foreach (element_children($form['redhen_contact']['form']) as $fieldname) {
+    $field = &$form['redhen_contact']['form'][$fieldname];
+    if (!in_array($fieldname, $allowed_fields) && empty($field['#required'])) {
       $field['#access'] = FALSE;
     }
   }
-  $content['redhen_contact']['form']['name']['middle_name']['#access'] = FALSE;
-  $content['login'] = array(
+  $form['redhen_contact']['form']['name']['middle_name']['#access'] = FALSE;
+  $form['login'] = array(
     '#type' => 'link',
     '#title' => t("Already have an account? Sign in."),
-    '#href' => $override_link ? $override_link : 'user/login',
-    '#options' => $login_options,
+    '#href' => 'user/login',
     '#weight' => 20,
   );
-  $content['actions']['cancel'] = array(
+  $form['actions']['cancel'] = array(
     '#type' => 'link',
     '#title' => t('Cancel'),
-    '#href' => $override_link ? $override_link : 'home',
+    '#href' => '<front>',
     '#weight' => 100,
   );
-  $content['redhen_contact']['account'] = $content['account'];
-  unset ($content['account']);
+  $form['redhen_contact']['account'] = $form['account'];
+  unset ($form['account']);
+}
+
+/**
+ * A customized version of the registration form for embedding.
+ */
+function redhen_raiser_register_form($override_link = FALSE) {
+  $content = drupal_get_form('user_register_form');
+  $content['login']['#href'] = $override_link ? $override_link : 'user/login';
+  $content['actions']['cancel']['#href'] = $override_link ? $override_link : '<front>';
   return $content;
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function redhen_raiser_core_form_user_pass_alter(&$form, &$form_state, $form_id) {
+  $form['account']['mail']['#description'] = NULL;
+  $form['account']['pass']['#description'] = NULL;
+  $form['actions']['submit']['#value'] = "Reset Password";
+  $form['login'] = array(
+    '#type' => 'link',
+    '#title' => t("Already have an account? Sign in."),
+    '#href' => 'user/login',
+    '#weight' => 20,
+  );
+  $form['register'] = array(
+    '#type' => 'link',
+    '#title' => t("Don't have an account? Create one."),
+    '#href' => 'user/register',
+    '#weight' => 21,
+  );
+  $form['actions']['cancel'] = array(
+    '#type' => 'link',
+    '#title' => t('Cancel'),
+    '#href' => '<front>',
+    '#weight' => 100,
+  );
+}
 
 /**
  * A customized version of the password reset form.
  */
-function redhen_raiser_password_form($login_options = array(), $register_options = array(), $override_link = FALSE) {
+function redhen_raiser_password_form($override_link = FALSE) {
   module_load_include('inc', 'user', 'user.pages');
   $content = drupal_get_form('user_pass');
-  $content['account']['mail']['#description'] = NULL;
-  $content['account']['pass']['#description'] = NULL;
-  $content['actions']['submit']['#value'] = "Reset Password";
-  $content['login'] = array(
-    '#type' => 'link',
-    '#title' => t("Already have an account? Sign in."),
-    '#href' => $override_link ? $override_link : 'user/login',
-    '#options' => $login_options,
-    '#weight' => 20,
-  );
-  $content['register'] = array(
-    '#type' => 'link',
-    '#title' => t("Don't have an account? Create one."),
-    '#href' => $override_link ? $override_link : 'user/register',
-    '#options' => $register_options,
-    '#weight' => 21,
-  );
-  $content['actions']['cancel'] = array(
-    '#type' => 'link',
-    '#title' => t('Cancel'),
-    '#href' => $override_link ? $override_link : 'home',
-    '#weight' => 100,
-  );
+  $content['login']['#href'] = $override_link ? $override_link : 'user/login';
+  $content['register']['#href'] = $override_link ? $override_link : 'user/register';
+  $content['register']['#options']['query']['action'] = 'register';
+  $content['actions']['cancel']['#href'] = $override_link ? $override_link : '<front>';
   return $content;
 }

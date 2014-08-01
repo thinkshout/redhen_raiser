@@ -17,18 +17,16 @@ function redhen_raiser_core_menu_default_menu_links() {
     'router_path' => 'user/register',
     'link_title' => 'Create Account',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'identifier' => 'user-menu_create-account:user/register',
     ),
-    'module' => 'menu',
-    'hidden' => 0,
+    'module' => 'system',
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,
-    'customized' => 1,
+    'customized' => 0,
+    'parent_identifier' => 'user-menu_my-account:user',
   );
   // Exported menu link: user-menu_fundraise-now:fundraise
   $menu_links['user-menu_fundraise-now:fundraise'] = array(
@@ -102,7 +100,7 @@ function redhen_raiser_core_menu_default_menu_links() {
     'module' => 'system',
     'hidden' => 0,
     'external' => 0,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 0,
     'weight' => -47,
     'customized' => 1,

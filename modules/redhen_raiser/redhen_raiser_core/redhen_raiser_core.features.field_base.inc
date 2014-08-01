@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * redhen_raiser_core_access.features.field_base.inc
+ * redhen_raiser_core.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function redhen_raiser_core_access_field_default_field_bases() {
+function redhen_raiser_core_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'body'

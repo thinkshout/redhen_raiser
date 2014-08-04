@@ -19,7 +19,6 @@ function redhen_raiser_install_tasks(){
  * Post install tasks
  */
 function redhen_raiser_custom_install(&$install_state) {
-  include_once 'libraries/ts_install_helpers/ts_install_helpers.inc'; // Load helper functions.
   // Disable DB blocks so we can use context to place everything.
   if (module_exists('block')) {
     db_update('block')

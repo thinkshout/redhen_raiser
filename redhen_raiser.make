@@ -92,13 +92,6 @@ projects[ftools][subdir] = "developer"
 ; Libraries
 ;-----------------------------------------
 
-; ts_install_helpers
-libraries[ts_install_helpers][download][type] = git
-libraries[ts_install_helpers][download][url] = git@github.com:thinkshout/ts_install_helpers.git
-libraries[ts_install_helpers][directory_name] = "ts_install_helpers"
-libraries[ts_install_helpers][type] = "library"
-
-
 ; chosen
 libraries[chosen][download][type] = git
 libraries[chosen][download][url] = https://github.com/harvesthq/chosen.git

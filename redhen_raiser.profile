@@ -14,7 +14,6 @@ function redhen_raiser_install_tasks(){
   return $taskset;
 }
 
-
 /**
  * Post install tasks.
  */
@@ -34,6 +33,7 @@ function redhen_raiser_custom_install(&$install_state) {
       ->condition('module', 'system', '=')
       ->execute();
   }
+  variable_set('theme_default', 'zen');
   module_enable(array('redhen_raiser_custom_config'), TRUE);
 
   drupal_flush_all_caches();

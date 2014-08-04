@@ -18,6 +18,10 @@ projects[admin_menu][subdir] = "contrib"
 ;projects[context][version] = ""
 projects[context][subdir] = "contrib"
 
+; context_condition_theme
+projects[context_condition_theme][version] = "1.0"
+projects[context_condition_theme][subdir] = "contrib"
+
 ; ctools
 ;projects[ctools][version] = ""
 projects[ctools][subdir] = "contrib"

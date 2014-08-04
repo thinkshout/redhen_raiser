@@ -27,7 +27,7 @@ function redhen_raiser_core_menu() {
  * Implements hook_menu_alter().
  */
 function redhen_raiser_core_menu_alter(&$items) {
-  ksort($items);
+  //ksort($items);
   $items['user/login']['title'] = "Log In";
   $items['user/register']['title'] = "Create Account";
   $items['user/register']['type'] = MENU_SUGGESTED_ITEM;

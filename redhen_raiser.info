@@ -38,6 +38,7 @@ dependencies[] = views_ui
 ; RedHen Raiser
 dependencies[] = redhen_raiser_core
 dependencies[] = redhen_raiser_contacts
+dependencies[] = redhen_raiser_page
 
 ; RedHen Raiser permissions
 dependencies[] = redhen_raiser_core_access

@@ -16,15 +16,22 @@ function redhen_raiser_install_tasks(){
 
 
 /**
- * Post install tasks
+ * Post install tasks.
  */
 function redhen_raiser_custom_install(&$install_state) {
-  // Disable DB blocks so we can use context to place everything.
   if (module_exists('block')) {
+    // Disable DB blocks so we can use context or panels to place everything.
     db_update('block')
       ->fields(array(
         'status' => 0,
         'region' => ''))
+      ->execute();
+    // Hide menu block names.
+    db_update('block')
+      ->fields(array(
+        'title' => '<none>'))
+      ->condition('delta', array('user-menu', 'main-menu'), 'in')
+      ->condition('module', 'system', '=')
       ->execute();
   }
   module_enable(array('redhen_raiser_custom_config'), TRUE);

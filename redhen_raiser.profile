@@ -18,22 +18,29 @@ function redhen_raiser_install_tasks(){
  * Post install tasks.
  */
 function redhen_raiser_custom_install(&$install_state) {
+  variable_set('theme_default', 'zen');
   if (module_exists('block')) {
     // Disable DB blocks so we can use context or panels to place everything.
     db_update('block')
       ->fields(array(
         'status' => 0,
-        'region' => ''))
+        'region' => -1,
+        'theme' => 'zen'))
       ->execute();
     // Hide menu block names.
     db_update('block')
       ->fields(array(
         'title' => '<none>'))
-      ->condition('delta', array('user-menu', 'main-menu'), 'in')
+      ->condition('delta', 'user-menu', '=')
+      ->condition('module', 'system', '=')
+      ->execute();
+    db_update('block')
+      ->fields(array(
+        'title' => '<none>'))
+      ->condition('delta', 'main-menu', '=')
       ->condition('module', 'system', '=')
       ->execute();
   }
-  variable_set('theme_default', 'zen');
   module_enable(array('redhen_raiser_custom_config'), TRUE);
 
   drupal_flush_all_caches();

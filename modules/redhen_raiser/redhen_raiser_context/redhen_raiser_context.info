@@ -1,4 +1,4 @@
-name = RedHen Raiser Context
+name = RedHen Raiser Context & Layout
 description = Base context configuration for site layout. Disable if you want to override or use Panels.
 core = 7.x
 package = RedHen Raiser
@@ -6,7 +6,11 @@ version = 7.x-1.0-alpha1
 project = redhen_raiser_context
 dependencies[] = context
 dependencies[] = context_condition_theme
+dependencies[] = ctools
+dependencies[] = strongarm
 features[context][] = everything_zen
 features[ctools][] = context:context:3
+features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[variable][] = theme_zen_settings
 project path = profiles/redhen_raiser/modules/redhen_raiser

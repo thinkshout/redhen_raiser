@@ -19,6 +19,7 @@ function redhen_raiser_install_tasks(){
  */
 function redhen_raiser_custom_install(&$install_state) {
   variable_set('theme_default', 'zen');
+  theme_enable(array('zen'));
   if (module_exists('block')) {
     // Disable DB blocks so we can use context or panels to place everything.
     db_update('block')
@@ -41,6 +42,7 @@ function redhen_raiser_custom_install(&$install_state) {
       ->condition('module', 'system', '=')
       ->execute();
   }
+  redhen_raiser_create_default_blocks();
   module_enable(array('redhen_raiser_custom_config'), TRUE);
   drupal_flush_all_caches();
   features_revert();

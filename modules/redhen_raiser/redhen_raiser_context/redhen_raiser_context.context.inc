@@ -38,6 +38,12 @@ function redhen_raiser_context_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-10',
         ),
+        'bean-social-media-links' => array(
+          'module' => 'bean',
+          'delta' => 'social-media-links',
+          'region' => 'footer',
+          'weight' => '-9',
+        ),
       ),
     ),
   );

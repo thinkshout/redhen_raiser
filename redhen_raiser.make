@@ -14,6 +14,10 @@ core = 7.x
 ;projects[admin_menu][version] = ""
 projects[admin_menu][subdir] = "contrib"
 
+; bean
+;projects[bean][version] = ""
+projects[bean][subdir] = "contrib"
+
 ; context requires ctools 1.7+ (jquery_ui & admin recommended)
 ;projects[context][version] = ""
 projects[context][subdir] = "contrib"

@@ -1,0 +1,66 @@
+<?php
+/**
+ * @file
+ * Code for the RedHen Raiser Blocks & Widgets feature.
+ */
+
+include_once 'redhen_raiser_blocks.features.inc';
+
+/**
+ * Implements hook_install().
+ */
+function redhen_raiser_create_default_blocks() {
+
+  $stubbed_beans = array(
+    // Link beans.
+    'social_media_links' => array(
+      'type' => 'link_group',
+      'label' => 'Social Media Links',
+      'title' => '',
+      'properties' => array(
+        'field_links' => array(
+          array(
+            array(
+              'url' => 'http://www.salmonlove.com',
+              'title' => 'Learn More',
+              'attributes' => array(),
+            ),
+            array(
+              'url' => 'http://www.salmonlove2.com',
+              'title' => 'Learn More2',
+              'attributes' => array(),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+  redhen_raiser_create_beans($stubbed_beans);
+}
+
+/**
+ * Helper to create beans.
+ */
+function redhen_raiser_create_beans($stubbed_beans) {
+  foreach ($stubbed_beans as $name => $stubbed_bean) {
+    $new_bean = bean_create(array('type' => $stubbed_bean['type']));
+    $new_bean->label = $stubbed_bean['label'];
+    $new_bean->title = $stubbed_bean['title'];
+    $new_bean->delta = $name;
+    if (!empty($stubbed_bean['data'])) {
+      $new_bean->data = $stubbed_bean['data'];
+    }
+    $bean_wrapper = entity_metadata_wrapper('bean', $new_bean);
+    foreach ($stubbed_bean['properties'] as $prop => $value) {
+      if (strpos($bean_wrapper->field_links->type(), 'list<') === FALSE) {
+        $bean_wrapper->{$prop} = $value;
+      }
+      else {
+        foreach ($value as $item) {
+          $bean_wrapper->{$prop}[] = $item;
+        }
+      }
+    }
+    $new_bean->save();
+  }
+}

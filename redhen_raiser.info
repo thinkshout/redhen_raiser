@@ -27,6 +27,7 @@ dependencies[] = email_registration
 dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = features
+dependencies[] = link
 dependencies[] = login_destination
 dependencies[] = redhen
 dependencies[] = redhen_contact
@@ -39,6 +40,7 @@ dependencies[] = views_ui
 ; RedHen Raiser
 dependencies[] = redhen_raiser_core
 dependencies[] = redhen_raiser_contacts
+dependencies[] = redhen_raiser_blocks
 dependencies[] = redhen_raiser_context
 dependencies[] = redhen_raiser_page
 

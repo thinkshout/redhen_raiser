@@ -20,16 +20,24 @@ function redhen_raiser_create_default_blocks() {
       'properties' => array(
         'field_links' => array(
           array(
-            array(
-              'url' => 'http://www.salmonlove.com',
-              'title' => 'Learn More',
-              'attributes' => array(),
-            ),
-            array(
-              'url' => 'http://www.salmonlove2.com',
-              'title' => 'Learn More2',
-              'attributes' => array(),
-            ),
+            'url' => 'http://www.twitter.com',
+            'title' => 'Twitter',
+            'attributes' => array('class' => 'twitter-link'),
+          ),
+          array(
+            'url' => 'http://www.facebook.com',
+            'title' => 'Facebook',
+            'attributes' => array('class' => 'facebook-link'),
+          ),
+          array(
+            'url' => 'http://www.linkedin.com',
+            'title' => 'LinkedIn',
+            'attributes' => array('class' => 'linkedin-link'),
+          ),
+          array(
+            'url' => 'http://plus.google.com',
+            'title' => 'Google+',
+            'attributes' => array('class' => 'googleplus-link'),
           ),
         ),
       ),

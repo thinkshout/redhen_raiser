@@ -3,3 +3,14 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function redhen_raiser_defaults_block_view_system_user_menu_alter(&$data, $block) {
+  foreach (element_children($data['content']) as $menu_id) {
+    if ($data['content'][$menu_id]['#href'] == 'fundraise') {
+      $data['content'][$menu_id]['#attributes']['class'][] = 'fundraise-now';
+    }
+  }
+}

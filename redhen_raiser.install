@@ -11,7 +11,6 @@ function redhen_raiser_install() {
   // Set the admin theme. (NOTE: We don't want to enable it.)
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
-
   // Set homepage
   //variable_set('site_frontpage', 'home');
 

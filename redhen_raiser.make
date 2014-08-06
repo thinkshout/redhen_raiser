@@ -98,6 +98,9 @@ projects[redhen][patch][] = "https://www.drupal.org/files/issues/only_notify_red
 
 ; redhen_donation
 ;projects[redhen_donation][version] = ""
+projects[redhen_donation][download][type] = git
+projects[redhen_donation][download][branch] = 7.x-1.x
+projects[redhen_donation][download][branch] = "http://git.drupal.org/project/redhen_donation.git"
 projects[redhen_donation][subdir] = "contrib"
 
 ; rules

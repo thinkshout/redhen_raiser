@@ -7,7 +7,7 @@
 include_once 'redhen_raiser_blocks.features.inc';
 
 /**
- * Implements hook_install().
+ * Create default Blocks.
  */
 function redhen_raiser_create_default_blocks() {
 

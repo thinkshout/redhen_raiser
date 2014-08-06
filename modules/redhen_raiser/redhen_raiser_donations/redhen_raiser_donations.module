@@ -5,3 +5,14 @@
  */
 
 include_once 'redhen_raiser_donations.features.inc';
+
+/**
+ * Implements hook_install().
+ */
+function redhen_raiser_donations_install() {
+  // Create default Donation Product.
+  
+  // Create default Donation Page.
+  
+  // Configure default Donation Page.
+}

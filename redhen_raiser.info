@@ -71,6 +71,8 @@ dependencies[] = redhen_raiser_contacts
 dependencies[] = redhen_raiser_blocks
 dependencies[] = redhen_raiser_context
 dependencies[] = redhen_raiser_page
+dependencies[] = redhen_raiser_donations
+dependencies[] = redhen_raiser_donation_page
 
 ; RedHen Raiser permissions
 dependencies[] = redhen_raiser_core_access

@@ -26,6 +26,10 @@ projects[bean][subdir] = "contrib"
 projects[commerce][version] = "1.9"
 projects[commerce][subdir] = "contrib"
 
+; commerce_features
+projects[commerce_features][version] = "1.0"
+projects[commerce_features][subdir] = "contrib"
+
 ; commerce_cardonfile
 ;projects[commerce_cardonfile][version] = "2.0-beta5"
 projects[commerce_cardonfile][subdir] = "contrib"

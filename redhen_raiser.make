@@ -52,7 +52,7 @@ projects[ctools][subdir] = "contrib"
 
 ; date
 projects[date][version] = "2.8"
-projects[ctools][subdir] = "contrib"
+projects[date][subdir] = "contrib"
 
 ; email_registration
 ;projects[email_registration][version] = ""
@@ -73,6 +73,10 @@ projects[features][subdir] = "contrib"
 ; interval
 ;projects[interval][version] = "1.0"
 projects[interval][subdir] = "contrib"
+
+; link
+;projects[link][version] = ""
+projects[link][subdir] = "contrib"
 
 ; login_destination
 ;projects[login_destination][version] = ""

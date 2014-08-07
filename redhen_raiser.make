@@ -103,6 +103,13 @@ projects[redhen_donation][download][branch] = 7.x-1.x
 projects[redhen_donation][download][url] = "http://git.drupal.org/project/redhen_donation.git"
 projects[redhen_donation][subdir] = "contrib"
 
+; redhen_campaign
+;projects[redhen_campaign][version] = ""
+projects[redhen_campaign][download][type] = git
+projects[redhen_campaign][download][branch] = 7.x-1.x
+projects[redhen_campaign][download][url] = "git@github.com:thinkshout/redhen_campaign.git"
+projects[redhen_campaign][subdir] = "contrib"
+
 ; rules
 projects[rules][version] = "2.7"
 projects[rules][subdir] = "contrib"

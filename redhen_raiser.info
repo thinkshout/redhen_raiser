@@ -58,6 +58,7 @@ dependencies[] = redhen
 dependencies[] = redhen_contact
 dependencies[] = redhen_donation
 dependencies[] = redhen_fields
+dependencies[] = redhen_campaign
 dependencies[] = rules
 dependencies[] = select_or_other
 dependencies[] = strongarm

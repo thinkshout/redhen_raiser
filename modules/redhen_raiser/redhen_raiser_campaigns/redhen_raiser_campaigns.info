@@ -1,0 +1,15 @@
+name = RedHen Raiser Campaigns
+description = Campaign types, configuration, and custom UI elements. Disabling is not advised.
+core = 7.x
+package = RedHen Raiser
+version = 7.x-1.0-alpha1
+project = redhen_raiser_campaigns
+dependencies[] = entity
+dependencies[] = features
+dependencies[] = number
+dependencies[] = redhen_campaign
+features[features_api][] = api:2
+features[field_base][] = redhen_campaign_goal
+features[field_instance][] = redhen_campaign-basic-redhen_campaign_goal
+features[redhen_campaign_type][] = basic
+project path = profiles/redhen_raiser/modules/redhen_raiser/

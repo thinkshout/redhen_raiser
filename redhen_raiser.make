@@ -22,6 +22,10 @@ projects[admin_menu][subdir] = "contrib"
 ;projects[bean][version] = "1.7"
 projects[bean][subdir] = "contrib"
 
+; breakpoints
+projects[breakpoints][version] = "1.2"
+projects[breakpoints][subdir] = "contrib"
+
 ; commerce
 projects[commerce][version] = "1.9"
 projects[commerce][subdir] = "contrib"
@@ -86,6 +90,10 @@ projects[link][subdir] = "contrib"
 ;projects[login_destination][version] = ""
 projects[login_destination][subdir] = "contrib"
 projects[login_destination][patch][] = "https://www.drupal.org/files/issues/login_destination-add_ctools_exportables-1645260-23.patch"
+
+; media
+projects[media][version] = "1.4"
+projects[media][subdir] = "contrib"
 
 ; pathauto requires token
 ;projects[pathauto][version] = ""

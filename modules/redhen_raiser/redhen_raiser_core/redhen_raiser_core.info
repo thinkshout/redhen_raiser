@@ -18,6 +18,7 @@ features[field_base][] = body
 features[field_base][] = field_donation_type
 features[login_destination][] = fundraise_page
 features[menu_custom][] = user-menu
+features[variable][] = pathauto_entity_available_entity_types
 features[variable][] = redhen_admin_path
 features[variable][] = redhen_items_page
 project path = profiles/redhen_raiser/modules/redhen_raiser

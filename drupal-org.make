@@ -103,6 +103,10 @@ projects[media_youtube][subdir] = "contrib"
 ;projects[pathauto][version] = ""
 projects[pathauto][subdir] = "contrib"
 
+; pathauto_entity
+projects[pathauto_entity][version] = "1.0"
+projects[pathauto_entity][subdir] = "contrib"
+
 ; redhen
 ;projects[redhen][version] = "1.7"
 projects[redhen][subdir] = "contrib"

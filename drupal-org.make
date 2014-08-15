@@ -23,7 +23,7 @@ projects[admin_menu][subdir] = "contrib"
 projects[bean][subdir] = "contrib"
 
 ; breakpoints
-projects[breakpoints][version] = "1.2"
+projects[breakpoints][version] = "1.3"
 projects[breakpoints][subdir] = "contrib"
 
 ; commerce
@@ -94,6 +94,10 @@ projects[login_destination][patch][] = "https://www.drupal.org/files/issues/logi
 ; media
 projects[media][version] = "1.4"
 projects[media][subdir] = "contrib"
+
+; media_youtube
+projects[media_youtube][version] = "2.0-rc4"
+projects[media_youtube][subdir] = "contrib"
 
 ; pathauto requires token
 ;projects[pathauto][version] = ""

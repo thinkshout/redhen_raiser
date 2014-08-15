@@ -60,6 +60,7 @@ dependencies[] = media_youtube
 dependencies[] = image
 dependencies[] = file_entity
 dependencies[] = login_destination
+dependencies[] = pathauto_entity
 dependencies[] = redhen
 dependencies[] = redhen_contact
 dependencies[] = redhen_donation
@@ -80,6 +81,8 @@ dependencies[] = redhen_raiser_context
 dependencies[] = redhen_raiser_page
 dependencies[] = redhen_raiser_donations
 dependencies[] = redhen_raiser_donation_page
+dependencies[] = redhen_raiser_campaigns
+dependencies[] = redhen_raiser_campaign_pages
 
 ; RedHen Raiser permissions
 dependencies[] = redhen_raiser_core_access

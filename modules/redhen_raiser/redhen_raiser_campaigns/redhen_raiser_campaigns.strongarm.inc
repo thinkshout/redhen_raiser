@@ -14,7 +14,7 @@ function redhen_raiser_campaigns_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_redhen_campaign_pattern';
-  $strongarm->value = 'campaign/[redhen_campaign:label]';
+  $strongarm->value = 'campaigns/[redhen_campaign:label]';
   $export['pathauto_redhen_campaign_pattern'] = $strongarm;
 
   return $export;

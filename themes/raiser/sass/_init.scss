@@ -80,6 +80,9 @@ $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 
+$raiser-body-font: Arial, Helvetica, Verdana, sans-serif;
+$raiser-header-font: Georgia, "Times New Roman", serif;
+
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
@@ -93,6 +96,12 @@ $font-monospace:   $courier;
 //
 // Colors, etc.
 //
+// RAISER COLORS
+$primary: #5e9733;
+$action:  #f8071c;
+$white:   #ffffff;
+$gray:    #989898;
+$lt-gray: #f1f1f1;
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;

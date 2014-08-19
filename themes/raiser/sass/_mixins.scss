@@ -35,3 +35,21 @@
     @include element-invisible-off;
   }
 }
+
+
+// Raiser Mixins
+
+@mixin clear-btn {
+  background: none;
+  border: 3px solid $primary;
+  border-radius: 0.7em;
+  color: $primary;
+  padding: 0.8em 1em;
+
+  &:hover {
+    color: $white;
+    background: $primary;
+    border: 3px solid $primary + 50; 
+    @include transition(all 0.5s);
+  }
+}

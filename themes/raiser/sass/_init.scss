@@ -81,15 +81,15 @@ $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 
 $raiser-body-font: Arial, Helvetica, Verdana, sans-serif;
-$raiser-header-font: Georgia, "Times New Roman", serif;
+$raiser-heading-font: Georgia, "Times New Roman", serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $verdana; // The font family set on the html element.
-$font-body:        $verdana;
+$base-font-family: $raiser-body-font; // The font family set on the html element.
+$font-body:        $raiser-body-font;
 $font-monospace:   $courier;
 
 
@@ -98,7 +98,8 @@ $font-monospace:   $courier;
 //
 // RAISER COLORS
 $primary: #5e9733;
-$action:  #f8071c;
+$action:  #f8971c;
+$black:   #000000;
 $white:   #ffffff;
 $gray:    #989898;
 $lt-gray: #f1f1f1;

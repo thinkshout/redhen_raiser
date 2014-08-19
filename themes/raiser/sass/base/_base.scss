@@ -1,0 +1,19 @@
+body {
+  background: $page-bg;
+  font-family: $raiser-body-font;
+}
+
+// HEADINGS
+h1, h2, h3, h4 {
+  font-family: $raiser-heading-font;
+}
+
+a, a:visited {
+  color: $action;
+  text-decoration: none;
+
+  &:hover {
+    color: $action - 20; 
+    @include transition(all 0.3s);
+  }
+}

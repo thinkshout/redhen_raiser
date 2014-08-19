@@ -12,11 +12,15 @@
 /* HTML element (SMACSS base) rules */
 @import "normalize";
 
+/* Base Styles and elments */
+@import "base/*";
+
 /* Layout rules */
 @import "layouts/responsive";
+@import "layouts/raiser_layout";
 
 /* Component (SMACSS module) rules */
-@import "components/misc";
+@import "components/*";
 // Optionally, add your own components here.
 @import "print";
 

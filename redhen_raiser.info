@@ -64,6 +64,7 @@ dependencies[] = pathauto_entity
 dependencies[] = redhen
 dependencies[] = redhen_contact
 dependencies[] = redhen_donation
+dependencies[] = redhen_engagement
 dependencies[] = redhen_fields
 dependencies[] = redhen_campaign
 dependencies[] = rules

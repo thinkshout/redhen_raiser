@@ -108,9 +108,11 @@ projects[pathauto_entity][version] = "1.0"
 projects[pathauto_entity][subdir] = "contrib"
 
 ; redhen
-;projects[redhen][version] = "1.7"
+;projects[redhen][version] = "1.8"
+projects[redhen][download][type] = git
+projects[redhen][download][branch] = 7.x-1.x
+projects[redhen][download][url] = "http://git.drupal.org/project/redhen.git"
 projects[redhen][subdir] = "contrib"
-projects[redhen][patch][] = "https://www.drupal.org/files/issues/only_notify_redhen_users_of_contact_creation.patch"
 
 ; redhen_donation
 ;projects[redhen_donation][version] = ""

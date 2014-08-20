@@ -8,7 +8,7 @@
 function redhen_raiser_install_tasks(){
   $taskset = array(
     'redhen_raiser_custom_install' => array(
-      'display_name' => st('Thinkshout Site Setup'),
+      'display_name' => st('RedHen Raiser Setup'),
     ),
   );
   return $taskset;
@@ -18,8 +18,8 @@ function redhen_raiser_install_tasks(){
  * Post install tasks.
  */
 function redhen_raiser_custom_install(&$install_state) {
-  variable_set('theme_default', 'zen');
-  theme_enable(array('zen'));
+  theme_enable(array('zen', 'raiser'));
+  variable_set('theme_default', 'raiser');
   if (module_exists('block')) {
     // Disable DB blocks so we can use context or panels to place everything.
     db_update('block')

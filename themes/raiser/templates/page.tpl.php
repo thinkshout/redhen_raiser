@@ -14,11 +14,12 @@
   <header class="header" id="header" role="banner">
     <div class="inner">
       <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo">
+        <a href="<?php print $front_page; ?>" rel="home" class="header__logo" id="logo">
           <img src="<?php print $logo; ?>" alt="<?php ($site_name) ? print $site_name : print "" ?>" class="header__logo-image" />
         </a>
       <?php endif; ?>
 
+      <a id="menu-toggle" href="#">Menu <i class="fa fa-bars"></i></a>
       <?php if ($secondary_menu): ?>
         <nav class="header__secondary-menu" id="secondary-menu" role="navigation">
           <?php print theme('links__system_secondary_menu', array(

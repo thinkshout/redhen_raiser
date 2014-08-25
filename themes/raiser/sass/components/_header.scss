@@ -1,25 +1,47 @@
 header {
   background: $white;
-  padding: 0.8em 0;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  @include box-shadow($black+100 0 1px 3px);
+  padding: 0.2em 0;
+  @include box-shadow($black+200 0 2px 5px);
+  
+  #logo {
+    display: block; 
+    float: left;
+    img { width: 3.594em; }
+  }
+
+  #menu-toggle {
+    display: block; 
+    float: right;
+    line-height: 2.5em;
+  }
   
   #secondary-menu {
-    float: right;
-    line-height: 3.25em;
-    text-align: right;
-    .inline li {
-      padding-right: 0;
-      margin-left: 0.5em; 
-    }
-    .links .first a {
-      @include clear-btn;
-    } 
+    border-top: 3px solid $primary;
+    clear: both;
+    display: none;
+    float: left;
+    margin-top: 1.5em;
+    width: 100%;
 
-    .links li:not(.first) {
-      display: none; 
+    .links li {
+      display: block;
+      margin: 0 0 1em;
+
+      &.first {
+        margin-top: 1.5em; 
+
+        a {
+          @include clear-btn;
+          padding: 0.5em 0;
+          display: inline-block;
+          text-align: center;
+          width: 100%;
+        } 
+      }
+      
+      & li:not(.first) {
+        margin-bottom: 1em;
+      }
     }
   }
 }

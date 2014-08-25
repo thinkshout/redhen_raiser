@@ -28,6 +28,7 @@
  * HTML5 display definitions
  */
 /* Correct `block` display not defined in IE 8/9. */
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
 /* line 33, ../sass/_normalize.scss */
 article,
 aside,
@@ -578,54 +579,54 @@ table {
 }
 
 /* Base Styles and elments */
-/* line 1, ../sass/base/_base.scss */
+/* line 3, ../sass/base/_base.scss */
 body {
   background: #e5e5e5;
   font-family: Arial, Helvetica, Verdana, sans-serif;
 }
 
-/* line 7, ../sass/base/_base.scss */
+/* line 9, ../sass/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* line 11, ../sass/base/_base.scss */
+/* line 13, ../sass/base/_base.scss */
 h1 {
   font-size: 2em;
 }
 
-/* line 13, ../sass/base/_base.scss */
+/* line 15, ../sass/base/_base.scss */
 h2 {
   font-size: 1.75em;
 }
 
-/* line 15, ../sass/base/_base.scss */
+/* line 17, ../sass/base/_base.scss */
 h3 {
   font-size: 1.5em;
 }
 
-/* line 17, ../sass/base/_base.scss */
+/* line 19, ../sass/base/_base.scss */
 h4 {
   font-size: 1.25em;
 }
 
-/* line 19, ../sass/base/_base.scss */
+/* line 21, ../sass/base/_base.scss */
 h5, h6 {
   font-size: 1.10em;
   font-weight: bold;
 }
 
-/* line 24, ../sass/base/_base.scss */
+/* line 26, ../sass/base/_base.scss */
 h6 {
   font-size: 1em;
 }
 
-/* line 27, ../sass/base/_base.scss */
+/* line 29, ../sass/base/_base.scss */
 a, a:visited {
   color: #f8971c;
   text-decoration: none;
 }
-/* line 31, ../sass/base/_base.scss */
+/* line 33, ../sass/base/_base.scss */
 a:hover, a:visited:hover {
   color: #e48308;
   -webkit-transition: all 0.3s;
@@ -910,53 +911,67 @@ a:hover, a:visited:hover {
     margin-right: -100%;
   }
 }
-/* line 2, ../sass/layouts/_raiser_layout.scss */
-header .inner {
-  margin: 0 auto;
-  max-width: 71.250em;
-  padding: 0 1em;
-}
-
-/* line 9, ../sass/layouts/_raiser_layout.scss */
+/* line 1, ../sass/layouts/_raiser_layout.scss */
 #main {
   margin: 0 auto;
-  max-width: 51.250em;
-  padding: 5em 0;
 }
 
 /* Component (SMACSS module) rules */
 /* line 1, ../sass/components/_header.scss */
 header {
   background: white;
-  padding: 0.8em 0;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  -webkit-box-shadow: #646464 0 1px 3px;
-  -moz-box-shadow: #646464 0 1px 3px;
-  box-shadow: #646464 0 1px 3px;
+  padding: 0.2em 0;
+  -webkit-box-shadow: #c8c8c8 0 2px 5px;
+  -moz-box-shadow: #c8c8c8 0 2px 5px;
+  box-shadow: #c8c8c8 0 2px 5px;
+}
+/* line 6, ../sass/components/_header.scss */
+header #logo {
+  display: block;
+  float: left;
 }
 /* line 9, ../sass/components/_header.scss */
-header #secondary-menu {
+header #logo img {
+  width: 3.594em;
+}
+/* line 12, ../sass/components/_header.scss */
+header #menu-toggle {
+  display: block;
   float: right;
-  line-height: 3.25em;
-  text-align: right;
+  line-height: 2.5em;
 }
-/* line 13, ../sass/components/_header.scss */
-header #secondary-menu .inline li {
-  padding-right: 0;
-  margin-left: 0.5em;
+/* line 18, ../sass/components/_header.scss */
+header #secondary-menu {
+  border-top: 3px solid #5e9733;
+  clear: both;
+  display: none;
+  float: left;
+  margin-top: 1.5em;
+  width: 100%;
 }
-/* line 17, ../sass/components/_header.scss */
-header #secondary-menu .links .first a {
+/* line 26, ../sass/components/_header.scss */
+header #secondary-menu .links li {
+  display: block;
+  margin: 0 0 1em;
+}
+/* line 30, ../sass/components/_header.scss */
+header #secondary-menu .links li.first {
+  margin-top: 1.5em;
+}
+/* line 33, ../sass/components/_header.scss */
+header #secondary-menu .links li.first a {
   background: none;
   border: 3px solid #5e9733;
   border-radius: 0.7em;
   color: #5e9733;
   padding: 0.8em 1em;
+  padding: 0.5em 0;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
 }
 /* line 49, ../sass/_mixins.scss */
-header #secondary-menu .links .first a:hover {
+header #secondary-menu .links li.first a:hover {
   color: white;
   background: #5e9733;
   border: 3px solid #90c965;
@@ -965,9 +980,9 @@ header #secondary-menu .links .first a:hover {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 21, ../sass/components/_header.scss */
-header #secondary-menu .links li:not(.first) {
-  display: none;
+/* line 42, ../sass/components/_header.scss */
+header #secondary-menu .links li li:not(.first) {
+  margin-bottom: 1em;
 }
 
 /**

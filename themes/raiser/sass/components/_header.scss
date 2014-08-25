@@ -16,11 +16,9 @@ header {
   }
   
   #secondary-menu {
-    border-top: 3px solid $primary;
     clear: both;
     display: none;
     float: left;
-    margin-top: 1.5em;
     width: 100%;
 
     .links li {
@@ -44,4 +42,43 @@ header {
       }
     }
   }
+}
+
+@include small {
+  #header {
+    padding: 0.2em 1em;
+
+    #logo img { width: 40%; }
+
+    #menu-toggle { display: none; }
+    
+    #secondary-menu {
+      clear: none;
+      display: block; 
+      float: right;
+      line-height: 4.428em;
+      width: auto;
+
+      .links li {
+        display: inline; 
+
+        &.first {
+          margin-top: 0; 
+
+          a {
+            display: inline; 
+            width: auto;
+            @include clear-btn;
+          }
+        }
+      }
+    } 
+  }
+}
+
+@include large {
+}
+
+@include xlarge {
+
 }

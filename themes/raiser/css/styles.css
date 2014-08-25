@@ -588,45 +588,46 @@ body {
 /* line 9, ../sass/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
 }
 
-/* line 13, ../sass/base/_base.scss */
+/* line 14, ../sass/base/_base.scss */
 h1 {
   font-size: 2em;
 }
 
-/* line 15, ../sass/base/_base.scss */
+/* line 16, ../sass/base/_base.scss */
 h2 {
   font-size: 1.75em;
 }
 
-/* line 17, ../sass/base/_base.scss */
+/* line 18, ../sass/base/_base.scss */
 h3 {
   font-size: 1.5em;
 }
 
-/* line 19, ../sass/base/_base.scss */
+/* line 20, ../sass/base/_base.scss */
 h4 {
   font-size: 1.25em;
 }
 
-/* line 21, ../sass/base/_base.scss */
+/* line 22, ../sass/base/_base.scss */
 h5, h6 {
   font-size: 1.10em;
   font-weight: bold;
 }
 
-/* line 26, ../sass/base/_base.scss */
+/* line 27, ../sass/base/_base.scss */
 h6 {
   font-size: 1em;
 }
 
-/* line 29, ../sass/base/_base.scss */
+/* line 30, ../sass/base/_base.scss */
 a, a:visited {
   color: #f8971c;
   text-decoration: none;
 }
-/* line 33, ../sass/base/_base.scss */
+/* line 34, ../sass/base/_base.scss */
 a:hover, a:visited:hover {
   color: #e48308;
   -webkit-transition: all 0.3s;
@@ -697,15 +698,12 @@ a:hover, a:visited:hover {
   /* line 59, ../sass/layouts/_responsive.scss */
   #main {
     /* Move all the children of #main down to make room. */
-    padding-top: 3em;
     position: relative;
   }
 
-  /* line 64, ../sass/layouts/_responsive.scss */
+  /* line 63, ../sass/layouts/_responsive.scss */
   #navigation {
     /* Move the navbar up inside #main's padding. */
-    position: absolute;
-    top: 0;
     height: 3em;
     width: 100%;
   }
@@ -717,19 +715,19 @@ a:hover, a:visited:hover {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 85, ../sass/layouts/_responsive.scss */
+  /* line 82, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 87, ../sass/layouts/_responsive.scss */
+  /* line 84, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 92, ../sass/layouts/_responsive.scss */
+  /* line 89, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 33.33333%;
@@ -740,19 +738,19 @@ a:hover, a:visited:hover {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 100, ../sass/layouts/_responsive.scss */
+  /* line 97, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-  /* line 102, ../sass/layouts/_responsive.scss */
+  /* line 99, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 66.66667%;
     margin-left: 0%;
     margin-right: -66.66667%;
   }
-  /* line 107, ../sass/layouts/_responsive.scss */
+  /* line 104, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 33.33333%;
@@ -763,27 +761,27 @@ a:hover, a:visited:hover {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 115, ../sass/layouts/_responsive.scss */
+  /* line 112, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-  /* line 117, ../sass/layouts/_responsive.scss */
+  /* line 114, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 122, ../sass/layouts/_responsive.scss */
+  /* line 119, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 127, ../sass/layouts/_responsive.scss */
+  /* line 124, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 100%;
@@ -797,7 +795,7 @@ a:hover, a:visited:hover {
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-  /* line 133, ../sass/layouts/_responsive.scss */
+  /* line 130, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -807,7 +805,7 @@ a:hover, a:visited:hover {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 137, ../sass/layouts/_responsive.scss */
+  /* line 134, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
     width: 33.33333%;
@@ -815,14 +813,14 @@ a:hover, a:visited:hover {
     margin-right: -33.33333%;
     clear: left;
   }
-  /* line 142, ../sass/layouts/_responsive.scss */
+  /* line 139, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 146, ../sass/layouts/_responsive.scss */
+  /* line 143, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
     width: 33.33333%;
@@ -837,19 +835,19 @@ a:hover, a:visited:hover {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 163, ../sass/layouts/_responsive.scss */
+  /* line 160, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 165, ../sass/layouts/_responsive.scss */
+  /* line 162, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 80%;
     margin-left: 20%;
     margin-right: -100%;
   }
-  /* line 170, ../sass/layouts/_responsive.scss */
+  /* line 167, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 20%;
@@ -860,19 +858,19 @@ a:hover, a:visited:hover {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 178, ../sass/layouts/_responsive.scss */
+  /* line 175, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 180, ../sass/layouts/_responsive.scss */
+  /* line 177, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 80%;
     margin-left: 0%;
     margin-right: -80%;
   }
-  /* line 185, ../sass/layouts/_responsive.scss */
+  /* line 182, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 20%;
@@ -883,27 +881,27 @@ a:hover, a:visited:hover {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 193, ../sass/layouts/_responsive.scss */
+  /* line 190, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 195, ../sass/layouts/_responsive.scss */
+  /* line 192, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 60%;
     margin-left: 20%;
     margin-right: -80%;
   }
-  /* line 200, ../sass/layouts/_responsive.scss */
+  /* line 197, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 20%;
     margin-left: 0%;
     margin-right: -20%;
   }
-  /* line 205, ../sass/layouts/_responsive.scss */
+  /* line 202, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 20%;
@@ -942,23 +940,21 @@ header #menu-toggle {
 }
 /* line 18, ../sass/components/_header.scss */
 header #secondary-menu {
-  border-top: 3px solid #5e9733;
   clear: both;
   display: none;
   float: left;
-  margin-top: 1.5em;
   width: 100%;
 }
-/* line 26, ../sass/components/_header.scss */
+/* line 24, ../sass/components/_header.scss */
 header #secondary-menu .links li {
   display: block;
   margin: 0 0 1em;
 }
-/* line 30, ../sass/components/_header.scss */
+/* line 28, ../sass/components/_header.scss */
 header #secondary-menu .links li.first {
   margin-top: 1.5em;
 }
-/* line 33, ../sass/components/_header.scss */
+/* line 31, ../sass/components/_header.scss */
 header #secondary-menu .links li.first a {
   background: none;
   border: 3px solid #5e9733;
@@ -980,11 +976,61 @@ header #secondary-menu .links li.first a:hover {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 42, ../sass/components/_header.scss */
+/* line 40, ../sass/components/_header.scss */
 header #secondary-menu .links li li:not(.first) {
   margin-bottom: 1em;
 }
 
+@media (min-width: 47.938em) {
+  /* line 48, ../sass/components/_header.scss */
+  #header {
+    padding: 0.2em 1em;
+  }
+  /* line 51, ../sass/components/_header.scss */
+  #header #logo img {
+    width: 40%;
+  }
+  /* line 53, ../sass/components/_header.scss */
+  #header #menu-toggle {
+    display: none;
+  }
+  /* line 55, ../sass/components/_header.scss */
+  #header #secondary-menu {
+    clear: none;
+    display: block;
+    float: right;
+    line-height: 4.428em;
+    width: auto;
+  }
+  /* line 62, ../sass/components/_header.scss */
+  #header #secondary-menu .links li {
+    display: inline;
+  }
+  /* line 65, ../sass/components/_header.scss */
+  #header #secondary-menu .links li.first {
+    margin-top: 0;
+  }
+  /* line 68, ../sass/components/_header.scss */
+  #header #secondary-menu .links li.first a {
+    display: inline;
+    width: auto;
+    background: none;
+    border: 3px solid #5e9733;
+    border-radius: 0.7em;
+    color: #5e9733;
+    padding: 0.8em 1em;
+  }
+  /* line 49, ../sass/_mixins.scss */
+  #header #secondary-menu .links li.first a:hover {
+    color: white;
+    background: #5e9733;
+    border: 3px solid #90c965;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+}
 /**
  * @file
  * SMACSS Modules

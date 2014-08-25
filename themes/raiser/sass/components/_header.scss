@@ -17,5 +17,9 @@ header {
     .links .first a {
       @include clear-btn;
     } 
+
+    .links li:not(.first) {
+      display: none; 
+    }
   }
 }

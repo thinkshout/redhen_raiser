@@ -53,3 +53,23 @@
     @include transition(all 0.5s);
   }
 }
+
+// Breakpoints
+/* Large desktop */
+@mixin xlarge {
+  @media (min-width: 75em) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (max-width: 48em) and (max-width: 61.188em) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 47.938em) {
+    @content; 
+  }
+}

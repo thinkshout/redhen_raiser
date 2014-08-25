@@ -4,10 +4,26 @@ body {
 }
 
 // HEADINGS
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: $raiser-heading-font;
 }
 
+h1 { font-size: 2em;    }
+
+h2 { font-size: 1.75em; }
+
+h3 { font-size: 1.5em;  }
+
+h4 { font-size: 1.25em; }
+
+h5, h6 { 
+  font-size: 1.10em; 
+  font-weight: bold;
+}
+
+h6 { font-size: 1em; }
+
+// Links
 a, a:visited {
   color: $action;
   text-decoration: none;

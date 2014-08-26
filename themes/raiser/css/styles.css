@@ -915,6 +915,127 @@ a:hover, a:visited:hover {
 }
 
 /* Component (SMACSS module) rules */
+/* line 1, ../sass/components/_footer.scss */
+footer {
+  background: #5e9733;
+}
+/* line 3, ../sass/components/_footer.scss */
+footer #pre-footer {
+  background: white;
+  border-bottom: 3px solid #e5e5e5;
+  padding: 0.2em 1em;
+  overflow: hidden;
+  text-align: center;
+}
+/* line 10, ../sass/components/_footer.scss */
+footer #pre-footer #logo {
+  display: block;
+  margin-bottom: 1em;
+  width: 100%;
+}
+/* line 14, ../sass/components/_footer.scss */
+footer #pre-footer #logo img {
+  width: 3.594em;
+}
+/* line 17, ../sass/components/_footer.scss */
+footer #pre-footer .tagline {
+  color: #f8971c;
+  display: block;
+  margin-bottom: 1em;
+  font-family: Georgia, "Times New Roman", serif;
+}
+/* line 24, ../sass/components/_footer.scss */
+footer #pre-footer .social {
+  margin: 0;
+  overflow: hidden;
+  padding-left: 0;
+  text-align: center;
+}
+/* line 30, ../sass/components/_footer.scss */
+footer #pre-footer .social li {
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+  position: relative;
+}
+/* line 36, ../sass/components/_footer.scss */
+footer #pre-footer .social li a {
+  display: list-item;
+  height: 41px;
+  text-indent: -9999px;
+  width: 41px;
+}
+/* line 42, ../sass/components/_footer.scss */
+footer #pre-footer .social li a.twitter {
+  background: url("../images/social.png") 0 0 no-repeat;
+  background-size: 195px 42px;
+  margin-bottom: -1.5em;
+}
+/* line 47, ../sass/components/_footer.scss */
+footer #pre-footer .social li a.facebook {
+  background: url("../images/social.png") -3.2em 0 no-repeat;
+  background-size: 195px 42px;
+}
+/* line 51, ../sass/components/_footer.scss */
+footer #pre-footer .social li a.linkedin {
+  background: url("../images/social.png") -6.4em 0 no-repeat;
+  background-size: 195px 42px;
+}
+/* line 55, ../sass/components/_footer.scss */
+footer #pre-footer .social li a.google-plus {
+  background: url("../images/social.png") -9.6em 0 no-repeat;
+  background-size: 195px 42px;
+}
+/* line 64, ../sass/components/_footer.scss */
+footer #colophon {
+  color: white;
+  padding: 0.2em 1em;
+  text-align: center;
+}
+/* line 69, ../sass/components/_footer.scss */
+footer #colophon a {
+  color: white;
+}
+/* line 71, ../sass/components/_footer.scss */
+footer #colophon a:hover {
+  color: #f8971c;
+}
+
+@media (min-width: 47.938em) {
+  /* line 81, ../sass/components/_footer.scss */
+  footer #pre-footer {
+    text-align: left;
+  }
+  /* line 84, ../sass/components/_footer.scss */
+  footer #pre-footer #logo {
+    display: inline-block;
+    float: left;
+    margin-bottom: 0;
+    width: 92px;
+  }
+  /* line 89, ../sass/components/_footer.scss */
+  footer #pre-footer #logo img {
+    width: 100%;
+  }
+  /* line 92, ../sass/components/_footer.scss */
+  footer #pre-footer .tagline {
+    display: inline;
+    font-size: 1.25em;
+    float: left;
+    line-height: 3em;
+    margin: 0;
+    vertical-align: top;
+  }
+  /* line 101, ../sass/components/_footer.scss */
+  footer #pre-footer .social {
+    float: right;
+    margin-top: 0.8em;
+  }
+  /* line 107, ../sass/components/_footer.scss */
+  footer #colophon {
+    text-align: left;
+  }
+}
 /* line 1, ../sass/components/_header.scss */
 header {
   background: white;

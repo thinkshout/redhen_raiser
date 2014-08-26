@@ -88,11 +88,26 @@
     <?php if ($site_slogan): ?>
       <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
     <?php endif; ?>
-      
+
+
+    <div id="pre-footer">
+      <?php if ($logo): ?>
+        <a href="<?php print $front_page; ?>" rel="home" class="header__logo" id="logo">
+          <img src="<?php print $logo; ?>" alt="<?php ($site_name) ? print $site_name : print "" ?>" class="header__logo-image" />
+        </a>
+      <?php endif; ?>
+      <p class="tagline">Together We Can Solve Hunger&#8482;</p>
+      <ul class="social">
+        <li><a class="twitter" href=""></a></li>
+        <li><a class="facebook" href="">Facebook</a></li>
+        <li><a class="linkedin" href="">LinkedIn</a></li>
+        <li><a class="google-plus" href="">Google +</a></li>
+      </ul>
+    </div>
     <?php print render($page['footer']); ?>
 
     <!-- NAVIGATION -->
-    <div id="navigation">
+    <div id="colophon">
 
       <?php if ($main_menu): ?>
         <nav id="main-menu" role="navigation" tabindex="-1">

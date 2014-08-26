@@ -19,22 +19,24 @@ Drupal.behaviors.my_custom_behavior = {
     // Alias jquery
     _$ = jQuery;
     
-    // Store viewport width
+    // Store viewport width as a function
+    // so it can be retrieved at any time
     var viewportWidth = function(){
       var width = _$(window).width();
       return width;
     }
     
+    // Is it a large screen?
+    var isLarge = function(){
+        return viewportWidth() >= 768  ? true : false;
+    }
+
     // App object
     var _cafb = {
-      isLarge: function(){
-        return viewportWidth() >= 768  ? true : false;
-      },
 
       toggleMenu: function(){
         _$('#menu-toggle').click(function(e){
-          console.log(viewportWidth());          
-          if (_cafb.isLarge() == false){
+          if (isLarge() == false){
             e.preventDefault();
             _$('#secondary-menu').slideToggle();
           }
@@ -43,7 +45,7 @@ Drupal.behaviors.my_custom_behavior = {
 
       setMenuState: function(){
         var menu = _$('#secondary-menu');
-        if(_cafb.isLarge()){
+        if (isLarge()) {
           menu.fadeIn();
         } else {
           menu.hide();
@@ -51,9 +53,7 @@ Drupal.behaviors.my_custom_behavior = {
       },
 
       init: function() {
-        if (_$('#menu-toggle').length > 0) {
-          this.toggleMenu(); 
-        }
+        this.toggleMenu(); 
       }
     } // end _cafb
     

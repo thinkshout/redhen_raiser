@@ -1,7 +1,7 @@
 header {
   background: $white;
   padding: 0.2em 0;
-  @include box-shadow($black+200 0 2px 5px);
+  @include box-shadow($gray 0 2px 5px);
   
   #logo {
     display: block; 
@@ -63,12 +63,12 @@ header {
         display: inline; 
 
         &.first {
-          margin-top: 0; 
+          margin-top: 0;
 
           a {
-            display: inline; 
-            width: auto;
             @include clear-btn;
+            display: inline; 
+            padding: 0.8em 1em;
           }
         }
       }

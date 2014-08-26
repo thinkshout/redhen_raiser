@@ -1,0 +1,44 @@
+// Login form
+#user-login,
+#user-register-form {
+  background: $white;
+  border-radius: 0.7em;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 2em;
+  @include zen-grid-item(12, 1);
+  @include box-shadow(0 2px 3px $gray);
+
+  @include large {
+    @include zen-grid-item(6,4);
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #edit-register,
+  #edit-reset,
+  #edit-login,
+  .form-item, 
+  .form-actions {
+    padding: 0em 1em; 
+  }
+
+
+  #edit-register,
+  #edit-reset {
+    display: block; 
+  }
+
+  .form-actions {
+    margin-top: 1em;
+    #edit-cancel {
+      @include muted-btn; 
+      float: right;
+      padding: 0.6em 1em;
+    } 
+  }
+}

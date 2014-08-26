@@ -6,6 +6,28 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+/* line 41, ../sass/_mixins.scss */
+.btn, form input[type=submit],
+form button, #user-login .form-actions #edit-cancel,
+#user-register-form .form-actions #edit-cancel, header #secondary-menu .links li.first a {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #989898;
+  -moz-box-shadow: 0 2px 3px #989898;
+  box-shadow: 0 2px 3px #989898;
+}
+/* line 47, ../sass/_mixins.scss */
+.btn:hover, form input[type=submit]:hover,
+form button:hover, #user-login .form-actions #edit-cancel:hover,
+#user-register-form .form-actions #edit-cancel:hover, header #secondary-menu .links li.first a:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 /* Large desktop */
 /* HTML element (SMACSS base) rules */
 /**
@@ -28,7 +50,6 @@
  * HTML5 display definitions
  */
 /* Correct `block` display not defined in IE 8/9. */
-@import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
 /* line 33, ../sass/_normalize.scss */
 article,
 aside,
@@ -636,6 +657,52 @@ a:hover, a:visited:hover {
   transition: all 0.3s;
 }
 
+/* line 42, ../sass/base/_base.scss */
+form label {
+  font-weight: normal;
+}
+/* line 46, ../sass/base/_base.scss */
+form input[type=text],
+form input[type=password] {
+  border: 2px solid #5e9733;
+  border-radius: 4px;
+  color: #5e9733;
+  padding: 0.5em;
+  width: 100%;
+}
+/* line 53, ../sass/base/_base.scss */
+form input[type=text]:focus,
+form input[type=password]:focus {
+  background: #e3edda;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 58, ../sass/base/_base.scss */
+form input[type=text]:blur,
+form input[type=password]:blur {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 64, ../sass/base/_base.scss */
+form input[type=submit],
+form button {
+  background: #f8971c;
+  border: 3px solid white;
+  color: white;
+  text-transform: uppercase;
+}
+/* line 73, ../sass/_mixins.scss */
+form input[type=submit]:hover,
+form button:hover {
+  color: white;
+  background: #ffab30;
+}
+
 /* Layout rules */
 /**
  * @file
@@ -909,9 +976,20 @@ a:hover, a:visited:hover {
     margin-right: -100%;
   }
 }
-/* line 1, ../sass/layouts/_raiser_layout.scss */
-#main {
+/* line 4, ../sass/layouts/_raiser_layout.scss */
+#main #content {
+  padding-bottom: 2em;
   margin: 0 auto;
+  max-width: 1140px;
+}
+/* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#main #content:before, #main #content:after {
+  content: "";
+  display: table;
+}
+/* line 50, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#main #content:after {
+  clear: both;
 }
 
 /* Component (SMACSS module) rules */
@@ -1036,13 +1114,87 @@ footer #colophon a:hover {
     text-align: left;
   }
 }
+/* line 3, ../sass/components/_forms.scss */
+#user-login,
+#user-register-form {
+  background: white;
+  border-radius: 0.7em;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 2em;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  -webkit-box-shadow: 0 2px 3px #989898;
+  -moz-box-shadow: 0 2px 3px #989898;
+  box-shadow: 0 2px 3px #989898;
+}
+@media (min-width: 48em) {
+  /* line 3, ../sass/components/_forms.scss */
+  #user-login,
+  #user-register-form {
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: -75%;
+  }
+}
+/* line 16, ../sass/components/_forms.scss */
+#user-login fieldset,
+#user-register-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 26, ../sass/components/_forms.scss */
+#user-login #edit-register,
+#user-login #edit-reset,
+#user-login #edit-login,
+#user-login .form-item,
+#user-login .form-actions,
+#user-register-form #edit-register,
+#user-register-form #edit-reset,
+#user-register-form #edit-login,
+#user-register-form .form-item,
+#user-register-form .form-actions {
+  padding: 0em 1em;
+}
+/* line 32, ../sass/components/_forms.scss */
+#user-login #edit-register,
+#user-login #edit-reset,
+#user-register-form #edit-register,
+#user-register-form #edit-reset {
+  display: block;
+}
+/* line 36, ../sass/components/_forms.scss */
+#user-login .form-actions,
+#user-register-form .form-actions {
+  margin-top: 1em;
+}
+/* line 38, ../sass/components/_forms.scss */
+#user-login .form-actions #edit-cancel,
+#user-register-form .form-actions #edit-cancel {
+  border: 3px solid #989898;
+  color: #989898;
+  float: right;
+  padding: 0.6em 1em;
+}
+/* line 84, ../sass/_mixins.scss */
+#user-login .form-actions #edit-cancel:hover,
+#user-register-form .form-actions #edit-cancel:hover {
+  background: #989898;
+  border: 3px solid #f1f1f1;
+  color: white;
+}
+
 /* line 1, ../sass/components/_header.scss */
 header {
   background: white;
   padding: 0.2em 0;
-  -webkit-box-shadow: #c8c8c8 0 2px 5px;
-  -moz-box-shadow: #c8c8c8 0 2px 5px;
-  box-shadow: #c8c8c8 0 2px 5px;
+  -webkit-box-shadow: #989898 0 2px 5px;
+  -moz-box-shadow: #989898 0 2px 5px;
+  box-shadow: #989898 0 2px 5px;
 }
 /* line 6, ../sass/components/_header.scss */
 header #logo {
@@ -1079,23 +1231,18 @@ header #secondary-menu .links li.first {
 header #secondary-menu .links li.first a {
   background: none;
   border: 3px solid #5e9733;
-  border-radius: 0.7em;
+  box-shadow: none;
   color: #5e9733;
-  padding: 0.8em 1em;
   padding: 0.5em 0;
   display: inline-block;
   text-align: center;
   width: 100%;
 }
-/* line 49, ../sass/_mixins.scss */
+/* line 59, ../sass/_mixins.scss */
 header #secondary-menu .links li.first a:hover {
-  color: white;
   background: #5e9733;
   border: 3px solid #90c965;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  color: white;
 }
 /* line 40, ../sass/components/_header.scss */
 header #secondary-menu .links li li:not(.first) {
@@ -1133,23 +1280,18 @@ header #secondary-menu .links li li:not(.first) {
   }
   /* line 68, ../sass/components/_header.scss */
   #header #secondary-menu .links li.first a {
-    display: inline;
-    width: auto;
     background: none;
     border: 3px solid #5e9733;
-    border-radius: 0.7em;
+    box-shadow: none;
     color: #5e9733;
+    display: inline;
     padding: 0.8em 1em;
   }
-  /* line 49, ../sass/_mixins.scss */
+  /* line 59, ../sass/_mixins.scss */
   #header #secondary-menu .links li.first a:hover {
-    color: white;
     background: #5e9733;
     border: 3px solid #90c965;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+    color: white;
   }
 }
 /**

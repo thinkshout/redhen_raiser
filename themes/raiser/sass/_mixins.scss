@@ -38,19 +38,53 @@
 
 
 // Raiser Mixins
+.btn {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  @include box-shadow(0 2px 3px $gray);
+
+  &:hover {
+    @include transition(all 0.5s);
+  }
+}
 
 @mixin clear-btn {
+  @extend .btn;
   background: none;
   border: 3px solid $primary;
-  border-radius: 0.7em;
+  box-shadow: none;
   color: $primary;
-  padding: 0.8em 1em;
+
+  &:hover {
+    background: $primary;
+    border: 3px solid $primary + 50; 
+    color: $white;
+  }
+}
+
+@mixin cta-btn {
+  @extend .btn;
+  background: $action;
+  border: 3px solid $white;
+  color: $white;
+  text-transform: uppercase;
 
   &:hover {
     color: $white;
-    background: $primary;
-    border: 3px solid $primary + 50; 
-    @include transition(all 0.5s);
+    background: $action + 20;
+  }
+}
+
+@mixin muted-btn {
+  @extend .btn;
+  border: 3px solid $gray;
+  color: $gray;
+
+  &:hover {
+    background: $gray;
+    border: 3px solid $lt-gray;
+    color: $white;
   }
 }
 

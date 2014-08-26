@@ -36,3 +36,32 @@ a, a:visited {
     @include transition(all 0.3s);
   }
 }
+
+// Forms
+form {
+  label {
+    font-weight: normal; 
+  }
+  input[type=text],
+  input[type=password] {
+    border: 2px solid $primary;
+    border-radius: 4px;
+    color: $primary;
+    padding: 0.5em; 
+    width: 100%;
+
+    &:focus {
+      background: $lt-primary;
+      outline: none; 
+      @include transition(all 0.3s);
+    }
+    &:blur {
+      @include transition(all 0.3s);
+    }
+  }
+
+  input[type=submit], 
+  button {
+    @include cta-btn;
+  }
+}

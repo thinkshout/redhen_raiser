@@ -52,14 +52,19 @@ Drupal.behaviors.my_custom_behavior = {
         } 
       },
 
+      setRequiredFormFields: function() {
+        _$('form .required').attr('required', "true");
+      },
+
       init: function() {
         this.toggleMenu(); 
+        this.setRequiredFormFields();
       }
     } // end _cafb
     
     // Initializer for app object
     _cafb.init();
-    
+     
     // Resize listener
     $(window).resize(function(){
       _cafb.setMenuState();  

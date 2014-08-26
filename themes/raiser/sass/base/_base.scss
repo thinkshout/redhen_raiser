@@ -1,13 +1,32 @@
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+
 body {
   background: $page-bg;
   font-family: $raiser-body-font;
 }
 
 // HEADINGS
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: $raiser-heading-font;
+  font-weight: normal;
 }
 
+h1 { font-size: 2em;    }
+
+h2 { font-size: 1.75em; }
+
+h3 { font-size: 1.5em;  }
+
+h4 { font-size: 1.25em; }
+
+h5, h6 { 
+  font-size: 1.10em; 
+  font-weight: bold;
+}
+
+h6 { font-size: 1em; }
+
+// Links
 a, a:visited {
   color: $action;
   text-decoration: none;
@@ -15,5 +34,34 @@ a, a:visited {
   &:hover {
     color: $action - 20; 
     @include transition(all 0.3s);
+  }
+}
+
+// Forms
+form {
+  label {
+    font-weight: normal; 
+  }
+  input[type=text],
+  input[type=password] {
+    border: 2px solid $primary;
+    border-radius: 4px;
+    color: $primary;
+    padding: 0.5em; 
+    width: 100%;
+
+    &:focus {
+      background: $lt-primary;
+      outline: none; 
+      @include transition(all 0.3s);
+    }
+    &:blur {
+      @include transition(all 0.3s);
+    }
+  }
+
+  input[type=submit], 
+  button {
+    @include cta-btn;
   }
 }

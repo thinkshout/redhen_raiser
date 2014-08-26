@@ -16,10 +16,61 @@
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
+    // Alias jquery
+    _$ = jQuery;
+    
+    // Store viewport width as a function
+    // so it can be retrieved at any time
+    var viewportWidth = function(){
+      var width = _$(window).width();
+      return width;
+    }
+    
+    // Is it a large screen?
+    var isLarge = function(){
+        return viewportWidth() >= 768  ? true : false;
+    }
 
-    // Place your code here.
+    // App object
+    var _cafb = {
 
-  }
+      toggleMenu: function(){
+        _$('#menu-toggle').click(function(e){
+          if (isLarge() == false){
+            e.preventDefault();
+            _$('#secondary-menu').slideToggle();
+          }
+        });
+      },
+
+      setMenuState: function(){
+        var menu = _$('#secondary-menu');
+        if (isLarge()) {
+          menu.fadeIn();
+        } else {
+          menu.hide();
+        } 
+      },
+
+      setRequiredFormFields: function() {
+        _$('form .required').attr('required', "true");
+      },
+
+      init: function() {
+        this.toggleMenu(); 
+        this.setRequiredFormFields();
+      }
+    } // end _cafb
+    
+    // Initializer for app object
+    _cafb.init();
+     
+    // Resize listener
+    $(window).resize(function(){
+      _cafb.setMenuState();  
+    });
+    
+  } // end attach
 };
 
 

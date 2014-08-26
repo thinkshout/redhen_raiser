@@ -1,13 +1,9 @@
-header {
-  .inner {
-    margin: 0 auto;
-    max-width: 71.250em; 
-    padding: 0 1em;
-  }
-}
+$zen-column-count: 12;
+$zen-gutter-width: 20px;
 
-#main {
+#main #content {
+  @include zen-grid-container;
+  padding-bottom: 2em;
   margin: 0 auto;
-  max-width: 51.250em;
-  padding: 5em 0;
+  max-width: 1140px; 
 }

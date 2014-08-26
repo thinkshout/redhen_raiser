@@ -1,0 +1,111 @@
+footer {
+  background: $primary;
+  #pre-footer {
+    background: $white;
+    border-bottom: 3px solid $page-bg;
+    padding: 0.2em 1em; 
+    overflow: hidden;
+    text-align: center;
+
+    #logo {
+      display: block; 
+      margin-bottom: 1em;
+      width: 100%;
+      img { width: 3.594em; }
+    }
+
+    .tagline {
+      color: $action;
+      display: block;
+      margin-bottom: 1em;
+      font-family: $raiser-heading-font;
+    } 
+
+    .social  {
+      margin: 0;
+      overflow: hidden;
+      padding-left: 0;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        list-style-type: none;
+        text-align: center;
+        position: relative;
+
+        a {
+          display: list-item;
+          height: 41px;
+          text-indent: -9999px;
+          width: 41px;
+
+          &.twitter {
+            background: url('../images/social.png') 0 0 no-repeat; 
+            background-size: 195px 42px;
+            margin-bottom: -1.5em;
+          }
+          &.facebook {
+            background: url('../images/social.png') -3.2em 0 no-repeat; 
+            background-size: 195px 42px;
+          }
+          &.linkedin {
+            background: url('../images/social.png') -6.4em 0 no-repeat; 
+            background-size: 195px 42px;
+          }
+          &.google-plus {
+            background: url('../images/social.png') -9.6em 0 no-repeat; 
+            background-size: 195px 42px;
+          }
+        }
+      }
+    }
+  }
+
+  #colophon {
+    color: $white;
+    padding: 0.2em 1em; 
+    text-align: center;
+
+    a { 
+      color: $white;
+      &:hover {
+        color: $action; 
+      } 
+    }
+  }
+}
+
+@include small {
+  footer {
+  
+    #pre-footer {
+      text-align: left;
+
+      #logo {
+        display: inline-block; 
+        float: left;
+        margin-bottom: 0;
+        width: 92px;
+        img { width: 100% }
+      }
+
+      .tagline {
+        display: inline;
+        font-size: 1.25em;
+        float: left;
+        line-height: 3em;
+        margin: 0;
+        vertical-align: top;
+      }
+
+      .social {
+        float: right; 
+        margin-top: 0.8em;
+      }
+    } 
+
+    #colophon {
+      text-align: left; 
+    }
+  }
+}

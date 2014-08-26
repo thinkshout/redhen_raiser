@@ -4,3 +4,4 @@ modules/contrib
 themes/shiny
 themes/zen
 libraries
+Gemfile.lock

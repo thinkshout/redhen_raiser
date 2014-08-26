@@ -1,0 +1,21 @@
+header {
+  background: $white;
+  padding: 0.8em 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  @include box-shadow($black+100 0 1px 3px);
+  
+  #secondary-menu {
+    float: right;
+    line-height: 3.25em;
+    text-align: right;
+    .inline li {
+      padding-right: 0;
+      margin-left: 0.5em; 
+    }
+    .links .first a {
+      @include clear-btn;
+    } 
+  }
+}

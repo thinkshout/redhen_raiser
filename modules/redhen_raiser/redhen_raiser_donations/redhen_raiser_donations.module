@@ -11,8 +11,15 @@ include_once 'redhen_raiser_donations.features.inc';
  */
 function redhen_raiser_donations_install() {
   // Create default Donation Product.
-  
+  $donation_product_settings = array(
+    'sku' => 'DONATION',
+    'title' => 'Donation',
+    'type' => 'donation',
+  );
+  $donation_product = entity_create('commerce_product', $donation_product_settings);
+  $donation_product->price->set(array('amount' => 0, 'currency' => 'USD'));
+  entity_save('commerce_product', $donation_product);
   // Create default Donation Page.
-  
+
   // Configure default Donation Page.
 }

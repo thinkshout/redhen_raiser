@@ -82,6 +82,10 @@ projects[features][subdir] = "contrib"
 ;projects[interval][version] = "1.0"
 projects[interval][subdir] = "contrib"
 
+; libraries
+projects[libraries][version] = "2.2"
+projects[libraries][subdir] = "contrib"
+
 ; link
 ;projects[link][version] = ""
 projects[link][subdir] = "contrib"

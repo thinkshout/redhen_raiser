@@ -54,6 +54,7 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = interval
 dependencies[] = link
+dependencies[] = libraries
 dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_youtube
@@ -89,6 +90,8 @@ dependencies[] = redhen_raiser_campaign_pages
 dependencies[] = redhen_raiser_core_access
 dependencies[] = redhen_raiser_crm_access
 dependencies[] = redhen_raiser_blocks_access
+dependencies[] = redhen_raiser_campaign_access
+dependencies[] = redhen_raiser_commerce_access
 
 
 files[] = redhen_raiser.profile

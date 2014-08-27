@@ -17,8 +17,9 @@ function redhen_raiser_donations_install() {
     'type' => 'donation',
   );
   $donation_product = entity_create('commerce_product', $donation_product_settings);
-  $donation_product->price->set(array('amount' => 0, 'currency' => 'USD'));
   entity_save('commerce_product', $donation_product);
+  // @todo: initialize price
+  commerce_product_configure_product_type('donation');
   // Create default Donation Page.
 
   // Configure default Donation Page.

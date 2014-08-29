@@ -30,6 +30,10 @@ projects[breakpoints][subdir] = "contrib"
 projects[commerce][version] = "1.9"
 projects[commerce][subdir] = "contrib"
 
+; ckeditor
+projects[ckeditor][version] = "1.15"
+projects[ckeditor][subdir] = "contrib"
+
 ; commerce_features
 projects[commerce_features][version] = "1.0"
 projects[commerce_features][subdir] = "contrib"

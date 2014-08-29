@@ -21,6 +21,7 @@ dependencies[] = admin_menu
 dependencies[] = bean
 dependencies[] = bean_admin_ui
 dependencies[] = breakpoints
+dependencies[] = ckeditor
 dependencies[] = commerce
 dependencies[] = commerce_cart
 dependencies[] = commerce_checkout

@@ -19,5 +19,14 @@ function redhen_raiser_blocks_bean_admin_ui_types() {
   $bean_type->description = 'Use to generate configurable groups of links in blocks (eg. a Social Media block)';
   $export['link_group'] = $bean_type;
 
+  $bean_type = new stdClass();
+  $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
+  $bean_type->api_version = 5;
+  $bean_type->name = 'promo';
+  $bean_type->label = 'Promo';
+  $bean_type->options = '';
+  $bean_type->description = 'A simple block with a linkable image and text field. Designed for creating matching promotions.';
+  $export['promo'] = $bean_type;
+
   return $export;
 }

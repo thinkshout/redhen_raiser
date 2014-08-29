@@ -7,6 +7,30 @@
 include_once 'redhen_raiser_blocks.features.inc';
 
 /**
+ * Implements hook_block_view_alter().
+ */
+function redhen_raiser_blocks_block_view_alter(&$data, $block) {
+  if ($block->module == 'bean') {
+    $bean = &$data['content']['bean'][$block->delta];
+    switch ($bean['#bundle']) {
+      case "promo":
+        // Link the Promo bean image to the target link.
+        if (isset($bean['field_promo_image'])) {
+          if (isset($bean['field_promo_image_link'])) {
+            $bean['field_promo_image'][0]['#path']['path'] = $bean['field_promo_image_link']['#items'][0]['url'];
+            $bean['field_promo_image_link']['#access'] = FALSE;
+          }
+          else {
+            unset($bean['field_promo_image'][0]['#path']);
+          }
+        }
+        break;
+
+    }
+  }
+}
+
+/**
  * Create default Blocks.
  */
 function redhen_raiser_create_default_blocks() {

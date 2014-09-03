@@ -66,6 +66,10 @@ projects[ctools][subdir] = "contrib"
 projects[date][version] = "2.8"
 projects[date][subdir] = "contrib"
 
+; elements
+projects[elements][version] = "1.4"
+projects[elements][subdir] = "contrib"
+
 ; email_registration
 ;projects[email_registration][version] = ""
 projects[email_registration][subdir] = "contrib"
@@ -81,6 +85,10 @@ projects[entityreference][subdir] = "contrib"
 ; features
 ;projects[features][version] = ""
 projects[features][subdir] = "contrib"
+
+; html5_tools
+projects[html5_tools][version] = "1.2"
+projects[html5_tools][subdir] = "contrib"
 
 ; interval
 ;projects[interval][version] = "1.0"

@@ -88,6 +88,10 @@ dependencies[] = redhen_raiser_donations
 dependencies[] = redhen_raiser_donation_page
 dependencies[] = redhen_raiser_campaigns
 dependencies[] = redhen_raiser_campaign_pages
+; Note that we do not do this:
+; dependencies[] = redhen_raiser_defaults
+; defaults is enabled by the install script in redhen_raiser_custom_config() if
+; desired.
 
 ; RedHen Raiser permissions
 dependencies[] = redhen_raiser_core_access

@@ -115,6 +115,12 @@ projects[media][subdir] = "contrib"
 projects[media_youtube][version] = "2.0-rc4"
 projects[media_youtube][subdir] = "contrib"
 
+; navbar
+projects[navbar][version] = "1.4"
+projects[navbar][subdir] = "contrib"
+; Patch to add top-level icons for commerce menu, etc.
+projects[navbar][patch][] = "https://www.drupal.org/files/issues/navbar-contrib-icons-1954912-20.patch"
+
 ; pathauto requires token
 ;projects[pathauto][version] = ""
 projects[pathauto][subdir] = "contrib"
@@ -192,6 +198,25 @@ projects[ftools][subdir] = "developer"
 ;-----------------------------------------
 ; Libraries
 ;-----------------------------------------
+
+; backbone (used by navbar)
+libraries[backbone][download][type] = get
+libraries[backbone][download][url] = https://github.com/jashkenas/backbone/archive/1.0.0.zip
+libraries[backbone][directory_name] = "backbone"
+libraries[backbone][type] = "library"
+
+; underscore (used by navbar)
+libraries[underscore][download][type] = get
+libraries[underscore][download][url] = https://github.com/jashkenas/underscore/archive/1.7.0.zip
+libraries[underscore][directory_name] = "underscore"
+libraries[underscore][type] = "library"
+
+; modernizr (used by navbar)
+libraries[modernizr][download][type] = git
+libraries[modernizr][download][url] = https://github.com/BrianGilbert/modernizer-navbar.git
+libraries[modernizr][download][revision] = 5b89d92
+libraries[modernizr][directory_name] = "modernizr"
+libraries[modernizr][type] = "library"
 
 ; chosen
 libraries[chosen][download][type] = git

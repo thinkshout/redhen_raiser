@@ -61,6 +61,7 @@ dependencies[] = libraries
 dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_youtube
+dependencies[] = navbar
 dependencies[] = image
 dependencies[] = file_entity
 dependencies[] = login_destination

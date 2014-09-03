@@ -10,13 +10,6 @@
 function redhen_raiser_core_access_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'access administration menu'.
-  $permissions['access administration menu'] = array(
-    'name' => 'access administration menu',
-    'roles' => array(),
-    'module' => 'admin_menu',
-  );
-
   // Exported permission: 'access administration pages'.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
@@ -29,6 +22,13 @@ function redhen_raiser_core_access_user_default_permissions() {
     'name' => 'access devel information',
     'roles' => array(),
     'module' => 'devel',
+  );
+
+  // Exported permission: 'access navbar'.
+  $permissions['access navbar'] = array(
+    'name' => 'access navbar',
+    'roles' => array(),
+    'module' => 'navbar',
   );
 
   // Exported permission: 'access site in maintenance mode'.
@@ -66,11 +66,32 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'block',
   );
 
+  // Exported permission: 'administer breakpoints'.
+  $permissions['administer breakpoints'] = array(
+    'name' => 'administer breakpoints',
+    'roles' => array(),
+    'module' => 'breakpoints',
+  );
+
+  // Exported permission: 'administer ckeditor'.
+  $permissions['administer ckeditor'] = array(
+    'name' => 'administer ckeditor',
+    'roles' => array(),
+    'module' => 'ckeditor',
+  );
+
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
     'roles' => array(),
     'module' => 'features',
+  );
+
+  // Exported permission: 'administer image styles'.
+  $permissions['administer image styles'] = array(
+    'name' => 'administer image styles',
+    'roles' => array(),
+    'module' => 'image',
   );
 
   // Exported permission: 'administer modules'.
@@ -129,11 +150,11 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'display drupal links'.
-  $permissions['display drupal links'] = array(
-    'name' => 'display drupal links',
+  // Exported permission: 'customize ckeditor'.
+  $permissions['customize ckeditor'] = array(
+    'name' => 'customize ckeditor',
     'roles' => array(),
-    'module' => 'admin_menu',
+    'module' => 'ckeditor',
   );
 
   // Exported permission: 'execute php code'.
@@ -141,13 +162,6 @@ function redhen_raiser_core_access_user_default_permissions() {
     'name' => 'execute php code',
     'roles' => array(),
     'module' => 'devel',
-  );
-
-  // Exported permission: 'flush caches'.
-  $permissions['flush caches'] = array(
-    'name' => 'flush caches',
-    'roles' => array(),
-    'module' => 'admin_menu',
   );
 
   // Exported permission: 'generate features'.

@@ -228,4 +228,7 @@ libraries[chosen][type] = "library"
 ;-----------------------------------------
 ; Themes
 ;-----------------------------------------
+projects[zen][subdir] = 'contrib'
 projects[zen][version] = 5.5
+projects[shiny][subdir] = 'contrib'
+projects[shiny][version] = 1.6

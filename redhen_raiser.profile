@@ -20,6 +20,7 @@ function redhen_raiser_install_tasks(){
 function redhen_raiser_custom_install(&$install_state) {
   theme_enable(array('zen', 'raiser'));
   variable_set('theme_default', 'raiser');
+  variable_set('admin_theme', 'shiny');
   if (module_exists('block')) {
     // Disable DB blocks so we can use context or panels to place everything.
     db_update('block')

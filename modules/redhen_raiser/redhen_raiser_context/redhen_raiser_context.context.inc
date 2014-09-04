@@ -55,5 +55,33 @@ function redhen_raiser_context_context_default_contexts() {
   t('General');
   $export['everything_zen'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'homepage';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-campaigns-block' => array(
+          'module' => 'views',
+          'delta' => 'campaigns-block',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+  $export['homepage'] = $context;
+
   return $export;
 }

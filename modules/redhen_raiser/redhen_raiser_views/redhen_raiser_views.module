@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RedHen Raiser Views feature.
+ */
+
+include_once 'redhen_raiser_views.features.inc';

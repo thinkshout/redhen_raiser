@@ -1,0 +1,13 @@
+name = RedHen Raiser Views
+description = Views for general site layout: front page blocks, etc. Likely to be overridden.
+core = 7.x
+package = RedHen Raiser
+version = 7.x-1.0-alpha1
+project = redhen_raiser_views
+dependencies[] = ctools
+dependencies[] = entity
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = campaigns
+project path = profiles/redhen_raiser/modules/redhen_raiser

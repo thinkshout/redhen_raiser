@@ -1,7 +1,6 @@
 modules/libraries
 modules/developer
 modules/contrib
-themes/shiny
-themes/zen
+themes/contrib
 libraries
 Gemfile.lock

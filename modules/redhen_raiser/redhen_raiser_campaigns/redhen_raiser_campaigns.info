@@ -12,6 +12,7 @@ dependencies[] = file_entity
 dependencies[] = image
 dependencies[] = media
 dependencies[] = number
+dependencies[] = picture
 dependencies[] = redhen_campaign
 dependencies[] = strongarm
 dependencies[] = text

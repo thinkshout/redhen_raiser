@@ -18,11 +18,21 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'picture',
         'settings' => array(
-          'file_view_mode' => 'media_large',
+          'colorbox_settings' => array(
+            'colorbox_caption' => 'auto',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_group' => '',
+            'colorbox_multivalue_index' => NULL,
+          ),
+          'fallback_image_style' => 'banner_xl',
+          'image_link' => '',
+          'picture_mapping' => 'banner_image',
         ),
-        'type' => 'file_rendered',
+        'type' => 'picture',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -172,11 +182,21 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'picture',
         'settings' => array(
-          'file_view_mode' => 'media_large',
+          'colorbox_settings' => array(
+            'colorbox_caption' => 'auto',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_group' => '',
+            'colorbox_multivalue_index' => NULL,
+          ),
+          'fallback_image_style' => 'story_xl',
+          'image_link' => '',
+          'picture_mapping' => 'story_image',
         ),
-        'type' => 'file_rendered',
+        'type' => 'picture',
         'weight' => 2,
       ),
       'teaser' => array(

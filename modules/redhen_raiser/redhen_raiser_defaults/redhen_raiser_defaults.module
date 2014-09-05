@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the RedHen Raiser Defaults feature.
  */
+
+include_once 'redhen_raiser_defaults.features.inc';
 
 /**
  * Implements hook_block_view_alter().
@@ -41,7 +43,7 @@ function redhen_raiser_defaults_navbar() {
         'attributes' => array(
           'title' => t('RedHen CRM'),
           // @todo: create an icon to load for "navbar-icon-crm-dashboard" instead:
-          'class' => array('navbar-icon', 'navbar-icon-people',),
+          'class' => array('navbar-icon', 'navbar-icon-people'),
         ),
       ),
     ),

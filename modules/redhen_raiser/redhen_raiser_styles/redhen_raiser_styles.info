@@ -20,6 +20,7 @@ features[image][] = banner_xl
 features[image][] = story_l
 features[image][] = story_s
 features[image][] = story_xl
+features[image][] = teaser_image
 features[picture_mapping][] = banner_image
 features[picture_mapping][] = story_image
 project path = profiles/redhen_raiser/modules/redhen_raiser/

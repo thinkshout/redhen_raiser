@@ -41,6 +41,62 @@ function redhen_raiser_defaults_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'honeypot_element_name';
+  $strongarm->value = 'url';
+  $export['honeypot_element_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'honeypot_form_donation_page_node_form';
+  $strongarm->value = 0;
+  $export['honeypot_form_donation_page_node_form'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'honeypot_form_page_node_form';
+  $strongarm->value = 0;
+  $export['honeypot_form_page_node_form'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'honeypot_form_user_pass';
+  $strongarm->value = 1;
+  $export['honeypot_form_user_pass'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'honeypot_form_user_register_form';
+  $strongarm->value = 1;
+  $export['honeypot_form_user_register_form'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'honeypot_log';
+  $strongarm->value = 0;
+  $export['honeypot_log'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'honeypot_protect_all_forms';
+  $strongarm->value = 0;
+  $export['honeypot_protect_all_forms'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'honeypot_time_limit';
+  $strongarm->value = '5';
+  $export['honeypot_time_limit'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_admin_role';
   $strongarm->value = '0';
   $export['user_admin_role'] = $strongarm;
@@ -321,7 +377,7 @@ Your account on [site:name] has been canceled.
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_picture_style';
-  $strongarm->value = 'avatar__85x85_';
+  $strongarm->value = 'avatar';
   $export['user_picture_style'] = $strongarm;
 
   $strongarm = new stdClass();

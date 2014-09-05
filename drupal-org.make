@@ -129,6 +129,10 @@ projects[pathauto][subdir] = "contrib"
 projects[pathauto_entity][version] = "1.0"
 projects[pathauto_entity][subdir] = "contrib"
 
+; picture
+projects[picture][version] = "2.6"
+projects[picture][subdir] = "contrib"
+
 ; redhen
 ;projects[redhen][version] = "1.8"
 projects[redhen][download][type] = git

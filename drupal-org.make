@@ -86,6 +86,10 @@ projects[entityreference][subdir] = "contrib"
 ;projects[features][version] = ""
 projects[features][subdir] = "contrib"
 
+; honeypot
+projects[honeypot][version] = "1.17"
+projects[honeypot][subdir] = "contrib"
+
 ; html5_tools
 projects[html5_tools][version] = "1.2"
 projects[html5_tools][subdir] = "contrib"

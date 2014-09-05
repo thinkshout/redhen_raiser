@@ -40,13 +40,6 @@ function redhen_raiser_crm_access_user_default_permissions() {
     'module' => 'redhen_contact',
   );
 
-  // Exported permission: 'administer redhen engagements'.
-  $permissions['administer redhen engagements'] = array(
-    'name' => 'administer redhen engagements',
-    'roles' => array(),
-    'module' => 'redhen_engagement',
-  );
-
   // Exported permission: 'administer redhen_contact types'.
   $permissions['administer redhen_contact types'] = array(
     'name' => 'administer redhen_contact types',

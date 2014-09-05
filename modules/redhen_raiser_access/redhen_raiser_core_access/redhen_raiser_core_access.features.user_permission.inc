@@ -48,7 +48,9 @@ function redhen_raiser_core_access_user_default_permissions() {
   // Exported permission: 'access user profiles'.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'user',
   );
 
@@ -85,6 +87,13 @@ function redhen_raiser_core_access_user_default_permissions() {
     'name' => 'administer features',
     'roles' => array(),
     'module' => 'features',
+  );
+
+  // Exported permission: 'administer honeypot'.
+  $permissions['administer honeypot'] = array(
+    'name' => 'administer honeypot',
+    'roles' => array(),
+    'module' => 'honeypot',
   );
 
   // Exported permission: 'administer image styles'.
@@ -136,10 +145,19 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'bypass honeypot protection'.
+  $permissions['bypass honeypot protection'] = array(
+    'name' => 'bypass honeypot protection',
+    'roles' => array(),
+    'module' => 'honeypot',
+  );
+
   // Exported permission: 'cancel account'.
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'user',
   );
 

@@ -20,7 +20,9 @@ function redhen_raiser_crm_access_user_default_permissions() {
   // Exported permission: 'access redhen contacts'.
   $permissions['access redhen contacts'] = array(
     'name' => 'access redhen contacts',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'redhen_contact',
   );
 
@@ -38,6 +40,13 @@ function redhen_raiser_crm_access_user_default_permissions() {
     'module' => 'redhen_contact',
   );
 
+  // Exported permission: 'administer redhen engagements'.
+  $permissions['administer redhen engagements'] = array(
+    'name' => 'administer redhen engagements',
+    'roles' => array(),
+    'module' => 'redhen_engagement',
+  );
+
   // Exported permission: 'administer redhen_contact types'.
   $permissions['administer redhen_contact types'] = array(
     'name' => 'administer redhen_contact types',
@@ -45,9 +54,25 @@ function redhen_raiser_crm_access_user_default_permissions() {
     'module' => 'redhen_contact',
   );
 
+  // Exported permission: 'delete redhen contact revisions'.
+  $permissions['delete redhen contact revisions'] = array(
+    'name' => 'delete redhen contact revisions',
+    'roles' => array(),
+    'module' => 'redhen_contact',
+  );
+
   // Exported permission: 'edit own redhen contact'.
   $permissions['edit own redhen contact'] = array(
     'name' => 'edit own redhen contact',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'redhen_contact',
+  );
+
+  // Exported permission: 'edit redhen contact revisions'.
+  $permissions['edit redhen contact revisions'] = array(
+    'name' => 'edit redhen contact revisions',
     'roles' => array(),
     'module' => 'redhen_contact',
   );
@@ -55,14 +80,27 @@ function redhen_raiser_crm_access_user_default_permissions() {
   // Exported permission: 'manage redhen contacts'.
   $permissions['manage redhen contacts'] = array(
     'name' => 'manage redhen contacts',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'redhen_contact',
   );
 
   // Exported permission: 'view own redhen contact'.
   $permissions['view own redhen contact'] = array(
     'name' => 'view own redhen contact',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'redhen_contact',
+  );
+
+  // Exported permission: 'view redhen contact revisions'.
+  $permissions['view redhen contact revisions'] = array(
+    'name' => 'view redhen contact revisions',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'redhen_contact',
   );
 

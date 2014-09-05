@@ -136,7 +136,18 @@ function redhen_raiser_core_form_user_register_form_alter(&$form, &$form_state, 
     '#weight' => 100,
   );
   $form['redhen_contact']['account'] = $form['account'];
-  unset ($form['account']);
+  $form['account']['mail']['#required'] = FALSE;
+  $form['account']['#access'] = FALSE;
+  array_unshift($form['#validate'], 'redhen_raiser_core_registration_validate');
+}
+
+/**
+ * Form validator for altered registration form.
+ *
+ * Ensures that the email input is in the expected place for the User module.
+ */
+function redhen_raiser_core_registration_validate($form, &$form_state) {
+  $form_state['values']['mail'] = $form_state['input']['mail'];
 }
 
 /**

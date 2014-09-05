@@ -163,7 +163,7 @@ function redhen_raiser_styles_image_default_styles() {
   // Exported image style: teaser_image.
   $styles['teaser_image'] = array(
     'name' => 'teaser_image',
-    'label' => 'Teaser Image',
+    'label' => 'Teaser Image (277x200)',
     'effects' => array(
       10 => array(
         'label' => 'Scale and crop',

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RedHen Raiser Campaign Updates feature.
+ */
+
+include_once 'redhen_raiser_campaign_updates.features.inc';

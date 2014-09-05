@@ -89,6 +89,7 @@ dependencies[] = redhen_raiser_donations
 dependencies[] = redhen_raiser_donation_page
 dependencies[] = redhen_raiser_campaigns
 dependencies[] = redhen_raiser_campaign_pages
+dependencies[] = redhen_raiser_campaign_updates
 dependencies[] = redhen_raiser_styles
 dependencies[] = redhen_raiser_views
 ; Note that we do not do this:

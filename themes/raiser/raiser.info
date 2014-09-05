@@ -144,3 +144,9 @@ settings[zen_wireframes]           = 0
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: https://drupal.org/node/495654
 ;plugins[panels][layouts] = panels-layouts
+
+; Adding breakpoints here for use with breakpoints module:
+
+breakpoints[small] = (max-width: 47em)
+breakpoints[large] = (max-width: 74em)
+breakpoints[xlarge] = (min-width: 75em)

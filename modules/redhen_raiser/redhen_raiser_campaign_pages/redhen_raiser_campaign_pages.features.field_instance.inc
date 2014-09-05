@@ -206,7 +206,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
-          'youtube' => 0,
+          'youtube' => 'youtube',
         ),
         'allowed_types' => array(
           'audio' => 0,

@@ -61,3 +61,33 @@ function redhen_raiser_campaign_updates_display_recent_updates() {
   }
 }
 
+/**
+ * Implements hook_node_view_alter().
+ */
+function redhen_raiser_campaign_updates_node_view_alter(&$build) {
+  if ($build['#bundle'] == "campaign_update") {
+    // Show author image, and sometimes name, on Campaign Updates.
+    $node_wrapper = entity_metadata_wrapper("node", $build['#node']);
+    $user = $node_wrapper->author->value();
+    $redhen_contact = redhen_contact_load_by_user($user);
+    switch ($build['#view_mode']) {
+      case "full":
+        if ($redhen_contact) {
+          $build['author'] = entity_view('redhen_contact', array($redhen_contact), 'byline');
+        }
+        break;
+
+      case "teaser":
+        if ($user->picture) {
+          $build['avatar'] = array(
+            '#theme' => 'image_style',
+            '#path' => $user->picture->uri,
+            '#style_name' => 'mini-avatar',
+            '#weight' => -1,
+          );
+        }
+        break;
+
+    }
+  }
+}

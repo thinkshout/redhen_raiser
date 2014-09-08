@@ -52,7 +52,8 @@ function redhen_raiser_campaign_updates_display_recent_updates() {
       ->entityCondition('bundle', 'campaign_update', '=')
       ->fieldCondition('field_campaign_context', 'target_id', $args['1'], '=')
       ->propertyOrderBy('sticky', 'DESC')
-      ->propertyOrderBy('created', 'DESC');
+      ->propertyOrderBy('created', 'DESC')
+      ->range(0, 3);
     $result = $update_query->execute();
     if (isset($result['node'])) {
       $updates = node_load_multiple(array_keys($result['node']));

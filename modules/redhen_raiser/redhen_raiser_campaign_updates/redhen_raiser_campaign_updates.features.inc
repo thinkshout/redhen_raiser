@@ -23,8 +23,8 @@ function redhen_raiser_campaign_updates_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
+      'title_label' => t('Subject'),
+      'help' => t('This update will appear on your Campaign Page below the story.'),
     ),
   );
   drupal_alter('node_info', $items);

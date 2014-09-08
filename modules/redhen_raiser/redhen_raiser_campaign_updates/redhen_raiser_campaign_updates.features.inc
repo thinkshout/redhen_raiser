@@ -14,6 +14,13 @@ function redhen_raiser_campaign_updates_ctools_plugin_api($module = NULL, $api =
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function redhen_raiser_campaign_updates_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function redhen_raiser_campaign_updates_node_info() {

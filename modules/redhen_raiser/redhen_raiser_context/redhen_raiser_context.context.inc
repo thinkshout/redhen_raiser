@@ -27,11 +27,11 @@ function redhen_raiser_context_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'redhen_raiser_campaign_updates-campaign_updates' => array(
-          'module' => 'redhen_raiser_campaign_updates',
-          'delta' => 'campaign_updates',
+        'views-campaign_updates-block' => array(
+          'module' => 'views',
+          'delta' => 'campaign_updates-block',
           'region' => 'content',
-          'weight' => '13',
+          'weight' => '10',
         ),
       ),
     ),

@@ -22,6 +22,29 @@ function redhen_raiser_styles_ctools_plugin_api($module = NULL, $api = NULL) {
 function redhen_raiser_styles_image_default_styles() {
   $styles = array();
 
+  // Exported image style: avatar.
+  $styles['avatar'] = array(
+    'name' => 'avatar',
+    'label' => 'Avatar (85x85)',
+    'effects' => array(
+      12 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 85,
+          'height' => 85,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: banner_l.
   $styles['banner_l'] = array(
     'name' => 'banner_l',
@@ -87,6 +110,29 @@ function redhen_raiser_styles_image_default_styles() {
           'height' => 300,
         ),
         'weight' => -10,
+      ),
+    ),
+  );
+
+  // Exported image style: mini-avatar.
+  $styles['mini-avatar'] = array(
+    'name' => 'mini-avatar',
+    'label' => 'Mini-Avatar (50x50)',
+    'effects' => array(
+      13 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 50,
+          'height' => 50,
+        ),
+        'weight' => 1,
       ),
     ),
   );

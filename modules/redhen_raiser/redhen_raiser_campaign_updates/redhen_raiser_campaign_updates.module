@@ -5,3 +5,59 @@
  */
 
 include_once 'redhen_raiser_campaign_updates.features.inc';
+
+/**
+ * Implements hook_block_info().
+ */
+function redhen_raiser_campaign_updates_block_info() {
+  $blocks = array();
+
+  $blocks['campaign_updates'] = array(
+    'info' => t('Updates for a campaign'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function redhen_raiser_campaign_updates_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'campaign_updates':
+      $block['subject'] = '';
+      $block['content'] = redhen_raiser_campaign_updates_display_recent_updates();
+      break;
+
+  }
+
+  return $block;
+}
+
+/**
+ * Generate block content for campaign update listings.
+ *
+ * It's possible that this would be better to build with a view, but the views
+ * context filter does not behave as well with custom entity contexts as of
+ * Views-7.x-3.8.
+ */
+function redhen_raiser_campaign_updates_display_recent_updates() {
+  $args = arg();
+  if ($args[0] == 'redhen_campaign') {
+    $update_query = new EntityFieldQuery();
+    $update_query->entityCondition('entity_type', 'node', '=')
+      ->entityCondition('bundle', 'campaign_update', '=')
+      ->fieldCondition('field_campaign_context', 'target_id', $args['1'], '=')
+      ->propertyOrderBy('sticky', 'DESC')
+      ->propertyOrderBy('created', 'DESC');
+    $result = $update_query->execute();
+    if (isset($result['node'])) {
+      $updates = node_load_multiple(array_keys($result['node']));
+      return node_view_multiple($updates);
+    }
+  }
+}
+

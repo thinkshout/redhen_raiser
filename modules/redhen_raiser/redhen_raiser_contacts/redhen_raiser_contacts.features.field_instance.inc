@@ -27,6 +27,12 @@ function redhen_raiser_contacts_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'byline' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'addressfield',
@@ -77,6 +83,12 @@ function redhen_raiser_contacts_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'byline' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'redhen_fields',

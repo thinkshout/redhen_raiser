@@ -36,3 +36,13 @@ function redhen_raiser_campaign_updates_node_view_alter(&$build) {
     }
   }
 }
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function redhen_raiser_campaign_updates_views_query_alter(&$view, &$query) {
+  // We want page updates to include general campaign updates.
+  if ($view->name == "campaign_updates" && $view->current_display == 'page_block') {
+    $query->where[0]['type'] = 'OR';
+  }
+}

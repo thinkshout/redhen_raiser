@@ -63,6 +63,18 @@
       <?php print $feed_icons; ?>
     </div>
 
+    <?php if($page['content_secondary']): ?>
+      <div id="content-secondary">
+        <?php print render($page['content_secondary']); ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if($page['content_tertiary']): ?>
+      <div id="content-tertiary">
+        <?php print render($page['content_tertiary']); ?>
+      </div>
+    <?php endif; ?>
+
 
     <?php
       // Render the sidebars to see if there's anything in them.

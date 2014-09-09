@@ -30,8 +30,8 @@ function redhen_raiser_context_context_default_contexts() {
         'views-campaign_updates-block' => array(
           'module' => 'views',
           'delta' => 'campaign_updates-block',
-          'region' => 'content',
-          'weight' => '10',
+          'region' => 'content_secondary',
+          'weight' => '-10',
         ),
       ),
     ),

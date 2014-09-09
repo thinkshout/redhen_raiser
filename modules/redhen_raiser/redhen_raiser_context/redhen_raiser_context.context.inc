@@ -47,6 +47,39 @@ function redhen_raiser_context_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'campaign_page_home';
+  $context->description = 'This context applies to all RedHen Campaign Pages.';
+  $context->tag = 'Campaigns';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'campaigns/*/*' => 'campaigns/*/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-campaign_updates-page_block' => array(
+          'module' => 'views',
+          'delta' => 'campaign_updates-page_block',
+          'region' => 'content_secondary',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Campaigns');
+  t('This context applies to all RedHen Campaign Pages.');
+  $export['campaign_page_home'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'everything_zen';
   $context->description = 'Context applied to all pages';
   $context->tag = 'General';

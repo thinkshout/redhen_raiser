@@ -12,6 +12,7 @@ dependencies[] = redhen_raiser_campaign_updates
 dependencies[] = strongarm
 dependencies[] = views
 features[context][] = campaign_home
+features[context][] = campaign_page_home
 features[context][] = everything_zen
 features[context][] = homepage
 features[ctools][] = context:context:3

@@ -33,7 +33,10 @@ function redhen_raiser_donations_default_redhen_donation_type() {
     "data" : null,
     "settings" : {
       "contact_settings" : { "contact_type" : "contact", "contact_update_fields" : 1 },
-      "commerce_settings" : { "one_time_product_type" : "donation" }
+      "commerce_settings" : {
+        "one_time_product_type" : "donation",
+        "line_item_type" : "redhen_raiser_donation"
+      }
     },
     "rdf_mapping" : []
   }');

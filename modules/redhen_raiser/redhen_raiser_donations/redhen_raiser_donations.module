@@ -7,7 +7,18 @@
 include_once 'redhen_raiser_donations.features.inc';
 
 /**
+ * Implements hook_commerce_line_item_type_info().
+ *
+ * @see http://www.drupalcommerce.org/specification/info-hooks/checkout
  */
+function redhen_raiser_donations_commerce_line_item_type_info() {
 
-  // Configure default Donation Page.
+  $line_item_types['redhen_raiser_donation'] = array(
+    'name' => t('Donation'),
+    'description' => t('Donation where the amount is customizable.'),
+    'product' => TRUE,
+    'add_form_submit_value' => t('Add donation'),
+    'base' => 'commerce_product_line_item',
+  );
+  return $line_item_types;
 }

@@ -196,9 +196,47 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_campaign_context'
+  $field_instances['redhen_donation-redhen_raiser_donation-field_campaign_context'] = array(
+    'bundle' => 'redhen_raiser_donation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'redhen_donation',
+    'field_name' => 'field_campaign_context',
+    'label' => 'Campaign Context',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 2,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
+  t('Campaign Context');
   t('Price');
 
   return $field_instances;

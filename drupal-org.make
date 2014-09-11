@@ -167,6 +167,10 @@ projects[rules][subdir] = "contrib"
 projects[select_or_other][version] = "2.20"
 projects[select_or_other][subdir] = "contrib"
 
+; short_scale_formatter
+projects[short_scale_formatter][version] = "1.1"
+projects[short_scale_formatter][subdir] = "contrib"
+
 ; strongarm requires ctools
 ;projects[strongarm][version] = ""
 projects[strongarm][subdir] = "contrib"

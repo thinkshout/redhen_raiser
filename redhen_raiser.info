@@ -73,6 +73,7 @@ dependencies[] = redhen_fields
 dependencies[] = redhen_campaign
 dependencies[] = rules
 dependencies[] = select_or_other
+dependencies[] = short_scale_formatter
 dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = views

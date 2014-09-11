@@ -89,14 +89,15 @@ regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
 regions[content]        = Content
+; Additional regions
+regions[content_secondary] = Content secondary
+regions[content_tertiary]  = Content tertiary
+; end additional regions
 regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
 regions[footer]         = Footer
 regions[bottom]         = Page bottom
 
-; Additional regions
-regions[content_secondary] = Content secondary
-regions[content_tertiary]  = Content tertiary
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for

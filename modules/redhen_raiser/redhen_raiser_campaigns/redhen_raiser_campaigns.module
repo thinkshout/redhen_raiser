@@ -5,3 +5,13 @@
  */
 
 include_once 'redhen_raiser_campaigns.features.inc';
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function redhen_raiser_campaigns_entity_info_alter(&$entity_info) {
+  $entity_info['redhen_campaign']['view modes']['progress'] = array(
+    'label' => t('Progress'),
+    'custom settings' => TRUE,
+  );
+}

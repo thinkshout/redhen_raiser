@@ -37,16 +37,6 @@ function redhen_raiser_blocks_block_view($delta = '') {
 }
 
 /**
- * Implements hook_entity_info_alter().
- */
-function redhen_raiser_blocks_entity_info_alter(&$entity_info) {
-  $entity_info['redhen_campaign']['view modes']['progress'] = array(
-    'label' => t('Progress'),
-    'custom settings' => TRUE,
-  );
-}
-
-/**
  * Implements hook_block_view_alter().
  */
 function redhen_raiser_blocks_block_view_alter(&$data, $block) {

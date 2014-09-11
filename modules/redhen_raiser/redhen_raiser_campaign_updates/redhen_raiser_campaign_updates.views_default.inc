@@ -48,7 +48,7 @@ function redhen_raiser_campaign_updates_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Campaign Context (field_campaign_context) */
+  /* Contextual filter: Field: Campaign Context (field_campaign_context) */
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['id'] = 'field_campaign_context_target_id_1';
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['table'] = 'field_data_field_campaign_context';
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['field'] = 'field_campaign_context_target_id';
@@ -81,7 +81,7 @@ function redhen_raiser_campaign_updates_views_default_views() {
   /* Display: Campaign Block */
   $handler = $view->new_display('block', 'Campaign Block', 'block');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Campaign Context (field_campaign_context) */
+  /* Contextual filter: Field: Campaign Context (field_campaign_context) */
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['id'] = 'field_campaign_context_target_id_1';
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['table'] = 'field_data_field_campaign_context';
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['field'] = 'field_campaign_context_target_id';
@@ -107,7 +107,7 @@ function redhen_raiser_campaign_updates_views_default_views() {
   $handler->display->display_options['arguments']['field_page_context_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_page_context_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_page_context_target_id']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Content: Campaign Context (field_campaign_context) */
+  /* Contextual filter: Field: Campaign Context (field_campaign_context) */
   $handler->display->display_options['arguments']['field_campaign_context_target_id']['id'] = 'field_campaign_context_target_id';
   $handler->display->display_options['arguments']['field_campaign_context_target_id']['table'] = 'field_data_field_campaign_context';
   $handler->display->display_options['arguments']['field_campaign_context_target_id']['field'] = 'field_campaign_context_target_id';

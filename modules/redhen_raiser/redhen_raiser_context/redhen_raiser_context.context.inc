@@ -141,7 +141,7 @@ function redhen_raiser_context_context_default_contexts() {
         'views-campaigns-block' => array(
           'module' => 'views',
           'delta' => 'campaigns-block',
-          'region' => 'content',
+          'region' => 'content_secondary',
           'weight' => '-10',
         ),
       ),

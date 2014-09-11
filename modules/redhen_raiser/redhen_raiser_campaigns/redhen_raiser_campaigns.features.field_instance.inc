@@ -35,6 +35,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'picture',
         'weight' => 0,
       ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -100,6 +106,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 4,
       ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -148,6 +160,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -188,6 +206,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         ),
         'type' => 'file_rendered',
         'weight' => 2,
+      ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -246,6 +270,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -296,6 +326,24 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         ),
         'type' => 'redhen_campaign_smart_thermometer',
         'weight' => 5,
+      ),
+      'progress' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'abbreviate' => 0,
+          'characters' => array(
+            'billion' => 'B',
+            'million' => 'M',
+            'thousand' => 'K',
+            'trillion' => 'T',
+          ),
+          'reference_field' => 'field_campaign_context',
+          'text' => '@PROGRESS of @TOTAL raised',
+          'thermometer' => 1,
+        ),
+        'type' => 'redhen_campaign_smart_thermometer',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',

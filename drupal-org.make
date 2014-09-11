@@ -11,15 +11,11 @@ core = 7.x
 
 
 ; addressfield
-;projects[addressfield][version] = "1.0-beta5"
+projects[addressfield][version] = "1.0-beta5"
 projects[addressfield][subdir] = "contrib"
 
-; admin_menu
-;projects[admin_menu][version] = ""
-projects[admin_menu][subdir] = "contrib"
-
 ; bean
-;projects[bean][version] = "1.7"
+projects[bean][version] = "1.7"
 projects[bean][subdir] = "contrib"
 
 ; breakpoints
@@ -27,7 +23,7 @@ projects[breakpoints][version] = "1.3"
 projects[breakpoints][subdir] = "contrib"
 
 ; commerce
-projects[commerce][version] = "1.9"
+projects[commerce][version] = "1.10"
 projects[commerce][subdir] = "contrib"
 
 ; ckeditor
@@ -39,19 +35,20 @@ projects[commerce_features][version] = "1.0"
 projects[commerce_features][subdir] = "contrib"
 
 ; commerce_cardonfile
-;projects[commerce_cardonfile][version] = "2.0-beta5"
+projects[commerce_cardonfile][version] = "2.0-beta5"
 projects[commerce_cardonfile][subdir] = "contrib"
 projects[commerce_cardonfile][patch][] = "https://www.drupal.org/files/issues/commerce_cardonfile-Returned_method_should_only_expect_FALSE-2275263-1.patch"
 
 ; commerce_recurring
-; @todo: lock down a version that patches well
-;projects[commerce_recurring][version] = ""
+projects[commerce_recurring][download][type] = "git"
+projects[commerce_recurring][download][url] = "http://git.drupal.org/project/commerce_recurring.git"
+projects[commerce_recurring][download][revision] = "007e2ed"
 projects[commerce_recurring][subdir] = "contrib"
 projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/commerce_recurring-custom_order_types-2273443-1.patch"
 projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/commerce_recurring-Alter_recurring_price-2263371-1.patch"
 
 ; context requires ctools 1.7+ (jquery_ui & admin recommended)
-;projects[context][version] = ""
+projects[context][version] = "3.2"
 projects[context][subdir] = "contrib"
 
 ; context_condition_theme
@@ -59,7 +56,7 @@ projects[context_condition_theme][version] = "1.0"
 projects[context_condition_theme][subdir] = "contrib"
 
 ; ctools
-;projects[ctools][version] = ""
+projects[ctools][version] = "1.4"
 projects[ctools][subdir] = "contrib"
 
 ; date
@@ -71,19 +68,19 @@ projects[elements][version] = "1.4"
 projects[elements][subdir] = "contrib"
 
 ; email_registration
-;projects[email_registration][version] = ""
+projects[email_registration][version] = "1.2"
 projects[email_registration][subdir] = "contrib"
 
 ; entity
-;projects[entity][version] = ""
+projects[entity][version] = "1.5"
 projects[entity][subdir] = "contrib"
 
 ; entityreference
-;projects[entityreference][version] = ""
+projects[entityreference][version] = "1.1"
 projects[entityreference][subdir] = "contrib"
 
 ; features
-;projects[features][version] = ""
+projects[features][version] = "2.2"
 projects[features][subdir] = "contrib"
 
 ; honeypot
@@ -95,7 +92,7 @@ projects[html5_tools][version] = "1.2"
 projects[html5_tools][subdir] = "contrib"
 
 ; interval
-;projects[interval][version] = "1.0"
+projects[interval][version] = "1.0"
 projects[interval][subdir] = "contrib"
 
 ; libraries
@@ -103,11 +100,11 @@ projects[libraries][version] = "2.2"
 projects[libraries][subdir] = "contrib"
 
 ; link
-;projects[link][version] = ""
+projects[link][version] = "1.2"
 projects[link][subdir] = "contrib"
 
 ; login_destination
-;projects[login_destination][version] = ""
+projects[login_destination][version] = "1.1"
 projects[login_destination][subdir] = "contrib"
 projects[login_destination][patch][] = "https://www.drupal.org/files/issues/login_destination-add_ctools_exportables-1645260-23.patch"
 
@@ -126,7 +123,7 @@ projects[navbar][subdir] = "contrib"
 projects[navbar][patch][] = "https://www.drupal.org/files/issues/navbar-contrib-icons-1954912-20.patch"
 
 ; pathauto requires token
-;projects[pathauto][version] = ""
+projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
 
 ; pathauto_entity
@@ -134,7 +131,7 @@ projects[pathauto_entity][version] = "1.0"
 projects[pathauto_entity][subdir] = "contrib"
 
 ; picture
-projects[picture][version] = "2.6"
+projects[picture][version] = "2.7"
 projects[picture][subdir] = "contrib"
 
 ; redhen
@@ -172,24 +169,16 @@ projects[short_scale_formatter][version] = "1.1"
 projects[short_scale_formatter][subdir] = "contrib"
 
 ; strongarm requires ctools
-;projects[strongarm][version] = ""
+projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
 
 ; token
-;projects[token][version] = ""
+projects[token][version] = "1.5"
 projects[token][subdir] = "contrib"
 
 ; views
-;projects[views][version] = ""
+projects[views][version] = "3.8"
 projects[views][subdir] = "contrib"
-
-;-----------------------------------------
-; Patched Contrib Modules
-;-----------------------------------------
-
-; Patch to fix notices for render arrays in blocks/panels: http://drupal.org/node/1925018#comment-7361230
-;projects[ctools][patch][] = "http://drupal.org/files/ctools-1925018-61.patch"
-
 
 ;-----------------------------------------
 ; Developer tools

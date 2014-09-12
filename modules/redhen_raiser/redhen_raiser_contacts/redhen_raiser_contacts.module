@@ -51,6 +51,5 @@ function redhen_raiser_contacts_form_user_profile_form_alter(&$form, &$form_stat
  * Implements hook_menu_alter().
  */
 function redhen_raiser_contacts_menu_alter(&$items) {
-  ksort($items);
   $items['user/%user_category/edit/redhen_contact']['title arguments'][0] = "Contact Details";
 }

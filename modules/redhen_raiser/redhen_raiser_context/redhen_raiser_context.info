@@ -8,6 +8,7 @@ dependencies[] = bean
 dependencies[] = context
 dependencies[] = context_condition_theme
 dependencies[] = ctools
+dependencies[] = redhen_raiser_blocks
 dependencies[] = redhen_raiser_campaign_updates
 dependencies[] = strongarm
 dependencies[] = views

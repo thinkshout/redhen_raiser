@@ -363,7 +363,7 @@ Your account on [site:name] has been canceled.
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_picture_guidelines';
-  $strongarm->value = 'Pictures will resized and cropped automatically to be 85 pixels square.';
+  $strongarm->value = 'Pictures will be resized and cropped automatically to be 85 pixels square.';
   $export['user_picture_guidelines'] = $strongarm;
 
   $strongarm = new stdClass();

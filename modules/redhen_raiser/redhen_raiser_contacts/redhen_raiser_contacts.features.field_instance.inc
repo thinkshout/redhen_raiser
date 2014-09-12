@@ -90,10 +90,10 @@ function redhen_raiser_contacts_field_default_field_instances() {
         'weight' => 6,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'redhen_fields',
         'settings' => array(),
-        'type' => 'redhen_email_formatter',
+        'type' => 'redhen_email_primary',
         'weight' => 0,
       ),
       'teaser' => array(

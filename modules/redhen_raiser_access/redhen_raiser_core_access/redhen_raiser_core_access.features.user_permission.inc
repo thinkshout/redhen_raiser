@@ -17,6 +17,23 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'access content'.
+  $permissions['access content'] = array(
+    'name' => 'access content',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'access content overview'.
+  $permissions['access content overview'] = array(
+    'name' => 'access content overview',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'access devel information'.
   $permissions['access devel information'] = array(
     'name' => 'access devel information',
@@ -54,6 +71,15 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'add media from remote sources'.
+  $permissions['add media from remote sources'] = array(
+    'name' => 'add media from remote sources',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'media_internet',
+  );
+
   // Exported permission: 'administer actions'.
   $permissions['administer actions'] = array(
     'name' => 'administer actions',
@@ -82,6 +108,13 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'ckeditor',
   );
 
+  // Exported permission: 'administer content types'.
+  $permissions['administer content types'] = array(
+    'name' => 'administer content types',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -103,11 +136,25 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'image',
   );
 
+  // Exported permission: 'administer media'.
+  $permissions['administer media'] = array(
+    'name' => 'administer media',
+    'roles' => array(),
+    'module' => 'media',
+  );
+
   // Exported permission: 'administer modules'.
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
     'roles' => array(),
     'module' => 'system',
+  );
+
+  // Exported permission: 'administer nodes'.
+  $permissions['administer nodes'] = array(
+    'name' => 'administer nodes',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: 'administer permissions'.
@@ -152,6 +199,13 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'honeypot',
   );
 
+  // Exported permission: 'bypass node access'.
+  $permissions['bypass node access'] = array(
+    'name' => 'bypass node access',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'cancel account'.
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
@@ -175,6 +229,22 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'ckeditor',
   );
 
+  // Exported permission: 'delete revisions'.
+  $permissions['delete revisions'] = array(
+    'name' => 'delete revisions',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit media'.
+  $permissions['edit media'] = array(
+    'name' => 'edit media',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'media',
+  );
+
   // Exported permission: 'execute php code'.
   $permissions['execute php code'] = array(
     'name' => 'execute php code',
@@ -187,6 +257,13 @@ function redhen_raiser_core_access_user_default_permissions() {
     'name' => 'generate features',
     'roles' => array(),
     'module' => 'features',
+  );
+
+  // Exported permission: 'import media'.
+  $permissions['import media'] = array(
+    'name' => 'import media',
+    'roles' => array(),
+    'module' => 'media',
   );
 
   // Exported permission: 'manage features'.
@@ -203,6 +280,13 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: 'revert revisions'.
+  $permissions['revert revisions'] = array(
+    'name' => 'revert revisions',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'select account cancellation method'.
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
@@ -215,6 +299,30 @@ function redhen_raiser_core_access_user_default_permissions() {
     'name' => 'switch users',
     'roles' => array(),
     'module' => 'devel',
+  );
+
+  // Exported permission: 'view media'.
+  $permissions['view media'] = array(
+    'name' => 'view media',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
+    ),
+    'module' => 'media',
+  );
+
+  // Exported permission: 'view own unpublished content'.
+  $permissions['view own unpublished content'] = array(
+    'name' => 'view own unpublished content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'view revisions'.
+  $permissions['view revisions'] = array(
+    'name' => 'view revisions',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: 'view the administration theme'.

@@ -31,7 +31,7 @@ function redhen_raiser_contacts_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'default' => array(
         'label' => 'above',
@@ -87,7 +87,7 @@ function redhen_raiser_contacts_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'default' => array(
         'label' => 'inline',

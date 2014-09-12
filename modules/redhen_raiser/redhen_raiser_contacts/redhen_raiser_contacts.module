@@ -37,3 +37,20 @@ function redhen_raiser_contacts_entity_view_alter(&$build, $type) {
     }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Hide the complex version of the email address form from users.
+ */
+function redhen_raiser_contacts_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+  $form['redhen_contact']['redhen_contact_email']['#access'] = user_access('administer redhen contacts');
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function redhen_raiser_contacts_menu_alter(&$items) {
+  ksort($items);
+  $items['user/%user_category/edit/redhen_contact']['title arguments'][0] = "Contact Details";
+}

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * redhen_raiser_campaign_content_access.features.user_permission.inc
+ * redhen_raiser_content_access.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function redhen_raiser_campaign_content_access_user_default_permissions() {
+function redhen_raiser_content_access_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: 'create campaign_update content'.

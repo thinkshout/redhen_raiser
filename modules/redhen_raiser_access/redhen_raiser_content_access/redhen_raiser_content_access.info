@@ -1,4 +1,4 @@
-name = Redhen Raiser Campaign Content Access
+name = Redhen Raiser Content Access
 description = Permissions and Access to Basic Content Types
 core = 7.x
 package = RedHen Raiser Permissions

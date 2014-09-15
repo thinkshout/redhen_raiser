@@ -13,105 +13,135 @@ function redhen_raiser_campaign_content_access_user_default_permissions() {
   // Exported permission: 'create campaign_update content'.
   $permissions['create campaign_update content'] = array(
     'name' => 'create campaign_update content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'create donation_page content'.
   $permissions['create donation_page content'] = array(
     'name' => 'create donation_page content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'create page content'.
   $permissions['create page content'] = array(
     'name' => 'create page content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any campaign_update content'.
   $permissions['delete any campaign_update content'] = array(
     'name' => 'delete any campaign_update content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any donation_page content'.
   $permissions['delete any donation_page content'] = array(
     'name' => 'delete any donation_page content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any page content'.
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own campaign_update content'.
   $permissions['delete own campaign_update content'] = array(
     'name' => 'delete own campaign_update content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own donation_page content'.
   $permissions['delete own donation_page content'] = array(
     'name' => 'delete own donation_page content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own page content'.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit any campaign_update content'.
   $permissions['edit any campaign_update content'] = array(
     'name' => 'edit any campaign_update content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit any donation_page content'.
   $permissions['edit any donation_page content'] = array(
     'name' => 'edit any donation_page content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit any page content'.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own campaign_update content'.
   $permissions['edit own campaign_update content'] = array(
     'name' => 'edit own campaign_update content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own donation_page content'.
   $permissions['edit own donation_page content'] = array(
     'name' => 'edit own donation_page content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own page content'.
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 

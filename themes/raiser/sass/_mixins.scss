@@ -38,6 +38,9 @@
 
 
 // Raiser Mixins
+//==================
+
+// BUTTONS
 .btn {
   background: none;
   padding: 0.8em 1em;
@@ -89,6 +92,8 @@
 }
 
 // Breakpoints
+//==================
+
 /* Large desktop */
 @mixin xlarge {
   @media (min-width: 75em) {
@@ -106,4 +111,12 @@
   @media (min-width: 47.938em) {
     @content; 
   }
+}
+
+// Style Mixins
+//================
+
+// Box shadow
+@mixin raiser-box-shadow {
+  @include box-shadow(0 2px 4px $black);
 }

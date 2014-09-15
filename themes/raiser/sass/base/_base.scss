@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: 2em;    }
 
-h2 { font-size: 1.75em; }
+h2 { color: $primary; font-size: 1.75em; }
 
 h3 { font-size: 1.5em;  }
 
@@ -25,6 +25,11 @@ h5, h6 {
 }
 
 h6 { font-size: 1em; }
+
+p {
+  line-height: 1.5em;
+  margin-bottom: 2em;
+}
 
 // Links
 a, a:visited {

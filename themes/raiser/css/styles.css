@@ -7,7 +7,7 @@
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
-/* line 41, ../sass/_mixins.scss */
+/* line 44, ../sass/_mixins.scss */
 .btn, form input[type=submit],
 form button, #user-login .form-actions #edit-cancel,
 #user-register-form .form-actions #edit-cancel, header #secondary-menu .links li.first a {
@@ -18,7 +18,7 @@ form button, #user-login .form-actions #edit-cancel,
   -moz-box-shadow: 0 2px 3px #989898;
   box-shadow: 0 2px 3px #989898;
 }
-/* line 47, ../sass/_mixins.scss */
+/* line 50, ../sass/_mixins.scss */
 .btn:hover, form input[type=submit]:hover,
 form button:hover, #user-login .form-actions #edit-cancel:hover,
 #user-register-form .form-actions #edit-cancel:hover, header #secondary-menu .links li.first a:hover {
@@ -619,6 +619,7 @@ h1 {
 
 /* line 16, ../sass/base/_base.scss */
 h2 {
+  color: #5e9733;
   font-size: 1.75em;
 }
 
@@ -643,12 +644,18 @@ h6 {
   font-size: 1em;
 }
 
-/* line 30, ../sass/base/_base.scss */
+/* line 29, ../sass/base/_base.scss */
+p {
+  line-height: 1.5em;
+  margin-bottom: 2em;
+}
+
+/* line 35, ../sass/base/_base.scss */
 a, a:visited {
   color: #f8971c;
   text-decoration: none;
 }
-/* line 34, ../sass/base/_base.scss */
+/* line 39, ../sass/base/_base.scss */
 a:hover, a:visited:hover {
   color: #e48308;
   -webkit-transition: all 0.3s;
@@ -657,11 +664,11 @@ a:hover, a:visited:hover {
   transition: all 0.3s;
 }
 
-/* line 42, ../sass/base/_base.scss */
+/* line 47, ../sass/base/_base.scss */
 form label {
   font-weight: normal;
 }
-/* line 46, ../sass/base/_base.scss */
+/* line 51, ../sass/base/_base.scss */
 form input[type=text],
 form input[type=password] {
   border: 2px solid #5e9733;
@@ -670,7 +677,7 @@ form input[type=password] {
   padding: 0.5em;
   width: 100%;
 }
-/* line 53, ../sass/base/_base.scss */
+/* line 58, ../sass/base/_base.scss */
 form input[type=text]:focus,
 form input[type=password]:focus {
   background: #e3edda;
@@ -680,7 +687,7 @@ form input[type=password]:focus {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 58, ../sass/base/_base.scss */
+/* line 63, ../sass/base/_base.scss */
 form input[type=text]:blur,
 form input[type=password]:blur {
   -webkit-transition: all 0.3s;
@@ -688,7 +695,7 @@ form input[type=password]:blur {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 64, ../sass/base/_base.scss */
+/* line 69, ../sass/base/_base.scss */
 form input[type=submit],
 form button {
   background: #f8971c;
@@ -696,7 +703,7 @@ form button {
   color: white;
   text-transform: uppercase;
 }
-/* line 73, ../sass/_mixins.scss */
+/* line 76, ../sass/_mixins.scss */
 form input[type=submit]:hover,
 form button:hover {
   color: white;
@@ -993,6 +1000,11 @@ form button:hover {
 }
 
 /* Component (SMACSS module) rules */
+/* line 1, ../sass/components/_admin-menu.scss */
+.admin-menu-icon {
+  width: 30px;
+}
+
 /* line 1, ../sass/components/_footer.scss */
 footer {
   background: #5e9733;
@@ -1180,7 +1192,7 @@ footer #colophon a:hover {
   float: right;
   padding: 0.6em 1em;
 }
-/* line 84, ../sass/_mixins.scss */
+/* line 87, ../sass/_mixins.scss */
 #user-login .form-actions #edit-cancel:hover,
 #user-register-form .form-actions #edit-cancel:hover {
   background: #989898;
@@ -1238,7 +1250,7 @@ header #secondary-menu .links li.first a {
   text-align: center;
   width: 100%;
 }
-/* line 59, ../sass/_mixins.scss */
+/* line 62, ../sass/_mixins.scss */
 header #secondary-menu .links li.first a:hover {
   background: #5e9733;
   border: 3px solid #90c965;
@@ -1287,7 +1299,7 @@ header #secondary-menu .links li li:not(.first) {
     display: inline;
     padding: 0.8em 1em;
   }
-  /* line 59, ../sass/_mixins.scss */
+  /* line 62, ../sass/_mixins.scss */
   #header #secondary-menu .links li.first a:hover {
     background: #5e9733;
     border: 3px solid #90c965;
@@ -2140,7 +2152,16 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1408381110');
+  background-image: url('../images/progress.gif?1409084000');
+}
+
+/* line 3, ../sass/components/_page.scss */
+.page-node #main #content {
+  background: white;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  min-height: 30em;
+  padding: 1em 2em;
 }
 
 /**

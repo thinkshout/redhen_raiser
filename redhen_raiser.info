@@ -103,6 +103,7 @@ dependencies[] = redhen_raiser_core_access
 dependencies[] = redhen_raiser_crm_access
 dependencies[] = redhen_raiser_blocks_access
 dependencies[] = redhen_raiser_campaign_access
+dependencies[] = redhen_raiser_content_access
 dependencies[] = redhen_raiser_commerce_access
 
 

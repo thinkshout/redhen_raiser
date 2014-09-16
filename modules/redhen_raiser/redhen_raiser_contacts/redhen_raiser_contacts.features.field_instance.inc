@@ -73,6 +73,52 @@ function redhen_raiser_contacts_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'redhen_contact-contact-field_organization'
+  $field_instances['redhen_contact-contact-field_organization'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The name of your Company, School, or Team',
+    'display' => array(
+      'byline' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'redhen_contact',
+    'field_name' => 'field_organization',
+    'label' => 'Organization',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 2,
     ),
   );
@@ -122,6 +168,8 @@ function redhen_raiser_contacts_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Billing Address');
   t('Email');
+  t('Organization');
+  t('The name of your Company, School, or Team');
 
   return $field_instances;
 }

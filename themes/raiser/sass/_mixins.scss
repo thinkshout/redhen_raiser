@@ -41,7 +41,7 @@
 //==================
 
 // BUTTONS
-.btn {
+@mixin raiser-btn {
   background: none;
   padding: 0.8em 1em;
   border-radius: 0.7em;
@@ -53,7 +53,7 @@
 }
 
 @mixin clear-btn {
-  @extend .btn;
+  @include raiser-btn;
   background: none;
   border: 3px solid $primary;
   box-shadow: none;
@@ -67,7 +67,7 @@
 }
 
 @mixin cta-btn {
-  @extend .btn;
+  @include raiser-btn;
   background: $action;
   border: 3px solid $white;
   color: $white;
@@ -80,7 +80,7 @@
 }
 
 @mixin muted-btn {
-  @extend .btn;
+  @include raiser-btn;
   border: 3px solid $gray;
   color: $gray;
 

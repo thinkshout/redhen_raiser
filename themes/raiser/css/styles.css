@@ -6,28 +6,6 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
-@import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
-/* line 44, ../sass/_mixins.scss */
-.btn, form input[type=submit],
-form button, #user-login .form-actions #edit-cancel,
-#user-register-form .form-actions #edit-cancel, header #secondary-menu .links li.first a {
-  background: none;
-  padding: 0.8em 1em;
-  border-radius: 0.7em;
-  -webkit-box-shadow: 0 2px 3px #989898;
-  -moz-box-shadow: 0 2px 3px #989898;
-  box-shadow: 0 2px 3px #989898;
-}
-/* line 50, ../sass/_mixins.scss */
-.btn:hover, form input[type=submit]:hover,
-form button:hover, #user-login .form-actions #edit-cancel:hover,
-#user-register-form .form-actions #edit-cancel:hover, header #secondary-menu .links li.first a:hover {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
 /* Large desktop */
 /* HTML element (SMACSS base) rules */
 /**
@@ -50,6 +28,7 @@ form button:hover, #user-login .form-actions #edit-cancel:hover,
  * HTML5 display definitions
  */
 /* Correct `block` display not defined in IE 8/9. */
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
 /* line 33, ../sass/_normalize.scss */
 article,
 aside,
@@ -698,10 +677,24 @@ form input[type=password]:blur {
 /* line 69, ../sass/base/_base.scss */
 form input[type=submit],
 form button {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #989898;
+  -moz-box-shadow: 0 2px 3px #989898;
+  box-shadow: 0 2px 3px #989898;
   background: #f8971c;
   border: 3px solid white;
   color: white;
   text-transform: uppercase;
+}
+/* line 50, ../sass/_mixins.scss */
+form input[type=submit]:hover,
+form button:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 /* line 76, ../sass/_mixins.scss */
 form input[type=submit]:hover,
@@ -1187,10 +1180,24 @@ footer #colophon a:hover {
 /* line 38, ../sass/components/_forms.scss */
 #user-login .form-actions #edit-cancel,
 #user-register-form .form-actions #edit-cancel {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #989898;
+  -moz-box-shadow: 0 2px 3px #989898;
+  box-shadow: 0 2px 3px #989898;
   border: 3px solid #989898;
   color: #989898;
   float: right;
   padding: 0.6em 1em;
+}
+/* line 50, ../sass/_mixins.scss */
+#user-login .form-actions #edit-cancel:hover,
+#user-register-form .form-actions #edit-cancel:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 /* line 87, ../sass/_mixins.scss */
 #user-login .form-actions #edit-cancel:hover,
@@ -1242,6 +1249,12 @@ header #secondary-menu .links li.first {
 /* line 31, ../sass/components/_header.scss */
 header #secondary-menu .links li.first a {
   background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #989898;
+  -moz-box-shadow: 0 2px 3px #989898;
+  box-shadow: 0 2px 3px #989898;
+  background: none;
   border: 3px solid #5e9733;
   box-shadow: none;
   color: #5e9733;
@@ -1249,6 +1262,13 @@ header #secondary-menu .links li.first a {
   display: inline-block;
   text-align: center;
   width: 100%;
+}
+/* line 50, ../sass/_mixins.scss */
+header #secondary-menu .links li.first a:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 /* line 62, ../sass/_mixins.scss */
 header #secondary-menu .links li.first a:hover {
@@ -1293,11 +1313,24 @@ header #secondary-menu .links li li:not(.first) {
   /* line 68, ../sass/components/_header.scss */
   #header #secondary-menu .links li.first a {
     background: none;
+    padding: 0.8em 1em;
+    border-radius: 0.7em;
+    -webkit-box-shadow: 0 2px 3px #989898;
+    -moz-box-shadow: 0 2px 3px #989898;
+    box-shadow: 0 2px 3px #989898;
+    background: none;
     border: 3px solid #5e9733;
     box-shadow: none;
     color: #5e9733;
     display: inline;
     padding: 0.8em 1em;
+  }
+  /* line 50, ../sass/_mixins.scss */
+  #header #secondary-menu .links li.first a:hover {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
   }
   /* line 62, ../sass/_mixins.scss */
   #header #secondary-menu .links li.first a:hover {
@@ -2152,16 +2185,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1409084000');
-}
-
-/* line 3, ../sass/components/_page.scss */
-.page-node #main #content {
-  background: white;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  min-height: 30em;
-  padding: 1em 2em;
+  background-image: url('../images/progress.gif?1410884111');
 }
 
 /**

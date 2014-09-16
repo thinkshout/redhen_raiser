@@ -4,3 +4,4 @@ modules/contrib
 themes/contrib
 libraries
 Gemfile.lock
+.sass-cache

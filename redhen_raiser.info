@@ -61,6 +61,7 @@ dependencies[] = libraries
 dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_youtube
+dependencies[] = module_filter
 dependencies[] = navbar
 dependencies[] = picture
 dependencies[] = image

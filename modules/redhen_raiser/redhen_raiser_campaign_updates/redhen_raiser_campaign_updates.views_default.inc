@@ -95,6 +95,7 @@ function redhen_raiser_campaign_updates_views_default_views() {
 
   /* Display: Campaign Page Block */
   $handler = $view->new_display('block', 'Campaign Page Block', 'page_block');
+  $handler->display->display_options['display_comment'] = 'The contextual filters are being "OR"ed not "AND"ed as would normally be expected. See redhen_raiser_campaign_updates_views_query_alter().';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Page Context (field_page_context) */
   $handler->display->display_options['arguments']['field_page_context_target_id']['id'] = 'field_page_context_target_id';

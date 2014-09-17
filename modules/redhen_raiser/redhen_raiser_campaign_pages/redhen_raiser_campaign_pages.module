@@ -5,3 +5,20 @@
  */
 
 include_once 'redhen_raiser_campaign_pages.features.inc';
+
+/**
+ * Implements hook_views_pre_render().
+ *
+ * Put the Campaign name into the campaign pages view title.
+ */
+function redhen_raiser_campaign_pages_views_pre_render(&$view) {
+  if ($view->name == "campaign_pages" && $view->current_display == "campaign_pages") {
+    $campaign = redhen_campaign_load($view->args[0]);
+    $title_pattern = $view->build_info['title'];
+    foreach ($view->build_info['substitutions'] as $needle => $value) {
+      $title_pattern = str_replace($needle, $value, $title_pattern);
+    }
+    $new_title = str_replace($view->args[0], $campaign->label, $title_pattern);
+    $view->set_title($new_title);
+  }
+}

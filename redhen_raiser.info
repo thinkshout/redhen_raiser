@@ -80,6 +80,7 @@ dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
+dependencies[] = views_infinite_scroll
 
 ; RedHen Raiser
 dependencies[] = redhen_raiser_core

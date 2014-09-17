@@ -186,6 +186,10 @@ projects[token][subdir] = "contrib"
 projects[views][version] = "3.8"
 projects[views][subdir] = "contrib"
 
+; views_infinite_scroll
+projects[views_infinite_scroll][version] = "1.1"
+projects[views_infinite_scroll][subdir] = "contrib"
+
 ;-----------------------------------------
 ; Developer tools
 ;-----------------------------------------

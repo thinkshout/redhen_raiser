@@ -1,7 +1,22 @@
 .page-redhen-campaign {
+  
+  
+
+  #content {
+    @include zen-grid-item(12,1);
+    background: white;
+
+    @include medium {
+      @include zen-grid-item(8,1);
+    }
+  }
+
+  aside {
+    @include zen-grid-item(12,1);
     
-  .content {
-    @include zen-grid-item(6,12);
+    @include medium {
+      @include zen-grid-item(4,2); 
+    }
   }
   
 } // end .page-redhen-campaign

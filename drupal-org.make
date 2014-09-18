@@ -83,6 +83,10 @@ projects[entityreference][subdir] = "contrib"
 projects[features][version] = "2.2"
 projects[features][subdir] = "contrib"
 
+; field_group
+projects[field_group][version] = "1.4"
+projects[field_group][subdir] = "contrib"
+
 ; honeypot
 projects[honeypot][version] = "1.17"
 projects[honeypot][subdir] = "contrib"

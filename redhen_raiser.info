@@ -53,6 +53,7 @@ dependencies[] = email_registration
 dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = features
+dependencies[] = field_group
 dependencies[] = honeypot
 dependencies[] = html5_tools
 dependencies[] = interval

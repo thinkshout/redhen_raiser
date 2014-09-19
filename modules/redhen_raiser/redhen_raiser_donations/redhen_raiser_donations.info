@@ -17,7 +17,6 @@ features[commerce_product_type][] = donation
 features[features_api][] = api:2
 features[field_instance][] = commerce_customer_profile-billing-commerce_customer_address
 features[field_instance][] = commerce_product-donation-commerce_price
-features[field_instance][] = redhen_donation-redhen_raiser_donation-field_campaign_context
 features[redhen_donation_type][] = redhen_raiser_donation
 features_exclude[field_base][commerce_price] = commerce_price
 features_exclude[field_base][commerce_customer_address] = commerce_customer_address

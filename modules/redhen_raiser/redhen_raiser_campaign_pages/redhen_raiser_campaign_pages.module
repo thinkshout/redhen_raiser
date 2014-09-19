@@ -22,3 +22,13 @@ function redhen_raiser_campaign_pages_views_pre_render(&$view) {
     $view->set_title($new_title);
   }
 }
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function redhen_raiser_campaign_pages_entity_info_alter(&$entity_info) {
+  $entity_info['redhen_campaign_page']['view modes']['progress'] = array(
+    'label' => t('Progress'),
+    'custom settings' => TRUE,
+  );
+}

@@ -33,7 +33,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           'picture_mapping' => 'banner_image',
         ),
         'type' => 'picture',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'progress' => array(
         'label' => 'above',
@@ -104,7 +104,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'progress' => array(
         'label' => 'above',
@@ -158,7 +158,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'progress' => array(
         'label' => 'above',
@@ -205,7 +205,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           'file_view_mode' => 'default',
         ),
         'type' => 'file_rendered',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'progress' => array(
         'label' => 'above',
@@ -268,7 +268,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'progress' => array(
         'label' => 'above',
@@ -302,6 +302,58 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'redhen_campaign-general-redhen_campaign_donation_type'
+  $field_instances['redhen_campaign-general-redhen_campaign_donation_type'] = array(
+    'bundle' => 'general',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_donation',
+        'settings' => array(
+          'label' => 'Donate',
+        ),
+        'type' => 'redhen_donation_link',
+        'weight' => 3,
+      ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'redhen_campaign',
+    'field_name' => 'redhen_campaign_donation_type',
+    'label' => 'Donation Type',
+    'required' => TRUE,
+    'settings' => array(
+      'default_redhen_donation_settings' => array(
+        'scheduling' => array(
+          'close' => NULL,
+          'open' => NULL,
+        ),
+        'settings' => array(),
+        'status' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'redhen_donation',
+      'settings' => array(),
+      'type' => 'redhen_donation_select',
+      'weight' => -8,
+    ),
+  );
+
   // Exported field_instance: 'redhen_campaign-general-redhen_campaign_goal'
   $field_instances['redhen_campaign-general-redhen_campaign_goal'] = array(
     'bundle' => 'general',
@@ -313,7 +365,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'progress' => array(
         'label' => 'hidden',
@@ -376,6 +428,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
   t('Banner Image');
   t('Campaign Teaser');
   t('Dates');
+  t('Donation Type');
   t('Goal');
   t('Story');
   t('Story Image/Video');

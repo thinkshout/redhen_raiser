@@ -154,6 +154,33 @@ function redhen_raiser_campaigns_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'redhen_campaign_donation_type'
+  $field_bases['redhen_campaign_donation_type'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'redhen_campaign_donation_type',
+    'foreign keys' => array(
+      'redhen_donation_type' => array(
+        'columns' => array(
+          'redhen_donation_type' => 'name',
+        ),
+        'table' => 'redhen_donation_type',
+      ),
+    ),
+    'indexes' => array(
+      'redhen_donation_type' => array(
+        0 => 'redhen_donation_type',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'redhen_donation',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'redhen_donation',
+  );
+
   // Exported field_base: 'redhen_campaign_goal'
   $field_bases['redhen_campaign_goal'] = array(
     'active' => 1,

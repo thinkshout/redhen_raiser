@@ -15,6 +15,7 @@ dependencies[] = media
 dependencies[] = number
 dependencies[] = picture
 dependencies[] = redhen_campaign
+dependencies[] = redhen_donation
 dependencies[] = strongarm
 dependencies[] = text
 features[ctools][] = field_group:field_group:1

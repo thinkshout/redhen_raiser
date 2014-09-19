@@ -25,8 +25,9 @@ function redhen_raiser_campaigns_default_redhen_campaign_type() {
     "name" : "general",
     "label" : "General",
     "locked" : "0",
-    "data" : null,
     "weight" : "0",
+    "donation_type" : "redhen_raiser_donation",
+    "hide_donation_type" : 1,
     "rdf_mapping" : []
   }');
   return $items;

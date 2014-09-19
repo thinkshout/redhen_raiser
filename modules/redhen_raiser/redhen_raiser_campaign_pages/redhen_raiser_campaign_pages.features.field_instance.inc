@@ -103,7 +103,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'entity_type' => 'redhen_campaign_page',
     'field_name' => 'field_dates',
     'label' => 'Dates',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'default_value' => 'blank',
       'default_value2' => 'same',
@@ -293,6 +293,57 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'redhen_campaign_page-individual-redhen_campaign_goal'
+  $field_instances['redhen_campaign_page-individual-redhen_campaign_goal'] = array(
+    'bundle' => 'individual',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The total fundraising goal for this campaign.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 0,
+      ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'redhen_campaign_page',
+    'field_name' => 'redhen_campaign_goal',
+    'label' => 'Goal',
+    'required' => FALSE,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '$',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 31,
     ),
   );
 
@@ -582,13 +633,66 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'redhen_campaign_page-team-redhen_campaign_goal'
+  $field_instances['redhen_campaign_page-team-redhen_campaign_goal'] = array(
+    'bundle' => 'team',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The total fundraising goal for this campaign.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 0,
+      ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'redhen_campaign_page',
+    'field_name' => 'redhen_campaign_goal',
+    'label' => 'Goal',
+    'required' => FALSE,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '$',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 0,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Banner Image');
   t('Campaign Teaser');
   t('Dates');
+  t('Goal');
   t('Story');
   t('Story Image/Video');
+  t('The total fundraising goal for this campaign.');
 
   return $field_instances;
 }

@@ -72,9 +72,9 @@ function redhen_raiser_context_context_default_contexts() {
           'region' => 'content_secondary',
           'weight' => '-10',
         ),
-        'redhen_raiser_blocks-campaign_progress' => array(
+        'redhen_raiser_blocks-campaign_page_progress' => array(
           'module' => 'redhen_raiser_blocks',
-          'delta' => 'campaign_progress',
+          'delta' => 'campaign_page_progress',
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),

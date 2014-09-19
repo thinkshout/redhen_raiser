@@ -22,3 +22,11 @@ function redhen_raiser_donations_commerce_line_item_type_info() {
   );
   return $line_item_types;
 }
+
+/**
+ * Implements hook_menu_alter().
+ */
+function redhen_raiser_donations_menu_alter(&$items) {
+  //ksort($items);
+  $items['redhen_campaign/%entity_object/donate']['type'] = MENU_NORMAL_ITEM;
+}

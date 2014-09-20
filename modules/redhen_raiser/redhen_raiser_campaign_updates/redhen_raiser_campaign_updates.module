@@ -46,3 +46,38 @@ function redhen_raiser_campaign_updates_views_query_alter(&$view, &$query) {
     $query->where[0]['type'] = 'OR';
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function redhen_raiser_campaign_updates_form_campaign_update_node_form_alter(&$form, &$form_state, $form_id) {
+  if (!$form['nid']['#value']) {
+    // This is a brand new node:
+    $params = drupal_get_query_parameters();
+    if (!isset($params['page']) && !user_access('edit any campaign_update content')) {
+      $access = FALSE;
+    }
+    else {
+      $page = redhen_campaign_page_load($params['page']);
+      if (!$page || !redhen_campaign_page_access('edit', $page)) {
+        $access = FALSE;
+      }
+      else {
+        // There is a valid page argument and the user has access to edit the
+        // page and post updates. Populate the contextual elements.
+        $access = TRUE;
+        $lang = $form['language']['#value'];
+        $form['field_campaign_context'][$lang]['#default_value'] = $page->campaign;
+        $form['field_page_context'][$lang]['#default_value'] = $page->page_id;
+      }
+    }
+    if (!$access) {
+      drupal_set_message(t('To create an update, go to your Campaign Page and use the "Updates" tab.'), 'warning');
+      foreach (element_children($form) as $element) {
+        $form[$element]['#access'] = FALSE;
+      }
+    }
+  }
+  $form['field_campaign_context']['#access'] = user_access('edit any campaign_update content');
+  $form['field_page_context']['#access'] = user_access('edit any campaign_update content');
+}

@@ -7,6 +7,7 @@ project = redhen_raiser_campaign_updates
 dependencies[] = ctools
 dependencies[] = entityreference
 dependencies[] = features
+dependencies[] = options
 dependencies[] = redhen_raiser_core
 dependencies[] = strongarm
 dependencies[] = text

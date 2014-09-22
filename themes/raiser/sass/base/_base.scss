@@ -1,5 +1,10 @@
 @import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
 
+html, 
+body,
+#page {
+  height: 100%;
+}
 body {
   background: $page-bg;
   font-family: $raiser-body-font;

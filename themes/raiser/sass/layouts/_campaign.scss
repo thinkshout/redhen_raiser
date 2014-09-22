@@ -1,13 +1,16 @@
 .page-redhen-campaign {
   
-  
-
-  #content {
+  .main-content-wrapper {
     @include zen-grid-item(12,1);
-    background: white;
 
     @include medium {
-      @include zen-grid-item(8,1);
+      @include zen-grid-item(8,1); 
+    } 
+
+    background: $white;
+    padding: 1em;
+
+    h1#page-title {
     }
   }
 
@@ -15,8 +18,16 @@
     @include zen-grid-item(12,1);
     
     @include medium {
-      @include zen-grid-item(4,2); 
+      @include zen-grid-item(4,9); 
     }
+
+    background: $lt-gray;
   }
   
+
+  iframe {
+    border: 3px solid $white;
+    @include box-shadow(0 3px 5px $gray);
+    width: 100%; 
+  }
 } // end .page-redhen-campaign

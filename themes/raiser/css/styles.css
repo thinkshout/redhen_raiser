@@ -579,62 +579,69 @@ table {
 }
 
 /* Base Styles and elments */
-/* line 3, ../sass/base/_base.scss */
+/* line 5, ../sass/base/_base.scss */
+html,
+body,
+#page {
+  height: 100%;
+}
+
+/* line 8, ../sass/base/_base.scss */
 body {
-  background: #f1f1f1;
+  background: #e5e5e5;
   font-family: Arial, Helvetica, Verdana, sans-serif;
 }
 
-/* line 9, ../sass/base/_base.scss */
+/* line 14, ../sass/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: normal;
 }
 
-/* line 14, ../sass/base/_base.scss */
+/* line 19, ../sass/base/_base.scss */
 h1 {
   font-size: 2em;
 }
 
-/* line 16, ../sass/base/_base.scss */
+/* line 21, ../sass/base/_base.scss */
 h2 {
   color: #5e9733;
   font-size: 1.75em;
 }
 
-/* line 18, ../sass/base/_base.scss */
+/* line 23, ../sass/base/_base.scss */
 h3 {
   font-size: 1.5em;
 }
 
-/* line 20, ../sass/base/_base.scss */
+/* line 25, ../sass/base/_base.scss */
 h4 {
   font-size: 1.25em;
 }
 
-/* line 22, ../sass/base/_base.scss */
+/* line 27, ../sass/base/_base.scss */
 h5, h6 {
   font-size: 1.10em;
   font-weight: bold;
 }
 
-/* line 27, ../sass/base/_base.scss */
+/* line 32, ../sass/base/_base.scss */
 h6 {
   font-size: 1em;
 }
 
-/* line 29, ../sass/base/_base.scss */
+/* line 34, ../sass/base/_base.scss */
 p {
   line-height: 1.5em;
   margin-bottom: 2em;
 }
 
-/* line 35, ../sass/base/_base.scss */
+/* line 40, ../sass/base/_base.scss */
 a, a:visited {
   color: #f8971c;
   text-decoration: none;
 }
-/* line 39, ../sass/base/_base.scss */
+/* line 44, ../sass/base/_base.scss */
 a:hover, a:visited:hover {
   color: #e48308;
   -webkit-transition: all 0.3s;
@@ -643,11 +650,11 @@ a:hover, a:visited:hover {
   transition: all 0.3s;
 }
 
-/* line 47, ../sass/base/_base.scss */
+/* line 52, ../sass/base/_base.scss */
 form label {
   font-weight: normal;
 }
-/* line 51, ../sass/base/_base.scss */
+/* line 56, ../sass/base/_base.scss */
 form input[type=text],
 form input[type=password] {
   border: 2px solid #5e9733;
@@ -656,7 +663,7 @@ form input[type=password] {
   padding: 0.5em;
   width: 100%;
 }
-/* line 58, ../sass/base/_base.scss */
+/* line 63, ../sass/base/_base.scss */
 form input[type=text]:focus,
 form input[type=password]:focus {
   background: #e3edda;
@@ -666,7 +673,7 @@ form input[type=password]:focus {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 63, ../sass/base/_base.scss */
+/* line 68, ../sass/base/_base.scss */
 form input[type=text]:blur,
 form input[type=password]:blur {
   -webkit-transition: all 0.3s;
@@ -674,7 +681,7 @@ form input[type=password]:blur {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 69, ../sass/base/_base.scss */
+/* line 74, ../sass/base/_base.scss */
 form input[type=submit],
 form button {
   background: none;
@@ -846,38 +853,48 @@ form button:hover {
     /* Span 1 column, starting in 5th column from left. */
   }
 }
-/* line 5, ../sass/layouts/_campaign.scss */
-.page-redhen-campaign #content {
+/* line 3, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign .main-content-wrapper {
   float: left;
   width: 100%;
   margin-left: 0%;
   margin-right: -100%;
   background: white;
+  padding: 1em;
 }
 @media (min-width: 48em) {
-  /* line 5, ../sass/layouts/_campaign.scss */
-  .page-redhen-campaign #content {
+  /* line 3, ../sass/layouts/_campaign.scss */
+  .page-redhen-campaign .main-content-wrapper {
     float: left;
     width: 66.66667%;
     margin-left: 0%;
     margin-right: -66.66667%;
   }
 }
-/* line 14, ../sass/layouts/_campaign.scss */
+/* line 17, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign aside {
   float: left;
   width: 100%;
   margin-left: 0%;
   margin-right: -100%;
+  background: #f1f1f1;
 }
 @media (min-width: 48em) {
-  /* line 14, ../sass/layouts/_campaign.scss */
+  /* line 17, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign aside {
     float: left;
     width: 33.33333%;
-    margin-left: 8.33333%;
-    margin-right: -41.66667%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
   }
+}
+/* line 28, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign iframe {
+  border: 3px solid white;
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+  width: 100%;
 }
 
 /* line 2, ../sass/layouts/_home.scss */
@@ -1098,7 +1115,7 @@ body.front #content {
 }
 /* line 41, ../sass/components/_campaign_list_item.scss */
 .front #block-views-campaigns-block td .entity-redhen-campaign .redhen-campaign-thermo-percent-bar-wrapper {
-  background: #f1f1f1;
+  background: #e5e5e5;
   margin-top: 1em;
   border: 3px solid white;
   border-radius: 5px;
@@ -1131,7 +1148,7 @@ footer {
 /* line 3, ../sass/components/_footer.scss */
 footer #pre-footer {
   background: white;
-  border-bottom: 3px solid #f1f1f1;
+  border-bottom: 3px solid #e5e5e5;
   padding: 0.2em 1em;
   overflow: hidden;
   text-align: center;

@@ -14,4 +14,8 @@ function redhen_raiser_campaigns_entity_info_alter(&$entity_info) {
     'label' => t('Progress'),
     'custom settings' => TRUE,
   );
+  $entity_info['redhen_campaign']['view modes']['banner'] = array(
+    'label' => t('Banner'),
+    'custom settings' => TRUE,
+  );
 }

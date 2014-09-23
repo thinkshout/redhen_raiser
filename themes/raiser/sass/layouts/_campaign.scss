@@ -39,10 +39,61 @@
     }
   }
   
-
+  // Video style
   iframe {
     border: 3px solid $white;
     @include box-shadow(0 3px 5px $gray);
     width: 100%; 
+  }
+  
+  // Progress widget
+  #block-redhen-raiser-blocks-campaign-progress {
+    background: $primary-widget; 
+    color: $primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    padding: 1em 0.6em 2em 0.5em;
+
+    font-size: 2em;
+    line-height: 1.2em;
+  }
+
+  .block-bean {
+    border-bottom: 1px solid $white;
+  }
+
+  #block-bean-social-media-links {
+    margin-top: 14em; 
+    padding-bottom: 1em;
+
+    .field-item {
+      float: left; 
+    }
+    a {
+      background: url(../images/social.png) no-repeat;
+      background-size: 214px;
+      display: block;
+      width: 44px;
+      height: 45px;
+      float: left;
+      text-indent: -9999px;
+    }
+  }
+
+  .bean-promo {
+    text-align: center;
+
+    img { 
+      @include border-radius(8px);
+      @include box-shadow(0 3px 5px $gray);
+      border: 3px solid $white;
+      width: 100%; 
+    }
+
+    p {
+      margin: 1em 0; 
+    }
   }
 } // end .page-redhen-campaign

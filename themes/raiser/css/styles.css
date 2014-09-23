@@ -579,10 +579,9 @@ table {
 }
 
 /* Base Styles and elments */
-/* line 5, ../sass/base/_base.scss */
+/* line 4, ../sass/base/_base.scss */
 html,
-body,
-#page {
+body {
   height: 100%;
 }
 
@@ -654,18 +653,22 @@ a:hover, a:visited:hover {
 form label {
   font-weight: normal;
 }
-/* line 56, ../sass/base/_base.scss */
+/* line 58, ../sass/base/_base.scss */
 form input[type=text],
-form input[type=password] {
+form input[type=password],
+form input[type=email],
+form textarea {
   border: 2px solid #5e9733;
   border-radius: 4px;
   color: #5e9733;
   padding: 0.5em;
   width: 100%;
 }
-/* line 63, ../sass/base/_base.scss */
+/* line 65, ../sass/base/_base.scss */
 form input[type=text]:focus,
-form input[type=password]:focus {
+form input[type=password]:focus,
+form input[type=email]:focus,
+form textarea:focus {
   background: #e3edda;
   outline: none;
   -webkit-transition: all 0.3s;
@@ -673,15 +676,17 @@ form input[type=password]:focus {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 68, ../sass/base/_base.scss */
+/* line 70, ../sass/base/_base.scss */
 form input[type=text]:blur,
-form input[type=password]:blur {
+form input[type=password]:blur,
+form input[type=email]:blur,
+form textarea:blur {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 74, ../sass/base/_base.scss */
+/* line 76, ../sass/base/_base.scss */
 form input[type=submit],
 form button {
   background: none;
@@ -916,32 +921,100 @@ form button:hover {
   box-shadow: 0 3px 5px #989898;
   width: 100%;
 }
-
-/* line 1, ../sass/layouts/_home.scss */
-body.front {
-  background: white;
+/* line 50, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign #block-redhen-raiser-blocks-campaign-progress {
+  background: #cdd6c5;
+  color: #5e9733;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85%;
+  padding: 1em 0.6em 2em 0.5em;
+  font-size: 2em;
+  line-height: 1.2em;
 }
-/* line 3, ../sass/layouts/_home.scss */
+/* line 63, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign .block-bean {
+  border-bottom: 1px solid white;
+}
+/* line 67, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign #block-bean-social-media-links {
+  margin-top: 14em;
+  padding-bottom: 1em;
+}
+/* line 71, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign #block-bean-social-media-links .field-item {
+  float: left;
+}
+/* line 74, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign #block-bean-social-media-links a {
+  background: url(../images/social.png) no-repeat;
+  background-size: 214px;
+  display: block;
+  width: 44px;
+  height: 45px;
+  float: left;
+  text-indent: -9999px;
+}
+/* line 85, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign .bean-promo {
+  text-align: center;
+}
+/* line 88, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign .bean-promo img {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+  border: 3px solid white;
+  width: 100%;
+}
+/* line 95, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign .bean-promo p {
+  margin: 1em 0;
+}
+
+/* line 2, ../sass/layouts/_home.scss */
 body.front #content {
-  background: none;
   border-bottom: 1px solid #5e9733;
   text-align: center;
+}
+
+/* line 2, ../sass/layouts/_page.scss */
+#page {
+  overflow: hidden;
+}
+
+/* line 6, ../sass/layouts/_page.scss */
+.front #page {
+  background-color: ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFE5E5E5');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(63%, #ffffff), color-stop(63%, #ffffff), color-stop(100%, #e5e5e5));
+  background-image: -webkit-linear-gradient(top, #ffffff 63%, #ffffff 63%, #e5e5e5 100%);
+  background-image: -moz-linear-gradient(top, #ffffff 63%, #ffffff 63%, #e5e5e5 100%);
+  background-image: -o-linear-gradient(top, #ffffff 63%, #ffffff 63%, #e5e5e5 100%);
+  background-image: linear-gradient(top, #ffffff 63%, #ffffff 63%, #e5e5e5 100%);
 }
 
 /* line 1, ../sass/layouts/_raiser_layout.scss */
 #main {
   max-width: 820px;
   margin: 0 auto;
+  padding-bottom: 3em;
 }
 
-/* line 6, ../sass/layouts/_raiser_layout.scss */
+/* line 7, ../sass/layouts/_raiser_layout.scss */
 #main #content {
   padding-bottom: 2em;
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
-/* line 12, ../sass/layouts/_raiser_layout.scss */
+/* line 13, ../sass/layouts/_raiser_layout.scss */
 #content-secondary {
   clear: left;
 }
@@ -1094,11 +1167,11 @@ body.front #content {
   width: 30px;
 }
 
-/* line 4, ../sass/components/_campaign_list_item.scss */
+/* line 4, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block h2 {
   text-align: center;
 }
-/* line 8, ../sass/components/_campaign_list_item.scss */
+/* line 8, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block td {
   background: white;
   border-radius: 5px;
@@ -1107,26 +1180,26 @@ body.front #content {
   box-shadow: 0 3px 10px #999999;
   text-align: center;
 }
-/* line 16, ../sass/components/_campaign_list_item.scss */
+/* line 16, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block td .entity-redhen-campaign {
   padding: 1em;
 }
-/* line 19, ../sass/components/_campaign_list_item.scss */
+/* line 19, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block td .entity-redhen-campaign div {
   margin: 0 auto;
 }
-/* line 23, ../sass/components/_campaign_list_item.scss */
+/* line 23, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block td .entity-redhen-campaign h2 {
   font-size: 1.25em;
   padding: 0;
   margin: 0;
   line-height: 1.5em;
 }
-/* line 29, ../sass/components/_campaign_list_item.scss */
+/* line 29, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block td .entity-redhen-campaign h2 a {
   color: #5e9733;
 }
-/* line 32, ../sass/components/_campaign_list_item.scss */
+/* line 32, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block td .entity-redhen-campaign .field-name-field-banner-image {
   border-radius: 5px;
   margin: 0 auto 2em;
@@ -1137,7 +1210,7 @@ body.front #content {
   -moz-box-shadow: 0 2px 3px #999999;
   box-shadow: 0 2px 3px #999999;
 }
-/* line 41, ../sass/components/_campaign_list_item.scss */
+/* line 41, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block td .entity-redhen-campaign .redhen-campaign-thermo-percent-bar-wrapper {
   background: #e5e5e5;
   margin-top: 1em;
@@ -1149,14 +1222,14 @@ body.front #content {
   height: 20px;
   padding: 0;
 }
-/* line 50, ../sass/components/_campaign_list_item.scss */
+/* line 50, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block td .entity-redhen-campaign .redhen-campaign-thermo-percent-bar-wrapper .redhen-campaign-thermo-percent-bar {
   background: #5e9733;
   height: 100%;
   margin: 0;
 }
 @media (min-width: 48em) {
-  /* line 71, ../sass/components/_campaign_list_item.scss */
+  /* line 71, ../sass/components/_campaign-list-item.scss */
   .front #block-views-campaigns-block td:nth-child(3n) {
     float: left;
     width: 33.33333%;
@@ -1169,7 +1242,11 @@ body.front #content {
 footer {
   background: #5e9733;
 }
-/* line 3, ../sass/components/_footer.scss */
+/* line 4, ../sass/components/_footer.scss */
+footer #main-menu h2 {
+  display: none;
+}
+/* line 6, ../sass/components/_footer.scss */
 footer #pre-footer {
   background: white;
   border-bottom: 3px solid #e5e5e5;
@@ -1177,97 +1254,97 @@ footer #pre-footer {
   overflow: hidden;
   text-align: center;
 }
-/* line 10, ../sass/components/_footer.scss */
+/* line 13, ../sass/components/_footer.scss */
 footer #pre-footer #logo {
   display: block;
   margin-bottom: 1em;
   width: 100%;
 }
-/* line 14, ../sass/components/_footer.scss */
+/* line 17, ../sass/components/_footer.scss */
 footer #pre-footer #logo img {
   width: 3.594em;
 }
-/* line 17, ../sass/components/_footer.scss */
+/* line 20, ../sass/components/_footer.scss */
 footer #pre-footer .tagline {
   color: #f8971c;
   display: block;
   margin-bottom: 1em;
   font-family: Georgia, "Times New Roman", serif;
 }
-/* line 24, ../sass/components/_footer.scss */
+/* line 27, ../sass/components/_footer.scss */
 footer #pre-footer .social {
   margin: 0;
   overflow: hidden;
   padding-left: 0;
   text-align: center;
 }
-/* line 30, ../sass/components/_footer.scss */
+/* line 33, ../sass/components/_footer.scss */
 footer #pre-footer .social li {
   display: inline-block;
   list-style-type: none;
   text-align: center;
   position: relative;
 }
-/* line 36, ../sass/components/_footer.scss */
+/* line 39, ../sass/components/_footer.scss */
 footer #pre-footer .social li a {
   display: list-item;
   height: 41px;
   text-indent: -9999px;
   width: 41px;
 }
-/* line 42, ../sass/components/_footer.scss */
+/* line 45, ../sass/components/_footer.scss */
 footer #pre-footer .social li a.twitter {
   background: url("../images/social.png") 0 0 no-repeat;
   background-size: 195px 42px;
   margin-bottom: -1.5em;
 }
-/* line 47, ../sass/components/_footer.scss */
+/* line 50, ../sass/components/_footer.scss */
 footer #pre-footer .social li a.facebook {
   background: url("../images/social.png") -3.2em 0 no-repeat;
   background-size: 195px 42px;
 }
-/* line 51, ../sass/components/_footer.scss */
+/* line 54, ../sass/components/_footer.scss */
 footer #pre-footer .social li a.linkedin {
   background: url("../images/social.png") -6.4em 0 no-repeat;
   background-size: 195px 42px;
 }
-/* line 55, ../sass/components/_footer.scss */
+/* line 58, ../sass/components/_footer.scss */
 footer #pre-footer .social li a.google-plus {
   background: url("../images/social.png") -9.6em 0 no-repeat;
   background-size: 195px 42px;
 }
-/* line 64, ../sass/components/_footer.scss */
+/* line 67, ../sass/components/_footer.scss */
 footer #colophon {
   color: white;
   padding: 0.2em 1em;
   text-align: center;
 }
-/* line 69, ../sass/components/_footer.scss */
+/* line 72, ../sass/components/_footer.scss */
 footer #colophon a {
   color: white;
 }
-/* line 71, ../sass/components/_footer.scss */
+/* line 74, ../sass/components/_footer.scss */
 footer #colophon a:hover {
   color: #f8971c;
 }
 
 @media (min-width: 47.938em) {
-  /* line 81, ../sass/components/_footer.scss */
+  /* line 84, ../sass/components/_footer.scss */
   footer #pre-footer {
     text-align: left;
   }
-  /* line 84, ../sass/components/_footer.scss */
+  /* line 87, ../sass/components/_footer.scss */
   footer #pre-footer #logo {
     display: inline-block;
     float: left;
     margin-bottom: 0;
     width: 92px;
   }
-  /* line 89, ../sass/components/_footer.scss */
+  /* line 92, ../sass/components/_footer.scss */
   footer #pre-footer #logo img {
     width: 100%;
   }
-  /* line 92, ../sass/components/_footer.scss */
+  /* line 95, ../sass/components/_footer.scss */
   footer #pre-footer .tagline {
     display: inline;
     font-size: 1.25em;
@@ -1276,19 +1353,26 @@ footer #colophon a:hover {
     margin: 0;
     vertical-align: top;
   }
-  /* line 101, ../sass/components/_footer.scss */
+  /* line 104, ../sass/components/_footer.scss */
   footer #pre-footer .social {
     float: right;
     margin-top: 0.8em;
   }
-  /* line 107, ../sass/components/_footer.scss */
+  /* line 110, ../sass/components/_footer.scss */
   footer #colophon {
     text-align: left;
   }
 }
-/* line 3, ../sass/components/_forms.scss */
+/* line 4, ../sass/components/_forms.scss */
+.page-user h2.page__title,
+.not-logged-in.page-fundraise h2.page__title {
+  text-align: center;
+}
+
+/* line 10, ../sass/components/_forms.scss */
 #user-login,
-#user-register-form {
+#user-register-form,
+#user-pass {
   background: white;
   border-radius: 0.7em;
   display: block;
@@ -1303,23 +1387,25 @@ footer #colophon a:hover {
   box-shadow: 0 2px 3px #989898;
 }
 @media (min-width: 75em) {
-  /* line 3, ../sass/components/_forms.scss */
+  /* line 10, ../sass/components/_forms.scss */
   #user-login,
-  #user-register-form {
+  #user-register-form,
+  #user-pass {
     float: left;
     width: 50%;
     margin-left: 25%;
     margin-right: -75%;
   }
 }
-/* line 16, ../sass/components/_forms.scss */
+/* line 23, ../sass/components/_forms.scss */
 #user-login fieldset,
-#user-register-form fieldset {
+#user-register-form fieldset,
+#user-pass fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
-/* line 26, ../sass/components/_forms.scss */
+/* line 33, ../sass/components/_forms.scss */
 #user-login #edit-register,
 #user-login #edit-reset,
 #user-login #edit-login,
@@ -1329,24 +1415,33 @@ footer #colophon a:hover {
 #user-register-form #edit-reset,
 #user-register-form #edit-login,
 #user-register-form .form-item,
-#user-register-form .form-actions {
+#user-register-form .form-actions,
+#user-pass #edit-register,
+#user-pass #edit-reset,
+#user-pass #edit-login,
+#user-pass .form-item,
+#user-pass .form-actions {
   padding: 0em 1em;
 }
-/* line 32, ../sass/components/_forms.scss */
+/* line 39, ../sass/components/_forms.scss */
 #user-login #edit-register,
 #user-login #edit-reset,
 #user-register-form #edit-register,
-#user-register-form #edit-reset {
+#user-register-form #edit-reset,
+#user-pass #edit-register,
+#user-pass #edit-reset {
   display: block;
 }
-/* line 36, ../sass/components/_forms.scss */
+/* line 43, ../sass/components/_forms.scss */
 #user-login .form-actions,
-#user-register-form .form-actions {
+#user-register-form .form-actions,
+#user-pass .form-actions {
   margin-top: 1em;
 }
-/* line 38, ../sass/components/_forms.scss */
+/* line 45, ../sass/components/_forms.scss */
 #user-login .form-actions #edit-cancel,
-#user-register-form .form-actions #edit-cancel {
+#user-register-form .form-actions #edit-cancel,
+#user-pass .form-actions #edit-cancel {
   background: none;
   padding: 0.8em 1em;
   border-radius: 0.7em;
@@ -1360,7 +1455,8 @@ footer #colophon a:hover {
 }
 /* line 50, ../sass/_mixins.scss */
 #user-login .form-actions #edit-cancel:hover,
-#user-register-form .form-actions #edit-cancel:hover {
+#user-register-form .form-actions #edit-cancel:hover,
+#user-pass .form-actions #edit-cancel:hover {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -1368,7 +1464,8 @@ footer #colophon a:hover {
 }
 /* line 87, ../sass/_mixins.scss */
 #user-login .form-actions #edit-cancel:hover,
-#user-register-form .form-actions #edit-cancel:hover {
+#user-register-form .form-actions #edit-cancel:hover,
+#user-pass .form-actions #edit-cancel:hover {
   background: #989898;
   border: 3px solid #f1f1f1;
   color: white;
@@ -2357,8 +2454,8 @@ tr.selected td {
 
 /* line 1, ../sass/components/_progress-bar.scss */
 .redhen-campaign-thermo-percent-bar-wrapper {
-  background: #e5e5e5;
-  margin-top: 1em;
+  background: #e1ead9;
+  margin-top: 0.5em;
   border: 3px solid white;
   border-radius: 5px;
   -webkit-box-shadow: 0 2px 3px #999999;

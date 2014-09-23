@@ -1,6 +1,13 @@
-// Login form
+// Account forms
+.page-user,
+.not-logged-in.page-fundraise {
+  h2.page__title {
+    text-align: center; 
+  }
+}
 #user-login,
-#user-register-form {
+#user-register-form,
+#user-pass {
   background: $white;
   border-radius: 0.7em;
   display: block;

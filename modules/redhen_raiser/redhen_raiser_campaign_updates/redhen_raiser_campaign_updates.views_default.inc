@@ -120,7 +120,7 @@ function redhen_raiser_campaign_updates_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Page Context (field_page_context) */
+  /* Contextual filter: Content: Fundraiser (field_page_context) */
   $handler->display->display_options['arguments']['field_page_context_target_id']['id'] = 'field_page_context_target_id';
   $handler->display->display_options['arguments']['field_page_context_target_id']['table'] = 'field_data_field_page_context';
   $handler->display->display_options['arguments']['field_page_context_target_id']['field'] = 'field_page_context_target_id';
@@ -149,11 +149,11 @@ return redhen_campaign_page_access(\'edit\', $page);';
     'campaign_update' => 'campaign_update',
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Campaign Pages Tab */
+  $handler = $view->new_display('page', 'Campaign Pages Tab', 'page');
   $handler->display->display_options['path'] = 'redhen_campaign/page/%/update';
   $handler->display->display_options['menu']['type'] = 'tab';
-  $handler->display->display_options['menu']['title'] = 'Edit Updates';
+  $handler->display->display_options['menu']['title'] = 'Updates';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'management';
   $handler->display->display_options['menu']['context'] = 0;
@@ -198,7 +198,7 @@ return redhen_campaign_page_access(\'edit\', $page);';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Campaign Context (field_campaign_context) */
+  /* Contextual filter: Content: Campaign (field_campaign_context) */
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['id'] = 'field_campaign_context_target_id_1';
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['table'] = 'field_data_field_campaign_context';
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['field'] = 'field_campaign_context_target_id';
@@ -222,7 +222,7 @@ return redhen_campaign_page_access(\'edit\', $page);';
   $handler->display->display_options['filters']['type']['value'] = array(
     'campaign_update' => 'campaign_update',
   );
-  /* Filter criterion: Content: Page Context (field_page_context) */
+  /* Filter criterion: Content: Fundraiser (field_page_context) */
   $handler->display->display_options['filters']['field_page_context_target_id']['id'] = 'field_page_context_target_id';
   $handler->display->display_options['filters']['field_page_context_target_id']['table'] = 'field_data_field_page_context';
   $handler->display->display_options['filters']['field_page_context_target_id']['field'] = 'field_page_context_target_id';
@@ -231,7 +231,7 @@ return redhen_campaign_page_access(\'edit\', $page);';
   /* Display: Campaign Block */
   $handler = $view->new_display('block', 'Campaign Block', 'block');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Campaign Context (field_campaign_context) */
+  /* Contextual filter: Content: Campaign (field_campaign_context) */
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['id'] = 'field_campaign_context_target_id_1';
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['table'] = 'field_data_field_campaign_context';
   $handler->display->display_options['arguments']['field_campaign_context_target_id_1']['field'] = 'field_campaign_context_target_id';
@@ -247,7 +247,7 @@ return redhen_campaign_page_access(\'edit\', $page);';
   $handler = $view->new_display('block', 'Campaign Page Block', 'page_block');
   $handler->display->display_options['display_comment'] = 'The contextual filters are being "OR"ed not "AND"ed as would normally be expected. See redhen_raiser_campaign_updates_views_query_alter().';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Page Context (field_page_context) */
+  /* Contextual filter: Content: Fundraiser (field_page_context) */
   $handler->display->display_options['arguments']['field_page_context_target_id']['id'] = 'field_page_context_target_id';
   $handler->display->display_options['arguments']['field_page_context_target_id']['table'] = 'field_data_field_page_context';
   $handler->display->display_options['arguments']['field_page_context_target_id']['field'] = 'field_page_context_target_id';
@@ -258,7 +258,7 @@ return redhen_campaign_page_access(\'edit\', $page);';
   $handler->display->display_options['arguments']['field_page_context_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_page_context_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_page_context_target_id']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Content: Campaign Context (field_campaign_context) */
+  /* Contextual filter: Content: Campaign (field_campaign_context) */
   $handler->display->display_options['arguments']['field_campaign_context_target_id']['id'] = 'field_campaign_context_target_id';
   $handler->display->display_options['arguments']['field_campaign_context_target_id']['table'] = 'field_data_field_campaign_context';
   $handler->display->display_options['arguments']['field_campaign_context_target_id']['field'] = 'field_campaign_context_target_id';

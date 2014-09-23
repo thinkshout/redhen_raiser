@@ -16,6 +16,18 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'banner' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'default' => 'campaign',
+          'secondary' => '',
+          'tertiary' => '',
+          'view_mode' => 'banner',
+        ),
+        'type' => 'redhen_campaign_inherit_value',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'redhen_campaign',
@@ -27,6 +39,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'redhen_campaign_inherit_value',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'progress' => array(
         'label' => 'above',
@@ -74,6 +92,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'date',
@@ -86,6 +110,19 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'date_default',
         'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'short',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 2,
       ),
       'progress' => array(
         'label' => 'above',
@@ -134,6 +171,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'redhen_campaign',
@@ -145,6 +188,18 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'redhen_campaign_inherit_value',
         'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'default' => 'page',
+          'secondary' => 'team',
+          'tertiary' => 'campaign',
+          'view_mode' => 'default',
+        ),
+        'type' => 'redhen_campaign_inherit_value',
+        'weight' => 1,
       ),
       'progress' => array(
         'label' => 'above',
@@ -184,6 +239,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'redhen_campaign',
@@ -195,6 +256,18 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'redhen_campaign_inherit_value',
         'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'default' => 'page',
+          'secondary' => 'team',
+          'tertiary' => 'campaign',
+          'view_mode' => 'default',
+        ),
+        'type' => 'redhen_campaign_inherit_value',
+        'weight' => 0,
       ),
       'progress' => array(
         'label' => 'above',
@@ -252,6 +325,18 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'banner' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'default' => 'campaign',
+          'secondary' => '',
+          'tertiary' => '',
+          'view_mode' => 'banner',
+        ),
+        'type' => 'redhen_campaign_inherit_value',
+        'weight' => 1,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'redhen_campaign',
@@ -263,6 +348,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'redhen_campaign_inherit_value',
         'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'progress' => array(
         'label' => 'above',
@@ -303,6 +394,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'The total fundraising goal for this campaign.',
     'display' => array(
+      'banner' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'number',
@@ -314,6 +411,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'number_integer',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'progress' => array(
         'label' => 'above',
@@ -353,6 +456,18 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'banner' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'default' => 'campaign',
+          'secondary' => '',
+          'tertiary' => '',
+          'view_mode' => 'banner',
+        ),
+        'type' => 'redhen_campaign_inherit_value',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'redhen_campaign',
@@ -364,6 +479,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'redhen_campaign_inherit_value',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'progress' => array(
         'label' => 'above',
@@ -411,6 +532,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'date',
@@ -423,6 +550,19 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'date_default',
         'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 2,
       ),
       'progress' => array(
         'label' => 'above',
@@ -471,6 +611,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'redhen_campaign',
@@ -482,6 +628,18 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'redhen_campaign_inherit_value',
         'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'default' => 'page',
+          'secondary' => 'campaign',
+          'tertiary' => '',
+          'view_mode' => 'default',
+        ),
+        'type' => 'redhen_campaign_inherit_value',
+        'weight' => 1,
       ),
       'progress' => array(
         'label' => 'above',
@@ -521,6 +679,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'redhen_campaign',
@@ -532,6 +696,18 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'redhen_campaign_inherit_value',
         'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'default' => 'page',
+          'secondary' => 'campaign',
+          'tertiary' => '',
+          'view_mode' => 'default',
+        ),
+        'type' => 'redhen_campaign_inherit_value',
+        'weight' => 0,
       ),
       'progress' => array(
         'label' => 'above',
@@ -589,17 +765,35 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'banner' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'default' => 'campaign',
+          'secondary' => '',
+          'tertiary' => '',
+          'view_mode' => 'banner',
+        ),
+        'type' => 'redhen_campaign_inherit_value',
+        'weight' => 1,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'redhen_campaign',
         'settings' => array(
-          'default' => 'page',
-          'secondary' => 'campaign',
+          'default' => 'campaign',
+          'secondary' => '',
           'tertiary' => '',
           'view_mode' => 'default',
         ),
         'type' => 'redhen_campaign_inherit_value',
         'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'progress' => array(
         'label' => 'above',
@@ -640,17 +834,23 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'The total fundraising goal for this campaign.',
     'display' => array(
+      'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'progress' => array(
         'label' => 'above',

@@ -25,6 +25,7 @@ function redhen_raiser_contacts_entity_view_alter(&$build, $type) {
     $user = $contact_wrapper->user->value();
     switch ($build['#view_mode']) {
       case "byline":
+        $build['name']['#label'] = 'By';
         if ($user->picture) {
           $build['avatar'] = array(
             '#theme' => 'image_style',

@@ -1,4 +1,11 @@
 .page-redhen-campaign {
+
+  #content {
+    background: $white;
+    overflow: hidden;
+    padding-right: 2em;
+    position: relative; 
+  }
   
   .main-content-wrapper {
     @include zen-grid-item(12,1);
@@ -9,9 +16,6 @@
 
     background: $white;
     padding: 1em;
-
-    h1#page-title {
-    }
   }
 
   aside {
@@ -22,6 +26,15 @@
     }
 
     background: $lt-gray;
+    margin-left: 1em;
+    position: absolute;
+    height: 100%;
+
+    .region-sidebar-first {
+      max-width: 90%; 
+      margin: 0 auto;
+      padding-top: 1em;
+    }
   }
   
 

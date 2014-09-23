@@ -17,6 +17,10 @@
 
     background: $white;
     padding: 1em;
+
+    .page__title {
+      display: none; 
+    }
   }
 
   aside {
@@ -47,7 +51,7 @@
   }
   
   // Progress widget
-  #block-redhen-raiser-blocks-campaign-progress {
+  #block-bean-campaign-progress {
     background: $primary-widget; 
     color: $primary;
     position: absolute;
@@ -55,9 +59,10 @@
     left: 0;
     width: 85%;
     padding: 1em 0.6em 2em 0.5em;
-
     font-size: 2em;
     line-height: 1.2em;
+
+    h2 { display: none; }
   }
 
   .block-bean {

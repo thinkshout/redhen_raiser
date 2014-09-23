@@ -7,43 +7,6 @@
 include_once 'redhen_raiser_blocks.features.inc';
 
 /**
- * Implements hook_block_info().
- */
-function redhen_raiser_blocks_block_info() {
-  $blocks = array();
-
-  $blocks['campaign_progress'] = array(
-    'info' => t('Campaign Progress'),
-    'cache' => DRUPAL_CACHE_PER_ROLE,
-  );
-  $blocks['campaign_page_progress'] = array(
-    'info' => t('Campaign Page Progress'),
-    'cache' => DRUPAL_CACHE_PER_ROLE,
-  );
-
-  return $blocks;
-}
-
-/**
- * Implements hook_block_view().
- */
-function redhen_raiser_blocks_block_view($delta = '') {
-  $block = array();
-
-  switch ($delta) {
-    case 'campaign_progress':
-      $block['content'] = redhen_raiser_blocks_campaign_progress();
-      break;
-
-    case 'campaign_page_progress':
-      $block['content'] = redhen_raiser_blocks_campaign_page_progress();
-      break;
-  }
-
-  return $block;
-}
-
-/**
  * Implements hook_block_view_alter().
  */
 function redhen_raiser_blocks_block_view_alter(&$data, $block) {
@@ -132,36 +95,4 @@ function redhen_raiser_create_beans($stubbed_beans) {
     }
     $new_bean->save();
   }
-}
-
-/**
- * Content for a block with campaign progress information.
- */
-function redhen_raiser_blocks_campaign_progress() {
-  if (arg(0) != 'redhen_campaign') {
-    return array();
-  }
-  if (arg(1) == "page") {
-    $page = redhen_campaign_page_load(arg(2));
-    $campaign_id = $page->campaign;
-  }
-  else {
-    $campaign_id = arg(1);
-  }
-  $campaign = redhen_campaign_load($campaign_id);
-  $content = entity_view('redhen_campaign', array($campaign), 'progress', NULL, TRUE);
-  return $content;
-}
-
-
-/**
- * Content for a block with campaign progress information.
- */
-function redhen_raiser_blocks_campaign_page_progress() {
-  if (arg(0) != 'redhen_campaign' || arg(1) != "page") {
-    return array();
-  }
-  $page = redhen_campaign_page_load(arg(2));
-  $content = entity_view('redhen_campaign_page', array($page), 'progress', NULL, TRUE);
-  return $content;
 }

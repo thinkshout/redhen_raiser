@@ -10,6 +10,7 @@ dependencies[] = entity
 dependencies[] = features
 dependencies[] = image
 dependencies[] = media
+dependencies[] = number
 dependencies[] = redhen_campaign
 dependencies[] = redhen_raiser_campaigns
 dependencies[] = strongarm

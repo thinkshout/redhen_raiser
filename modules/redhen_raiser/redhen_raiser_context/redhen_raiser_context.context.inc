@@ -27,15 +27,21 @@ function redhen_raiser_context_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'bean-campaign-banner' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-banner',
+          'region' => 'highlighted',
+          'weight' => '-10',
+        ),
         'views-campaign_updates-block' => array(
           'module' => 'views',
           'delta' => 'campaign_updates-block',
           'region' => 'content_secondary',
           'weight' => '-10',
         ),
-        'redhen_raiser_blocks-campaign_progress' => array(
-          'module' => 'redhen_raiser_blocks',
-          'delta' => 'campaign_progress',
+        'bean-campaign-progress' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-progress',
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
@@ -66,17 +72,23 @@ function redhen_raiser_context_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'bean-campaign-page-banner' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-page-banner',
+          'region' => 'highlighted',
+          'weight' => '-10',
+        ),
         'views-campaign_updates-page_block' => array(
           'module' => 'views',
           'delta' => 'campaign_updates-page_block',
           'region' => 'content_secondary',
           'weight' => '-10',
         ),
-        'redhen_raiser_blocks-campaign_page_progress' => array(
-          'module' => 'redhen_raiser_blocks',
-          'delta' => 'campaign_page_progress',
+        'bean-campaign-page-progress' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-page-progress',
           'region' => 'sidebar_first',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
       ),
     ),

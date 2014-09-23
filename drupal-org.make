@@ -18,6 +18,10 @@ projects[addressfield][subdir] = "contrib"
 projects[bean][version] = "1.7"
 projects[bean][subdir] = "contrib"
 
+; better_formats
+projects[better_formats][version] = "1.0-beta1"
+projects[better_formats][subdir] = "contrib"
+
 ; breakpoints
 projects[breakpoints][version] = "1.3"
 projects[breakpoints][subdir] = "contrib"

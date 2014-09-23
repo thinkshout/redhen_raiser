@@ -30,7 +30,9 @@ function redhen_raiser_core_access_user_default_permissions() {
   // Exported permission: 'access content overview'.
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
@@ -292,6 +294,168 @@ function redhen_raiser_core_access_user_default_permissions() {
     'name' => 'select account cancellation method',
     'roles' => array(),
     'module' => 'user',
+  );
+
+  // Exported permission: 'show format selection for bean'.
+  $permissions['show format selection for bean'] = array(
+    'name' => 'show format selection for bean',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for commerce_cardonfile'.
+  $permissions['show format selection for commerce_cardonfile'] = array(
+    'name' => 'show format selection for commerce_cardonfile',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for commerce_customer_profile'.
+  $permissions['show format selection for commerce_customer_profile'] = array(
+    'name' => 'show format selection for commerce_customer_profile',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for commerce_line_item'.
+  $permissions['show format selection for commerce_line_item'] = array(
+    'name' => 'show format selection for commerce_line_item',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for commerce_order'.
+  $permissions['show format selection for commerce_order'] = array(
+    'name' => 'show format selection for commerce_order',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for commerce_product'.
+  $permissions['show format selection for commerce_product'] = array(
+    'name' => 'show format selection for commerce_product',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for commerce_recurring'.
+  $permissions['show format selection for commerce_recurring'] = array(
+    'name' => 'show format selection for commerce_recurring',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for file'.
+  $permissions['show format selection for file'] = array(
+    'name' => 'show format selection for file',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for node'.
+  $permissions['show format selection for node'] = array(
+    'name' => 'show format selection for node',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for redhen_campaign'.
+  $permissions['show format selection for redhen_campaign'] = array(
+    'name' => 'show format selection for redhen_campaign',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for redhen_campaign_page'.
+  $permissions['show format selection for redhen_campaign_page'] = array(
+    'name' => 'show format selection for redhen_campaign_page',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for redhen_contact'.
+  $permissions['show format selection for redhen_contact'] = array(
+    'name' => 'show format selection for redhen_contact',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for redhen_donation'.
+  $permissions['show format selection for redhen_donation'] = array(
+    'name' => 'show format selection for redhen_donation',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for rules_config'.
+  $permissions['show format selection for rules_config'] = array(
+    'name' => 'show format selection for rules_config',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for taxonomy_term'.
+  $permissions['show format selection for taxonomy_term'] = array(
+    'name' => 'show format selection for taxonomy_term',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for user'.
+  $permissions['show format selection for user'] = array(
+    'name' => 'show format selection for user',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format tips'.
+  $permissions['show format tips'] = array(
+    'name' => 'show format tips',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show more format tips link'.
+  $permissions['show more format tips link'] = array(
+    'name' => 'show more format tips link',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'better_formats',
   );
 
   // Exported permission: 'switch users'.

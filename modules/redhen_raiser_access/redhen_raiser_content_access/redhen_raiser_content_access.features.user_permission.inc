@@ -10,6 +10,20 @@
 function redhen_raiser_content_access_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'create any bean_entity_view bean'.
+  $permissions['create any bean_entity_view bean'] = array(
+    'name' => 'create any bean_entity_view bean',
+    'roles' => array(),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'create any promo bean'.
+  $permissions['create any promo bean'] = array(
+    'name' => 'create any promo bean',
+    'roles' => array(),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'create campaign_update content'.
   $permissions['create campaign_update content'] = array(
     'name' => 'create campaign_update content',
@@ -26,6 +40,13 @@ function redhen_raiser_content_access_user_default_permissions() {
       'editor' => 'editor',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'delete any bean_entity_view bean'.
+  $permissions['delete any bean_entity_view bean'] = array(
+    'name' => 'delete any bean_entity_view bean',
+    'roles' => array(),
+    'module' => 'bean',
   );
 
   // Exported permission: 'delete any campaign_update content'.
@@ -46,6 +67,13 @@ function redhen_raiser_content_access_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any promo bean'.
+  $permissions['delete any promo bean'] = array(
+    'name' => 'delete any promo bean',
+    'roles' => array(),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'delete own campaign_update content'.
   $permissions['delete own campaign_update content'] = array(
     'name' => 'delete own campaign_update content',
@@ -62,6 +90,13 @@ function redhen_raiser_content_access_user_default_permissions() {
       'editor' => 'editor',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit any bean_entity_view bean'.
+  $permissions['edit any bean_entity_view bean'] = array(
+    'name' => 'edit any bean_entity_view bean',
+    'roles' => array(),
+    'module' => 'bean',
   );
 
   // Exported permission: 'edit any campaign_update content'.
@@ -82,6 +117,13 @@ function redhen_raiser_content_access_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any promo bean'.
+  $permissions['edit any promo bean'] = array(
+    'name' => 'edit any promo bean',
+    'roles' => array(),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'edit own campaign_update content'.
   $permissions['edit own campaign_update content'] = array(
     'name' => 'edit own campaign_update content',
@@ -98,6 +140,23 @@ function redhen_raiser_content_access_user_default_permissions() {
       'editor' => 'editor',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'view any bean_entity_view bean'.
+  $permissions['view any bean_entity_view bean'] = array(
+    'name' => 'view any bean_entity_view bean',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'view any promo bean'.
+  $permissions['view any promo bean'] = array(
+    'name' => 'view any promo bean',
+    'roles' => array(),
+    'module' => 'bean',
   );
 
   return $permissions;

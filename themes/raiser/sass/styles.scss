@@ -17,7 +17,7 @@
 
 /* Layout rules */
 @import "layouts/responsive";
-@import "layouts/raiser_layout";
+@import "layouts/*";
 
 /* Component (SMACSS module) rules */
 @import "components/*";

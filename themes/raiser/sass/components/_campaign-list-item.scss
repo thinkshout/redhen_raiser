@@ -1,0 +1,78 @@
+.front {
+  #block-views-campaigns-block {
+    
+    h2 {
+     text-align: center; 
+    }
+
+    td {
+      background: $white;
+      border-radius: 5px;
+      @include box-shadow(0 3px 10px #999); 
+      text-align: center;
+
+      
+
+      .entity-redhen-campaign {
+        padding: 1em; 
+
+        div {
+          margin: 0 auto; 
+        }
+
+        h2 {
+          font-size: 1.25em;
+          padding: 0;
+          margin: 0;
+          line-height: 1.5em;
+
+          a { color: $primary; }
+        }
+
+        .field-name-field-banner-image {
+          border-radius: 5px;
+          margin: 0 auto 2em;
+          max-height: 129px; 
+          max-width: 185px;
+          overflow: hidden;
+          @include box-shadow(0 2px 3px #999); 
+        }
+
+        .redhen-campaign-thermo-percent-bar-wrapper {
+          background: $page-bg;
+          margin-top: 1em; 
+          border: 3px solid $white;
+          border-radius: 5px;
+          @include box-shadow(0 2px 3px #999); 
+          height: 20px;
+          padding: 0;
+
+          .redhen-campaign-thermo-percent-bar {
+            background: $primary;
+            height: 100%; 
+            margin: 0;
+          }
+        }
+
+      }
+      //@include zen-grid-item(12,1);
+      
+      @include medium {
+        //@include zen-grid-item(4,1); 
+      }
+
+      &:nth-child(2n) {
+        @include medium {
+        
+          //@include zen-grid-item(4,5); 
+        }
+      }
+
+      &:nth-child(3n) {
+        @include medium {
+          @include zen-grid-item(4,9); 
+        }
+      }
+    }
+  }
+}

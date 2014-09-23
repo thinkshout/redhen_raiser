@@ -1,10 +1,10 @@
-// Styles for pages
-.page-node {
-  #main #content {
-    background: $white; 
-    margin-top: 2em;
-    margin-bottom: 2em;
-    min-height: 30em;
-    padding: 1em 2em;
-  }
+// Global page styles
+#page {
+ overflow: hidden; 
+}
+
+.front #page {
+  background-color: ffffff; // Old browsers
+  @include filter-gradient(#ffffff, #e5e5e5, vertical); // IE6-9
+  @include background-image(linear-gradient(top, #ffffff 63%,#ffffff 63%,#e5e5e5 100%));
 }

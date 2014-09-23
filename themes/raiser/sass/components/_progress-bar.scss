@@ -1,0 +1,16 @@
+.redhen-campaign-thermo-percent-bar-wrapper {
+  background: $primary-widget + 20;
+  margin-top: 0.5em; 
+  border: 3px solid $white;
+  border-radius: 5px;
+  @include box-shadow(0 2px 3px #999); 
+  height: 28px;
+  padding: 0;
+
+  .redhen-campaign-thermo-percent-bar {
+    background: $primary;
+    @include border-radius(3px 0 0 3px);
+    height: 100%; 
+    margin: 0;
+  }
+}

@@ -95,13 +95,13 @@
 //==================
 
 /* Large desktop */
-@mixin xlarge {
+@mixin large {
   @media (min-width: 75em) {
     @content;
   }
 }
 
-@mixin large {
+@mixin medium {
   @media (min-width: 48em) {
     @content;
   }

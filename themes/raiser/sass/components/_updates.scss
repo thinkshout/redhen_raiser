@@ -1,0 +1,32 @@
+.view-campaign-updates {
+  @include box-shadow(0 3px 5px $gray);
+  background: $white;
+  padding: 2em 1em;
+
+  .node-campaign-update {
+    margin-bottom: 2em;
+
+    h2 {
+      position: absolute;
+      left: 85px;
+      line-height: 1em;
+      a {
+        color: $primary; 
+      } 
+    }
+
+    img {
+      @include border-radius(8px);
+      float: left; 
+    }
+
+    .field-name-body {
+      padding-left: 70px;
+      padding-top: 1em;
+    }
+
+    .node-readmore {
+      padding-left: 70px; 
+    }
+  }
+}

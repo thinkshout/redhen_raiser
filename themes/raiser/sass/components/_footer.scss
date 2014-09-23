@@ -1,5 +1,8 @@
 footer {
   background: $primary;
+
+  #main-menu h2 { display: none; }
+
   #pre-footer {
     background: $white;
     border-bottom: 3px solid $page-bg;

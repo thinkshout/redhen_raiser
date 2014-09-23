@@ -1,5 +1,10 @@
 @import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
 
+html, 
+body {
+  height: 100%;
+}
+
 body {
   background: $page-bg;
   font-family: $raiser-body-font;
@@ -48,7 +53,9 @@ form {
     font-weight: normal; 
   }
   input[type=text],
-  input[type=password] {
+  input[type=password],
+  input[type=email],
+  textarea {
     border: 2px solid $primary;
     border-radius: 4px;
     color: $primary;

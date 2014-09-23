@@ -18,7 +18,7 @@ function redhen_raiser_campaign_updates_node_view_alter(&$build) {
     switch ($build['#view_mode']) {
       case "full":
         if ($redhen_contact) {
-          $build['author'] = entity_view('redhen_contact', array($redhen_contact), 'byline');
+          $build['author'] = entity_view('redhen_contact', array($redhen_contact), 'byline', NULL, TRUE);
         }
         break;
 

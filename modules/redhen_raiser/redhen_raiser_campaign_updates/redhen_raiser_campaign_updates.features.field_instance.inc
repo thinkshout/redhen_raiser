@@ -63,7 +63,7 @@ function redhen_raiser_campaign_updates_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
           'link' => 1,
@@ -80,7 +80,7 @@ function redhen_raiser_campaign_updates_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_campaign_context',
-    'label' => 'Campaign Context',
+    'label' => 'Campaign',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -88,11 +88,7 @@ function redhen_raiser_campaign_updates_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 32,
     ),
@@ -106,7 +102,7 @@ function redhen_raiser_campaign_updates_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
           'link' => 1,
@@ -123,7 +119,7 @@ function redhen_raiser_campaign_updates_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_page_context',
-    'label' => 'Page Context',
+    'label' => 'Fundraiser',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -131,11 +127,7 @@ function redhen_raiser_campaign_updates_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 33,
     ),
@@ -144,8 +136,8 @@ function redhen_raiser_campaign_updates_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Campaign Context');
-  t('Page Context');
+  t('Campaign');
+  t('Fundraiser');
 
   return $field_instances;
 }

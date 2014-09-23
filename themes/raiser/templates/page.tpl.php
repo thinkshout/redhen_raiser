@@ -84,12 +84,6 @@
       </div>
     <?php endif; ?>
 
-    <?php if($page['content_tertiary']): ?>
-      <div id="content-tertiary">
-        <?php print render($page['content_tertiary']); ?>
-      </div>
-    <?php endif; ?>
-
   </div>
   <!-- END MAIN -->
 

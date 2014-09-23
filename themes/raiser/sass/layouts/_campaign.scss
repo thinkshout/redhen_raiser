@@ -1,9 +1,10 @@
 .page-redhen-campaign {
 
   #content {
+    @include box-shadow(0 3px 5px $gray);
     background: $white;
     overflow: hidden;
-    padding-right: 2em;
+    padding-right: 3.5em;
     position: relative; 
   }
   
@@ -33,6 +34,7 @@
     .region-sidebar-first {
       max-width: 90%; 
       margin: 0 auto;
+      padding-right: 2em;
       padding-top: 1em;
     }
   }

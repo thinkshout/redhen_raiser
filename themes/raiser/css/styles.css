@@ -855,12 +855,15 @@ form button:hover {
 }
 /* line 3, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #content {
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
   background: white;
   overflow: hidden;
-  padding-right: 2em;
+  padding-right: 3.5em;
   position: relative;
 }
-/* line 10, ../sass/layouts/_campaign.scss */
+/* line 11, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign .main-content-wrapper {
   float: left;
   width: 100%;
@@ -870,7 +873,7 @@ form button:hover {
   padding: 1em;
 }
 @media (min-width: 48em) {
-  /* line 10, ../sass/layouts/_campaign.scss */
+  /* line 11, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign .main-content-wrapper {
     float: left;
     width: 66.66667%;
@@ -878,7 +881,7 @@ form button:hover {
     margin-right: -66.66667%;
   }
 }
-/* line 21, ../sass/layouts/_campaign.scss */
+/* line 22, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign aside {
   float: left;
   width: 100%;
@@ -890,7 +893,7 @@ form button:hover {
   height: 100%;
 }
 @media (min-width: 48em) {
-  /* line 21, ../sass/layouts/_campaign.scss */
+  /* line 22, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign aside {
     float: left;
     width: 33.33333%;
@@ -898,13 +901,14 @@ form button:hover {
     margin-right: -100%;
   }
 }
-/* line 33, ../sass/layouts/_campaign.scss */
+/* line 34, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign aside .region-sidebar-first {
   max-width: 90%;
   margin: 0 auto;
+  padding-right: 2em;
   padding-top: 1em;
 }
-/* line 41, ../sass/layouts/_campaign.scss */
+/* line 43, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign iframe {
   border: 3px solid white;
   -webkit-box-shadow: 0 3px 5px #989898;
@@ -1371,7 +1375,7 @@ footer #colophon a:hover {
 }
 
 /* line 1, ../sass/components/_header.scss */
-header {
+#header {
   background: white;
   padding: 0.2em 0;
   -webkit-box-shadow: #989898 0 2px 5px;
@@ -1379,38 +1383,38 @@ header {
   box-shadow: #989898 0 2px 5px;
 }
 /* line 6, ../sass/components/_header.scss */
-header #logo {
+#header #logo {
   display: block;
   float: left;
 }
 /* line 9, ../sass/components/_header.scss */
-header #logo img {
+#header #logo img {
   width: 3.594em;
 }
 /* line 12, ../sass/components/_header.scss */
-header #menu-toggle {
+#header #menu-toggle {
   display: block;
   float: right;
   line-height: 2.5em;
 }
 /* line 18, ../sass/components/_header.scss */
-header #secondary-menu {
+#header #secondary-menu {
   clear: both;
   display: none;
   float: left;
   width: 100%;
 }
 /* line 24, ../sass/components/_header.scss */
-header #secondary-menu .links li {
+#header #secondary-menu .links li {
   display: block;
   margin: 0 0 1em;
 }
 /* line 28, ../sass/components/_header.scss */
-header #secondary-menu .links li.first {
+#header #secondary-menu .links li.first {
   margin-top: 1.5em;
 }
 /* line 31, ../sass/components/_header.scss */
-header #secondary-menu .links li.first a {
+#header #secondary-menu .links li.first a {
   background: none;
   padding: 0.8em 1em;
   border-radius: 0.7em;
@@ -1427,20 +1431,20 @@ header #secondary-menu .links li.first a {
   width: 100%;
 }
 /* line 50, ../sass/_mixins.scss */
-header #secondary-menu .links li.first a:hover {
+#header #secondary-menu .links li.first a:hover {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 /* line 62, ../sass/_mixins.scss */
-header #secondary-menu .links li.first a:hover {
+#header #secondary-menu .links li.first a:hover {
   background: #5e9733;
   border: 3px solid #90c965;
   color: white;
 }
 /* line 40, ../sass/components/_header.scss */
-header #secondary-menu .links li li:not(.first) {
+#header #secondary-menu .links li li:not(.first) {
   margin-bottom: 1em;
 }
 
@@ -2373,6 +2377,47 @@ tr.selected td {
   border-radius: 3px 0 0 3px;
   height: 100%;
   margin: 0;
+}
+
+/* line 1, ../sass/components/_updates.scss */
+.view-campaign-updates {
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+  background: white;
+  padding: 2em 1em;
+}
+/* line 6, ../sass/components/_updates.scss */
+.view-campaign-updates .node-campaign-update {
+  margin-bottom: 2em;
+}
+/* line 9, ../sass/components/_updates.scss */
+.view-campaign-updates .node-campaign-update h2 {
+  position: absolute;
+  left: 85px;
+  line-height: 1em;
+}
+/* line 13, ../sass/components/_updates.scss */
+.view-campaign-updates .node-campaign-update h2 a {
+  color: #5e9733;
+}
+/* line 18, ../sass/components/_updates.scss */
+.view-campaign-updates .node-campaign-update img {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  float: left;
+}
+/* line 23, ../sass/components/_updates.scss */
+.view-campaign-updates .node-campaign-update .field-name-body {
+  padding-left: 70px;
+  padding-top: 1em;
+}
+/* line 28, ../sass/components/_updates.scss */
+.view-campaign-updates .node-campaign-update .node-readmore {
+  padding-left: 70px;
 }
 
 /**

@@ -18,6 +18,10 @@ projects[addressfield][subdir] = "contrib"
 projects[bean][version] = "1.7"
 projects[bean][subdir] = "contrib"
 
+; bean_entity_view
+projects[bean_entity_view][version] = "1.0-beta2"
+projects[bean_entity_view][subdir] = "contrib"
+
 ; better_formats
 projects[better_formats][version] = "1.0-beta1"
 projects[better_formats][subdir] = "contrib"

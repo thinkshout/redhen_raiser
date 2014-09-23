@@ -18,6 +18,7 @@ dependencies[] = taxonomy
 dependencies[] = addressfield
 dependencies[] = bean
 dependencies[] = bean_admin_ui
+dependencies[] = bean_entity_view
 dependencies[] = better_formats
 dependencies[] = breakpoints
 dependencies[] = ckeditor

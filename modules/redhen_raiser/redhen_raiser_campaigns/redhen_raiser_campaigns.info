@@ -39,5 +39,6 @@ features[field_instance][] = redhen_campaign-general-field_teaser
 features[field_instance][] = redhen_campaign-general-redhen_campaign_donation_type
 features[field_instance][] = redhen_campaign-general-redhen_campaign_goal
 features[redhen_campaign_type][] = general
+features[variable][] = field_bundle_settings_redhen_campaign__general
 features[variable][] = pathauto_redhen_campaign_pattern
 project path = profiles/redhen_raiser/modules/redhen_raiser/

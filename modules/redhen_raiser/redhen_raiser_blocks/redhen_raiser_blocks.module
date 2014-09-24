@@ -93,7 +93,7 @@ function redhen_raiser_create_default_blocks() {
       'data' => array(
         'entity_type' => 'redhen_campaign_page',
         'entity_view_mode' => 'banner',
-        'entity_id_position' => '1',
+        'entity_id_position' => '2',
       ),
     ),
     'campaign-banner' => array(

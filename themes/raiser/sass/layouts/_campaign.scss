@@ -41,6 +41,10 @@
       padding-right: 2em;
       padding-top: 1em;
     }
+
+    .block-bean {
+      border-bottom: 1px solid $white;
+    }
   }
   
   // Video style
@@ -65,28 +69,43 @@
     h2 { display: none; }
   }
 
-  .block-bean {
-    border-bottom: 1px solid $white;
-  }
-
   #block-bean-social-media-links {
     margin-top: 14em; 
     padding-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
 
     .field-item {
       float: left; 
     }
+
+
     a {
       background: url(../images/social.png) no-repeat;
       background-size: 214px;
       display: block;
-      width: 44px;
+      width: 45px;
       height: 45px;
       float: left;
       text-indent: -9999px;
+      margin-right: 0.3em;
+
+      &.twitter-link {
+        background-position: 0 0; 
+      }
+      &.facebook-link {
+        background-position: -56px 0;
+      }
+      &.linkedin-link {
+        background-position: -112px 0;
+      }
+      &.googleplus-link {
+        background-position: -168px 0;
+      }
     }
   }
-
+  
+  // Promo block
   .bean-promo {
     text-align: center;
 

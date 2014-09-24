@@ -42,9 +42,10 @@
 
   <!-- MAIN -->
   <div id="main">
-
-    <div id="content" class="column" role="main">
+    <div id="highlighted">
       <?php print render($page['highlighted']); ?>
+    </div>
+    <div id="content" class="column" role="main">
       <a id="main-content"></a>
       <div class="main-content-wrapper">
         <?php print render($title_prefix); ?>

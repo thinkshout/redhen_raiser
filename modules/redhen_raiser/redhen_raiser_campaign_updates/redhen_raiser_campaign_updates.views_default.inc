@@ -158,6 +158,61 @@ return redhen_campaign_page_access(\'edit\', $page);';
   $handler->display->display_options['menu']['name'] = 'management';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Campaigns Tab */
+  $handler = $view->new_display('page', 'Campaigns Tab', 'page_1');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Unfiltered text */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['label'] = 'Add Update Link';
+  $handler->display->display_options['header']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<a href="http://dc_campaign.local/node/add/campaign-update?campaign=!1">Post an Update</a>';
+  $handler->display->display_options['header']['area_text_custom']['tokenize'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Campaign (field_campaign_context) */
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['id'] = 'field_campaign_context_target_id';
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['table'] = 'field_data_field_campaign_context';
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['field'] = 'field_campaign_context_target_id';
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['validate']['type'] = 'php';
+  $handler->display->display_options['arguments']['field_campaign_context_target_id']['validate_options']['code'] = '$campaign = redhen_campaign_load($argument);
+return redhen_campaign_access(\'edit\', $campaign);';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'campaign_update' => 'campaign_update',
+  );
+  /* Filter criterion: Content: Fundraiser (field_page_context) */
+  $handler->display->display_options['filters']['field_page_context_target_id']['id'] = 'field_page_context_target_id';
+  $handler->display->display_options['filters']['field_page_context_target_id']['table'] = 'field_data_field_page_context';
+  $handler->display->display_options['filters']['field_page_context_target_id']['field'] = 'field_page_context_target_id';
+  $handler->display->display_options['filters']['field_page_context_target_id']['operator'] = 'empty';
+  $handler->display->display_options['path'] = 'redhen_campaign/%/update';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Updates';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'management';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['campaign_update_admin'] = $view;
 
   $view = new view();

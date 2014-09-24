@@ -50,7 +50,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -128,7 +128,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -205,7 +205,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -273,7 +273,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -359,7 +359,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -419,9 +419,20 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'weight' => 5,
       ),
       'progress' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'abbreviate' => 0,
+          'characters' => array(
+            'billion' => 'B',
+            'million' => 'M',
+            'thousand' => 'K',
+            'trillion' => 'T',
+          ),
+          'text' => '@PROGRESS of @TOTAL raised',
+          'thermometer' => 1,
+        ),
+        'type' => 'redhen_campaign_smart_thermometer',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -490,7 +501,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -568,7 +579,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -645,7 +656,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -713,7 +724,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -799,7 +810,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -853,9 +864,20 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'weight' => 5,
       ),
       'progress' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'abbreviate' => 0,
+          'characters' => array(
+            'billion' => 'B',
+            'million' => 'M',
+            'thousand' => 'K',
+            'trillion' => 'T',
+          ),
+          'text' => '@PROGRESS of @TOTAL raised',
+          'thermometer' => 1,
+        ),
+        'type' => 'redhen_campaign_smart_thermometer',
         'weight' => 0,
       ),
       'teaser' => array(

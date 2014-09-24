@@ -58,7 +58,13 @@ function redhen_raiser_core_fundraise_now_page() {
     return drupal_render($form);
   }
   else {
-    return 'go for it';
+    $return = array();
+    if (user_access('manage redhen campaigns')) {
+      $return['new_campaign'] = array(
+        '#markup' => l(t('Create a new Campaign'), 'redhen_campaign/add/general'),
+      );
+    }
+    return $return;
   }
 }
 // todo: assert this module runs hooks after redhen_contact

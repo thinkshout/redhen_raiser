@@ -31,6 +31,29 @@ function redhen_raiser_blocks_block_view_alter(&$data, $block) {
 }
 
 /**
+ * Implements hook_entity_view_alter().
+ */
+function redhen_raiser_blocks_entity_view_alter(&$build, $type) {
+  if ($build['#view_mode'] == 'progress') {
+    if (isset($build['field_end_date'])) {
+      $end = strtotime($build['field_end_date']['#items'][0]['value']);
+      $remaining = $end - time();
+      // @todo: add configuration options to control these behaviors.
+      if ($remaining <= 0) {
+        $build['field_end_date'][0]['#markup'] = '<span class="date-display-interval-past">Fundraiser has ended.</span>';
+      }
+      else {
+        $prepend = '<span class="date-display-interval-all">';
+        if ($remaining < (7 * 24 * 60 * 60)) {
+          $prepend .= "Only ";
+        }
+        $build['field_end_date'][0]['#markup'] = $prepend . $build['field_end_date'][0]['#markup'] . " left.</span";
+      }
+    }
+  }
+}
+
+/**
  * Create default Blocks.
  */
 function redhen_raiser_create_default_blocks() {

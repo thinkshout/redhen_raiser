@@ -57,9 +57,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare hoc videndum est,
     'weight' => '0',
     'children' => array(
       0 => 'redhen_campaign_goal',
-      1 => 'field_dates',
-      2 => 'field_teaser',
-      3 => 'label',
+      1 => 'field_teaser',
+      2 => 'field_start_date',
+      3 => 'field_end_date',
+      4 => 'label',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

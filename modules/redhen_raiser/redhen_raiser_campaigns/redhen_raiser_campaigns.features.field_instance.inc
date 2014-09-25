@@ -58,13 +58,13 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'progress' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -112,8 +112,8 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_campaign-general-field_dates'
-  $field_instances['redhen_campaign-general-field_dates'] = array(
+  // Exported field_instance: 'redhen_campaign-general-field_end_date'
+  $field_instances['redhen_campaign-general-field_end_date'] = array(
     'bundle' => 'general',
     'deleted' => 0,
     'description' => '',
@@ -122,56 +122,53 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 0,
       ),
       'default' => array(
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'short',
+          'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 6,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'short',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 5,
-      ),
-      'progress' => array(
-        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 0,
+      ),
+      'progress' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'interval' => 1,
+          'interval_display' => 'raw time hence',
+        ),
+        'type' => 'format_interval',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'redhen_campaign',
-    'field_name' => 'field_dates',
-    'label' => 'Dates',
+    'field_name' => 'field_end_date',
+    'label' => 'End Date',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'blank',
+      'default_value' => 'now',
       'default_value2' => 'same',
       'default_value_code' => '',
-      'default_value_code2' => '+90 days',
+      'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -181,9 +178,80 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'increment' => 15,
         'input_format' => 'Y-m-d H:i:s',
         'input_format_custom' => '',
-        'label_position' => 'none',
+        'label_position' => 'above',
         'text_parts' => array(),
-        'year_range' => '-1:+3',
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => -6,
+    ),
+  );
+
+  // Exported field_instance: 'redhen_campaign-general-field_start_date'
+  $field_instances['redhen_campaign-general-field_start_date'] = array(
+    'bundle' => 'general',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 8,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'redhen_campaign',
+    'field_name' => 'field_start_date',
+    'label' => 'Start Date',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'Y-m-d H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
       'weight' => -7,
@@ -215,13 +283,13 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'progress' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -277,13 +345,13 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           'file_view_mode' => 'media_large',
         ),
         'type' => 'file_rendered',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'progress' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -353,13 +421,13 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 6,
       ),
       'progress' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -390,7 +458,11 @@ function redhen_raiser_campaigns_field_default_field_instances() {
   // Exported field_instance: 'redhen_campaign-general-redhen_campaign_donation_type'
   $field_instances['redhen_campaign-general-redhen_campaign_donation_type'] = array(
     'bundle' => 'general',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'redhen_donation_type' => 'redhen_raiser_donation',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -414,15 +486,18 @@ function redhen_raiser_campaigns_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
+        'module' => 'redhen_donation',
+        'settings' => array(
+          'label' => 'Donate',
+        ),
+        'type' => 'redhen_donation_link',
+        'weight' => 3,
       ),
       'progress' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -434,7 +509,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     'entity_type' => 'redhen_campaign',
     'field_name' => 'redhen_campaign_donation_type',
     'label' => 'Donation Type',
-    'required' => TRUE,
+    'required' => 1,
     'settings' => array(
       'default_redhen_donation_settings' => array(
         'scheduling' => array(
@@ -447,6 +522,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'redhen_donation',
       'settings' => array(),
       'type' => 'redhen_donation_select',
@@ -483,19 +559,18 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'redhen_campaign',
         'settings' => array(
-          'abbreviate' => 0,
+          'abbreviate' => 1,
           'characters' => array(
             'billion' => 'B',
             'million' => 'M',
             'thousand' => 'K',
             'trillion' => 'T',
           ),
-          'reference_field' => 'field_campaign_context',
           'text' => '@PROGRESS of @TOTAL raised',
           'thermometer' => 1,
         ),
         'type' => 'redhen_campaign_smart_thermometer',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -539,9 +614,10 @@ function redhen_raiser_campaigns_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Banner Image');
   t('Campaign Teaser');
-  t('Dates');
   t('Donation Type');
+  t('End Date');
   t('Goal');
+  t('Start Date');
   t('Story');
   t('Story Image/Video');
   t('The total fundraising goal for this campaign.');

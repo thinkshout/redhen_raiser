@@ -7,6 +7,152 @@
 include_once 'redhen_raiser_campaign_updates.features.inc';
 
 /**
+ * Implements hook_block_info().
+ */
+function redhen_raiser_campaign_updates_block_info() {
+  $blocks = array();
+
+  $blocks['campaign_page_updates'] = array(
+    'info' => t('Fundraising Page Updates'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  $blocks['campaign_updates'] = array(
+    'info' => t('Fundraising Campaign Updates'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function redhen_raiser_campaign_updates_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'campaign_page_updates':
+      $block['content'] = redhen_raiser_campaign_updates_page_list();
+      break;
+
+    case 'campaign_updates':
+      $block['content'] = redhen_raiser_campaign_updates_campaign_list();
+      break;
+
+  }
+
+  return $block;
+}
+
+/**
+ * Generate a list of a campaigns updates for display in a block.
+ */
+function redhen_raiser_campaign_updates_campaign_list() {
+  $campaign_id = arg(1);
+  if (is_numeric($campaign_id)) {
+    $include = array(
+      'campaign',
+    );
+    return redhen_raiser_campaign_updates_list($include, $campaign_id);
+  }
+}
+
+/**
+ * Generate a list of a page's campaign updates for display in a block.
+ */
+function redhen_raiser_campaign_updates_page_list() {
+  $page_id = arg(2);
+  if (is_numeric($page_id)) {
+    $page = redhen_campaign_page_load($page_id);
+    $include = array(
+      'campaign',
+      'team',
+    );
+    return redhen_raiser_campaign_updates_list($include, $page->campaign, $page_id, $page->team);
+  }
+}
+
+/**
+ * Helper function to generate campaign update displays.
+ */
+function redhen_raiser_campaign_updates_list($include, $campaign_id, $page_id = NULL, $team_id = NULL) {
+  $view_mode = 'teaser';
+  $count = 3;
+  $updates = array();
+
+  // Collect Updates for the specific Page:
+  if ($page_id) {
+    $p_query = new EntityFieldQuery();
+    $p_query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'campaign_update')
+      ->propertyOrderBy('created', 'DESC')
+      ->fieldCondition('field_page_context', 'target_id', $page_id)
+      ->range(0, $count);
+    $results = $p_query->execute();
+    if (!empty($results['node'])) {
+      $updates = array_keys($results['node']);
+    }
+  }
+
+  // Collect Campaign-level updates:
+  if (in_array('campaign', $include)) {
+    $c_query = new EntityFieldQuery();
+    $c_query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'campaign_update')
+      ->propertyOrderBy('created', 'DESC')
+      ->fieldCondition('field_campaign_context', 'target_id', $campaign_id)
+      ->addTag('page_context_is_blank')
+      ->range(0, $count);
+    $results = $c_query->execute();
+    if (!empty($results['node'])) {
+      $updates = array_merge($updates, array_keys($results['node']));
+    }
+  }
+
+  // Collect Team-level updates:
+  if ($team_id && in_array('team', $include)) {
+    $t_query = new EntityFieldQuery();
+    $t_query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'campaign_update')
+      ->propertyOrderBy('created', 'DESC')
+      ->fieldCondition('field_page_context', 'target_id', $team_id)
+      ->range(0, $count);
+    $results = $t_query->execute();
+    if (!empty($results['node'])) {
+      $updates = array_merge($updates, array_keys($results['node']));
+    }
+  }
+
+  // Collect Team-member updates:
+  if (in_array('team members', $include)) {
+    // @todo: will require a joined query.
+  }
+
+  // Merge all updates and render the most recent ones:
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->propertyCondition('type', 'campaign_update')
+    ->propertyOrderBy('created', 'DESC')
+    ->propertyCondition('nid', $updates, 'in')
+    ->range(0, $count);
+  $results = $query->execute();
+  if (!empty($results['node'])) {
+    $nodes = node_load_multiple(array_keys($results['node']));
+  }
+  return node_view_multiple($nodes, $view_mode);
+}
+
+/**
+ * Implements hook_query_TAG_alter().
+ */
+function redhen_raiser_campaign_updates_query_page_context_is_blank_alter(QueryAlterableInterface $query) {
+  // The intuitive names for the arguments have been stripped.
+  // ":db_condition_placeholder_2" is the argument containing "node".
+  $query->leftJoin('field_data_field_page_context', 'c', 'node.nid = c.entity_id AND c.entity_type = :db_condition_placeholder_2');
+  $query->isNull('c.field_page_context_target_id');
+}
+
+/**
  * Implements hook_node_view_alter().
  */
 function redhen_raiser_campaign_updates_node_view_alter(&$build) {

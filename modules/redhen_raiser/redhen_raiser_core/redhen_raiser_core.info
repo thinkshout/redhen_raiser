@@ -28,6 +28,7 @@ features[field_base][] = field_page_context
 features[field_base][] = field_start_date
 features[field_base][] = field_story
 features[field_base][] = field_story_media
+features[field_base][] = field_team_context
 features[field_base][] = field_teaser
 features[field_base][] = redhen_campaign_goal
 features[filter][] = rich_text

@@ -27,6 +27,7 @@ features[field_instance][] = redhen_campaign_page-individual-field_story_media
 features[field_instance][] = redhen_campaign_page-individual-field_teaser
 features[field_instance][] = redhen_campaign_page-individual-redhen_campaign_goal
 features[field_instance][] = redhen_campaign_page-team-field_banner_image
+features[field_instance][] = redhen_campaign_page-team-field_logo
 features[field_instance][] = redhen_campaign_page-team-field_story
 features[field_instance][] = redhen_campaign_page-team-field_story_media
 features[field_instance][] = redhen_campaign_page-team-field_teaser

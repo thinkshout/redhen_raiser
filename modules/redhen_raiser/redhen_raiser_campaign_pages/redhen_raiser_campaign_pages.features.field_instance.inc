@@ -459,6 +459,87 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'redhen_campaign_page-team-field_logo'
+  $field_instances['redhen_campaign_page-team-field_logo'] = array(
+    'bundle' => 'team',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'thumbnail',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'redhen_campaign_page',
+    'field_name' => 'field_logo',
+    'label' => 'Logo',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'campaigns',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'redhen_campaign_page-team-field_story'
   $field_instances['redhen_campaign_page-team-field_story'] = array(
     'bundle' => 'team',
@@ -494,7 +575,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
           'view_mode' => 'default',
         ),
         'type' => 'redhen_campaign_inherit_value',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'progress' => array(
         'label' => 'above',
@@ -524,7 +605,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 5,
     ),
   );
 
@@ -609,7 +690,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -678,7 +759,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -755,6 +836,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
   t('Banner Image');
   t('Campaign Teaser');
   t('Goal');
+  t('Logo');
   t('Story');
   t('Story Image/Video');
   t('The total fundraising goal for this campaign.');

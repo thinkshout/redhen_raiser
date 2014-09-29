@@ -146,13 +146,15 @@ function redhen_raiser_create_beans($stubbed_beans) {
       $new_bean->data = $stubbed_bean['data'];
     }
     $bean_wrapper = entity_metadata_wrapper('bean', $new_bean);
-    foreach ($stubbed_bean['properties'] as $prop => $value) {
-      if (strpos($bean_wrapper->field_links->type(), 'list<') === FALSE) {
-        $bean_wrapper->{$prop} = $value;
-      }
-      else {
-        foreach ($value as $item) {
-          $bean_wrapper->{$prop}[] = $item;
+    if (!empty($stubbed_bean['properties'])) {
+      foreach ($stubbed_bean['properties'] as $prop => $value) {
+        if (strpos($bean_wrapper->field_links->type(), 'list<') === FALSE) {
+          $bean_wrapper->{$prop} = $value;
+        }
+        else {
+          foreach ($value as $item) {
+            $bean_wrapper->{$prop}[] = $item;
+          }
         }
       }
     }

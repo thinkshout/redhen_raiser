@@ -77,7 +77,50 @@ function redhen_raiser_campaign_pages_strongarm() {
           'weight' => '6',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'label' => array(
+          'progress' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'banner' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+        ),
+        'campaign' => array(
+          'progress' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'banner' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+        'team' => array(
+          'progress' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'banner' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_redhen_campaign_page__team'] = $strongarm;

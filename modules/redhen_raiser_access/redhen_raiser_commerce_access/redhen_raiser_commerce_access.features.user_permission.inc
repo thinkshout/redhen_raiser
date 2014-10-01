@@ -83,7 +83,9 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'administer own redhen_raiser_donation redhen donation'.
   $permissions['administer own redhen_raiser_donation redhen donation'] = array(
     'name' => 'administer own redhen_raiser_donation redhen donation',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'redhen_donation',
   );
 
@@ -125,7 +127,9 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'administer redhen_raiser_donation redhen donation'.
   $permissions['administer redhen_raiser_donation redhen donation'] = array(
     'name' => 'administer redhen_raiser_donation redhen donation',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'redhen_donation',
   );
 
@@ -653,7 +657,9 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'view own redhen_raiser_donation redhen donation'.
   $permissions['view own redhen_raiser_donation redhen donation'] = array(
     'name' => 'view own redhen_raiser_donation redhen donation',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'redhen_donation',
   );
 

@@ -46,7 +46,9 @@ function redhen_raiser_core_access_user_default_permissions() {
   // Exported permission: 'access navbar'.
   $permissions['access navbar'] = array(
     'name' => 'access navbar',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'navbar',
   );
 
@@ -492,7 +494,9 @@ function redhen_raiser_core_access_user_default_permissions() {
   // Exported permission: 'view the administration theme'.
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'system',
   );
 

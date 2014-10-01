@@ -127,19 +127,22 @@ function redhen_raiser_campaign_updates_list($include, $campaign_id, $page_id = 
   if (in_array('team members', $include)) {
     // @todo: will require a joined query.
   }
+  if (count($updates)) {
+    // Merge all updates and render the most recent ones:
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+      ->propertyCondition('type', 'campaign_update')
+      ->propertyOrderBy('created', 'DESC')
+      ->propertyCondition('nid', $updates, 'in')
+      ->range(0, $count);
+    $results = $query->execute();
+    if (!empty($results['node'])) {
+      $nodes = node_load_multiple(array_keys($results['node']));
+    }
 
-  // Merge all updates and render the most recent ones:
-  $query = new EntityFieldQuery();
-  $query->entityCondition('entity_type', 'node')
-    ->propertyCondition('type', 'campaign_update')
-    ->propertyOrderBy('created', 'DESC')
-    ->propertyCondition('nid', $updates, 'in')
-    ->range(0, $count);
-  $results = $query->execute();
-  if (!empty($results['node'])) {
-    $nodes = node_load_multiple(array_keys($results['node']));
+    return node_view_multiple($nodes, $view_mode);
   }
-  return node_view_multiple($nodes, $view_mode);
+  return array();
 }
 
 /**

@@ -44,15 +44,19 @@ function redhen_raiser_campaign_pages_strongarm() {
       'display' => array(
         'label' => array(
           'banner' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'progress' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),
@@ -69,17 +73,25 @@ function redhen_raiser_campaign_pages_strongarm() {
             'weight' => '1',
             'visible' => TRUE,
           ),
-        ),
-        'team' => array(
-          'banner' => array(
-            'weight' => '5',
-            'visible' => FALSE,
-          ),
-          'progress' => array(
+          'teaser' => array(
             'weight' => '4',
             'visible' => FALSE,
           ),
+        ),
+        'team' => array(
+          'banner' => array(
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'progress' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
           'full' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
             'weight' => '2',
             'visible' => TRUE,
           ),
@@ -90,11 +102,29 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => TRUE,
           ),
           'progress' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+        'owner' => array(
+          'teaser' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'progress' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'banner' => array(
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
@@ -137,15 +167,19 @@ function redhen_raiser_campaign_pages_strongarm() {
       'display' => array(
         'label' => array(
           'progress' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'banner' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '4',
             'visible' => TRUE,
           ),
         ),
@@ -162,19 +196,27 @@ function redhen_raiser_campaign_pages_strongarm() {
             'weight' => '2',
             'visible' => TRUE,
           ),
+          'teaser' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
         ),
         'team' => array(
           'progress' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'banner' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '2',
+            'visible' => TRUE,
           ),
         ),
         'donate' => array(
@@ -183,11 +225,33 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => TRUE,
           ),
           'progress' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '6',
+            'weight' => '7',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+        'owner' => array(
+          'banner' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'progress' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),

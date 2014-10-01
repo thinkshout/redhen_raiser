@@ -388,7 +388,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'field_name' => 'redhen_campaign_goal',
     'foreign keys' => array(),
     'indexes' => array(),
-    'locked' => 1,
+    'locked' => 0,
     'module' => 'number',
     'settings' => array(),
     'translatable' => 0,

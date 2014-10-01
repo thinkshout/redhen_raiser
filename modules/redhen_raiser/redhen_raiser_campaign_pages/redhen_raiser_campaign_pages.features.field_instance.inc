@@ -442,7 +442,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'entity_type' => 'redhen_campaign_page',
     'field_name' => 'redhen_campaign_goal',
     'label' => 'Goal',
-    'required' => FALSE,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -451,6 +451,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
@@ -965,7 +966,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
     'entity_type' => 'redhen_campaign_page',
     'field_name' => 'redhen_campaign_goal',
     'label' => 'Goal',
-    'required' => FALSE,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -974,6 +975,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',

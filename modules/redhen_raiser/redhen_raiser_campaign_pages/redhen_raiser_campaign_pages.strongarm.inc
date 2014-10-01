@@ -41,7 +41,64 @@ function redhen_raiser_campaign_pages_strongarm() {
           'weight' => '30',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'label' => array(
+          'banner' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'progress' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+        'campaign' => array(
+          'banner' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'progress' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+        ),
+        'team' => array(
+          'banner' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'progress' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+        ),
+        'donate' => array(
+          'banner' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+          'progress' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_redhen_campaign_page__individual'] = $strongarm;
@@ -80,44 +137,58 @@ function redhen_raiser_campaign_pages_strongarm() {
       'display' => array(
         'label' => array(
           'progress' => array(
-            'weight' => '2',
-            'visible' => FALSE,
-          ),
-          'banner' => array(
             'weight' => '4',
             'visible' => FALSE,
           ),
+          'banner' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
           'full' => array(
-            'weight' => '2',
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),
         'campaign' => array(
           'progress' => array(
-            'weight' => '3',
-            'visible' => FALSE,
+            'weight' => '2',
+            'visible' => TRUE,
           ),
           'banner' => array(
             'weight' => '1',
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '0',
+            'weight' => '2',
             'visible' => TRUE,
           ),
         ),
         'team' => array(
           'progress' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'banner' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+        ),
+        'donate' => array(
+          'banner' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+          'progress' => array(
             'weight' => '3',
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '1',
-            'visible' => TRUE,
+            'weight' => '6',
+            'visible' => FALSE,
           ),
         ),
       ),

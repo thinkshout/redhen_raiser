@@ -36,3 +36,41 @@ function redhen_raiser_campaign_pages_entity_info_alter(&$entity_info) {
     'custom settings' => TRUE,
   );
 }
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
+  if ($type == 'redhen_campaign' && $build['#view_mode'] == 'full') {
+    $options = array(
+      'attributes' => array(
+        'class' => 'redhen-campaign-pages-button',
+      ),
+    );
+    $build['pages'] = array(
+      '#markup' => l(t('View all Teams and Individual'), 'campaigns/' . $build['#entity']->campaign_id . '/pages', $options),
+      '#weight' => 100,
+    );
+  }
+  if ($type == 'redhen_campaign_page' && $build['#view_mode'] == 'full') {
+    if (isset($build['campaign'])) {
+      _redhen_raiser_campaign_pages_colectomify($build['campaign']);
+      $build['campaign']['#label'] = 'Fundraising for';
+      unset($build['campaign']['#label_hidden']);
+    }
+    if (isset($build['team'])) {
+      _redhen_raiser_campaign_pages_colectomify($build['team']);
+      $build['team']['#label'] = 'with';
+    }
+  }
+}
+
+/**
+ * Helper to allow field_extra_fields enabled properties to be colectomified.
+ *
+ * See the colectomy module.
+ */
+function _redhen_raiser_campaign_pages_colectomify(&$field) {
+  $field['#label_display'] = 'inlinec';
+  $field['#post_render'] = array('colectomy' => 'colectomy_post_render');
+}

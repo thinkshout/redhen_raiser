@@ -4,6 +4,7 @@ core = 7.x
 package = RedHen Raiser
 version = 7.x-1.0-alpha1
 project = redhen_raiser_campaign_pages
+dependencies[] = colectomy
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = entity

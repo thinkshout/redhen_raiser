@@ -32,8 +32,8 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'redhen_campaign',
         'settings' => array(
-          'default' => 'page',
-          'secondary' => 'campaign',
+          'default' => 'campaign',
+          'secondary' => '',
           'tertiary' => '',
           'view_mode' => 'default',
         ),
@@ -82,7 +82,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 6,
     ),
   );
 
@@ -157,7 +157,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 33,
+      'weight' => 11,
     ),
   );
 
@@ -226,7 +226,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -311,7 +311,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -338,8 +338,8 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'redhen_campaign',
         'settings' => array(
-          'default' => 'team',
-          'secondary' => 'campaign',
+          'default' => 'campaign',
+          'secondary' => '',
           'tertiary' => '',
           'view_mode' => 'default',
         ),
@@ -380,7 +380,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 7,
     ),
   );
 
@@ -455,7 +455,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 31,
+      'weight' => 5,
     ),
   );
 
@@ -531,7 +531,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 7,
     ),
   );
 
@@ -606,7 +606,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 
@@ -687,7 +687,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 6,
     ),
   );
 
@@ -756,7 +756,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 10,
     ),
   );
 
@@ -841,7 +841,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 4,
+      'weight' => 9,
     ),
   );
 
@@ -910,7 +910,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 8,
     ),
   );
 
@@ -979,7 +979,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 0,
+      'weight' => 5,
     ),
   );
 

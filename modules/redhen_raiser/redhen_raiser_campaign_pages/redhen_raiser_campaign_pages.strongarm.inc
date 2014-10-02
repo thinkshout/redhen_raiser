@@ -38,7 +38,22 @@ function redhen_raiser_campaign_pages_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '30',
+          'weight' => '10',
+        ),
+        'label' => array(
+          'weight' => '4',
+        ),
+        'owner' => array(
+          'weight' => '0',
+        ),
+        'campaign' => array(
+          'weight' => '3',
+        ),
+        'team' => array(
+          'weight' => '1',
+        ),
+        'donate' => array(
+          'weight' => '2',
         ),
       ),
       'display' => array(
@@ -59,6 +74,10 @@ function redhen_raiser_campaign_pages_strongarm() {
             'weight' => '3',
             'visible' => TRUE,
           ),
+          'default' => array(
+            'weight' => '-10',
+            'visible' => TRUE,
+          ),
         ),
         'campaign' => array(
           'banner' => array(
@@ -77,6 +96,10 @@ function redhen_raiser_campaign_pages_strongarm() {
             'weight' => '4',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '-10',
+            'visible' => TRUE,
+          ),
         ),
         'team' => array(
           'banner' => array(
@@ -93,6 +116,10 @@ function redhen_raiser_campaign_pages_strongarm() {
           ),
           'teaser' => array(
             'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '-10',
             'visible' => TRUE,
           ),
         ),
@@ -113,6 +140,10 @@ function redhen_raiser_campaign_pages_strongarm() {
             'weight' => '0',
             'visible' => TRUE,
           ),
+          'default' => array(
+            'weight' => '-10',
+            'visible' => TRUE,
+          ),
         ),
         'owner' => array(
           'teaser' => array(
@@ -126,6 +157,10 @@ function redhen_raiser_campaign_pages_strongarm() {
           'banner' => array(
             'weight' => '4',
             'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '-10',
+            'visible' => TRUE,
           ),
         ),
       ),
@@ -161,7 +196,22 @@ function redhen_raiser_campaign_pages_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '6',
+          'weight' => '11',
+        ),
+        'label' => array(
+          'weight' => '2',
+        ),
+        'owner' => array(
+          'weight' => '4',
+        ),
+        'campaign' => array(
+          'weight' => '0',
+        ),
+        'team' => array(
+          'weight' => '1',
+        ),
+        'donate' => array(
+          'weight' => '3',
         ),
       ),
       'display' => array(

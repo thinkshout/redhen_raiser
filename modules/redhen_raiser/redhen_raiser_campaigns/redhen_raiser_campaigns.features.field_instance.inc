@@ -58,7 +58,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'progress' => array(
         'label' => 'above',
@@ -141,7 +141,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'progress' => array(
         'label' => 'hidden',
@@ -216,7 +216,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'progress' => array(
         'label' => 'above',
@@ -421,7 +421,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'progress' => array(
         'label' => 'above',
@@ -486,11 +486,8 @@ function redhen_raiser_campaigns_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'redhen_donation',
-        'settings' => array(
-          'label' => 'Donate',
-        ),
-        'type' => 'redhen_donation_link',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'progress' => array(
@@ -553,7 +550,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'progress' => array(
         'label' => 'hidden',

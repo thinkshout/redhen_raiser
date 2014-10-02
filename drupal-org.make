@@ -38,6 +38,10 @@ projects[commerce][subdir] = "contrib"
 projects[ckeditor][version] = "1.15"
 projects[ckeditor][subdir] = "contrib"
 
+; colectomy
+projects[colectomy][version] = "1.0-beta2"
+projects[colectomy][subdir] = "contrib"
+
 ; commerce_features
 projects[commerce_features][version] = "1.0"
 projects[commerce_features][subdir] = "contrib"

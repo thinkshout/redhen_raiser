@@ -22,6 +22,7 @@ dependencies[] = bean_entity_view
 dependencies[] = better_formats
 dependencies[] = breakpoints
 dependencies[] = ckeditor
+dependencies[] = colectomy
 dependencies[] = commerce
 dependencies[] = commerce_cart
 dependencies[] = commerce_checkout

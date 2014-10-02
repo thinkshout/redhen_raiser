@@ -21,6 +21,7 @@ features[field_instance][] = redhen_contact-contact-field_billing_address
 features[field_instance][] = redhen_contact-contact-field_organization
 features[field_instance][] = redhen_contact-contact-redhen_contact_email
 features[redhen_contact_type][] = contact
+features[variable][] = field_bundle_settings_redhen_contact__contact
 features[variable][] = redhen_contact_alter_username
 features[variable][] = redhen_contact_connect_users
 features[variable][] = redhen_contact_mirror_email

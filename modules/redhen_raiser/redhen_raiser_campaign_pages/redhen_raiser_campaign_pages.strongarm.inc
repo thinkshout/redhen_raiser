@@ -71,7 +71,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '3',
+            'weight' => '2',
             'visible' => TRUE,
           ),
           'default' => array(
@@ -115,7 +115,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '2',
+            'weight' => '1',
             'visible' => TRUE,
           ),
           'default' => array(
@@ -137,8 +137,8 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '3',
+            'visible' => FALSE,
           ),
           'default' => array(
             'weight' => '-10',
@@ -147,7 +147,7 @@ function redhen_raiser_campaign_pages_strongarm() {
         ),
         'owner' => array(
           'teaser' => array(
-            'weight' => '1',
+            'weight' => '0',
             'visible' => TRUE,
           ),
           'progress' => array(
@@ -229,7 +229,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '4',
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),
@@ -247,7 +247,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '3',
+            'weight' => '2',
             'visible' => TRUE,
           ),
         ),
@@ -265,7 +265,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '2',
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),
@@ -283,8 +283,8 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '4',
+            'visible' => FALSE,
           ),
         ),
         'owner' => array(
@@ -297,7 +297,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '1',
+            'weight' => '0',
             'visible' => TRUE,
           ),
           'full' => array(

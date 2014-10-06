@@ -71,7 +71,7 @@ function redhen_raiser_campaign_updates_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['label'] = 'Add Update Link';
   $handler->display->display_options['header']['area_text_custom']['empty'] = TRUE;
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<a href="http://dc_campaign.local/node/add/campaign-update?page=!1">Post an Update</a>';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<a href="/node/add/campaign-update?page=!1">Post an Update</a>';
   $handler->display->display_options['header']['area_text_custom']['tokenize'] = TRUE;
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
@@ -168,7 +168,7 @@ return redhen_campaign_page_access(\'edit\', $page);';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['label'] = 'Add Update Link';
   $handler->display->display_options['header']['area_text_custom']['empty'] = TRUE;
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<a href="http://dc_campaign.local/node/add/campaign-update?campaign=!1">Post an Update</a>';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<a href="/node/add/campaign-update?campaign=!1">Post an Update</a>';
   $handler->display->display_options['header']['area_text_custom']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Campaign (field_campaign_context) */

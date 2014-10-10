@@ -45,7 +45,7 @@
   background: none;
   padding: 0.8em 1em;
   border-radius: 0.7em;
-  @include box-shadow(0 2px 3px $gray);
+  @include box-shadow(0 2px 3px $gray - 50);
 
   &:hover {
     @include transition(all 0.5s);
@@ -72,6 +72,7 @@
   border: 3px solid $white;
   color: $white;
   text-transform: uppercase;
+  padding: 0.8em 5em;
 
   &:hover {
     color: $white;

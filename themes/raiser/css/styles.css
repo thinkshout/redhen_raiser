@@ -692,13 +692,14 @@ form button {
   background: none;
   padding: 0.8em 1em;
   border-radius: 0.7em;
-  -webkit-box-shadow: 0 2px 3px #989898;
-  -moz-box-shadow: 0 2px 3px #989898;
-  box-shadow: 0 2px 3px #989898;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
   background: #f8971c;
   border: 3px solid white;
   color: white;
   text-transform: uppercase;
+  padding: 0.8em 5em;
 }
 /* line 50, ../sass/_mixins.scss */
 form input[type=submit]:hover,
@@ -708,7 +709,7 @@ form button:hover {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 76, ../sass/_mixins.scss */
+/* line 77, ../sass/_mixins.scss */
 form input[type=submit]:hover,
 form button:hover {
   color: white;
@@ -1276,18 +1277,18 @@ body.front #content {
 .page-redhen-campaign #highlighted #block-bean-campaign-banner img {
   width: 100%;
 }
-/* line 14, ../sass/components/_campaign_banner.scss */
+/* line 13, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted h2 {
   left: 0.5em;
   position: absolute;
   top: 4em;
   z-index: 1;
 }
-/* line 20, ../sass/components/_campaign_banner.scss */
+/* line 19, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted h2 a {
   color: white;
 }
-/* line 23, ../sass/components/_campaign_banner.scss */
+/* line 22, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted .field-name-field-teaser {
   background: rgba(0, 0, 0, 0.6);
   bottom: 0;
@@ -1298,9 +1299,42 @@ body.front #content {
   height: 150px;
   width: 40%;
 }
-/* line 33, ../sass/components/_campaign_banner.scss */
+/* line 32, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted .field-name-field-teaser .field-item {
   margin-top: 3em;
+}
+/* line 37, ../sass/components/_campaign_banner.scss */
+.page-redhen-campaign #highlighted .field-type-redhen-donation {
+  position: absolute;
+  bottom: 2em;
+  right: 1em;
+  z-index: 2;
+}
+/* line 43, ../sass/components/_campaign_banner.scss */
+.page-redhen-campaign #highlighted .field-type-redhen-donation a {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
+  background: #f8971c;
+  border: 3px solid white;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.8em 5em;
+}
+/* line 50, ../sass/_mixins.scss */
+.page-redhen-campaign #highlighted .field-type-redhen-donation a:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 77, ../sass/_mixins.scss */
+.page-redhen-campaign #highlighted .field-type-redhen-donation a:hover {
+  color: white;
+  background: #ffab30;
 }
 
 /* line 1, ../sass/components/_footer.scss */
@@ -1510,9 +1544,9 @@ footer #colophon a:hover {
   background: none;
   padding: 0.8em 1em;
   border-radius: 0.7em;
-  -webkit-box-shadow: 0 2px 3px #989898;
-  -moz-box-shadow: 0 2px 3px #989898;
-  box-shadow: 0 2px 3px #989898;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
   border: 3px solid #989898;
   color: #989898;
   float: right;
@@ -1527,7 +1561,7 @@ footer #colophon a:hover {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 87, ../sass/_mixins.scss */
+/* line 88, ../sass/_mixins.scss */
 #user-login .form-actions #edit-cancel:hover,
 #user-register-form .form-actions #edit-cancel:hover,
 #user-pass .form-actions #edit-cancel:hover {
@@ -1580,9 +1614,9 @@ footer #colophon a:hover {
   background: none;
   padding: 0.8em 1em;
   border-radius: 0.7em;
-  -webkit-box-shadow: 0 2px 3px #989898;
-  -moz-box-shadow: 0 2px 3px #989898;
-  box-shadow: 0 2px 3px #989898;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
   background: none;
   border: 3px solid #5e9733;
   box-shadow: none;
@@ -1644,9 +1678,9 @@ footer #colophon a:hover {
     background: none;
     padding: 0.8em 1em;
     border-radius: 0.7em;
-    -webkit-box-shadow: 0 2px 3px #989898;
-    -moz-box-shadow: 0 2px 3px #989898;
-    box-shadow: 0 2px 3px #989898;
+    -webkit-box-shadow: 0 2px 3px #666666;
+    -moz-box-shadow: 0 2px 3px #666666;
+    box-shadow: 0 2px 3px #666666;
     background: none;
     border: 3px solid #5e9733;
     box-shadow: none;
@@ -2514,7 +2548,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1410884111');
+  background-image: url('../images/progress.gif?1412979568');
 }
 
 /* line 1, ../sass/components/_progress-bar.scss */

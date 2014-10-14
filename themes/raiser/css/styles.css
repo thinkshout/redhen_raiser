@@ -2599,39 +2599,50 @@ tr.selected td {
 /* line 37, ../sass/components/_progress-bar.scss */
 .field-name-field-end-date {
   color: white;
-  margin-top: 1em;
+  font-size: 1.125em;
+  margin-top: 0.5em;
   margin-left: 1em;
 }
-/* line 42, ../sass/components/_progress-bar.scss */
+/* line 43, ../sass/components/_progress-bar.scss */
 .field-name-field-end-date .date-display-interval {
   color: #f8971c;
-  font-size: 1.25em;
+  font-size: 1.125em;
 }
 
-/* line 1, ../sass/components/_updates.scss */
-#block-redhen-raiser-campaign-updates-campaign-updates, .view-campaign-updates {
+/* line 3, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates,
+#block-redhen-raiser-campaign-updates-campaign-page-updates,
+.view-campaign-updates {
   -webkit-box-shadow: 0 3px 5px #989898;
   -moz-box-shadow: 0 3px 5px #989898;
   box-shadow: 0 3px 5px #989898;
   background: white;
   padding: 2em 1em;
 }
-/* line 6, ../sass/components/_updates.scss */
-#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update, .view-campaign-updates .node-campaign-update {
+/* line 8, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update,
+.view-campaign-updates .node-campaign-update {
   margin-bottom: 2em;
 }
-/* line 9, ../sass/components/_updates.scss */
-#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update h2, .view-campaign-updates .node-campaign-update h2 {
+/* line 11, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update h2,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update h2,
+.view-campaign-updates .node-campaign-update h2 {
   position: absolute;
   left: 85px;
   line-height: 1em;
 }
-/* line 13, ../sass/components/_updates.scss */
-#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update h2 a, .view-campaign-updates .node-campaign-update h2 a {
+/* line 15, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update h2 a,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update h2 a,
+.view-campaign-updates .node-campaign-update h2 a {
   color: #5e9733;
 }
-/* line 18, ../sass/components/_updates.scss */
-#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update img, .view-campaign-updates .node-campaign-update img {
+/* line 20, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update img,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update img,
+.view-campaign-updates .node-campaign-update img {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
@@ -2639,13 +2650,17 @@ tr.selected td {
   border-radius: 8px;
   float: left;
 }
-/* line 23, ../sass/components/_updates.scss */
-#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update .field-name-body, .view-campaign-updates .node-campaign-update .field-name-body {
+/* line 25, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update .field-name-body,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update .field-name-body,
+.view-campaign-updates .node-campaign-update .field-name-body {
   padding-left: 70px;
   padding-top: 1em;
 }
-/* line 28, ../sass/components/_updates.scss */
-#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update .node-readmore, .view-campaign-updates .node-campaign-update .node-readmore {
+/* line 30, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update .node-readmore,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update .node-readmore,
+.view-campaign-updates .node-campaign-update .node-readmore {
   padding-left: 70px;
 }
 

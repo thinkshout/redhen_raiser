@@ -36,11 +36,12 @@
 
 .field-name-field-end-date {
   color: $white;
-  margin-top: 1em;
+  font-size: em(18);
+  margin-top: 0.5em;
   margin-left: 1em;
 
   .date-display-interval {
     color: $action; 
-    font-size: em(20);
+    font-size: em(18);
   }
 }

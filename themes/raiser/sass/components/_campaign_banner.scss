@@ -1,5 +1,6 @@
 .page-redhen-campaign #highlighted {
   position: relative;
+  margin-top: 1em;
   max-height: 300px;
   @include box-shadow(0 2px 5px $gray);
   

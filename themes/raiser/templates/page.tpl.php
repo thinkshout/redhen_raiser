@@ -48,31 +48,33 @@
     <div id="content" class="column" role="main">
       <a id="main-content"></a>
       <div class="main-content-wrapper">
-        <?php print render($title_prefix); ?>
+
         <?php if ($title): ?>
           <h2 class="page__title title" id="page-title"><?php print $title; ?></h2>
         <?php endif; ?>
-        <?php print render($title_suffix); ?>
+
         <?php print $messages; ?>
         <?php print render($tabs); ?>
+
         <?php print render($page['help']); ?>
         <?php if ($action_links): ?>
           <ul class="action-links"><?php print render($action_links); ?></ul>
         <?php endif; ?>
-        <?php if (drupal_is_front_page()): unset($page['content']['system_main']['default_message']); endif; ?>
+        <?php if (drupal_is_front_page()): ?>
+          <?php unset($page['content']['system_main']['default_message']); ?>
+        <?php endif; ?>
         <?php print render($page['content']); ?>
-        <?php print $feed_icons; ?>
 
-        <?php
-          // Render the sidebars to see if there's anything in them.
-          $sidebar_first  = render($page['sidebar_first']);
-          $sidebar_second = render($page['sidebar_second']);
-        ?>
       </div>
 
+      <?php
+        // Render the sidebars to see if there's anything in them.
+        $sidebar_first  = render($page['sidebar_first']);
+        $sidebar_second = render($page['sidebar_second']);
+      ?>
       <?php if ($sidebar_first || $sidebar_second): ?>
         <aside class="sidebar-first">
-          <?php print $sidebar_first; ?>
+          <?php print render($page['sidebar_first']); ?>
         </aside>
       <?php endif; ?>
     </div>

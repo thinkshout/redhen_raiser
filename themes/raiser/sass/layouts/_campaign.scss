@@ -4,7 +4,6 @@
     @include box-shadow(0 3px 5px $gray);
     background: $white;
     overflow: hidden;
-    padding-right: 3.5em;
     position: relative; 
   }
   
@@ -32,8 +31,8 @@
 
     background: $lt-gray;
     margin-left: 1em;
-    position: absolute;
-    height: 100%;
+    //position: absolute;
+    //height: 100%;
 
     .region-sidebar-first {
       max-width: 90%; 
@@ -63,8 +62,6 @@
     left: 0;
     width: 85%;
     padding: 1em 0.6em 2em 0.5em;
-    font-size: 2em;
-    line-height: 1.2em;
 
     h2 { display: none; }
   }

@@ -1254,75 +1254,74 @@ body.front #content {
   display: inline !important;
 }
 
-/* line 4, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block h2 {
-  text-align: center;
-}
-/* line 8, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td {
-  background: white;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 3px 10px #999999;
-  -moz-box-shadow: 0 3px 10px #999999;
-  box-shadow: 0 3px 10px #999999;
-  text-align: center;
-}
-/* line 16, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign {
+/* line 2, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block {
   padding: 1em;
 }
-/* line 19, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign div {
-  margin: 0 auto;
+/* line 5, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block h2.block-title {
+  margin-bottom: 2em;
+  text-align: center;
 }
-/* line 23, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign h2 {
-  font-size: 1.25em;
-  padding: 0;
-  margin: 0;
-  line-height: 1.5em;
-}
-/* line 29, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign h2 a {
-  color: #5e9733;
-}
-/* line 32, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign .field-name-field-banner-image {
-  border-radius: 5px;
-  margin: 0 auto 2em;
-  max-height: 129px;
-  max-width: 185px;
-  overflow: hidden;
-  -webkit-box-shadow: 0 2px 3px #999999;
-  -moz-box-shadow: 0 2px 3px #999999;
-  box-shadow: 0 2px 3px #999999;
-}
-/* line 41, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign .redhen-campaign-thermo-percent-bar-wrapper {
-  background: #e5e5e5;
-  margin-top: 1em;
-  border: 3px solid white;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 2px 3px #999999;
-  -moz-box-shadow: 0 2px 3px #999999;
-  box-shadow: 0 2px 3px #999999;
-  height: 20px;
-  padding: 0;
-}
-/* line 50, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign .redhen-campaign-thermo-percent-bar-wrapper .redhen-campaign-thermo-percent-bar {
-  background: #5e9733;
-  height: 100%;
-  margin: 0;
+/* line 10, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row {
+  background: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 2em;
 }
 @media (min-width: 48em) {
-  /* line 71, ../sass/components/_campaign-list-item.scss */
-  .front #block-views-campaigns-block td:nth-child(3n) {
+  /* line 10, ../sass/components/_campaign-list-item.scss */
+  .front #block-views-campaigns-block .views-row {
+    display: inline-block;
+    margin-bottom: 2em;
+    min-height: 18.75em;
+    width: 31.33333%;
     float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
+    margin-right: 2%;
+    padding: 1em 0;
   }
+}
+/* line 28, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row h2 {
+  text-align: left;
+  font-size: 1.125em;
+  line-height: 1em;
+  margin-top: 0;
+  padding: 0 1em;
+}
+/* line 35, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row h2 a {
+  color: #5e9733;
+}
+/* line 38, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row .field-name-field-banner-image {
+  margin-bottom: 1em;
+  padding: 0 1em;
+  text-align: center;
+}
+/* line 43, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row .field-name-field-banner-image img {
+  border-radius: 0.5em;
+  border: 3px solid white;
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+}
+/* line 50, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row .field-name-redhen-campaign-goal {
+  color: black;
+  font-size: 1em;
+}
+/* line 57, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row .rhc_progress {
+  display: inline;
+  font-size: 1em;
+  color: #f8971c;
 }
 
 /* line 2, ../sass/components/_campaign-team.scss */

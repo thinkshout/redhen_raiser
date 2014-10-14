@@ -1,78 +1,66 @@
 .front {
   #block-views-campaigns-block {
-    
-    h2 {
-     text-align: center; 
+    padding: 1em;
+
+    h2.block-title { 
+      margin-bottom: 2em; 
+      text-align: center; 
     }
-
-    td {
-      background: $white;
-      border-radius: 5px;
-      @include box-shadow(0 3px 10px #999); 
-      text-align: center;
-
-      
-
-      .entity-redhen-campaign {
-        padding: 1em; 
-
-        div {
-          margin: 0 auto; 
-        }
-
-        h2 {
-          font-size: 1.25em;
-          padding: 0;
-          margin: 0;
-          line-height: 1.5em;
-
-          a { color: $primary; }
-        }
-
-        .field-name-field-banner-image {
-          border-radius: 5px;
-          margin: 0 auto 2em;
-          max-height: 129px; 
-          max-width: 185px;
-          overflow: hidden;
-          @include box-shadow(0 2px 3px #999); 
-        }
-
-        .redhen-campaign-thermo-percent-bar-wrapper {
-          background: $page-bg;
-          margin-top: 1em; 
-          border: 3px solid $white;
-          border-radius: 5px;
-          @include box-shadow(0 2px 3px #999); 
-          height: 20px;
-          padding: 0;
-
-          .redhen-campaign-thermo-percent-bar {
-            background: $primary;
-            height: 100%; 
-            margin: 0;
-          }
-        }
-
-      }
-      //@include zen-grid-item(12,1);
-      
+    
+    .views-row {
       @include medium {
-        //@include zen-grid-item(4,1); 
+        display: inline-block;
+        margin-bottom: 2em;
+        min-height: em(300);
+        width: 31.33333%;  
+        float: left;
+        margin-right: 2%;
+        padding: 1em 0;
+      } 
+
+      background: $white;
+      border-radius: 8px;
+      @include box-shadow(0 3px 5px $gray);
+      margin-bottom: 1em;
+      padding-top: 1em;
+      padding-bottom: 2em;
+
+      h2 {
+       text-align: left; 
+       font-size: em(18);
+       line-height: 1em;
+       margin-top: 0;
+       padding: 0 1em;
+
+        a { color: $primary; }
       }
 
-      &:nth-child(2n) {
-        @include medium {
-        
-          //@include zen-grid-item(4,5); 
+      .field-name-field-banner-image {
+        margin-bottom: 1em;
+        padding: 0 1em; 
+        text-align: center;
+
+        img {
+          border-radius: em(8);
+          border: 3px solid $white;
+          @include box-shadow(0 3px 5px $gray);
         }
       }
 
-      &:nth-child(3n) {
-        @include medium {
-          @include zen-grid-item(4,9); 
-        }
+      .field-name-redhen-campaign-goal {
+        color: $black;
+        font-size: em(16);
       }
+
+
+
+      .rhc_progress {
+        display: inline; 
+        font-size: em(16);
+        color: $action;
+      }
+
     }
   }
 }
+

@@ -42,6 +42,11 @@
     }
   }
   
+  // Campaign story image
+  .field-name-field-story-media {
+    img { width: 100%; } 
+  }
+
   // Video style
   iframe {
     border: 3px solid $white;
@@ -99,7 +104,7 @@
   
   // Promo block
   #block-bean-donation-matching {
-    margin-right: 1em;
+    margin-right: 1.2em;
     margin-top: 1em;
 
     .block-title { display: none; } 

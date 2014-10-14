@@ -1,0 +1,24 @@
+.page-redhen-campaign-donate {
+  h2#page-title {
+    display: block; 
+    margin: 1em 0
+  }
+
+  form {
+    border-right: 1px solid $lt-gray;
+    padding-right: 1em;
+
+    fieldset {
+      border: none; 
+      padding: 0;
+
+      legend {
+        font-size: 1.25em; 
+      }
+    } 
+
+    #edit-product-label {
+      display: none; 
+    }
+  }
+}

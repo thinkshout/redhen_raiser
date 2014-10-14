@@ -1325,6 +1325,42 @@ body.front #content {
   }
 }
 
+/* line 2, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .field-name-field-logo {
+  float: left;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+/* line 7, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .field-name-field-logo img {
+  border-radius: 8px;
+}
+/* line 12, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .redhen_campaign_page_title {
+  float: left;
+  font-size: 1em;
+  width: 75%;
+}
+/* line 18, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .redhen_campaign_page_team {
+  display: block;
+  float: left;
+  font-size: 0.875em;
+  width: 75%;
+}
+/* line 25, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .redhen_campaign_page_campaign {
+  font-size: 0.875em;
+}
+/* line 29, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .field-label {
+  font-weight: normal;
+}
+/* line 33, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .clearfix:after {
+  display: inline !important;
+}
+
 /* line 1, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted {
   position: relative;

@@ -76,4 +76,8 @@ form {
   button {
     @include cta-btn;
   }
+
+  a.button {
+    @include clear-btn;  
+  }
 }

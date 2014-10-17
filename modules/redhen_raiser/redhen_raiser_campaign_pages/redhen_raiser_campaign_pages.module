@@ -48,7 +48,7 @@ function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
       ),
     );
     $build['pages'] = array(
-      '#markup' => l(t('View all Teams and Individual'), 'campaigns/' . $build['#entity']->campaign_id . '/pages', $options),
+      '#markup' => l(t('View all Teams and Individuals'), 'campaigns/' . $build['#entity']->campaign_id . '/pages', $options),
       '#weight' => 100,
     );
   }

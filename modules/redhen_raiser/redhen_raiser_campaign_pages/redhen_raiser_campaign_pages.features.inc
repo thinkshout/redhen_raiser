@@ -29,6 +29,7 @@ function redhen_raiser_campaign_pages_default_redhen_campaign_page_type() {
     "name" : "individual",
     "label" : "Individual",
     "locked" : "0",
+    "data" : null,
     "page_type" : "1",
     "weight" : "0",
     "rdf_mapping" : []
@@ -37,6 +38,7 @@ function redhen_raiser_campaign_pages_default_redhen_campaign_page_type() {
     "name" : "team",
     "label" : "Team",
     "locked" : "0",
+    "data" : null,
     "page_type" : "2",
     "weight" : "0",
     "rdf_mapping" : []

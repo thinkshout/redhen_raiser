@@ -248,7 +248,7 @@ function redhen_raiser_campaign_pages_strongarm() {
           ),
           'teaser' => array(
             'weight' => '2',
-            'visible' => TRUE,
+            'visible' => FALSE,
           ),
         ),
         'team' => array(

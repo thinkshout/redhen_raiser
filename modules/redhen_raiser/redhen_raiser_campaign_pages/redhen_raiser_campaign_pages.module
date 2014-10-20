@@ -52,15 +52,40 @@ function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
       '#weight' => 100,
     );
   }
-  if ($type == 'redhen_campaign_page' && $build['#view_mode'] == 'full') {
-    if (isset($build['campaign'])) {
-      _redhen_raiser_campaign_pages_colectomify($build['campaign']);
-      $build['campaign']['#label'] = 'Fundraising for';
-      unset($build['campaign']['#label_hidden']);
+  if ($type == 'redhen_campaign_page') {
+    if ($build['#view_mode'] == 'teaser') {
+      $stop = 'debug';
+      $uri = $build['#entity']->uri();
+      $path = $uri['path'];
+
+      // Link the label.
+      if (!empty($build['label']['#items'][0]['#markup'])) {
+        $build['label']['#items'][0]['#markup'] = l(
+          $build['label']['#items'][0]['#markup'],
+          $path
+        );
+      }
+
+      // Link the image.
+      if (!empty($build['owner']['redhen_contact'])) {
+        foreach ($build['owner']['redhen_contact'] as $contact_id => $contact) {
+          $build['owner']['redhen_contact'][$contact_id]['avatar']['#post_render'] = array(
+            '_redhen_raiser_campaign_pages_contact_image_post_render',
+          );
+          $build['owner']['redhen_contact'][$contact_id]['avatar']['link_url'] = $path;
+        }
+      }
     }
-    if (isset($build['team'])) {
-      _redhen_raiser_campaign_pages_colectomify($build['team']);
-      $build['team']['#label'] = 'with';
+    if ($build['#view_mode'] == 'full') {
+      if (isset($build['campaign'])) {
+        _redhen_raiser_campaign_pages_colectomify($build['campaign']);
+        $build['campaign']['#label'] = 'Fundraising for';
+        unset($build['campaign']['#label_hidden']);
+      }
+      if (isset($build['team'])) {
+        _redhen_raiser_campaign_pages_colectomify($build['team']);
+        $build['team']['#label'] = 'with';
+      }
     }
   }
 }
@@ -73,4 +98,13 @@ function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
 function _redhen_raiser_campaign_pages_colectomify(&$field) {
   $field['#label_display'] = 'inlinec';
   $field['#post_render'] = array('colectomy' => 'colectomy_post_render');
+}
+
+/**
+ * Post-render callback to link an image to the designated campaign page.
+ */
+function _redhen_raiser_campaign_pages_contact_image_post_render($html, $variables) {
+  $linked_img = l($html, $variables['link_url'], array('html' => TRUE));
+
+  return $linked_img;
 }

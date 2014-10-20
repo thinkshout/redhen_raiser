@@ -228,6 +228,12 @@ projects[ftools][subdir] = "developer"
 ; Libraries
 ;-----------------------------------------
 
+; autopager
+libraries[autopager][download][type] = get
+libraries[autopager][download][url] = http://jquery-autopager.googlecode.com/files/jquery.autopager-1.0.0.js
+libraries[autopager][directory_name] = "autopager"
+libraries[autopager][type] = "library"
+
 ; backbone (used by navbar)
 libraries[backbone][download][type] = get
 libraries[backbone][download][url] = https://github.com/jashkenas/backbone/archive/1.0.0.zip

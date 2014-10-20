@@ -54,7 +54,6 @@ function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
   }
   if ($type == 'redhen_campaign_page') {
     if ($build['#view_mode'] == 'teaser') {
-      $stop = 'debug';
       $uri = $build['#entity']->uri();
       $path = $uri['path'];
 

@@ -39,12 +39,6 @@ function redhen_raiser_context_context_default_contexts() {
           'region' => 'content_secondary',
           'weight' => '-9',
         ),
-        'views-campaign_updates-block' => array(
-          'module' => 'views',
-          'delta' => 'campaign_updates-block',
-          'region' => 'content_secondary',
-          'weight' => '-8',
-        ),
         'bean-campaign-progress' => array(
           'module' => 'bean',
           'delta' => 'campaign-progress',
@@ -89,12 +83,6 @@ function redhen_raiser_context_context_default_contexts() {
           'delta' => 'campaign_page_updates',
           'region' => 'content_secondary',
           'weight' => '-9',
-        ),
-        'views-campaign_updates-page_block' => array(
-          'module' => 'views',
-          'delta' => 'campaign_updates-page_block',
-          'region' => 'content_secondary',
-          'weight' => '-8',
         ),
         'bean-campaign-page-progress' => array(
           'module' => 'bean',

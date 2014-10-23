@@ -41,4 +41,5 @@ features[variable][] = field_bundle_settings_redhen_campaign_page__individual
 features[variable][] = field_bundle_settings_redhen_campaign_page__team
 features[variable][] = pathauto_redhen_campaign_page_pattern
 features[views_view][] = campaign_pages
+features[views_view][] = my_pages
 project path = profiles/redhen_raiser/modules/redhen_raiser

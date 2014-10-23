@@ -45,7 +45,7 @@ function redhen_raiser_custom_install(&$install_state) {
       ->execute();
   }
 
-  redhen_raiser_create_default_blocks();
+  redhen_raiser_blocks_create_default_blocks();
   module_enable(array('redhen_raiser_custom_config'), TRUE);
   drupal_flush_all_caches();
   features_revert();

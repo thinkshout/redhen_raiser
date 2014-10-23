@@ -56,7 +56,7 @@ function redhen_raiser_blocks_entity_view_alter(&$build, $type) {
 /**
  * Create default Blocks.
  */
-function redhen_raiser_create_default_blocks() {
+function redhen_raiser_blocks_create_default_blocks() {
 
   $stubbed_beans = array(
     // Link beans.

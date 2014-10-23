@@ -15,7 +15,7 @@ projects[addressfield][version] = "1.0-beta5"
 projects[addressfield][subdir] = "contrib"
 
 ; bean
-projects[bean][version] = "1.7"
+projects[bean][version] = "1.8"
 projects[bean][subdir] = "contrib"
 
 ; bean_entity_view
@@ -35,7 +35,7 @@ projects[commerce][version] = "1.10"
 projects[commerce][subdir] = "contrib"
 
 ; ckeditor
-projects[ckeditor][version] = "1.15"
+projects[ckeditor][version] = "1.16"
 projects[ckeditor][subdir] = "contrib"
 
 ; colectomy
@@ -60,7 +60,7 @@ projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/com
 projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/commerce_recurring-Alter_recurring_price-2263371-1.patch"
 
 ; context requires ctools 1.7+ (jquery_ui & admin recommended)
-projects[context][version] = "3.2"
+projects[context][version] = "3.3"
 projects[context][subdir] = "contrib"
 
 ; context_condition_theme
@@ -116,7 +116,7 @@ projects[libraries][version] = "2.2"
 projects[libraries][subdir] = "contrib"
 
 ; link
-projects[link][version] = "1.2"
+projects[link][version] = "1.3"
 projects[link][subdir] = "contrib"
 
 ; login_destination

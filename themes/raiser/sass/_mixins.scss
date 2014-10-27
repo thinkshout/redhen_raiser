@@ -61,7 +61,7 @@
 
   &:hover {
     background: $primary;
-    border: 3px solid $primary + 50; 
+    border: 3px solid $primary + 50;
     color: $white;
   }
 }
@@ -110,7 +110,7 @@
 
 @mixin small {
   @media (min-width: 47.938em) {
-    @content; 
+    @content;
   }
 }
 

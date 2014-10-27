@@ -902,7 +902,7 @@ form a.button:hover {
   margin-right: -100%;
   background: white;
 }
-@media (min-width: 48em) {
+@media (min-width: 992px) {
   /* line 10, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign .main-content-wrapper {
     float: left;
@@ -925,7 +925,7 @@ form a.button:hover {
   height: 100%;
   position: absolute;
 }
-@media (min-width: 48em) {
+@media (min-width: 992px) {
   /* line 24, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign aside {
     float: left;
@@ -1061,9 +1061,10 @@ form a.button:hover {
 }
 
 /* line 2, ../sass/layouts/_home.scss */
-body.front #content {
+body.front #main #content {
   border-bottom: 1px solid #5e9733;
   text-align: center;
+  padding: 0 1em;
 }
 
 /* line 2, ../sass/layouts/_page.scss */
@@ -1292,58 +1293,69 @@ body.front #content {
 /* line 10, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block .views-row {
   background: white;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 3px 5px #989898;
-  -moz-box-shadow: 0 3px 5px #989898;
-  box-shadow: 0 3px 5px #989898;
+  -webkit-box-shadow: 0 2px 5px #acacac;
+  -moz-box-shadow: 0 2px 5px #acacac;
+  box-shadow: 0 2px 5px #acacac;
   margin-bottom: 1em;
   padding-top: 1em;
   padding-bottom: 2em;
 }
-@media (min-width: 48em) {
+@media (min-width: 768px) {
+  /* line 10, ../sass/components/_campaign-list-item.scss */
+  .front #block-views-campaigns-block .views-row {
+    float: left;
+    margin-right: 1%;
+    margin-left: 1%;
+    width: 48%;
+  }
+}
+@media (min-width: 992px) {
   /* line 10, ../sass/components/_campaign-list-item.scss */
   .front #block-views-campaigns-block .views-row {
     display: inline-block;
     margin-bottom: 2em;
+    margin-right: 1%;
+    margin-left: 1%;
     min-height: 18.75em;
     width: 31.33333%;
     float: left;
-    margin-right: 2%;
     padding: 1em 0;
   }
 }
-/* line 28, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block .views-row h2 {
+/* line 38, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row .redhen_campaign_title {
+  font-family: Georgia, "Times New Roman", serif;
   text-align: left;
-  font-size: 1.125em;
   line-height: 1em;
+  margin-bottom: 1em;
   margin-top: 0;
   padding: 0 1em;
 }
-/* line 35, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block .views-row h2 a {
+/* line 46, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row .redhen_campaign_title a {
   color: #5e9733;
+  font-size: 1.125em;
 }
-/* line 38, ../sass/components/_campaign-list-item.scss */
+/* line 53, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block .views-row .field-name-field-banner-image {
   margin-bottom: 1em;
   padding: 0 1em;
   text-align: center;
 }
-/* line 43, ../sass/components/_campaign-list-item.scss */
+/* line 58, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block .views-row .field-name-field-banner-image img {
   border-radius: 0.5em;
-  border: 3px solid white;
   -webkit-box-shadow: 0 3px 5px #989898;
   -moz-box-shadow: 0 3px 5px #989898;
   box-shadow: 0 3px 5px #989898;
+  width: 100%;
 }
-/* line 50, ../sass/components/_campaign-list-item.scss */
+/* line 65, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block .views-row .field-name-redhen-campaign-goal {
   color: black;
   font-size: 1em;
 }
-/* line 57, ../sass/components/_campaign-list-item.scss */
+/* line 72, ../sass/components/_campaign-list-item.scss */
 .front #block-views-campaigns-block .views-row .rhc_progress {
   display: inline;
   font-size: 1em;
@@ -1361,7 +1373,7 @@ body.front #content {
   padding-top: 1em;
   padding-bottom: 2em;
 }
-@media (min-width: 48em) {
+@media (min-width: 992px) {
   /* line 3, ../sass/components/_campaign-team-individual-list.scss */
   .view-campaign-pages .views-row {
     display: inline-block;
@@ -1659,7 +1671,7 @@ footer #colophon a:hover {
   color: #f8971c;
 }
 
-@media (min-width: 47.938em) {
+@media (min-width: 768px) {
   /* line 84, ../sass/components/_footer.scss */
   footer #pre-footer {
     text-align: left;
@@ -1717,7 +1729,7 @@ footer #colophon a:hover {
   -moz-box-shadow: 0 2px 3px #989898;
   box-shadow: 0 2px 3px #989898;
 }
-@media (min-width: 75em) {
+@media (min-width: 1200px) {
   /* line 10, ../sass/components/_forms.scss */
   #user-login,
   #user-register-form,
@@ -1912,7 +1924,7 @@ footer #colophon a:hover {
 /* line 1, ../sass/components/_header.scss */
 #header {
   background: white;
-  padding: 0.2em 0;
+  padding: 0.2em 1em;
   -webkit-box-shadow: #989898 0 2px 5px;
   -moz-box-shadow: #989898 0 2px 5px;
   box-shadow: #989898 0 2px 5px;
@@ -1983,7 +1995,7 @@ footer #colophon a:hover {
   margin-bottom: 1em;
 }
 
-@media (min-width: 47.938em) {
+@media (min-width: 768px) {
   /* line 48, ../sass/components/_header.scss */
   #header {
     padding: 0.2em 1em;
@@ -2887,7 +2899,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1412979568');
+  background-image: url('../images/progress.gif?1414439382');
 }
 
 /* line 1, ../sass/components/_progress-bar.scss */

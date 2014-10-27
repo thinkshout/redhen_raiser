@@ -251,7 +251,30 @@ function redhen_raiser_campaign_updates_form_campaign_update_node_form_alter(&$f
       }
     }
   }
-  $form['field_campaign_context']['#access'] = user_access('administer nodes');
   $form['field_team_context']['#access'] = user_access('administer nodes');
-  $form['field_page_context']['#access'] = user_access('administer nodes');
+  // Hide context fields from non-admin users (auto-populated based on context):
+  if (!user_access('administer nodes')) {
+    $form['field_campaign_context']['#access'] = FALSE;
+    $form['field_page_context']['#access'] = FALSE;
+  }
+  // Otherwise, shine up the context selection UI:
+  else {
+    $lang = $form['field_page_context']['#language'];
+    $team_member_options = array();
+    $team_options = $form['field_page_context'][$lang]['#options']['Team'];
+    $individual_options = $form['field_page_context'][$lang]['#options']['Individual'];
+    $individual_pages = redhen_campaign_page_load_multiple(array_keys($individual_options));
+    foreach ($individual_pages as $page) {
+      if ($page->team) {
+        $team_member_options[$team_options[$page->team] . ' members'][$page->page_id] = $page->label;
+        unset($individual_options[$page->page_id]);
+      }
+    }
+    // Display teams before individuals:
+    unset($form['field_page_context'][$lang]['#options']['Team']);
+    unset($form['field_page_context'][$lang]['#options']['Individual']);
+    $form['field_page_context'][$lang]['#options']['TEAMS'] = $team_options;
+    $form['field_page_context'][$lang]['#options']['TEAM MEMBERS'] = $team_member_options;
+    $form['field_page_context'][$lang]['#options']['INDIVIDUALS'] = $individual_options;
+  }
 }

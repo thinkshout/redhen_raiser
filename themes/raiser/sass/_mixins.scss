@@ -97,19 +97,22 @@
 
 /* Large desktop */
 @mixin large {
-  @media (min-width: 75em) {
+  @media (min-width: 1200px) {
     @content;
   }
 }
 
+// Desktop
 @mixin medium {
-  @media (min-width: 48em) {
+  @media (min-width: 992px) and (max-width: 1199px) {
     @content;
   }
 }
 
+
+// Tablet
 @mixin small {
-  @media (min-width: 47.938em) {
+  @media (min-width: 768px) and (max-width: 991px ) {
     @content; 
   }
 }

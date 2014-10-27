@@ -133,51 +133,11 @@ function redhen_raiser_campaign_updates_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-campaign_update-field_team_context'
-  $field_instances['node-campaign_update-field_team_context'] = array(
-    'bundle' => 'campaign_update',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_team_context',
-    'label' => 'Team',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 4,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
   t('Campaign');
   t('Fundraiser');
-  t('Team');
 
   return $field_instances;
 }

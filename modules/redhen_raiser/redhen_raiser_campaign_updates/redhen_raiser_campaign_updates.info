@@ -18,7 +18,6 @@ features[features_api][] = api:2
 features[field_instance][] = node-campaign_update-body
 features[field_instance][] = node-campaign_update-field_campaign_context
 features[field_instance][] = node-campaign_update-field_page_context
-features[field_instance][] = node-campaign_update-field_team_context
 features[node][] = campaign_update
 features[variable][] = field_bundle_settings_node__campaign_update
 features[variable][] = menu_options_campaign_update

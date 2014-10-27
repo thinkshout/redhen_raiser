@@ -223,9 +223,6 @@ function redhen_raiser_campaign_updates_form_campaign_update_node_form_alter(&$f
             $lang = $form['language']['#value'];
             $form['field_campaign_context'][$lang]['#default_value'] = $page->campaign;
             $form['field_page_context'][$lang]['#default_value'] = $page->page_id;
-            if (isset($page->team)) {
-              $form['field_team_context'][$lang]['#default_value'] = $page->team;
-            }
           }
           break;
 
@@ -251,7 +248,6 @@ function redhen_raiser_campaign_updates_form_campaign_update_node_form_alter(&$f
       }
     }
   }
-  $form['field_team_context']['#access'] = user_access('administer nodes');
   // Hide context fields from non-admin users (auto-populated based on context):
   if (!user_access('administer nodes')) {
     $form['field_campaign_context']['#access'] = FALSE;

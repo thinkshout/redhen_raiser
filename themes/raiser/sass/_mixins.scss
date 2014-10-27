@@ -104,7 +104,7 @@
 
 // Desktop
 @mixin medium {
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 992px) {
     @content;
   }
 }
@@ -112,7 +112,7 @@
 
 // Tablet
 @mixin small {
-  @media (min-width: 768px) and (max-width: 991px ) {
+  @media (min-width: 768px) {
     @content; 
   }
 }

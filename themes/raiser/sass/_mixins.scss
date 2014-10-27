@@ -61,7 +61,7 @@
 
   &:hover {
     background: $primary;
-    border: 3px solid $primary + 50; 
+    border: 3px solid $primary + 50;
     color: $white;
   }
 }
@@ -113,7 +113,7 @@
 // Tablet
 @mixin small {
   @media (min-width: 768px) {
-    @content; 
+    @content;
   }
 }
 

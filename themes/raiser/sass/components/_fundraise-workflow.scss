@@ -1,6 +1,6 @@
 .page-fundraise {
   a[href="/cafb-dc/redhen_campaign/add/general"] {
-    @include cta-btn 
+    @include cta-btn
   }
 }
 
@@ -8,17 +8,38 @@
 .page-redhen-campaign-page-add {
 
   h2#page-title {
-    display: block; 
+    display: block;
   }
 
   legend {
     color: $black;
-    font-size: 1.25em; 
+    font-size: 1.25em;
   }
-  
+
   fieldset {
-    border: none; 
+    border: none;
     padding-left: 0;
+  }
+
+  .fieldset-description {
+    @include box-shadow(0 3px 5px $gray);
+    background: $lt-gray;
+    display: none;
+    padding: em(16);
+    position: absolute;
+    right: em(0);
+    margin-top: em(-56);
+    width: zen-grid-item-width(3);
+    @include medium {
+      display: block;
+    }
+
+    .fieldset-description-title {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: em(16);
+      margin-top: em(8);
+    }
   }
 
   .filter-wrapper, .filter-help {
@@ -28,45 +49,65 @@
   }
 
   .field-name-redhen-campaign-goal {
-    padding-left: 0; 
+    padding-left: 0;
 
     label {
-      color: $black; 
+      color: $black;
       font-size: em(14);
     }
 
     .field-prefix {
-      background: $gray; 
+      background: $gray;
       display: none;
     }
 
     .description {
       color: $black;
-      font-size: em(12); 
+      font-size: em(12);
     }
 
     input { font-size: em(14); }
   }
-  
+
 
   .container-inline-date {
     .date-padding {
-      padding: 0; 
+      padding: 0;
     }
   }
 
   .field-type-datetime {
+    @include zen-grid-item(6,1);
     margin-left: 0;
-    label { 
-      color: $black; 
-      font-size: em(16); 
-    } 
+    &#edit-field-end-date {
+      @include zen-grid-item(6,1,right);
+      font-size: em(16);
+      margin-top: 0;
+    }
+    label {
+      color: $black;
+      font-size: em(16);
+    }
 
     .description {
-      color: black; 
+      color: black;
     }
 
     input { font-size: 16px; }
+  }
+
+  .field-type-image {
+    label {
+      float: left;
+      margin-right: em(8);
+    }
+    .description {
+      line-height: 1.7;
+    }
+  }
+
+  a.button {
+    @include appearance(none);
   }
 
 }

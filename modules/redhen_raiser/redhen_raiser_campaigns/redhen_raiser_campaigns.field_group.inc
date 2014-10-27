@@ -35,7 +35,8 @@ function redhen_raiser_campaigns_field_group_info() {
         'required_fields' => 1,
         'classes' => 'group-customize field-group-fieldset',
         'description' => '<span class="fieldset-description-title">Customization Tips</span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare hoc videndum est, possitne nobis hoc ratio philosophorum dare. Sed tamen est aliquid, quod nobis non liceat, liceat illis. Ita enim vivunt quidam, ut eorum vita refellatur oratio.',
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare hoc videndum est, possitne nobis hoc ratio philosophorum dare. Sed tamen est aliquid, quod nobis non liceat, liceat illis. Ita enim vivunt quidam, ut eorum vita refellatur oratio.',
       ),
       'formatter' => 'open',
     ),
@@ -56,9 +57,9 @@ function redhen_raiser_campaigns_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'redhen_campaign_goal',
-      1 => 'field_teaser',
+      1 => 'field_end_date',
       2 => 'field_start_date',
-      3 => 'field_end_date',
+      3 => 'field_teaser',
       4 => 'label',
     ),
     'format_type' => 'fieldset',
@@ -68,7 +69,7 @@ function redhen_raiser_campaigns_field_group_info() {
         'required_fields' => 1,
         'classes' => 'group-funding field-group-fieldset',
         'description' => '<span class="fieldset-description-title">Funding Tip</span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quantum Aristoxeni ingenium consumptum videmus in musicis? Si enim ad populum me vocas, eum. Duo Reges: constructio interrete.',
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quantum Aristoxeni ingenium consumptum videmus in musicis? Si enim ad populum me vocas, eum. Duo Reges: constructio interrete.',
       ),
       'formatter' => 'open',
     ),
@@ -98,7 +99,8 @@ function redhen_raiser_campaigns_field_group_info() {
         'required_fields' => 1,
         'classes' => 'group-story field-group-fieldset',
         'description' => '<span class="fieldset-description-title">Story Tip</span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cupit enim dícere nihil posse ad beatam vitam deesse sapienti. Non est ista, inquam, Piso, magna dissensio.',
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cupit enim dícere nihil posse ad beatam vitam deesse sapienti. Non est ista, inquam, Piso, magna dissensio.',
       ),
       'formatter' => 'open',
     ),

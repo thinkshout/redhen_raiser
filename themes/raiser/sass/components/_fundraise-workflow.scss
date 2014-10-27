@@ -81,6 +81,7 @@
     margin-left: 0;
     &#edit-field-end-date {
       @include zen-grid-item(6,1,right);
+      font-size: em(16);
       margin-top: 0;
     }
     label {
@@ -93,6 +94,16 @@
     }
 
     input { font-size: 16px; }
+  }
+
+  .field-type-image {
+    label {
+      float: left;
+      margin-right: em(8);
+    }
+    .description {
+      line-height: 1.7;
+    }
   }
 
   a.button {

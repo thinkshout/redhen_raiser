@@ -1932,25 +1932,37 @@ footer #colophon a:hover {
   width: 50%;
   margin-right: 0%;
   margin-left: -50%;
+  font-size: 1em;
   margin-top: 0;
 }
-/* line 86, ../sass/components/_fundraise-workflow.scss */
+/* line 87, ../sass/components/_fundraise-workflow.scss */
 .page-redhen-campaign-add-general .field-type-datetime label,
 .page-redhen-campaign-page-add .field-type-datetime label {
   color: black;
   font-size: 1em;
 }
-/* line 91, ../sass/components/_fundraise-workflow.scss */
+/* line 92, ../sass/components/_fundraise-workflow.scss */
 .page-redhen-campaign-add-general .field-type-datetime .description,
 .page-redhen-campaign-page-add .field-type-datetime .description {
   color: black;
 }
-/* line 95, ../sass/components/_fundraise-workflow.scss */
+/* line 96, ../sass/components/_fundraise-workflow.scss */
 .page-redhen-campaign-add-general .field-type-datetime input,
 .page-redhen-campaign-page-add .field-type-datetime input {
   font-size: 16px;
 }
-/* line 98, ../sass/components/_fundraise-workflow.scss */
+/* line 100, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-type-image label,
+.page-redhen-campaign-page-add .field-type-image label {
+  float: left;
+  margin-right: 0.5em;
+}
+/* line 104, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-type-image .description,
+.page-redhen-campaign-page-add .field-type-image .description {
+  line-height: 1.7;
+}
+/* line 109, ../sass/components/_fundraise-workflow.scss */
 .page-redhen-campaign-add-general a.button,
 .page-redhen-campaign-page-add a.button {
   -webkit-appearance: none;

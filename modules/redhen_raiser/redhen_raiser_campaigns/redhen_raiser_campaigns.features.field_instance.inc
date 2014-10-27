@@ -176,7 +176,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
+        'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
         'text_parts' => array(),
@@ -247,7 +247,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
+        'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
         'text_parts' => array(),
@@ -532,7 +532,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     'bundle' => 'general',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The total fundraising goal for this campaign.',
+    'description' => '',
     'display' => array(
       'banner' => array(
         'label' => 'above',
@@ -589,7 +589,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
     'entity_type' => 'redhen_campaign',
     'field_name' => 'redhen_campaign_goal',
-    'label' => 'Goal',
+    'label' => 'How much money are you raising?',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -613,11 +613,10 @@ function redhen_raiser_campaigns_field_default_field_instances() {
   t('Campaign Teaser');
   t('Donation Type');
   t('End Date');
-  t('Goal');
+  t('How much money are you raising?');
   t('Start Date');
   t('Story');
   t('Story Image/Video');
-  t('The total fundraising goal for this campaign.');
   t('This teaser will appear on the banner image overlay below the title, and on some preview displays of this Campaign.');
 
   return $field_instances;

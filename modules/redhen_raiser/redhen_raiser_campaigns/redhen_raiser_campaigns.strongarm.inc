@@ -69,7 +69,7 @@ function redhen_raiser_campaigns_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '-10',
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),

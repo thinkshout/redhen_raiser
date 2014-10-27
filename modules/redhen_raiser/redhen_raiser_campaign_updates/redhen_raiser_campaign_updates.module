@@ -223,6 +223,9 @@ function redhen_raiser_campaign_updates_form_campaign_update_node_form_alter(&$f
             $lang = $form['language']['#value'];
             $form['field_campaign_context'][$lang]['#default_value'] = $page->campaign;
             $form['field_page_context'][$lang]['#default_value'] = $page->page_id;
+            $uri = entity_uri('redhen_campaign_page', $page);
+            $form_state['destination'] = $uri['path'];
+            $form['actions']['submit']['#submit'][] = 'redhen_raiser_campaign_updates_redirect';
           }
           break;
 
@@ -236,6 +239,9 @@ function redhen_raiser_campaign_updates_form_campaign_update_node_form_alter(&$f
             // edit the page and post updates. Populate the contextual elements.
             $lang = $form['language']['#value'];
             $form['field_campaign_context'][$lang]['#default_value'] = $campaign->campaign_id;
+            $uri = entity_uri('redhen_campaign', $campaign);
+            $form_state['destination'] = $uri['path'];
+            $form['actions']['submit']['#submit'][] = 'redhen_raiser_campaign_updates_redirect';
           }
           break;
 
@@ -273,4 +279,8 @@ function redhen_raiser_campaign_updates_form_campaign_update_node_form_alter(&$f
     $form['field_page_context'][$lang]['#options']['TEAM MEMBERS'] = $team_member_options;
     $form['field_page_context'][$lang]['#options']['INDIVIDUALS'] = $individual_options;
   }
+}
+
+function redhen_raiser_campaign_updates_redirect($form, &$form_state) {
+  $form_state['redirect'] = $form_state['destination'];
 }

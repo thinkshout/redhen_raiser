@@ -83,5 +83,12 @@ function redhen_raiser_campaign_updates_strongarm() {
   $strongarm->value = 0;
   $export['node_submitted_campaign_update'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_campaign_update_pattern';
+  $strongarm->value = '[node:field-campaign-context:label]/[node:field-page-context:label]/updates/[node:title]';
+  $export['pathauto_node_campaign_update_pattern'] = $strongarm;
+
   return $export;
 }

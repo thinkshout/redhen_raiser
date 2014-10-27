@@ -692,13 +692,14 @@ form button {
   background: none;
   padding: 0.8em 1em;
   border-radius: 0.7em;
-  -webkit-box-shadow: 0 2px 3px #989898;
-  -moz-box-shadow: 0 2px 3px #989898;
-  box-shadow: 0 2px 3px #989898;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
   background: #f8971c;
   border: 3px solid white;
   color: white;
   text-transform: uppercase;
+  padding: 0.8em 5em;
 }
 /* line 50, ../sass/_mixins.scss */
 form input[type=submit]:hover,
@@ -708,11 +709,37 @@ form button:hover {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 76, ../sass/_mixins.scss */
+/* line 77, ../sass/_mixins.scss */
 form input[type=submit]:hover,
 form button:hover {
   color: white;
   background: #ffab30;
+}
+/* line 80, ../sass/base/_base.scss */
+form a.button {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
+  background: none;
+  border: 3px solid #5e9733;
+  box-shadow: none;
+  color: #5e9733;
+}
+/* line 50, ../sass/_mixins.scss */
+form a.button:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 62, ../sass/_mixins.scss */
+form a.button:hover {
+  background: #5e9733;
+  border: 3px solid #90c965;
+  color: white;
 }
 
 /* Layout rules */
@@ -865,20 +892,18 @@ form button:hover {
   box-shadow: 0 3px 5px #989898;
   background: white;
   overflow: hidden;
-  padding-right: 3.5em;
   position: relative;
 }
-/* line 11, ../sass/layouts/_campaign.scss */
+/* line 10, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign .main-content-wrapper {
   float: left;
   width: 100%;
   margin-left: 0%;
   margin-right: -100%;
   background: white;
-  padding: 1em;
 }
 @media (min-width: 48em) {
-  /* line 11, ../sass/layouts/_campaign.scss */
+  /* line 10, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign .main-content-wrapper {
     float: left;
     width: 66.66667%;
@@ -886,23 +911,22 @@ form button:hover {
     margin-right: -66.66667%;
   }
 }
-/* line 21, ../sass/layouts/_campaign.scss */
+/* line 19, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign .main-content-wrapper .page__title {
   display: none;
 }
-/* line 26, ../sass/layouts/_campaign.scss */
+/* line 24, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign aside {
   float: left;
   width: 100%;
   margin-left: 0%;
   margin-right: -100%;
   background: #f1f1f1;
-  margin-left: 1em;
-  position: absolute;
   height: 100%;
+  position: absolute;
 }
 @media (min-width: 48em) {
-  /* line 26, ../sass/layouts/_campaign.scss */
+  /* line 24, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign aside {
     float: left;
     width: 33.33333%;
@@ -910,16 +934,39 @@ form button:hover {
     margin-right: -100%;
   }
 }
-/* line 38, ../sass/layouts/_campaign.scss */
-.page-redhen-campaign aside .region-sidebar-first {
-  max-width: 90%;
-  margin: 0 auto;
-  padding-right: 2em;
-  padding-top: 1em;
-}
-/* line 45, ../sass/layouts/_campaign.scss */
+/* line 35, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign aside .block-bean {
   border-bottom: 1px solid white;
+}
+/* line 41, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign .redhen-campaign-pages-button {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
+  background: #f8971c;
+  border: 3px solid white;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.8em 5em;
+}
+/* line 50, ../sass/_mixins.scss */
+.page-redhen-campaign .redhen-campaign-pages-button:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 77, ../sass/_mixins.scss */
+.page-redhen-campaign .redhen-campaign-pages-button:hover {
+  color: white;
+  background: #ffab30;
+}
+/* line 47, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign .field-name-field-story-media img {
+  width: 100%;
 }
 /* line 51, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign iframe {
@@ -929,34 +976,33 @@ form button:hover {
   box-shadow: 0 3px 5px #989898;
   width: 100%;
 }
-/* line 58, ../sass/layouts/_campaign.scss */
+/* line 59, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign #block-bean-campaign-page-progress,
 .page-redhen-campaign #block-bean-campaign-progress {
   background: #cdd6c5;
   color: #5e9733;
   position: absolute;
-  top: 0;
   left: 0;
-  width: 85%;
-  padding: 1em 0.6em 2em 0.5em;
-  font-size: 2em;
-  line-height: 1.2em;
+  width: 95%;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
-/* line 69, ../sass/layouts/_campaign.scss */
+/* line 68, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign #block-bean-campaign-page-progress h2,
 .page-redhen-campaign #block-bean-campaign-progress h2 {
   display: none;
 }
-/* line 72, ../sass/layouts/_campaign.scss */
+/* line 71, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-social-media-links {
-  margin-top: 14em;
   padding-bottom: 1em;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 78, ../sass/layouts/_campaign.scss */
+/* line 76, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-social-media-links .field-item {
   float: left;
 }
-/* line 83, ../sass/layouts/_campaign.scss */
+/* line 81, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-social-media-links a {
   background: url(../images/social.png) no-repeat;
   background-size: 214px;
@@ -967,28 +1013,37 @@ form button:hover {
   text-indent: -9999px;
   margin-right: 0.3em;
 }
-/* line 93, ../sass/layouts/_campaign.scss */
+/* line 91, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-social-media-links a.twitter-link {
   background-position: 0 0;
 }
-/* line 96, ../sass/layouts/_campaign.scss */
+/* line 94, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-social-media-links a.facebook-link {
   background-position: -56px 0;
 }
-/* line 99, ../sass/layouts/_campaign.scss */
+/* line 97, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-social-media-links a.linkedin-link {
   background-position: -112px 0;
 }
-/* line 102, ../sass/layouts/_campaign.scss */
+/* line 100, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-social-media-links a.googleplus-link {
   background-position: -168px 0;
 }
-/* line 109, ../sass/layouts/_campaign.scss */
-.page-redhen-campaign .bean-promo {
+/* line 107, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign #block-bean-donation-matching {
+  margin-right: 1.2em;
+  margin-top: 1em;
+}
+/* line 111, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign #block-bean-donation-matching .block-title {
+  display: none;
+}
+/* line 113, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign #block-bean-donation-matching .bean-promo {
   text-align: center;
 }
-/* line 112, ../sass/layouts/_campaign.scss */
-.page-redhen-campaign .bean-promo img {
+/* line 116, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign #block-bean-donation-matching .bean-promo img {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
@@ -1000,8 +1055,8 @@ form button:hover {
   border: 3px solid white;
   width: 100%;
 }
-/* line 119, ../sass/layouts/_campaign.scss */
-.page-redhen-campaign .bean-promo p {
+/* line 123, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign #block-bean-donation-matching .bean-promo p {
   margin: 1em 0;
 }
 
@@ -1032,8 +1087,8 @@ body.front #content {
 
 /* line 7, ../sass/layouts/_raiser_layout.scss */
 #main #content {
-  padding-bottom: 2em;
   margin-bottom: 2em;
+  padding: 0 0 2em 1em;
 }
 
 /* line 12, ../sass/layouts/_raiser_layout.scss */
@@ -1189,105 +1244,255 @@ body.front #content {
   width: 30px;
 }
 
-/* line 4, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block h2 {
-  text-align: center;
+/* line 2, ../sass/components/_campaign-individual.scss */
+.redhen-campaign-page-individual .redhen-contact-contact {
+  float: left;
+  margin-right: 1em;
 }
-/* line 8, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td {
-  background: white;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 3px 10px #999999;
-  -moz-box-shadow: 0 3px 10px #999999;
-  box-shadow: 0 3px 10px #999999;
-  text-align: center;
+/* line 6, ../sass/components/_campaign-individual.scss */
+.redhen-campaign-page-individual .redhen-contact-contact .content img {
+  border-radius: 8px;
 }
-/* line 16, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign {
+/* line 11, ../sass/components/_campaign-individual.scss */
+.redhen-campaign-page-individual .redhen_campaign_page_title {
+  float: left;
+  font-size: 1em;
+  margin-top: 0.5em;
+  width: 80%;
+}
+/* line 18, ../sass/components/_campaign-individual.scss */
+.redhen-campaign-page-individual .redhen_campaign_page_team {
+  display: block;
+  float: left;
+  font-size: 0.875em;
+  width: 80%;
+}
+/* line 25, ../sass/components/_campaign-individual.scss */
+.redhen-campaign-page-individual .redhen_campaign_page_campaign {
+  font-size: 0.875em;
+}
+/* line 29, ../sass/components/_campaign-individual.scss */
+.redhen-campaign-page-individual .field-label {
+  font-weight: normal;
+}
+/* line 33, ../sass/components/_campaign-individual.scss */
+.redhen-campaign-page-individual .clearfix:after {
+  display: inline !important;
+}
+
+/* line 2, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block {
   padding: 1em;
 }
-/* line 19, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign div {
-  margin: 0 auto;
+/* line 5, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block h2.block-title {
+  margin-bottom: 2em;
+  text-align: center;
 }
-/* line 23, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign h2 {
-  font-size: 1.25em;
-  padding: 0;
-  margin: 0;
-  line-height: 1.5em;
-}
-/* line 29, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign h2 a {
-  color: #5e9733;
-}
-/* line 32, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign .field-name-field-banner-image {
-  border-radius: 5px;
-  margin: 0 auto 2em;
-  max-height: 129px;
-  max-width: 185px;
-  overflow: hidden;
-  -webkit-box-shadow: 0 2px 3px #999999;
-  -moz-box-shadow: 0 2px 3px #999999;
-  box-shadow: 0 2px 3px #999999;
-}
-/* line 41, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign .redhen-campaign-thermo-percent-bar-wrapper {
-  background: #e5e5e5;
-  margin-top: 1em;
-  border: 3px solid white;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 2px 3px #999999;
-  -moz-box-shadow: 0 2px 3px #999999;
-  box-shadow: 0 2px 3px #999999;
-  height: 20px;
-  padding: 0;
-}
-/* line 50, ../sass/components/_campaign-list-item.scss */
-.front #block-views-campaigns-block td .entity-redhen-campaign .redhen-campaign-thermo-percent-bar-wrapper .redhen-campaign-thermo-percent-bar {
-  background: #5e9733;
-  height: 100%;
-  margin: 0;
+/* line 10, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row {
+  background: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 2em;
 }
 @media (min-width: 48em) {
-  /* line 71, ../sass/components/_campaign-list-item.scss */
-  .front #block-views-campaigns-block td:nth-child(3n) {
+  /* line 10, ../sass/components/_campaign-list-item.scss */
+  .front #block-views-campaigns-block .views-row {
+    display: inline-block;
+    margin-bottom: 2em;
+    min-height: 18.75em;
+    width: 31.33333%;
     float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
+    margin-right: 2%;
+    padding: 1em 0;
   }
+}
+/* line 28, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row h2 {
+  text-align: left;
+  font-size: 1.125em;
+  line-height: 1em;
+  margin-top: 0;
+  padding: 0 1em;
+}
+/* line 35, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row h2 a {
+  color: #5e9733;
+}
+/* line 38, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row .field-name-field-banner-image {
+  margin-bottom: 1em;
+  padding: 0 1em;
+  text-align: center;
+}
+/* line 43, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row .field-name-field-banner-image img {
+  border-radius: 0.5em;
+  border: 3px solid white;
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+}
+/* line 50, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row .field-name-redhen-campaign-goal {
+  color: black;
+  font-size: 1em;
+}
+/* line 57, ../sass/components/_campaign-list-item.scss */
+.front #block-views-campaigns-block .views-row .rhc_progress {
+  display: inline;
+  font-size: 1em;
+  color: #f8971c;
+}
+
+/* line 3, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row {
+  background: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+@media (min-width: 48em) {
+  /* line 3, ../sass/components/_campaign-team-individual-list.scss */
+  .view-campaign-pages .views-row {
+    display: inline-block;
+    margin-bottom: 2em;
+    min-height: 18.75em;
+    width: 31.33333%;
+    float: left;
+    margin-right: 2%;
+    padding: 1em 0;
+  }
+}
+/* line 21, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row h2 {
+  text-align: left;
+  font-size: 1.125em;
+  line-height: 1em;
+  margin-top: 0;
+  padding: 0 1em;
+}
+/* line 28, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row h2 a {
+  color: #5e9733;
+}
+/* line 31, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row .redhen-contact-contact {
+  padding: 0 1em;
+  text-align: center;
+  display: block;
+}
+/* line 36, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row .redhen-contact-contact img {
+  border-radius: 0.5em;
+  border: 3px solid white;
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+  width: 97%;
+}
+/* line 46, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row .redhen_campaign_page_campaign,
+.view-campaign-pages .views-row .redhen_campaign_page_title {
+  font-size: 1em;
+  margin-left: 1em;
+}
+/* line 51, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row .clearfix:after {
+  display: block !important;
+}
+
+/* line 2, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .field-name-field-logo {
+  float: left;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+/* line 7, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .field-name-field-logo img {
+  border-radius: 8px;
+}
+/* line 12, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .redhen_campaign_page_title {
+  float: left;
+  font-size: 1em;
+  width: 75%;
+}
+/* line 18, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .redhen_campaign_page_team {
+  display: block;
+  float: left;
+  font-size: 0.875em;
+  width: 75%;
+}
+/* line 25, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .redhen_campaign_page_campaign {
+  font-size: 0.875em;
+}
+/* line 29, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .field-label {
+  font-weight: normal;
+}
+/* line 33, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .clearfix:after {
+  display: inline !important;
 }
 
 /* line 1, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted {
   position: relative;
+  margin-top: 1em;
   max-height: 300px;
   -webkit-box-shadow: 0 2px 5px #989898;
   -moz-box-shadow: 0 2px 5px #989898;
   box-shadow: 0 2px 5px #989898;
 }
-/* line 6, ../sass/components/_campaign_banner.scss */
+/* line 8, ../sass/components/_campaign_banner.scss */
+.page-redhen-campaign #highlighted #block-bean-campaign-page-banner,
 .page-redhen-campaign #highlighted #block-bean-campaign-banner {
   margin-bottom: 0;
 }
-/* line 8, ../sass/components/_campaign_banner.scss */
+/* line 10, ../sass/components/_campaign_banner.scss */
+.page-redhen-campaign #highlighted #block-bean-campaign-page-banner img,
 .page-redhen-campaign #highlighted #block-bean-campaign-banner img {
   width: 100%;
 }
-/* line 14, ../sass/components/_campaign_banner.scss */
-.page-redhen-campaign #highlighted h2 {
-  left: 0.5em;
+/* line 15, ../sass/components/_campaign_banner.scss */
+.page-redhen-campaign #highlighted .redhen-campaign-general h2,
+.page-redhen-campaign #highlighted .redhen_campaign_page_campaign {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75em;
+  left: 0.7em;
   position: absolute;
-  top: 4em;
-  z-index: 1;
+  top: 5.5em;
+  z-index: 3;
 }
-/* line 20, ../sass/components/_campaign_banner.scss */
-.page-redhen-campaign #highlighted h2 a {
+/* line 24, ../sass/components/_campaign_banner.scss */
+.page-redhen-campaign #highlighted .redhen-campaign-general h2 a,
+.page-redhen-campaign #highlighted .redhen_campaign_page_campaign a {
   color: white;
 }
-/* line 23, ../sass/components/_campaign_banner.scss */
+/* line 27, ../sass/components/_campaign_banner.scss */
+.page-redhen-campaign #highlighted .redhen-campaign-general h2 {
+  top: 4em;
+  max-width: 38%;
+  line-height: 1.125em;
+}
+/* line 33, ../sass/components/_campaign_banner.scss */
+.page-redhen-campaign #highlighted h2 {
+  display: none;
+}
+/* line 37, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted .field-name-field-teaser {
   background: rgba(0, 0, 0, 0.6);
   bottom: 0;
@@ -1298,9 +1503,70 @@ body.front #content {
   height: 150px;
   width: 40%;
 }
-/* line 33, ../sass/components/_campaign_banner.scss */
+/* line 47, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted .field-name-field-teaser .field-item {
   margin-top: 3em;
+}
+/* line 53, ../sass/components/_campaign_banner.scss */
+.page-redhen-campaign #highlighted .redhen_campaign_page_donate,
+.page-redhen-campaign #highlighted .field-type-redhen-donation {
+  position: absolute;
+  bottom: 2em;
+  right: 1em;
+  z-index: 2;
+}
+/* line 59, ../sass/components/_campaign_banner.scss */
+.page-redhen-campaign #highlighted .redhen_campaign_page_donate a,
+.page-redhen-campaign #highlighted .field-type-redhen-donation a {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
+  background: #f8971c;
+  border: 3px solid white;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.8em 5em;
+}
+/* line 50, ../sass/_mixins.scss */
+.page-redhen-campaign #highlighted .redhen_campaign_page_donate a:hover,
+.page-redhen-campaign #highlighted .field-type-redhen-donation a:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 77, ../sass/_mixins.scss */
+.page-redhen-campaign #highlighted .redhen_campaign_page_donate a:hover,
+.page-redhen-campaign #highlighted .field-type-redhen-donation a:hover {
+  color: white;
+  background: #ffab30;
+}
+
+/* line 2, ../sass/components/_donation-form.scss */
+.page-redhen-campaign-donate h2#page-title {
+  display: block;
+  margin: 1em 0;
+}
+/* line 7, ../sass/components/_donation-form.scss */
+.page-redhen-campaign-donate form {
+  border-right: 1px solid #f1f1f1;
+  padding-right: 1em;
+}
+/* line 11, ../sass/components/_donation-form.scss */
+.page-redhen-campaign-donate form fieldset {
+  border: none;
+  padding: 0;
+}
+/* line 15, ../sass/components/_donation-form.scss */
+.page-redhen-campaign-donate form fieldset legend {
+  font-size: 1.25em;
+}
+/* line 20, ../sass/components/_donation-form.scss */
+.page-redhen-campaign-donate form #edit-product-label {
+  display: none;
 }
 
 /* line 1, ../sass/components/_footer.scss */
@@ -1510,9 +1776,9 @@ footer #colophon a:hover {
   background: none;
   padding: 0.8em 1em;
   border-radius: 0.7em;
-  -webkit-box-shadow: 0 2px 3px #989898;
-  -moz-box-shadow: 0 2px 3px #989898;
-  box-shadow: 0 2px 3px #989898;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
   border: 3px solid #989898;
   color: #989898;
   float: right;
@@ -1527,13 +1793,120 @@ footer #colophon a:hover {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 87, ../sass/_mixins.scss */
+/* line 88, ../sass/_mixins.scss */
 #user-login .form-actions #edit-cancel:hover,
 #user-register-form .form-actions #edit-cancel:hover,
 #user-pass .form-actions #edit-cancel:hover {
   background: #989898;
   border: 3px solid #f1f1f1;
   color: white;
+}
+
+/* line 2, ../sass/components/_fundraise-workflow.scss */
+.page-fundraise a[href="/cafb-dc/redhen_campaign/add/general"] {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
+  background: #f8971c;
+  border: 3px solid white;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.8em 5em;
+}
+/* line 50, ../sass/_mixins.scss */
+.page-fundraise a[href="/cafb-dc/redhen_campaign/add/general"]:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 77, ../sass/_mixins.scss */
+.page-fundraise a[href="/cafb-dc/redhen_campaign/add/general"]:hover {
+  color: white;
+  background: #ffab30;
+}
+
+/* line 10, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general h2#page-title,
+.page-redhen-campaign-page-add h2#page-title {
+  display: block;
+}
+/* line 14, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general legend,
+.page-redhen-campaign-page-add legend {
+  color: black;
+  font-size: 1.25em;
+}
+/* line 19, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general fieldset,
+.page-redhen-campaign-page-add fieldset {
+  border: none;
+  padding-left: 0;
+}
+/* line 24, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .filter-wrapper, .page-redhen-campaign-add-general .filter-help,
+.page-redhen-campaign-page-add .filter-wrapper,
+.page-redhen-campaign-page-add .filter-help {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 30, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-name-redhen-campaign-goal,
+.page-redhen-campaign-page-add .field-name-redhen-campaign-goal {
+  padding-left: 0;
+}
+/* line 33, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-name-redhen-campaign-goal label,
+.page-redhen-campaign-page-add .field-name-redhen-campaign-goal label {
+  color: black;
+  font-size: 0.875em;
+}
+/* line 38, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-name-redhen-campaign-goal .field-prefix,
+.page-redhen-campaign-page-add .field-name-redhen-campaign-goal .field-prefix {
+  background: #989898;
+  display: none;
+}
+/* line 43, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-name-redhen-campaign-goal .description,
+.page-redhen-campaign-page-add .field-name-redhen-campaign-goal .description {
+  color: black;
+  font-size: 0.75em;
+}
+/* line 48, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-name-redhen-campaign-goal input,
+.page-redhen-campaign-page-add .field-name-redhen-campaign-goal input {
+  font-size: 0.875em;
+}
+/* line 53, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .container-inline-date .date-padding,
+.page-redhen-campaign-page-add .container-inline-date .date-padding {
+  padding: 0;
+}
+/* line 58, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-type-datetime,
+.page-redhen-campaign-page-add .field-type-datetime {
+  margin-left: 0;
+}
+/* line 60, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-type-datetime label,
+.page-redhen-campaign-page-add .field-type-datetime label {
+  color: black;
+  font-size: 1em;
+}
+/* line 65, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-type-datetime .description,
+.page-redhen-campaign-page-add .field-type-datetime .description {
+  color: black;
+}
+/* line 69, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-type-datetime input,
+.page-redhen-campaign-page-add .field-type-datetime input {
+  font-size: 16px;
 }
 
 /* line 1, ../sass/components/_header.scss */
@@ -1580,9 +1953,9 @@ footer #colophon a:hover {
   background: none;
   padding: 0.8em 1em;
   border-radius: 0.7em;
-  -webkit-box-shadow: 0 2px 3px #989898;
-  -moz-box-shadow: 0 2px 3px #989898;
-  box-shadow: 0 2px 3px #989898;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
   background: none;
   border: 3px solid #5e9733;
   box-shadow: none;
@@ -1644,9 +2017,9 @@ footer #colophon a:hover {
     background: none;
     padding: 0.8em 1em;
     border-radius: 0.7em;
-    -webkit-box-shadow: 0 2px 3px #989898;
-    -moz-box-shadow: 0 2px 3px #989898;
-    box-shadow: 0 2px 3px #989898;
+    -webkit-box-shadow: 0 2px 3px #666666;
+    -moz-box-shadow: 0 2px 3px #666666;
+    box-shadow: 0 2px 3px #666666;
     background: none;
     border: 3px solid #5e9733;
     box-shadow: none;
@@ -2514,7 +2887,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1410884111');
+  background-image: url('../images/progress.gif?1412979568');
 }
 
 /* line 1, ../sass/components/_progress-bar.scss */
@@ -2526,10 +2899,12 @@ tr.selected td {
   -webkit-box-shadow: 0 2px 3px #999999;
   -moz-box-shadow: 0 2px 3px #999999;
   box-shadow: 0 2px 3px #999999;
-  height: 28px;
+  height: 1em;
   padding: 0;
+  width: 90%;
+  margin: 0.5em auto 0 0;
 }
-/* line 10, ../sass/components/_progress-bar.scss */
+/* line 12, ../sass/components/_progress-bar.scss */
 .redhen-campaign-thermo-percent-bar-wrapper .redhen-campaign-thermo-percent-bar {
   background: #5e9733;
   -webkit-border-radius: 3px 0 0 3px;
@@ -2541,7 +2916,40 @@ tr.selected td {
   margin: 0;
 }
 
-/* line 1, ../sass/components/_updates.scss */
+/* line 20, ../sass/components/_progress-bar.scss */
+.field-name-redhen-campaign-goal {
+  color: white;
+  font-size: 1.25em;
+  padding-left: 1em;
+}
+/* line 25, ../sass/components/_progress-bar.scss */
+.field-name-redhen-campaign-goal .rhc_progress {
+  display: block;
+  color: #5e9733;
+  font-size: 2.25em;
+  margin-bottom: 0.3em;
+}
+/* line 32, ../sass/components/_progress-bar.scss */
+.field-name-redhen-campaign-goal .rhc_goal {
+  color: #5e9733;
+}
+
+/* line 37, ../sass/components/_progress-bar.scss */
+.field-name-field-end-date {
+  color: white;
+  font-size: 1.125em;
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+/* line 43, ../sass/components/_progress-bar.scss */
+.field-name-field-end-date .date-display-interval {
+  color: #f8971c;
+  font-size: 1.125em;
+}
+
+/* line 3, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates,
+#block-redhen-raiser-campaign-updates-campaign-page-updates,
 .view-campaign-updates {
   -webkit-box-shadow: 0 3px 5px #989898;
   -moz-box-shadow: 0 3px 5px #989898;
@@ -2549,21 +2957,29 @@ tr.selected td {
   background: white;
   padding: 2em 1em;
 }
-/* line 6, ../sass/components/_updates.scss */
+/* line 8, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update,
 .view-campaign-updates .node-campaign-update {
   margin-bottom: 2em;
 }
-/* line 9, ../sass/components/_updates.scss */
+/* line 11, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update h2,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update h2,
 .view-campaign-updates .node-campaign-update h2 {
   position: absolute;
   left: 85px;
   line-height: 1em;
 }
-/* line 13, ../sass/components/_updates.scss */
+/* line 15, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update h2 a,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update h2 a,
 .view-campaign-updates .node-campaign-update h2 a {
   color: #5e9733;
 }
-/* line 18, ../sass/components/_updates.scss */
+/* line 20, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update img,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update img,
 .view-campaign-updates .node-campaign-update img {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -2572,12 +2988,16 @@ tr.selected td {
   border-radius: 8px;
   float: left;
 }
-/* line 23, ../sass/components/_updates.scss */
+/* line 25, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update .field-name-body,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update .field-name-body,
 .view-campaign-updates .node-campaign-update .field-name-body {
   padding-left: 70px;
   padding-top: 1em;
 }
-/* line 28, ../sass/components/_updates.scss */
+/* line 30, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update .node-readmore,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update .node-readmore,
 .view-campaign-updates .node-campaign-update .node-readmore {
   padding-left: 70px;
 }

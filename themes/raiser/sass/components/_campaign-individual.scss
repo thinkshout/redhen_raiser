@@ -1,0 +1,36 @@
+.redhen-campaign-page-individual {
+  .redhen-contact-contact {
+    float: left;
+    margin-right: 1em;
+
+    .content img {
+      border-radius: 8px; 
+    }
+  }
+
+  .redhen_campaign_page_title {
+    float: left; 
+    font-size: em(16);
+    margin-top: 0.5em;
+    width: 80%;
+  }
+
+  .redhen_campaign_page_team {
+    display: block;
+    float: left; 
+    font-size: em(14);
+    width: 80%;
+  }
+
+  .redhen_campaign_page_campaign {
+    font-size: em(14);
+  }
+
+  .field-label {
+    font-weight: normal; 
+  }
+
+  .clearfix:after {
+    display: inline !important; 
+  }
+}

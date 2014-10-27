@@ -1,0 +1,55 @@
+.view-campaign-pages {
+  
+  .views-row {
+    @include medium {
+      display: inline-block;
+      margin-bottom: 2em;
+      min-height: em(300);
+      width: 31.33333%;  
+      float: left;
+      margin-right: 2%;
+      padding: 1em 0;
+    } 
+
+    background: $white;
+    border-radius: 8px;
+    @include box-shadow(0 3px 5px $gray);
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+
+    h2 {
+     text-align: left; 
+     font-size: em(18);
+     line-height: 1em;
+     margin-top: 0;
+     padding: 0 1em;
+
+      a { color: $primary; }
+    }
+
+    .redhen-contact-contact {
+      padding: 0 1em; 
+      text-align: center;
+      display: block;
+
+      img {
+        border-radius: em(8);
+        border: 3px solid $white;
+        @include box-shadow(0 3px 5px $gray);
+        width: 97%;
+      }
+
+    }
+
+    .redhen_campaign_page_campaign,
+    .redhen_campaign_page_title {
+      font-size: em(16);
+      margin-left: 1em; 
+    }
+
+    .clearfix:after {
+      display: block !important; 
+    }
+  }
+}

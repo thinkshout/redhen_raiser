@@ -4,7 +4,6 @@
     @include box-shadow(0 3px 5px $gray);
     background: $white;
     overflow: hidden;
-    padding-right: 3.5em;
     position: relative; 
   }
   
@@ -16,7 +15,6 @@
     } 
 
     background: $white;
-    padding: 1em;
 
     .page__title {
       display: none; 
@@ -31,22 +29,24 @@
     }
 
     background: $lt-gray;
-    margin-left: 1em;
-    position: absolute;
     height: 100%;
-
-    .region-sidebar-first {
-      max-width: 90%; 
-      margin: 0 auto;
-      padding-right: 2em;
-      padding-top: 1em;
-    }
+    position: absolute;
 
     .block-bean {
       border-bottom: 1px solid $white;
     }
   }
+
+  // Team Individual Button
+  .redhen-campaign-pages-button {
+    @include cta-btn; 
+  }
   
+  // Campaign story image
+  .field-name-field-story-media {
+    img { width: 100%; } 
+  }
+
   // Video style
   iframe {
     border: 3px solid $white;
@@ -55,22 +55,20 @@
   }
   
   // Progress widget
+  #block-bean-campaign-page-progress,
   #block-bean-campaign-progress {
     background: $primary-widget; 
     color: $primary;
     position: absolute;
-    top: 0;
     left: 0;
-    width: 85%;
-    padding: 1em 0.6em 2em 0.5em;
-    font-size: 2em;
-    line-height: 1.2em;
+    width: 95%;
+    padding-top: 2em;
+    padding-bottom: 2em;
 
     h2 { display: none; }
   }
 
   #block-bean-social-media-links {
-    margin-top: 14em; 
     padding-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
@@ -106,18 +104,25 @@
   }
   
   // Promo block
-  .bean-promo {
-    text-align: center;
+  #block-bean-donation-matching {
+    margin-right: 1.2em;
+    margin-top: 1em;
 
-    img { 
-      @include border-radius(8px);
-      @include box-shadow(0 3px 5px $gray);
-      border: 3px solid $white;
-      width: 100%; 
-    }
+    .block-title { display: none; } 
 
-    p {
-      margin: 1em 0; 
+    .bean-promo {
+      text-align: center;
+
+      img { 
+        @include border-radius(8px);
+        @include box-shadow(0 3px 5px $gray);
+        border: 3px solid $white;
+        width: 100%; 
+      }
+
+      p {
+        margin: 1em 0; 
+      }
     }
   }
 } // end .page-redhen-campaign

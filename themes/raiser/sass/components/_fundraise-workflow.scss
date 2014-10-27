@@ -1,0 +1,72 @@
+.page-fundraise {
+  a[href="/cafb-dc/redhen_campaign/add/general"] {
+    @include cta-btn 
+  }
+}
+
+.page-redhen-campaign-add-general,
+.page-redhen-campaign-page-add {
+
+  h2#page-title {
+    display: block; 
+  }
+
+  legend {
+    color: $black;
+    font-size: 1.25em; 
+  }
+  
+  fieldset {
+    border: none; 
+    padding-left: 0;
+  }
+
+  .filter-wrapper, .filter-help {
+    float: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .field-name-redhen-campaign-goal {
+    padding-left: 0; 
+
+    label {
+      color: $black; 
+      font-size: em(14);
+    }
+
+    .field-prefix {
+      background: $gray; 
+      display: none;
+    }
+
+    .description {
+      color: $black;
+      font-size: em(12); 
+    }
+
+    input { font-size: em(14); }
+  }
+  
+
+  .container-inline-date {
+    .date-padding {
+      padding: 0; 
+    }
+  }
+
+  .field-type-datetime {
+    margin-left: 0;
+    label { 
+      color: $black; 
+      font-size: em(16); 
+    } 
+
+    .description {
+      color: black; 
+    }
+
+    input { font-size: 16px; }
+  }
+
+}

@@ -5,10 +5,16 @@
 }
 
 .page-redhen-campaign-add-general,
-.page-redhen-campaign-page-add {
+.page-redhen-campaign-page-add,
+.page-redhen-campaign-edit {
 
   h2#page-title {
     display: block;
+  }
+
+  .tabs-primary {
+    @include zen-grid-item(17,1);
+    float: none;
   }
 
   legend {
@@ -108,6 +114,7 @@
 
   a.button {
     @include appearance(none);
+    line-height: 1;
   }
 
 }

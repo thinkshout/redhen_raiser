@@ -1,31 +1,32 @@
-.page-redhen-campaign {
+.page-redhen-campaign,
+.page-redhen-campaign-edit {
 
   #content {
     @include box-shadow(0 3px 5px $gray);
     background: $white;
     overflow: hidden;
-    position: relative; 
+    position: relative;
   }
-  
+
   .main-content-wrapper {
     @include zen-grid-item(12,1);
 
     @include medium {
-      @include zen-grid-item(8,1); 
-    } 
+      @include zen-grid-item(8,1);
+    }
 
     background: $white;
 
     .page__title {
-      display: none; 
+      display: none;
     }
   }
 
   aside {
     @include zen-grid-item(12,1);
-    
+
     @include medium {
-      @include zen-grid-item(4,9); 
+      @include zen-grid-item(4,9);
     }
 
     background: $lt-gray;
@@ -39,25 +40,25 @@
 
   // Team Individual Button
   .redhen-campaign-pages-button {
-    @include cta-btn; 
+    @include cta-btn;
   }
-  
+
   // Campaign story image
   .field-name-field-story-media {
-    img { width: 100%; } 
+    img { width: 100%; }
   }
 
   // Video style
   iframe {
     border: 3px solid $white;
     @include box-shadow(0 3px 5px $gray);
-    width: 100%; 
+    width: 100%;
   }
-  
+
   // Progress widget
   #block-bean-campaign-page-progress,
   #block-bean-campaign-progress {
-    background: $primary-widget; 
+    background: $primary-widget;
     color: $primary;
     position: absolute;
     left: 0;
@@ -74,7 +75,7 @@
     margin-right: auto;
 
     .field-item {
-      float: left; 
+      float: left;
     }
 
 
@@ -89,7 +90,7 @@
       margin-right: 0.3em;
 
       &.twitter-link {
-        background-position: 0 0; 
+        background-position: 0 0;
       }
       &.facebook-link {
         background-position: -56px 0;
@@ -102,26 +103,26 @@
       }
     }
   }
-  
+
   // Promo block
   #block-bean-donation-matching {
     margin-right: 1.2em;
     margin-top: 1em;
 
-    .block-title { display: none; } 
+    .block-title { display: none; }
 
     .bean-promo {
       text-align: center;
 
-      img { 
+      img {
         @include border-radius(8px);
         @include box-shadow(0 3px 5px $gray);
         border: 3px solid $white;
-        width: 100%; 
+        width: 100%;
       }
 
       p {
-        margin: 1em 0; 
+        margin: 1em 0;
       }
     }
   }

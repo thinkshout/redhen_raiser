@@ -50,8 +50,14 @@
     }
     .redhen_campaign_page_team {
       padding-left: em(16);
-      position: absolute;
-      bottom: em(16);
+      margin-top: em(8);
+      line-height: 1;
+      .field-label {
+        width: 22%;
+      }
+      .field-items {
+        width: 78%;
+      }
     }
     .field-name-redhen-campaign-goal {
       color: $primary;
@@ -82,6 +88,7 @@
     .redhen_campaign_page_title {
       font-size: em(16);
       margin-left: 1em;
+      width: 80%;
     }
 
 

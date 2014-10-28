@@ -41,31 +41,9 @@ function redhen_raiser_campaign_pages_entity_info_alter(&$entity_info) {
  * Implements hook_entity_view_alter().
  */
 function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
-  if ($type == 'redhen_campaign') {
-    if ($build['#view_mode'] == 'teaser') {
-      // Link the label.
-      if (!empty($build['label']['#items'][0]['#markup'])) {
         $uri = $build['#entity']->uri();
         $path = $uri['path'];
 
-        $build['label']['#items'][0]['#markup'] = l(
-          $build['label']['#items'][0]['#markup'],
-          $path
-        );
-      }
-    }
-    if ($build['#view_mode'] == 'full') {
-      $options = array(
-        'attributes' => array(
-          'class' => 'redhen-campaign-pages-button',
-        ),
-      );
-      $build['pages'] = array(
-        '#markup' => l(t('View all Teams and Individuals'), 'campaigns/' . $build['#entity']->campaign_id . '/pages', $options),
-        '#weight' => 100,
-      );
-    }
-  }
 
   if ($type == 'redhen_campaign_page') {
     if ($build['#view_mode'] == 'teaser') {

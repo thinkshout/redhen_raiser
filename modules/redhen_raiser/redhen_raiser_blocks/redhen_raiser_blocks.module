@@ -129,6 +129,16 @@ function redhen_raiser_blocks_create_default_blocks() {
         'entity_id_position' => '1',
       ),
     ),
+    'campaign-promotion' => array(
+      'type' => 'bean_entity_view',
+      'label' => 'Campaign Promotion',
+      'title' => '',
+      'data' => array(
+        'entity_type' => 'redhen_campaign',
+        'entity_view_mode' => 'promotion',
+        'entity_id_position' => '1',
+      ),
+    ),
   );
   redhen_raiser_create_beans($stubbed_beans);
 }

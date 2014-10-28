@@ -28,6 +28,7 @@ features[field_group][] = group_funding|redhen_campaign|general|form
 features[field_group][] = group_story|redhen_campaign|general|form
 features[field_instance][] = redhen_campaign-general-field_banner_image
 features[field_instance][] = redhen_campaign-general-field_end_date
+features[field_instance][] = redhen_campaign-general-field_promotion
 features[field_instance][] = redhen_campaign-general-field_start_date
 features[field_instance][] = redhen_campaign-general-field_story
 features[field_instance][] = redhen_campaign-general-field_story_media

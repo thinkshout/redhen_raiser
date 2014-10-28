@@ -26,6 +26,7 @@ features[field_base][] = field_campaign_context
 features[field_base][] = field_end_date
 features[field_base][] = field_logo
 features[field_base][] = field_page_context
+features[field_base][] = field_promotion
 features[field_base][] = field_start_date
 features[field_base][] = field_story
 features[field_base][] = field_story_media

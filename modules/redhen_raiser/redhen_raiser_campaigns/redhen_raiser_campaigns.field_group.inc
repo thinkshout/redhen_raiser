@@ -27,6 +27,7 @@ function redhen_raiser_campaigns_field_group_info() {
       1 => 'path',
       2 => 'promote',
       3 => 'sticky',
+      4 => 'field_promotion',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

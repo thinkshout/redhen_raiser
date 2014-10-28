@@ -38,16 +38,16 @@ function redhen_raiser_campaigns_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '30',
+          'weight' => '35',
         ),
         'label' => array(
           'weight' => '-10',
         ),
         'promote' => array(
-          'weight' => '-10',
+          'weight' => '33',
         ),
         'sticky' => array(
-          'weight' => '-10',
+          'weight' => '32',
         ),
       ),
       'display' => array(
@@ -69,8 +69,12 @@ function redhen_raiser_campaigns_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '1',
+            'weight' => '-10',
             'visible' => TRUE,
+          ),
+          'promotion' => array(
+            'weight' => '1',
+            'visible' => FALSE,
           ),
         ),
       ),

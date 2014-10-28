@@ -66,6 +66,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 8,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -109,7 +115,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 34,
     ),
   );
 
@@ -154,6 +160,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'format_interval',
         'weight' => 2,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -185,6 +197,77 @@ function redhen_raiser_campaigns_field_default_field_instances() {
       ),
       'type' => 'date_popup',
       'weight' => -6,
+    ),
+  );
+
+  // Exported field_instance: 'redhen_campaign-general-field_promotion'
+  $field_instances['redhen_campaign-general-field_promotion'] = array(
+    'bundle' => 'general',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select a "Promo" block to display on the Campaign\'s sidebar. All Team and Individual pages attached to the Campaign will show the same block. <a href="/block/add/promo">Create a Promo Block</a>.',
+    'display' => array(
+      'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 10,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'promotion' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'redhen_campaign',
+    'field_name' => 'field_promotion',
+    'label' => 'Promotion',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 31,
     ),
   );
 
@@ -224,6 +307,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 3,
+      ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -292,6 +381,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -353,6 +448,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 5,
+      ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -430,6 +531,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -496,6 +603,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 4,
+      ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -570,6 +683,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'redhen_campaign_smart_thermometer',
         'weight' => 1,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'redhen_campaign',
@@ -617,6 +736,8 @@ function redhen_raiser_campaigns_field_default_field_instances() {
   t('Donation Type');
   t('End Date');
   t('How much money are you raising?');
+  t('Promotion');
+  t('Select a "Promo" block to display on the Campaign\'s sidebar. All Team and Individual pages attached to the Campaign will show the same block. <a href="/block/add/promo">Create a Promo Block</a>.');
   t('Start Date');
   t('Story');
   t('Story Image/Video');

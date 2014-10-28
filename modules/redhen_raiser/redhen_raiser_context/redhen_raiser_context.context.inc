@@ -96,6 +96,12 @@ function redhen_raiser_context_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-9',
         ),
+        'bean-campaign-page-promotion' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-page-promotion',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
       ),
     ),
   );

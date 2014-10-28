@@ -52,6 +52,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -126,6 +132,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'format_interval',
         'weight' => 1,
+      ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -204,6 +216,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -271,6 +289,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
+      ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -358,6 +382,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 8,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -431,6 +461,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         ),
         'type' => 'redhen_campaign_smart_thermometer',
         'weight' => 0,
+      ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -512,6 +548,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 11,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -587,6 +629,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'format_interval',
         'weight' => 1,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -658,6 +706,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
+      ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -749,6 +803,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -816,6 +876,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
+      ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -903,6 +969,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -969,6 +1041,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
           'thermometer' => 1,
         ),
         'type' => 'redhen_campaign_smart_thermometer',
+        'weight' => 0,
+      ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(

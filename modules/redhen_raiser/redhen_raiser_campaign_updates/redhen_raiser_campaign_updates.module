@@ -247,7 +247,7 @@ function redhen_raiser_campaign_updates_form_campaign_update_node_form_alter(&$f
 
       }
     }
-    if (!$access) {
+    if (!$access && !user_access('administer content')) {
       drupal_set_message(t('To create an update, go to your Campaign or Fundraising Page and use the "Updates" tab.'), 'warning');
       foreach (element_children($form) as $element) {
         $form[$element]['#access'] = FALSE;
@@ -262,14 +262,43 @@ function redhen_raiser_campaign_updates_form_campaign_update_node_form_alter(&$f
   // Otherwise, shine up the context selection UI:
   else {
     $lang = $form['field_page_context']['#language'];
+    if (!isset($form_state['all_pages'])) {
+      $form_state['all_pages'] = array(
+        'teams' => $form['field_page_context'][$lang]['#options']['Team'],
+        'individuals' => $form['field_page_context'][$lang]['#options']['Individual'],
+      );
+    }
+    // Rebuild our page selection to make it more intuitive:
     $team_member_options = array();
-    $team_options = $form['field_page_context'][$lang]['#options']['Team'];
-    $individual_options = $form['field_page_context'][$lang]['#options']['Individual'];
+    $team_options = $form_state['all_pages']['teams'];
+    $individual_options = $form_state['all_pages']['individuals'];
     $individual_pages = redhen_campaign_page_load_multiple(array_keys($individual_options));
+    $form['field_page_context']['#attributes']['id'] = 'campaign-page-context-select';
+    $form['field_campaign_context'][$lang]['#ajax'] = array(
+      'callback' => 'redhen_raiser_campaign_updates_page_context_callback',
+      'wrapper' => 'campaign-page-context-select',
+    );
+    if (isset($form_state['values']['field_campaign_context'][$lang][0]['target_id'])) {
+      $campaign_context = $form_state['values']['field_campaign_context'][$lang][0]['target_id'];
+    }
+    elseif (!empty($form['field_campaign_context'][$lang]['#default_value'])) {
+      $campaign_context = $form['field_campaign_context'][$lang]['#default_value'];
+    }
     foreach ($individual_pages as $page) {
-      if ($page->team) {
+      if (isset($campaign_context) && $page->campaign != $campaign_context) {
+        unset($individual_options[$page->page_id]);
+      }
+      elseif ($page->team) {
         $team_member_options[$team_options[$page->team] . ' members'][$page->page_id] = $page->label;
         unset($individual_options[$page->page_id]);
+      }
+    }
+    if (isset($campaign_context)) {
+      $team_pages = redhen_campaign_page_load_multiple(array_keys($team_options));
+      foreach ($team_pages as $teampage) {
+        if ($teampage->campaign != $campaign_context) {
+          unset($team_options[$teampage->page_id]);
+        }
       }
     }
     // Display teams before individuals:
@@ -281,6 +310,16 @@ function redhen_raiser_campaign_updates_form_campaign_update_node_form_alter(&$f
   }
 }
 
+/**
+ * Simple redirect for new update creation back to the host entity.
+ */
 function redhen_raiser_campaign_updates_redirect($form, &$form_state) {
   $form_state['redirect'] = $form_state['destination'];
+}
+
+/**
+ * Javascript callback for .
+ */
+function redhen_raiser_campaign_updates_page_context_callback($form, &$form_state) {
+  return $form['field_page_context'];
 }

@@ -87,6 +87,10 @@ function redhen_raiser_core_form_user_login_alter(&$form, &$form_state, $form_id
     '#href' => 'user/password',
     '#weight' => 21,
   );
+  if (isset($_GET['destination'])) {
+    $form['register']['#options']['query']['destination'] = $_GET['destination'];
+    $form['reset']['#options']['query']['destination'] = $_GET['destination'];
+  }
   $form['actions']['cancel'] = array(
     '#type' => 'link',
     '#title' => t('Cancel'),
@@ -135,6 +139,10 @@ function redhen_raiser_core_form_user_register_form_alter(&$form, &$form_state, 
     '#href' => 'user/login',
     '#weight' => 20,
   );
+  if (isset($_GET['destination'])) {
+    $form['login']['#options']['query']['destination'] = $_GET['destination'];
+  }
+
   $form['actions']['cancel'] = array(
     '#type' => 'link',
     '#title' => t('Cancel'),
@@ -154,6 +162,13 @@ function redhen_raiser_core_form_user_register_form_alter(&$form, &$form_state, 
  */
 function redhen_raiser_core_registration_validate($form, &$form_state) {
   $form_state['values']['mail'] = $form_state['input']['mail'];
+  // When registering, destinations may be inaccessible, so reset them:
+  if (isset($_GET['destination'])) {
+    $_GET['login_destination'] = $_GET['destination'];
+    unset($_GET['destination']);
+    drupal_static_reset('drupal_get_destination');
+    drupal_get_destination();
+  }
 }
 
 /**
@@ -179,6 +194,9 @@ function redhen_raiser_core_form_user_pass_alter(&$form, &$form_state, $form_id)
     '#href' => 'user/login',
     '#weight' => 20,
   );
+  if (isset($_GET['destination'])) {
+    $form['login']['#options']['query']['destination'] = $_GET['destination'];
+  }
   $form['register'] = array(
     '#type' => 'link',
     '#title' => t("Don't have an account? Create one."),
@@ -204,4 +222,33 @@ function redhen_raiser_core_password_form($override_link = FALSE) {
   $content['register']['#options']['query']['action'] = 'register';
   $content['actions']['cancel']['#href'] = $override_link ? $override_link : '<front>';
   return $content;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function redhen_raiser_core_form_user_pass_reset_alter(&$form, &$form_state, $form_id) {
+  if (!empty($_GET['destination'])) {
+    $_SESSION['destination'] = $_GET['destination'];
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function redhen_raiser_core_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+  if (isset($_SESSION['destination'])) {
+    $form['#submit'][] = 'redhen_raiser_core_session_destination';
+  }
+}
+
+/**
+ * Form submission handler to redirect new users to their original destination.
+ */
+function redhen_raiser_core_session_destination($form, &$form_state) {
+  $url_parts = drupal_parse_url($_SESSION['destination']);
+  $path = $url_parts['path'];
+  unset($url_parts['path']);
+  $form_state['redirect'] = array($path, $url_parts);
+  unset($_SESSION['destination']);
 }

@@ -20,7 +20,9 @@ function redhen_raiser_content_access_user_default_permissions() {
   // Exported permission: 'create any promo bean'.
   $permissions['create any promo bean'] = array(
     'name' => 'create any promo bean',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'bean',
   );
 
@@ -70,7 +72,9 @@ function redhen_raiser_content_access_user_default_permissions() {
   // Exported permission: 'delete any promo bean'.
   $permissions['delete any promo bean'] = array(
     'name' => 'delete any promo bean',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'bean',
   );
 
@@ -120,7 +124,9 @@ function redhen_raiser_content_access_user_default_permissions() {
   // Exported permission: 'edit any promo bean'.
   $permissions['edit any promo bean'] = array(
     'name' => 'edit any promo bean',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'bean',
   );
 
@@ -155,7 +161,10 @@ function redhen_raiser_content_access_user_default_permissions() {
   // Exported permission: 'view any promo bean'.
   $permissions['view any promo bean'] = array(
     'name' => 'view any promo bean',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'bean',
   );
 

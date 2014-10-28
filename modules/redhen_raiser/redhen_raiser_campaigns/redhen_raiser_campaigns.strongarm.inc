@@ -69,12 +69,34 @@ function redhen_raiser_campaigns_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '-10',
+            'weight' => '0',
             'visible' => TRUE,
+          ),
+          'promotion' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+        'join' => array(
+          'teaser' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+          'progress' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'banner' => array(
+            'weight' => '4',
+            'visible' => FALSE,
           ),
           'promotion' => array(
             'weight' => '1',
             'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '3',
+            'visible' => TRUE,
           ),
         ),
       ),

@@ -151,7 +151,7 @@ A request to reset the password for your account has been made at [site:name].
 
 You may now log in by clicking this link or copying and pasting it to your browser:
 
-[user:one-time-login-url]
+[user:one-time-login-url]?destination=[current-page:query:login_destination]
 
 This link can only be used once to log in and will lead you to a page where you can set your password. It expires after one day and nothing will happen if it\'s not used.
 
@@ -200,7 +200,7 @@ password: Your password
 
 Thank you for registering at [site:name]. You may now log in by clicking this link or copying and pasting it to your browser:
 
-[user:one-time-login-url]
+[user:one-time-login-url]?destination=[current-page:query:login_destination]
 
 This link can only be used once to log in and will lead you to a page where you can set your password.
 
@@ -342,7 +342,7 @@ Your account on [site:name] has been canceled.
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_picture_dimensions';
-  $strongarm->value = '85x85';
+  $strongarm->value = '200x200';
   $export['user_picture_dimensions'] = $strongarm;
 
   $strongarm = new stdClass();

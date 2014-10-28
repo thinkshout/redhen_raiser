@@ -88,6 +88,12 @@
     .redhen-campaign-page-team {
       .field-name-field-logo {
         margin: 0 em(8) em(8) em(16);
+        img {
+          border-radius: em(8);
+          border: 3px solid $white;
+          @include box-shadow(0 3px 5px $gray);
+          width: 97%;
+        }
       }
 
     }

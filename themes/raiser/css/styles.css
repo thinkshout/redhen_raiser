@@ -1515,7 +1515,16 @@ body.front #main #content {
 .view-campaign-pages .views-row .redhen-campaign-page-team .field-name-field-logo {
   margin: 0 0.5em 0.5em 1em;
 }
-/* line 95, ../sass/components/_campaign-team-individual-list.scss */
+/* line 91, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row .redhen-campaign-page-team .field-name-field-logo img {
+  border-radius: 0.5em;
+  border: 3px solid white;
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+  width: 97%;
+}
+/* line 101, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .clearfix:after {
   display: block !important;
 }

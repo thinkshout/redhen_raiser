@@ -41,43 +41,43 @@ function redhen_raiser_campaign_pages_entity_info_alter(&$entity_info) {
  * Implements hook_entity_view_alter().
  */
 function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
+  if ($type == 'redhen_campaign_page') {
+    switch ($build['#view_mode']) {
+      case 'teaser':
         $uri = $build['#entity']->uri();
         $path = $uri['path'];
 
-
-  if ($type == 'redhen_campaign_page') {
-    if ($build['#view_mode'] == 'teaser') {
-      $uri = $build['#entity']->uri();
-      $path = $uri['path'];
-
-      // Link the label.
-      if (!empty($build['label']['#items'][0]['#markup'])) {
-        $build['label']['#items'][0]['#markup'] = l(
-          $build['label']['#items'][0]['#markup'],
-          $path
-        );
-      }
-
-      // Link the image.
-      if (!empty($build['owner']['redhen_contact'])) {
-        foreach ($build['owner']['redhen_contact'] as $contact_id => $contact) {
-          $build['owner']['redhen_contact'][$contact_id]['avatar']['#post_render'] = array(
-            '_redhen_raiser_campaign_pages_contact_image_post_render',
+        // Link the label.
+        if (!empty($build['label']['#items'][0]['#markup'])) {
+          $build['label']['#items'][0]['#markup'] = l(
+            $build['label']['#items'][0]['#markup'],
+            $path
           );
-          $build['owner']['redhen_contact'][$contact_id]['avatar']['link_url'] = $path;
         }
-      }
-    }
-    if ($build['#view_mode'] == 'full') {
-      if (isset($build['campaign'])) {
-        _redhen_raiser_campaign_pages_colectomify($build['campaign']);
-        $build['campaign']['#label'] = 'Fundraising for';
-        unset($build['campaign']['#label_hidden']);
-      }
-      if (isset($build['team'])) {
-        _redhen_raiser_campaign_pages_colectomify($build['team']);
-        $build['team']['#label'] = 'with';
-      }
+
+        // Link the image.
+        if (!empty($build['owner']['redhen_contact'])) {
+          foreach ($build['owner']['redhen_contact'] as $contact_id => $contact) {
+            $build['owner']['redhen_contact'][$contact_id]['avatar']['#post_render'] = array(
+              '_redhen_raiser_campaign_pages_contact_image_post_render',
+            );
+            $build['owner']['redhen_contact'][$contact_id]['avatar']['link_url'] = $path;
+          }
+        }
+        break;
+
+      case 'full':
+        if (isset($build['campaign'])) {
+          _redhen_raiser_campaign_pages_colectomify($build['campaign']);
+          $build['campaign']['#label'] = 'Fundraising for';
+          unset($build['campaign']['#label_hidden']);
+        }
+        if (isset($build['team'])) {
+          _redhen_raiser_campaign_pages_colectomify($build['team']);
+          $build['team']['#label'] = 'with';
+        }
+        break;
+
     }
   }
 }

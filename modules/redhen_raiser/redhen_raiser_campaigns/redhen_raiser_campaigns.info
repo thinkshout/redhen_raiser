@@ -7,6 +7,7 @@ project = redhen_raiser_campaigns
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = entity
+dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = file_entity

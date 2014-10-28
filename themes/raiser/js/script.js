@@ -18,14 +18,14 @@ Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
     // Alias jquery
     _$ = jQuery;
-    
+
     // Store viewport width as a function
     // so it can be retrieved at any time
     var viewportWidth = function(){
       var width = _$(window).width();
       return width;
     }
-    
+
     // Is it a large screen?
     var isLarge = function(){
         return viewportWidth() >= 768  ? true : false;
@@ -49,27 +49,42 @@ Drupal.behaviors.my_custom_behavior = {
           menu.fadeIn();
         } else {
           menu.hide();
-        } 
+        }
       },
 
       setRequiredFormFields: function() {
         _$('form .required').attr('required', "true");
       },
 
+      activeRadioButton: function() {
+        var radio = _$('.view-campaign-pages .view-filters input'),
+            label = _$('.view-campaign-pages .view-filters label').parent();
+        label.click(function(){
+            _$(this).not('.checked').find('input').attr('checked', true).change();
+        });
+
+        radio.each(function(){
+          if (_$(this).attr('checked')) {
+            _$(this).parent().addClass('checked');
+          }
+        });
+      },
+
       init: function() {
-        this.toggleMenu(); 
+        this.toggleMenu();
         this.setRequiredFormFields();
+        this.activeRadioButton();
       }
     } // end _cafb
-    
+
     // Initializer for app object
     _cafb.init();
-     
+
     // Resize listener
     $(window).resize(function(){
-      _cafb.setMenuState();  
+      _cafb.setMenuState();
     });
-    
+
   } // end attach
 };
 

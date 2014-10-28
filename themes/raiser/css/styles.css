@@ -1391,47 +1391,112 @@ body.front #main #content {
 }
 
 /* line 3, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .form-radios .form-item {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
+  background: none;
+  border: 3px solid #5e9733;
+  box-shadow: none;
+  color: #5e9733;
+  cursor: pointer;
+  display: inline-block;
+}
+/* line 50, ../sass/_mixins.scss */
+.view-campaign-pages .form-radios .form-item:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 62, ../sass/_mixins.scss */
+.view-campaign-pages .form-radios .form-item:hover {
+  background: #5e9733;
+  border: 3px solid #90c965;
+  color: white;
+}
+/* line 7, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .form-radios .form-item input {
+  display: none;
+}
+/* line 10, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .form-radios .form-item label {
+  cursor: pointer;
+}
+/* line 13, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .form-radios .form-item.checked {
+  background: #5e9733;
+  border: 3px solid #90c965;
+  color: white;
+}
+/* line 20, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row {
-  background: white;
-  border-radius: 8px;
   -webkit-box-shadow: 0 3px 5px #989898;
   -moz-box-shadow: 0 3px 5px #989898;
   box-shadow: 0 3px 5px #989898;
+  background: white;
+  border-radius: 8px;
   margin-bottom: 1em;
-  padding-top: 1em;
   padding-bottom: 2em;
+  padding-top: 1em;
 }
 @media (min-width: 992px) {
-  /* line 3, ../sass/components/_campaign-team-individual-list.scss */
+  /* line 20, ../sass/components/_campaign-team-individual-list.scss */
   .view-campaign-pages .views-row {
     display: inline-block;
-    margin-bottom: 2em;
-    min-height: 18.75em;
-    width: 31.33333%;
     float: left;
+    margin-bottom: 2em;
     margin-right: 2%;
+    min-height: 18.75em;
     padding: 1em 0;
+    position: relative;
+    width: 31.33333%;
+  }
+  /* line 30, ../sass/components/_campaign-team-individual-list.scss */
+  .view-campaign-pages .views-row:nth-child(3n+4) {
+    clear: both;
   }
 }
-/* line 21, ../sass/components/_campaign-team-individual-list.scss */
+/* line 42, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row h2 {
-  text-align: left;
   font-size: 1.125em;
   line-height: 1em;
   margin-top: 0;
   padding: 0 1em;
+  text-align: left;
 }
-/* line 28, ../sass/components/_campaign-team-individual-list.scss */
+/* line 49, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row h2 a {
   color: #5e9733;
 }
-/* line 31, ../sass/components/_campaign-team-individual-list.scss */
+/* line 51, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row .redhen_campaign_page_team {
+  padding-left: 1em;
+  position: absolute;
+  bottom: 1em;
+}
+/* line 56, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row .field-name-redhen-campaign-goal {
+  color: #5e9733;
+  font-size: 1.375em;
+  line-height: 1.6;
+  padding-left: 0.625em;
+}
+/* line 61, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row .field-name-redhen-campaign-goal .rhc_progress {
+  display: inline;
+  font-size: 1em;
+}
+/* line 67, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .redhen-contact-contact {
+  display: block;
   padding: 0 1em;
   text-align: center;
-  display: block;
 }
-/* line 36, ../sass/components/_campaign-team-individual-list.scss */
+/* line 72, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .redhen-contact-contact img {
   border-radius: 0.5em;
   border: 3px solid white;
@@ -1440,13 +1505,26 @@ body.front #main #content {
   box-shadow: 0 3px 5px #989898;
   width: 97%;
 }
-/* line 46, ../sass/components/_campaign-team-individual-list.scss */
+/* line 82, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .redhen_campaign_page_campaign,
 .view-campaign-pages .views-row .redhen_campaign_page_title {
   font-size: 1em;
   margin-left: 1em;
 }
-/* line 51, ../sass/components/_campaign-team-individual-list.scss */
+/* line 89, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row .redhen-campaign-page-team .field-name-field-logo {
+  width: 3.75em;
+  margin: 0 0.5em 0.5em 1em;
+}
+/* line 93, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row .redhen-campaign-page-team .redhen_campaign_page_title {
+  position: absolute;
+  line-height: 1.3;
+  left: 4.125em;
+  top: 1em;
+  width: 65%;
+}
+/* line 102, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .clearfix:after {
   display: block !important;
 }

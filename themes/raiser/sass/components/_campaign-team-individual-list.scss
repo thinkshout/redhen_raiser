@@ -1,37 +1,73 @@
 .view-campaign-pages {
-  
+
+  .form-radios .form-item {
+    @include clear-btn;
+    cursor: pointer;
+    display: inline-block;
+    input {
+      display: none;
+    }
+    label {
+      cursor: pointer;
+    }
+    &.checked {
+      background: $primary;
+      border: 3px solid $primary + 50;
+      color: $white;
+    }
+  }
+
   .views-row {
     @include medium {
       display: inline-block;
-      margin-bottom: 2em;
-      min-height: em(300);
-      width: 31.33333%;  
       float: left;
+      margin-bottom: 2em;
       margin-right: 2%;
+      min-height: em(300);
       padding: 1em 0;
-    } 
+      position: relative;
+      width: 31.33333%;
+      &:nth-child(3n+4) {
+        clear: both;
+      }
+    }
 
+    @include box-shadow(0 3px 5px $gray);
     background: $white;
     border-radius: 8px;
-    @include box-shadow(0 3px 5px $gray);
     margin-bottom: 1em;
-    padding-top: 1em;
     padding-bottom: 2em;
+    padding-top: 1em;
 
     h2 {
-     text-align: left; 
      font-size: em(18);
      line-height: 1em;
      margin-top: 0;
      padding: 0 1em;
+     text-align: left;
 
       a { color: $primary; }
     }
+    .redhen_campaign_page_team {
+      padding-left: em(16);
+      position: absolute;
+      bottom: em(16);
+    }
+    .field-name-redhen-campaign-goal {
+      color: $primary;
+      font-size: em(22);
+      line-height: 1.6;
+      padding-left: em(10);
+      .rhc_progress {
+        display: inline;
+        font-size: em(16);
+      }
+    }
 
     .redhen-contact-contact {
-      padding: 0 1em; 
-      text-align: center;
       display: block;
+      padding: 0 1em;
+      text-align: center;
 
       img {
         border-radius: em(8);
@@ -45,11 +81,26 @@
     .redhen_campaign_page_campaign,
     .redhen_campaign_page_title {
       font-size: em(16);
-      margin-left: 1em; 
+      margin-left: 1em;
+    }
+
+
+    .redhen-campaign-page-team {
+      .field-name-field-logo {
+        width: em(60);
+        margin: 0 em(8) em(8) em(16);
+      }
+      .redhen_campaign_page_title {
+        position: absolute;
+        line-height: 1.3;
+        left: em(66);
+        top: em(16);
+        width: 65%;
+      }
     }
 
     .clearfix:after {
-      display: block !important; 
+      display: block !important;
     }
   }
 }

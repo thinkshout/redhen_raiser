@@ -13,7 +13,9 @@ function redhen_raiser_blocks_access_user_default_permissions() {
   // Exported permission: 'access bean overview'.
   $permissions['access bean overview'] = array(
     'name' => 'access bean overview',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'bean',
   );
 
@@ -41,21 +43,27 @@ function redhen_raiser_blocks_access_user_default_permissions() {
   // Exported permission: 'create any link_group bean'.
   $permissions['create any link_group bean'] = array(
     'name' => 'create any link_group bean',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'bean',
   );
 
   // Exported permission: 'delete any link_group bean'.
   $permissions['delete any link_group bean'] = array(
     'name' => 'delete any link_group bean',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'bean',
   );
 
   // Exported permission: 'edit any link_group bean'.
   $permissions['edit any link_group bean'] = array(
     'name' => 'edit any link_group bean',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'bean',
   );
 

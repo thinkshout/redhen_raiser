@@ -1513,18 +1513,19 @@ body.front #main #content {
 }
 /* line 89, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .redhen-campaign-page-team .field-name-field-logo {
-  width: 3.75em;
+  width: 2.5em;
   margin: 0 0.5em 0.5em 1em;
-}
-/* line 93, ../sass/components/_campaign-team-individual-list.scss */
-.view-campaign-pages .views-row .redhen-campaign-page-team .redhen_campaign_page_title {
   position: absolute;
+  top: 15.625em;
+}
+/* line 95, ../sass/components/_campaign-team-individual-list.scss */
+.view-campaign-pages .views-row .redhen-campaign-page-team .redhen_campaign_page_title {
   line-height: 1.3;
-  left: 4.125em;
-  top: 1em;
+  margin: 0.5em 0 1em 4.125em;
+  min-height: 2.5em;
   width: 65%;
 }
-/* line 102, ../sass/components/_campaign-team-individual-list.scss */
+/* line 103, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .clearfix:after {
   display: block !important;
 }

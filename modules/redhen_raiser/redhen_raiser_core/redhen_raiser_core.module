@@ -44,11 +44,11 @@ function redhen_raiser_core_fundraise_now_page() {
     if (isset($_GET['action'])) {
       switch ($_GET['action']) {
         case "register":
-          $form = redhen_raiser_register_form('fundraise');
+          $form = redhen_raiser_core_register_form('fundraise');
           break;
 
         case "reset":
-          $form = redhen_raiser_password_form('fundraise');
+          $form = redhen_raiser_core_password_form('fundraise');
           break;
       }
     }
@@ -159,7 +159,7 @@ function redhen_raiser_core_registration_validate($form, &$form_state) {
 /**
  * A customized version of the registration form for embedding.
  */
-function redhen_raiser_register_form($override_link = FALSE) {
+function redhen_raiser_core_register_form($override_link = FALSE) {
   $content = drupal_get_form('user_register_form');
   $content['login']['#href'] = $override_link ? $override_link : 'user/login';
   $content['actions']['cancel']['#href'] = $override_link ? $override_link : '<front>';
@@ -196,7 +196,7 @@ function redhen_raiser_core_form_user_pass_alter(&$form, &$form_state, $form_id)
 /**
  * A customized version of the password reset form.
  */
-function redhen_raiser_password_form($override_link = FALSE) {
+function redhen_raiser_core_password_form($override_link = FALSE) {
   module_load_include('inc', 'user', 'user.pages');
   $content = drupal_get_form('user_pass');
   $content['login']['#href'] = $override_link ? $override_link : 'user/login';

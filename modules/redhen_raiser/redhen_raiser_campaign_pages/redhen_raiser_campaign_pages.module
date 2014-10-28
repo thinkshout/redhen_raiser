@@ -35,6 +35,10 @@ function redhen_raiser_campaign_pages_entity_info_alter(&$entity_info) {
     'label' => t('Banner'),
     'custom settings' => TRUE,
   );
+  $entity_info['redhen_campaign_page']['view modes']['promotion'] = array(
+    'label' => t('Promo'),
+    'custom settings' => TRUE,
+  );
 }
 
 /**
@@ -76,6 +80,11 @@ function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
           _redhen_raiser_campaign_pages_colectomify($build['team']);
           $build['team']['#label'] = 'with';
         }
+        break;
+
+      case 'promotion':
+        $campaign = redhen_campaign_load($build['#entity']->campaign);
+        $build['campaign'] = entity_view('redhen_campaign', array($campaign), 'promotion');
         break;
 
     }

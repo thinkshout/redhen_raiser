@@ -31,9 +31,9 @@ function redhen_raiser_styles_image_default_styles() {
   // Exported image style: avatar.
   $styles['avatar'] = array(
     'name' => 'avatar',
-    'label' => 'Avatar (85x85)',
+    'label' => 'Avatar (100x100)',
     'effects' => array(
-      12 => array(
+      2 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -43,8 +43,8 @@ function redhen_raiser_styles_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 85,
-          'height' => 85,
+          'width' => 100,
+          'height' => 100,
         ),
         'weight' => 1,
       ),
@@ -228,6 +228,29 @@ function redhen_raiser_styles_image_default_styles() {
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 277,
+          'height' => 200,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: tile.
+  $styles['tile'] = array(
+    'name' => 'tile',
+    'label' => 'Tile (200x200)',
+    'effects' => array(
+      1 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 200,
           'height' => 200,
         ),
         'weight' => 1,

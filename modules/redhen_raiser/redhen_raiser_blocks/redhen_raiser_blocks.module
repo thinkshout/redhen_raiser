@@ -11,10 +11,11 @@ include_once 'redhen_raiser_blocks.features.inc';
  */
 function redhen_raiser_blocks_block_view_alter(&$data, $block) {
   if ($block->module == 'bean') {
-    $bean = &$data['content']['bean'][$block->delta];
-    switch ($bean['#bundle']) {
-      case "promo":
+    switch ($block->delta) {
+      case "campaign-promotion":
         // Link the Promo bean image to the target link.
+        $delta = $data['content'][0]['field_promotion']['#items'][0]['entity']->delta;
+        $bean = &$data['content'][0]['field_promotion'][0]['bean'][$delta]['bean'][$delta];
         if (isset($bean['field_promo_image'])) {
           if (isset($bean['field_promo_image_link'])) {
             $bean['field_promo_image'][0]['#path']['path'] = $bean['field_promo_image_link']['#items'][0]['url'];

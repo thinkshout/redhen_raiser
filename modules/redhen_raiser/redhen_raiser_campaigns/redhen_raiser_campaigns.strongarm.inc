@@ -49,6 +49,9 @@ function redhen_raiser_campaigns_strongarm() {
         'sticky' => array(
           'weight' => '32',
         ),
+        'join' => array(
+          'weight' => '-10',
+        ),
       ),
       'display' => array(
         'label' => array(

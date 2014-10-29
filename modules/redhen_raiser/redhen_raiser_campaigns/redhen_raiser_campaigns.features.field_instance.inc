@@ -176,7 +176,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     'entity_type' => 'redhen_campaign',
     'field_name' => 'field_end_date',
     'label' => 'End Date',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'default_value' => 'blank',
       'default_value2' => 'same',
@@ -260,13 +260,13 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'options',
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 60,
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'options_select',
       'weight' => 31,
     ),
   );
@@ -324,7 +324,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     'entity_type' => 'redhen_campaign',
     'field_name' => 'field_start_date',
     'label' => 'Start Date',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',

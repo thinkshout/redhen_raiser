@@ -24,10 +24,10 @@ function redhen_raiser_campaigns_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'field_banner_image',
-      1 => 'path',
-      2 => 'promote',
-      3 => 'sticky',
-      4 => 'field_promotion',
+      1 => 'field_promotion',
+      2 => 'path',
+      3 => 'promote',
+      4 => 'sticky',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

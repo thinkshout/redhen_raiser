@@ -86,7 +86,7 @@ function redhen_raiser_campaigns_strongarm() {
             'visible' => TRUE,
           ),
           'progress' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'banner' => array(

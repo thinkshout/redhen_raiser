@@ -158,7 +158,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           'interval_display' => 'raw time hence',
         ),
         'type' => 'format_interval',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'promotion' => array(
         'label' => 'above',
@@ -232,7 +232,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'promotion' => array(
         'label' => 'hidden',
@@ -303,10 +303,14 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'weight' => 6,
       ),
       'progress' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'interval' => 1,
+          'interval_display' => 'raw time hence',
+        ),
+        'type' => 'format_interval',
+        'weight' => 2,
       ),
       'promotion' => array(
         'label' => 'above',

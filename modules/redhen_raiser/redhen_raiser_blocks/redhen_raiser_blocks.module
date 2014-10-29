@@ -28,6 +28,18 @@ function redhen_raiser_blocks_entity_view_alter(&$build, $type) {
     case "redhen_campaign_page":
     case "redhen_campaign":
       if ($build['#view_mode'] == 'progress') {
+        if (isset($build['field_start_date'])) {
+          $start = strtotime($build['field_start_date']['#items'][0]['value']);
+          if (time() < $start) {
+            $prepend = '<span class="date-display-interval-all">';
+            $prepend .= "Fundraiser begins in ";
+            $build['field_start_date'][0]['#markup'] = $prepend . $build['field_start_date'][0]['#markup'] . "</span>";
+            $build['field_end_date']['#access'] = FALSE;
+          }
+          else {
+            $build['field_start_date']['#access'] = FALSE;
+          }
+        }
         if (isset($build['field_end_date'])) {
           $end = strtotime($build['field_end_date']['#items'][0]['value']);
           $remaining = $end - time();
@@ -40,7 +52,7 @@ function redhen_raiser_blocks_entity_view_alter(&$build, $type) {
             if ($remaining < (7 * 24 * 60 * 60)) {
               $prepend .= "Only ";
             }
-            $build['field_end_date'][0]['#markup'] = $prepend . $build['field_end_date'][0]['#markup'] . " left.</span";
+            $build['field_end_date'][0]['#markup'] = $prepend . $build['field_end_date'][0]['#markup'] . " left.</span>";
           }
         }
       }

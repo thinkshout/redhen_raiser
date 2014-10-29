@@ -72,12 +72,12 @@ function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
 
       case 'full':
         if (isset($build['campaign'])) {
-          _redhen_raiser_campaign_pages_colectomify($build['campaign']);
+          _redhen_raiser_core_colectomify($build['campaign']);
           $build['campaign']['#label'] = 'Fundraising for';
           unset($build['campaign']['#label_hidden']);
         }
         if (isset($build['team'])) {
-          _redhen_raiser_campaign_pages_colectomify($build['team']);
+          _redhen_raiser_core_colectomify($build['team']);
           $build['team']['#label'] = 'with';
         }
         break;
@@ -119,13 +119,7 @@ function redhen_raiser_campaign_pages_create_fundraiser_form_submit($form, &$for
 }
 
 /**
- * Helper to allow field_extra_fields enabled properties to be colectomified.
- *
- * See the colectomy module.
  */
-function _redhen_raiser_campaign_pages_colectomify(&$field) {
-  $field['#label_display'] = 'inlinec';
-  $field['#post_render'] = array('colectomy' => 'colectomy_post_render');
 }
 
 /**

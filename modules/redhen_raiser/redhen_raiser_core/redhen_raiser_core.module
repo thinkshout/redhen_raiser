@@ -249,3 +249,13 @@ function redhen_raiser_core_session_destination($form, &$form_state) {
   $form_state['redirect'] = array($path, $url_parts);
   unset($_SESSION['destination']);
 }
+
+/**
+ * Helper to allow field_extra_fields enabled properties to be colectomified.
+ *
+ * See the colectomy module.
+ */
+function _redhen_raiser_core_colectomify(&$field) {
+  $field['#label_display'] = 'inlinec';
+  $field['#post_render'] = array('colectomy' => 'colectomy_post_render');
+}

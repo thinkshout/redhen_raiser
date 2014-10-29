@@ -50,6 +50,8 @@ function redhen_raiser_campaigns_entity_view_alter(&$build, $type) {
       $build['pages'] = array(
         '#markup' => l(t('View all Teams and Individuals'), 'campaigns/' . $build['#entity']->campaign_id . '/pages', $options),
         '#weight' => 100,
+        '#prefix' => '<div class="view-all-button">',
+        '#suffix' => '</div>',
       );
       $build['join']['#label_hidden'] = FALSE;
       $build['join']['#label'] = 'Ready to contribute to the cause? Fundraise for this campaign now.';

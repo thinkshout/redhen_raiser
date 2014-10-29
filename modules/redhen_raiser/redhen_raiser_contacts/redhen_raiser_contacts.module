@@ -28,10 +28,17 @@ function redhen_raiser_contacts_entity_view_alter(&$build, $type) {
       case "byline":
         $build['name']['#label'] = 'By';
         $add_picture = TRUE;
+        $style = 'avatar';
         break;
 
       case "redhen_campaign_page_owner":
         $add_picture = TRUE;
+        $style = 'avatar';
+        break;
+
+      case "redhen_campaign_page_owner_teaser":
+        $add_picture = TRUE;
+        $style = 'tile';
         break;
 
     }
@@ -39,7 +46,7 @@ function redhen_raiser_contacts_entity_view_alter(&$build, $type) {
       $build['avatar'] = array(
         '#theme' => 'image_style',
         '#path' => $user->picture->uri,
-        '#style_name' => 'avatar',
+        '#style_name' => $style,
       );
     }
   }

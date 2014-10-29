@@ -1,0 +1,126 @@
+<?php
+
+/**
+ * @file
+ */
+
+
+/**
+ * Implements hook_schema().
+ */
+function commerce_recurring_schema() {
+  $schema = array();
+
+  $schema['commerce_recurring'] = array(
+    'description' => 'The base table for commerce recurring entities.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a recurring entity, used internally only.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'type' => array(
+        'description' => 'The type (bundle) of this recurring entity.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'uid' => array(
+        'description' => 'The {users}.uid that owns the recurring entity.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'status' => array(
+        'description' => 'Boolean indicating whether or not the recurring entity is active.',
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 1,
+      ),
+      'start_date' => array(
+        'description' => 'The Unix timestamp when the recurring entity was created.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'due_date' => array(
+        'description' => 'The Unix timestamp when the recurring entity has is next due date.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'end_date' => array(
+        'description' => 'The Unix timestamp when the recurring entity ends being active.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'quantity' => array(
+        'type' => 'numeric',
+        'size' => 'normal',
+        'not null' => TRUE,
+        'default' => 0,
+        'precision' => 10,
+        'scale' => 2,
+      ),
+      'data' => array(
+        'type' => 'blob',
+        'not null' => FALSE,
+        'size' => 'big',
+        'serialize' => TRUE,
+        'description' => 'A serialized array of additional data.',
+      ),
+    ),
+    'primary key' => array('id'),
+    'indexes' => array(
+      'commerce_recurring_type' => array('type'),
+      'uid' => array('uid'),
+    ),
+    'foreign keys' => array(
+      'creator' => array(
+        'table' => 'users',
+        'columns' => array('uid' => 'uid'),
+      ),
+    ),
+  );
+
+  return $schema;
+}
+/**
+ * Implements hook_install().
+ */
+function commerce_recurring_install() {
+  // Create the recurring product type.
+  $product_type = array(
+    'type' => 'recurring',
+    'name' => t('Recurring product'),
+    'description' => t('A recurring purchase product type'),
+    'help' => '',
+    'revision' => 1,
+    'is_new' => TRUE,
+  );
+
+  commerce_product_ui_product_type_save($product_type, FALSE);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function commerce_recurring_uninstall() {
+  module_load_include('module', 'commerce');
+  module_load_include('module', 'commerce_product_ui');
+  // Delete recurring product type and field instances.
+  commerce_product_ui_product_type_delete('recurring');
+  commerce_delete_instances('commerce_product', 'recurring');
+  // Delete field instances from commerce recurring entity.
+  commerce_delete_instances('commerce_recurring');
+  // Delete all fields created by this module.
+  $fields = array('commerce_recurring_ini_price', 'commerce_recurring_rec_price', 'commerce_recurring_ini_period', 'commerce_recurring_rec_period',
+    'commerce_recurring_end_period', 'commerce_recurring_ref_product', 'commerce_recurring_order', 'commerce_recurring_fixed_price');
+  foreach($fields as $field_name) {
+    commerce_delete_field($field_name);
+  }
+}

@@ -84,7 +84,7 @@ function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
 
       case 'promotion':
         $campaign = redhen_campaign_load($build['#entity']->campaign);
-        $build['campaign'] = entity_view('redhen_campaign', array($campaign), 'promotion');
+        $build['campaign'] = entity_view('redhen_campaign', array($campaign), 'promotion', NULL, FALSE);
         break;
 
     }

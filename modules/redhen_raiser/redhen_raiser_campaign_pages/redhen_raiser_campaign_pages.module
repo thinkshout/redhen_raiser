@@ -92,6 +92,33 @@ function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
 }
 
 /**
+ * A simple form for selecting a campaign to join before creating a fundraiser.
+ */
+function redhen_raiser_campaign_pages_create_fundraiser_form($form, &$form_state) {
+  $campaigns = redhen_raiser_campaigns_load_active();
+  $options = array('' => '-- Select --');
+  foreach ($campaigns as $campaign) {
+    $options[$campaign->campaign_id] = $campaign->label;
+  }
+  $form['campaign'] = array(
+    '#type' => 'select',
+    '#title' => t('Which fundraising campaign would you like to join?'),
+    '#options' => $options,
+    '#attributes' => array('onChange' => 'document.getElementById("redhen-raiser-campaign-pages-create-fundraiser-form").submit();'),
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Create Fundraiser',
+    '#attributes' => array('class' => array('element-invisible')),
+  );
+  return $form;
+}
+
+function redhen_raiser_campaign_pages_create_fundraiser_form_submit($form, &$form_state) {
+  drupal_goto('redhen_campaign_page/add', array('query' => array('campaign' => $form_state['input']['campaign'])));
+}
+
+/**
  * Helper to allow field_extra_fields enabled properties to be colectomified.
  *
  * See the colectomy module.

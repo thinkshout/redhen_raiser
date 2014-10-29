@@ -7,50 +7,45 @@
 include_once 'redhen_raiser_blocks.features.inc';
 
 /**
- * Implements hook_block_view_alter().
- */
-function redhen_raiser_blocks_block_view_alter(&$data, $block) {
-  if ($block->module == 'bean') {
-    switch ($block->delta) {
-      case "campaign-promotion":
-        // Link the Promo bean image to the target link.
-        $delta = $data['content'][0]['field_promotion']['#items'][0]['entity']->delta;
-        $bean = &$data['content'][0]['field_promotion'][0]['bean'][$delta]['bean'][$delta];
-        if (isset($bean['field_promo_image'])) {
-          if (isset($bean['field_promo_image_link'])) {
-            $bean['field_promo_image'][0]['#path']['path'] = $bean['field_promo_image_link']['#items'][0]['url'];
-            $bean['field_promo_image_link']['#access'] = FALSE;
-          }
-          else {
-            unset($bean['field_promo_image'][0]['#path']);
-          }
-        }
-        break;
-
-    }
-  }
-}
-
-/**
  * Implements hook_entity_view_alter().
  */
 function redhen_raiser_blocks_entity_view_alter(&$build, $type) {
-  if ($build['#view_mode'] == 'progress') {
-    if (isset($build['field_end_date'])) {
-      $end = strtotime($build['field_end_date']['#items'][0]['value']);
-      $remaining = $end - time();
-      // @todo: add configuration options to control these behaviors.
-      if ($remaining <= 0) {
-        $build['field_end_date'][0]['#markup'] = '<span class="date-display-interval-past">Fundraiser has ended.</span>';
-      }
-      else {
-        $prepend = '<span class="date-display-interval-all">';
-        if ($remaining < (7 * 24 * 60 * 60)) {
-          $prepend .= "Only ";
+  switch ($type) {
+    case "bean":
+      if ($build['#bundle'] == 'promo') {
+        if (isset($build['field_promo_image'])) {
+          if (isset($build['field_promo_image_link'])) {
+            $build['field_promo_image'][0]['#path']['path'] = $build['field_promo_image_link']['#items'][0]['url'];
+            $build['field_promo_image_link']['#access'] = FALSE;
+          }
+          else {
+            unset($build['field_promo_image'][0]['#path']);
+          }
         }
-        $build['field_end_date'][0]['#markup'] = $prepend . $build['field_end_date'][0]['#markup'] . " left.</span";
       }
-    }
+      break;
+
+    case "redhen_campaign_page":
+    case "redhen_campaign":
+      if ($build['#view_mode'] == 'progress') {
+        if (isset($build['field_end_date'])) {
+          $end = strtotime($build['field_end_date']['#items'][0]['value']);
+          $remaining = $end - time();
+          // @todo: add configuration options to control these behaviors.
+          if ($remaining <= 0) {
+            $build['field_end_date'][0]['#markup'] = '<span class="date-display-interval-past">Fundraiser has ended.</span>';
+          }
+          else {
+            $prepend = '<span class="date-display-interval-all">';
+            if ($remaining < (7 * 24 * 60 * 60)) {
+              $prepend .= "Only ";
+            }
+            $build['field_end_date'][0]['#markup'] = $prepend . $build['field_end_date'][0]['#markup'] . " left.</span";
+          }
+        }
+      }
+      break;
+
   }
 }
 

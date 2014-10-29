@@ -718,7 +718,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'avatar',
+          'image_style' => 'tile',
         ),
         'type' => 'image',
         'weight' => 0,

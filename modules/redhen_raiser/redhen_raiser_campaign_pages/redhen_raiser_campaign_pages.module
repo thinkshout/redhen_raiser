@@ -114,12 +114,11 @@ function redhen_raiser_campaign_pages_create_fundraiser_form($form, &$form_state
   return $form;
 }
 
+/**
+ * Form submission handler.
+ */
 function redhen_raiser_campaign_pages_create_fundraiser_form_submit($form, &$form_state) {
   drupal_goto('redhen_campaign_page/add', array('query' => array('campaign' => $form_state['input']['campaign'])));
-}
-
-/**
- */
 }
 
 /**

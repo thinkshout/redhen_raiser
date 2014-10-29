@@ -63,8 +63,7 @@ function redhen_raiser_campaigns_load_active() {
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'redhen_campaign')
     ->fieldCondition('field_start_date', 'value', $now, '<')
-    ->fieldCondition('field_end_date', 'value', $now, '>')
-  ;
+    ->fieldCondition('field_end_date', 'value', $now, '>');
   $results = $query->execute();
   if (isset($results['redhen_campaign'])) {
     return redhen_campaign_load_multiple(array_keys($results['redhen_campaign']));

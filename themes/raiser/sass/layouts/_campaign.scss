@@ -38,9 +38,28 @@
     }
   }
 
-  // Team Individual Button
-  .redhen-campaign-pages-button {
-    @include cta-btn;
+  .view-all-button,
+  .redhen_campaign_join_link {
+    background: $lt-gray;
+    margin-bottom: 2em;
+    padding: 2em 1em;
+    overflow: hidden;
+    .field-label {
+      font-weight: normal;
+      float: left; 
+      width: 48%;
+    }
+    a {
+      @include cta-btn; 
+      float: right;
+    }
+  }
+  .view-all-button {
+    padding: 2em;
+    text-align: center;
+    a { 
+      margin: 0 auto;
+    float: none; } 
   }
 
   // Campaign story image

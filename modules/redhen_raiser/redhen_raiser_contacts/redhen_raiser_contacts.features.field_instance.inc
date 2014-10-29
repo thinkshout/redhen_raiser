@@ -51,6 +51,12 @@ function redhen_raiser_contacts_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 4,
       ),
+      'redhen_campaign_page_owner_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -109,6 +115,12 @@ function redhen_raiser_contacts_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 3,
       ),
+      'redhen_campaign_page_owner_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -155,6 +167,12 @@ function redhen_raiser_contacts_field_default_field_instances() {
         'weight' => 1,
       ),
       'redhen_campaign_page_owner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'redhen_campaign_page_owner_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

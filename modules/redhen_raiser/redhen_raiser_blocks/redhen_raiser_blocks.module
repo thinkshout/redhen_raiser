@@ -26,40 +26,52 @@ function redhen_raiser_blocks_entity_view_alter(&$build, $type) {
       break;
 
     case "redhen_campaign_page":
+      if ($build['#view_mode'] == 'progress') {
+        $parent = redhen_campaign_load($build['#entity']->campaign);
+        $build['field_start_date'] = field_view_field('redhen_campaign', $parent, 'field_start_date', 'progress');
+        _redhen_raiser_blocks_format_dates($build);
+      }
+      break;
+
     case "redhen_campaign":
       if ($build['#view_mode'] == 'progress') {
-        if (isset($build['field_start_date'])) {
-          $start = strtotime($build['field_start_date']['#items'][0]['value']);
-          if (time() < $start) {
-            $prepend = '<span class="date-display-interval-all">';
-            $prepend .= "Fundraiser begins in ";
-            $build['field_start_date'][0]['#markup'] = $prepend . $build['field_start_date'][0]['#markup'] . "</span>";
-            $build['field_end_date']['#access'] = FALSE;
-          }
-          else {
-            $build['field_start_date']['#access'] = FALSE;
-          }
-        }
-        if (isset($build['field_end_date'])) {
-          $end = strtotime($build['field_end_date']['#items'][0]['value']);
-          $remaining = $end - time();
-          // @todo: add configuration options to control these behaviors.
-          if ($remaining <= 0) {
-            $build['field_end_date'][0]['#markup'] = '<span class="date-display-interval-past">Fundraiser has ended.</span>';
-          }
-          else {
-            $prepend = '<span class="date-display-interval-all">';
-            if ($remaining < (7 * 24 * 60 * 60)) {
-              $prepend .= "Only ";
-            }
-            $build['field_end_date'][0]['#markup'] = $prepend . $build['field_end_date'][0]['#markup'] . " left.</span>";
-          }
-        }
+        _redhen_raiser_blocks_format_dates($build);
       }
       break;
 
   }
 }
+
+function _redhen_raiser_blocks_format_dates(&$build) {
+  if (isset($build['field_start_date'])) {
+    $start = strtotime($build['field_start_date']['#items'][0]['value']);
+    if (time() < $start) {
+      $prepend = '<span class="date-display-interval-all">';
+      $prepend .= "Fundraiser begins in ";
+      $build['field_start_date'][0]['#markup'] = $prepend . $build['field_start_date'][0]['#markup'] . "</span>";
+      $build['field_end_date']['#access'] = FALSE;
+    }
+    else {
+      $build['field_start_date']['#access'] = FALSE;
+    }
+  }
+  if (isset($build['field_end_date'])) {
+    $end = strtotime($build['field_end_date']['#items'][0]['value']);
+    $remaining = $end - time();
+    // @todo: add configuration options to control these behaviors.
+    if ($remaining <= 0) {
+      $build['field_end_date'][0]['#markup'] = '<span class="date-display-interval-past">Fundraiser has ended.</span>';
+    }
+    else {
+      $prepend = '<span class="date-display-interval-all">';
+      if ($remaining < (7 * 24 * 60 * 60)) {
+        $prepend .= "Only ";
+      }
+      $build['field_end_date'][0]['#markup'] = $prepend . $build['field_end_date'][0]['#markup'] . " left.</span>";
+    }
+  }
+}
+
 
 /**
  * Create default Blocks.

@@ -1580,66 +1580,62 @@ body.front #main #content {
 }
 /* line 51, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .redhen_campaign_page_team {
-  padding-left: 1em;
+  padding-left: 1.375em;
   margin-top: 0.5em;
   line-height: 1;
+  position: absolute;
+  width: 100%;
+  bottom: 0.75em;
+  font-size: 0.75em;
 }
-/* line 55, ../sass/components/_campaign-team-individual-list.scss */
-.view-campaign-pages .views-row .redhen_campaign_page_team .field-label {
-  width: 22%;
-}
-/* line 58, ../sass/components/_campaign-team-individual-list.scss */
-.view-campaign-pages .views-row .redhen_campaign_page_team .field-items {
-  width: 78%;
-}
-/* line 62, ../sass/components/_campaign-team-individual-list.scss */
+/* line 61, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .field-name-redhen-campaign-goal {
   color: #5e9733;
   font-size: 1.375em;
-  line-height: 1.6;
-  padding-left: 0.625em;
+  padding-left: 0.75em;
 }
-/* line 67, ../sass/components/_campaign-team-individual-list.scss */
+/* line 65, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .field-name-redhen-campaign-goal .rhc_progress {
   display: inline;
   font-size: 1em;
 }
-/* line 73, ../sass/components/_campaign-team-individual-list.scss */
+/* line 71, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .redhen-contact-contact {
+  margin: 0 1em 1em 1em;
   display: block;
-  padding: 0 1em;
   text-align: center;
+  float: none;
 }
-/* line 78, ../sass/components/_campaign-team-individual-list.scss */
+/* line 76, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .redhen-contact-contact img {
   border-radius: 0.5em;
-  border: 3px solid white;
   -webkit-box-shadow: 0 3px 5px #989898;
   -moz-box-shadow: 0 3px 5px #989898;
   box-shadow: 0 3px 5px #989898;
-  width: 97%;
+  width: 100%;
 }
-/* line 88, ../sass/components/_campaign-team-individual-list.scss */
+/* line 85, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .redhen_campaign_page_campaign,
 .view-campaign-pages .views-row .redhen_campaign_page_title {
   font-size: 1em;
   margin-left: 1em;
+  margin-top: 0;
   width: 80%;
 }
-/* line 96, ../sass/components/_campaign-team-individual-list.scss */
+/* line 94, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .redhen-campaign-page-team .field-name-field-logo {
-  margin: 0 0.5em 0.5em 1em;
+  margin: 0 1em 1em 1em;
+  float: none;
 }
-/* line 98, ../sass/components/_campaign-team-individual-list.scss */
+/* line 97, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .redhen-campaign-page-team .field-name-field-logo img {
   border-radius: 0.5em;
-  border: 3px solid white;
   -webkit-box-shadow: 0 3px 5px #989898;
   -moz-box-shadow: 0 3px 5px #989898;
   box-shadow: 0 3px 5px #989898;
-  width: 97%;
+  width: 100%;
 }
-/* line 108, ../sass/components/_campaign-team-individual-list.scss */
+/* line 106, ../sass/components/_campaign-team-individual-list.scss */
 .view-campaign-pages .views-row .clearfix:after {
   display: block !important;
 }
@@ -3226,7 +3222,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1414691377');
+  background-image: url('../images/progress.gif?1414714240');
 }
 
 /* line 1, ../sass/components/_progress-bar.scss */

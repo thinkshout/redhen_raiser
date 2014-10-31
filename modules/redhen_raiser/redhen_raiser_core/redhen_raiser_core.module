@@ -231,6 +231,14 @@ function redhen_raiser_core_form_user_pass_reset_alter(&$form, &$form_state, $fo
   if (!empty($_GET['destination'])) {
     $_SESSION['destination'] = $_GET['destination'];
   }
+  $reset_user = user_load(arg(2));
+  if ($reset_user) {
+    $contact = redhen_contact_load_by_user($reset_user);
+    if ($contact) {
+      $form['message']['#markup'] = '<p>Click below to login as <em class="placeholder">' . $contact->first_name . ' ' . $contact->last_name . '</em>.</p><p>You can set your password on the next page.</p>';
+      unset($form['help']);
+    }
+  }
 }
 
 /**

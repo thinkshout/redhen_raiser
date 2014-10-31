@@ -41,6 +41,9 @@ function redhen_raiser_core_menu_alter(&$items) {
  */
 function redhen_raiser_core_fundraise_now_page() {
   if (user_is_anonymous()) {
+    if (!isset($_GET['destination'])) {
+      $_GET['destination'] = 'fundraise';
+    }
     if (isset($_GET['action'])) {
       switch ($_GET['action']) {
         case "register":

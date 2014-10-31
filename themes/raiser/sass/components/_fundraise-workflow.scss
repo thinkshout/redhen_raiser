@@ -84,9 +84,9 @@
 
   .field-type-datetime {
     @include zen-grid-item(6,1);
-    margin-left: 0;
+    margin-right: auto;
     &#edit-field-end-date {
-      @include zen-grid-item(6,1,right);
+      @include zen-grid-item(6,1);
       font-size: em(16);
       margin-top: 0;
     }
@@ -103,6 +103,7 @@
   }
 
   .field-type-image {
+    min-height: em(32);
     label {
       float: left;
       margin-right: em(8);
@@ -116,5 +117,7 @@
     @include appearance(none);
     line-height: 1;
   }
-
+  .form-actions {
+    clear:both;
+  }
 }

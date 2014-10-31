@@ -741,6 +741,25 @@ form a.button:hover {
   border: 3px solid #90c965;
   color: white;
 }
+/* line 84, ../sass/base/_base.scss */
+form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent url(../images/select.png) no-repeat 97% center;
+  border-radius: 4px;
+  border: 2px solid #5e9733;
+  color: #5e9733;
+  font-size: 14px;
+  height: 36px;
+  line-height: 1;
+  padding: 5px 20px 5px 10px;
+  margin-top: 10px;
+}
+/* line 99, ../sass/base/_base.scss */
+form select, form x:-moz-any-link, form x:only-child {
+  background: none;
+}
 
 /* Layout rules */
 /**
@@ -2162,16 +2181,16 @@ footer #colophon a:hover {
   width: 50%;
   margin-left: 0%;
   margin-right: -50%;
-  margin-left: 0;
+  margin-right: auto;
 }
 /* line 88, ../sass/components/_fundraise-workflow.scss */
 .page-redhen-campaign-add-general .field-type-datetime#edit-field-end-date,
 .page-redhen-campaign-page-add .field-type-datetime#edit-field-end-date,
 .page-redhen-campaign-edit .field-type-datetime#edit-field-end-date {
-  float: right;
+  float: left;
   width: 50%;
-  margin-right: 0%;
-  margin-left: -50%;
+  margin-left: 0%;
+  margin-right: -50%;
   font-size: 1em;
   margin-top: 0;
 }
@@ -2194,20 +2213,26 @@ footer #colophon a:hover {
 .page-redhen-campaign-edit .field-type-datetime input {
   font-size: 16px;
 }
-/* line 106, ../sass/components/_fundraise-workflow.scss */
+/* line 105, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .field-type-image,
+.page-redhen-campaign-page-add .field-type-image,
+.page-redhen-campaign-edit .field-type-image {
+  min-height: 2em;
+}
+/* line 107, ../sass/components/_fundraise-workflow.scss */
 .page-redhen-campaign-add-general .field-type-image label,
 .page-redhen-campaign-page-add .field-type-image label,
 .page-redhen-campaign-edit .field-type-image label {
   float: left;
   margin-right: 0.5em;
 }
-/* line 110, ../sass/components/_fundraise-workflow.scss */
+/* line 111, ../sass/components/_fundraise-workflow.scss */
 .page-redhen-campaign-add-general .field-type-image .description,
 .page-redhen-campaign-page-add .field-type-image .description,
 .page-redhen-campaign-edit .field-type-image .description {
   line-height: 1.7;
 }
-/* line 115, ../sass/components/_fundraise-workflow.scss */
+/* line 116, ../sass/components/_fundraise-workflow.scss */
 .page-redhen-campaign-add-general a.button,
 .page-redhen-campaign-page-add a.button,
 .page-redhen-campaign-edit a.button {
@@ -2215,6 +2240,12 @@ footer #colophon a:hover {
   -moz-appearance: none;
   appearance: none;
   line-height: 1;
+}
+/* line 120, ../sass/components/_fundraise-workflow.scss */
+.page-redhen-campaign-add-general .form-actions,
+.page-redhen-campaign-page-add .form-actions,
+.page-redhen-campaign-edit .form-actions {
+  clear: both;
 }
 
 /* line 1, ../sass/components/_header.scss */
@@ -3195,7 +3226,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1414604356');
+  background-image: url('../images/progress.gif?1414691377');
 }
 
 /* line 1, ../sass/components/_progress-bar.scss */

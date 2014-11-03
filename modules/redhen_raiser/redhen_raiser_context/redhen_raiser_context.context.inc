@@ -108,6 +108,12 @@ function redhen_raiser_context_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-8',
         ),
+        'views-leaderboard-block_team' => array(
+          'module' => 'views',
+          'delta' => 'leaderboard-block_team',
+          'region' => 'sidebar_first',
+          'weight' => '-7',
+        ),
       ),
     ),
   );

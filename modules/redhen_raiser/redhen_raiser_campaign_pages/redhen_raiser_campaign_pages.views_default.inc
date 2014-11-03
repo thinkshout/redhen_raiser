@@ -141,7 +141,9 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'view all';
-  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['link_display'] = 'page';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'access redhen campaign pages';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -237,6 +239,58 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
+
+  /* Display: Page: team */
+  $handler = $view->new_display('page', 'Page: team', 'page_team');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: RedHen Campaign Page: Team Page */
+  $handler->display->display_options['arguments']['team']['id'] = 'team';
+  $handler->display->display_options['arguments']['team']['table'] = 'redhen_campaign_page';
+  $handler->display->display_options['arguments']['team']['field'] = 'team';
+  $handler->display->display_options['arguments']['team']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['team']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['team']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['team']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['team']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['team']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['team']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['team']['validate']['type'] = 'numeric';
+  $handler->display->display_options['arguments']['team']['validate']['fail'] = 'empty';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  $handler->display->display_options['path'] = 'campaign-pages/%/leaderboard';
+
+  /* Display: Block: team */
+  $handler = $view->new_display('block', 'Block: team', 'block_team');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'view all';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page_team';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'mini';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: RedHen Campaign Page: Team Page */
+  $handler->display->display_options['arguments']['team']['id'] = 'team';
+  $handler->display->display_options['arguments']['team']['table'] = 'redhen_campaign_page';
+  $handler->display->display_options['arguments']['team']['field'] = 'team';
+  $handler->display->display_options['arguments']['team']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['team']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['team']['default_argument_options']['index'] = '2';
+  $handler->display->display_options['arguments']['team']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['team']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['team']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
   $export['leaderboard'] = $view;
 
   $view = new view();

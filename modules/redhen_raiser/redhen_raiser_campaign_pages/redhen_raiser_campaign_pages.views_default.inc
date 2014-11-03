@@ -194,28 +194,27 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
   $handler->display->display_options['filters']['type']['is_grouped'] = TRUE;
-  $handler->display->display_options['filters']['type']['group_info']['label'] = 'Type';
   $handler->display->display_options['filters']['type']['group_info']['identifier'] = 'type';
   $handler->display->display_options['filters']['type']['group_info']['optional'] = FALSE;
   $handler->display->display_options['filters']['type']['group_info']['widget'] = 'radios';
   $handler->display->display_options['filters']['type']['group_info']['default_group'] = '1';
   $handler->display->display_options['filters']['type']['group_info']['group_items'] = array(
     1 => array(
-      'title' => 'Individuals',
-      'operator' => 'in',
-      'value' => array(
-        'individual' => 'individual',
-        'all' => 0,
-        'team' => 0,
-      ),
-    ),
-    2 => array(
       'title' => 'Teams',
       'operator' => 'in',
       'value' => array(
         'team' => 'team',
         'all' => 0,
         'individual' => 0,
+      ),
+    ),
+    2 => array(
+      'title' => 'Individuals',
+      'operator' => 'in',
+      'value' => array(
+        'individual' => 'individual',
+        'all' => 0,
+        'team' => 0,
       ),
     ),
   );

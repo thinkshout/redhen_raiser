@@ -57,8 +57,8 @@ Drupal.behaviors.my_custom_behavior = {
       },
 
       activeRadioButton: function() {
-        var radio = _$('.view-campaign-pages .view-filters input'),
-            label = _$('.view-campaign-pages .view-filters label').parent();
+        var radio = _$('#edit-fundraiser-type input'),
+            label = _$('#edit-fundraiser-type label').parent();
         label.click(function(){
             _$(this).not('.checked').find('input').attr('checked', true).change();
         });

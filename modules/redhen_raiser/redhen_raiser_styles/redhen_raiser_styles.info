@@ -42,6 +42,7 @@ features[image][] = banner_l
 features[image][] = banner_s
 features[image][] = banner_xl
 features[image][] = mini-avatar
+features[image][] = snippet_tile
 features[image][] = story_l
 features[image][] = story_s
 features[image][] = story_xl

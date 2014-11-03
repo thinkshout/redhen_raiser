@@ -58,6 +58,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -134,6 +140,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'weight' => 1,
       ),
       'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+      'snippet' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -222,6 +234,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -291,6 +309,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'weight' => 7,
       ),
       'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'snippet' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -388,6 +412,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -466,6 +496,23 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'snippet' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'abbreviate' => 0,
+          'characters' => array(
+            'billion' => 'B',
+            'million' => 'M',
+            'thousand' => 'K',
+            'trillion' => 'T',
+          ),
+          'text' => 'Raised !PROGRESS',
+          'thermometer' => 0,
+        ),
+        'type' => 'redhen_campaign_smart_thermometer',
         'weight' => 10,
       ),
       'teaser' => array(
@@ -554,6 +601,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -635,6 +688,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -712,6 +771,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
+      ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -809,6 +874,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -882,6 +953,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 5,
+      ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -975,6 +1052,12 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1048,6 +1131,23 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
+      ),
+      'snippet' => array(
+        'label' => 'hidden',
+        'module' => 'redhen_campaign',
+        'settings' => array(
+          'abbreviate' => 0,
+          'characters' => array(
+            'billion' => 'B',
+            'million' => 'M',
+            'thousand' => 'K',
+            'trillion' => 'T',
+          ),
+          'text' => 'Raised !PROGRESS',
+          'thermometer' => 0,
+        ),
+        'type' => 'redhen_campaign_smart_thermometer',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',

@@ -67,6 +67,9 @@ Drupal.behaviors.my_custom_behavior = {
           if (_$(this).attr('checked')) {
             _$(this).parent().addClass('checked');
           }
+          if (!_$(this).attr('checked')) {
+            _$(this).parent().removeClass('checked');
+          }
         });
       },
 

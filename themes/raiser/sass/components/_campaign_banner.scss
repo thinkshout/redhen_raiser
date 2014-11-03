@@ -1,8 +1,8 @@
 .page-redhen-campaign #highlighted {
-  position: relative;
+  @include box-shadow(0 2px 5px $gray);
   margin-top: 1em;
   max-height: 300px;
-  @include box-shadow(0 2px 5px $gray);
+  position: relative;
 
   #block-bean-campaign-page-banner,
   #block-bean-campaign-banner {
@@ -39,9 +39,9 @@
     bottom: 0;
     color: $white;
     font-size: 1.2em;
+    height: 150px;
     padding: 1em 1em 0;
     position: absolute;
-    height: 150px;
     width: 40%;
 
     .field-item {
@@ -51,8 +51,8 @@
 
   .redhen_campaign_page_donate,
   .field-type-redhen-donation {
-    position: absolute;
     bottom: 2em;
+    position: absolute;
     right: 1em;
     z-index: 2;
 

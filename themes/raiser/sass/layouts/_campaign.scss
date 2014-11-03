@@ -75,7 +75,7 @@
     text-align: center;
     a {
       margin: 0 auto;
-    float: none; }
+      float: none; }
   }
 
   // Campaign story image
@@ -85,8 +85,8 @@
 
   // Video style
   iframe {
-    border: 3px solid $white;
     @include box-shadow(0 3px 5px $gray);
+    border: 3px solid $white;
     width: 100%;
   }
 
@@ -95,11 +95,10 @@
   #block-bean-campaign-progress {
     background: $primary-widget;
     color: $primary;
-    position: absolute;
     left: 0;
-    width: 95%;
-    padding-top: 2em;
     padding-bottom: 2em;
+    padding-top: 2em;
+    width: 105%;
     .field-label-inline {
       display: none;
     }
@@ -108,9 +107,9 @@
   }
 
   #block-bean-social-media-links {
-    padding-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 1em;
 
     .field-item {
       float: left;
@@ -118,14 +117,14 @@
 
 
     a {
-      background: url(../images/social.png) no-repeat;
       background-size: 214px;
+      background: url(../images/social.png) no-repeat;
       display: block;
-      width: 45px;
-      height: 45px;
       float: left;
-      text-indent: -9999px;
+      height: 45px;
       margin-right: 0.3em;
+      text-indent: -9999px;
+      width: 45px;
 
       &.twitter-link {
         background-position: 0 0;
@@ -141,6 +140,7 @@
       }
     }
   }
+
 
   // Promo block
   #block-bean-donation-matching {

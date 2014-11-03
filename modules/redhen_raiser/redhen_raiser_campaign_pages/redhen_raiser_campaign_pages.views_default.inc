@@ -126,6 +126,121 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $export['campaign_pages'] = $view;
 
   $view = new view();
+  $view->name = 'leaderboard';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'redhen_campaign_page';
+  $view->human_name = 'Leaderboard';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Leaderboard';
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['use_more_text'] = 'view all';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'snippet';
+  /* Relationship: RedHen Campaign Page: Parent Campaign */
+  $handler->display->display_options['relationships']['campaign']['id'] = 'campaign';
+  $handler->display->display_options['relationships']['campaign']['table'] = 'redhen_campaign_page';
+  $handler->display->display_options['relationships']['campaign']['field'] = 'campaign';
+  $handler->display->display_options['relationships']['campaign']['label'] = 'Campaign';
+  $handler->display->display_options['relationships']['campaign']['required'] = TRUE;
+  /* Field: RedHen Campaign Page: Redhen campaign page ID */
+  $handler->display->display_options['fields']['page_id']['id'] = 'page_id';
+  $handler->display->display_options['fields']['page_id']['table'] = 'redhen_campaign_page';
+  $handler->display->display_options['fields']['page_id']['field'] = 'page_id';
+  /* Sort criterion: RedHen Campaign Page: Progress */
+  $handler->display->display_options['sorts']['progress']['id'] = 'progress';
+  $handler->display->display_options['sorts']['progress']['table'] = 'redhen_campaign_page';
+  $handler->display->display_options['sorts']['progress']['field'] = 'progress';
+  $handler->display->display_options['sorts']['progress']['order'] = 'DESC';
+  /* Sort criterion: RedHen Campaign Page: Campaign Page Name */
+  $handler->display->display_options['sorts']['label']['id'] = 'label';
+  $handler->display->display_options['sorts']['label']['table'] = 'redhen_campaign_page';
+  $handler->display->display_options['sorts']['label']['field'] = 'label';
+  /* Contextual filter: RedHen Campaign: Redhen campaign ID */
+  $handler->display->display_options['arguments']['campaign_id']['id'] = 'campaign_id';
+  $handler->display->display_options['arguments']['campaign_id']['table'] = 'redhen_campaign';
+  $handler->display->display_options['arguments']['campaign_id']['field'] = 'campaign_id';
+  $handler->display->display_options['arguments']['campaign_id']['relationship'] = 'campaign';
+  $handler->display->display_options['arguments']['campaign_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['campaign_id']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['campaign_id']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['campaign_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['campaign_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['campaign_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['campaign_id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['campaign_id']['validate']['type'] = 'numeric';
+  $handler->display->display_options['arguments']['campaign_id']['validate']['fail'] = 'empty';
+  /* Filter criterion: RedHen Campaign Page: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'redhen_campaign_page';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+  $handler->display->display_options['filters']['type']['is_grouped'] = TRUE;
+  $handler->display->display_options['filters']['type']['group_info']['label'] = 'Type';
+  $handler->display->display_options['filters']['type']['group_info']['identifier'] = 'type';
+  $handler->display->display_options['filters']['type']['group_info']['optional'] = FALSE;
+  $handler->display->display_options['filters']['type']['group_info']['widget'] = 'radios';
+  $handler->display->display_options['filters']['type']['group_info']['default_group'] = '1';
+  $handler->display->display_options['filters']['type']['group_info']['group_items'] = array(
+    1 => array(
+      'title' => 'Individuals',
+      'operator' => 'in',
+      'value' => array(
+        'individual' => 'individual',
+        'all' => 0,
+        'team' => 0,
+      ),
+    ),
+    2 => array(
+      'title' => 'Teams',
+      'operator' => 'in',
+      'value' => array(
+        'team' => 'team',
+        'all' => 0,
+        'individual' => 0,
+      ),
+    ),
+  );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'campaigns/%/leaderboard';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'view all';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'mini';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $export['leaderboard'] = $view;
+
+  $view = new view();
   $view->name = 'my_pages';
   $view->description = 'Admin tab for users to view all their campaign pages.';
   $view->tag = 'default';

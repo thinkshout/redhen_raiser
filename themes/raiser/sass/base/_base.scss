@@ -89,11 +89,19 @@ form {
     border-radius: 4px;
     border: 2px solid $primary;
     color: $primary;
+    cursor: pointer;
     font-size: 14px;
     height: 36px;
-    line-height: 1;
+    line-height: 1.2;
+    margin-top: 2px;
     padding: 5px 20px 5px 10px;
-    margin-top: 10px;
+    &:disabled {
+      background-color: $lt-gray;
+      background-image: none;
+      border: 2px solid $gray;
+      color: $gray;
+      cursor: default;
+    }
   }
 
   select, x:-moz-any-link, x:only-child{

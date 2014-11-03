@@ -1,23 +1,5 @@
 .view-campaign-pages,.page-redhen-campaign-page {
 
-  #edit-fundraiser-type .form-item {
-    @include clear-btn;
-    padding: 0.4em 1em;
-    cursor: pointer;
-    display: inline-block;
-    input {
-      display: none;
-    }
-    label {
-      cursor: pointer;
-    }
-    &.checked {
-      background: $primary;
-      border: 3px solid $primary + 50;
-      color: $white;
-    }
-  }
-
   .views-row {
     @include medium {
       display: inline-block;

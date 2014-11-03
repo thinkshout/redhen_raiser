@@ -4,28 +4,28 @@
   max-height: 300px;
   @include box-shadow(0 2px 5px $gray);
 
-  #block-bean-campaign-page-banner,  
+  #block-bean-campaign-page-banner,
   #block-bean-campaign-banner {
-    margin-bottom: 0; 
+    margin-bottom: 0;
     img {
       width: 100%;
     }
   }
   .redhen-campaign-general h2,
   .redhen_campaign_page_campaign {
-    display: block; 
+    display: block;
     font-family: $raiser-heading-font;
-    font-size: 1.75em;
-    left: 0.7em;
-    position: absolute; 
-    top: 5.5em;
+    font-size: em(32);
+    left: em(11);
+    position: absolute;
+    top: em(80);
     z-index: 3;
 
     a { color: $white; }
   }
 
   .redhen-campaign-general h2 {
-    top: 4em; 
+    top: 4em;
     max-width: 38%;
     line-height: em(18);
   }
@@ -45,13 +45,13 @@
     width: 40%;
 
     .field-item {
-      margin-top: 3em; 
+      margin-top: 3em;
     }
   }
 
   .redhen_campaign_page_donate,
   .field-type-redhen-donation {
-    position: absolute; 
+    position: absolute;
     bottom: 2em;
     right: 1em;
     z-index: 2;

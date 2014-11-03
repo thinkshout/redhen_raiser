@@ -6,6 +6,20 @@
     background: $white;
     overflow: hidden;
     position: relative;
+    .redhen_campaign_title {
+      display: none;
+    }
+  }
+
+  #block-bean-campaign-banner .field-label-inline {
+    color: $white;
+    display: block;
+    font-family: $raiser-heading-font;
+    font-size: em(32);
+    left: em(11);
+    position: absolute;
+    top: em(80);
+    z-index: 3;
   }
 
   .main-content-wrapper {
@@ -46,20 +60,22 @@
     overflow: hidden;
     .field-label {
       font-weight: normal;
-      float: left; 
+      float: left;
+      padding-top: em(6);
+      margin-right: 2%;
       width: 48%;
     }
     a {
-      @include cta-btn; 
+      @include cta-btn;
       float: right;
     }
   }
   .view-all-button {
     padding: 2em;
     text-align: center;
-    a { 
+    a {
       margin: 0 auto;
-    float: none; } 
+    float: none; }
   }
 
   // Campaign story image
@@ -84,6 +100,9 @@
     width: 95%;
     padding-top: 2em;
     padding-bottom: 2em;
+    .field-label-inline {
+      display: none;
+    }
 
     h2 { display: none; }
   }

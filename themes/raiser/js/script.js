@@ -57,8 +57,8 @@ Drupal.behaviors.my_custom_behavior = {
       },
 
       activeRadioButton: function() {
-        var radio = _$('#edit-fundraiser-type input'),
-            label = _$('#edit-fundraiser-type label').parent();
+        var radio = _$('.form-radios input'),
+            label = _$('.form-radios label').parent();
         label.click(function(){
             _$(this).not('.checked').find('input').attr('checked', true).change();
         });

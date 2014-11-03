@@ -51,6 +51,12 @@ function redhen_raiser_context_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-9',
         ),
+        'views-leaderboard-block' => array(
+          'module' => 'views',
+          'delta' => 'leaderboard-block',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
       ),
     ),
   );

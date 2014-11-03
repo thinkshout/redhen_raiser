@@ -33,6 +33,7 @@ projects[breakpoints][subdir] = "contrib"
 ; commerce
 projects[commerce][version] = "1.10"
 projects[commerce][subdir] = "contrib"
+projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_payment_method_callback_comment_fix.patch"
 
 ; ckeditor
 projects[ckeditor][version] = "1.16"

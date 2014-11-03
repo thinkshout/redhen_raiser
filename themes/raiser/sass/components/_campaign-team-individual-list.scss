@@ -1,7 +1,8 @@
-.view-campaign-pages {
+.view-campaign-pages,.page-redhen-campaign-page {
 
-  .form-radios .form-item {
+  #edit-fundraiser-type .form-item {
     @include clear-btn;
+    padding: 0.4em 1em;
     cursor: pointer;
     display: inline-block;
     input {

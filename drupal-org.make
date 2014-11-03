@@ -128,6 +128,7 @@ projects[login_destination][patch][] = "https://www.drupal.org/files/issues/logi
 ; media
 projects[media][version] = "1.4"
 projects[media][subdir] = "contrib"
+projects[media][patch][] = "https://www.drupal.org/files/issues/change_select_button_when_value_exists.patch"
 
 ; media_youtube
 projects[media_youtube][version] = "2.0-rc4"

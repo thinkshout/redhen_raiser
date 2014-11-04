@@ -27,6 +27,7 @@ features[variable][] = honeypot_form_user_register_form
 features[variable][] = honeypot_log
 features[variable][] = honeypot_protect_all_forms
 features[variable][] = honeypot_time_limit
+features[variable][] = media__dialog_theme
 features[variable][] = user_admin_role
 features[variable][] = user_cancel_method
 features[variable][] = user_default_timezone

@@ -159,10 +159,35 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['relationships']['campaign']['field'] = 'campaign';
   $handler->display->display_options['relationships']['campaign']['label'] = 'Campaign';
   $handler->display->display_options['relationships']['campaign']['required'] = TRUE;
+  /* Field: Global: View result counter */
+  $handler->display->display_options['fields']['counter']['id'] = 'counter';
+  $handler->display->display_options['fields']['counter']['table'] = 'views';
+  $handler->display->display_options['fields']['counter']['field'] = 'counter';
+  $handler->display->display_options['fields']['counter']['label'] = '';
+  $handler->display->display_options['fields']['counter']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['counter']['alter']['text'] = '#[counter]';
+  $handler->display->display_options['fields']['counter']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['counter']['counter_start'] = '1';
   /* Field: RedHen Campaign Page: Redhen campaign page ID */
   $handler->display->display_options['fields']['page_id']['id'] = 'page_id';
   $handler->display->display_options['fields']['page_id']['table'] = 'redhen_campaign_page';
   $handler->display->display_options['fields']['page_id']['field'] = 'page_id';
+  $handler->display->display_options['fields']['page_id']['exclude'] = TRUE;
+  /* Field: RedHen Campaign Page: Campaign Page Name */
+  $handler->display->display_options['fields']['label']['id'] = 'label';
+  $handler->display->display_options['fields']['label']['table'] = 'redhen_campaign_page';
+  $handler->display->display_options['fields']['label']['field'] = 'label';
+  $handler->display->display_options['fields']['label']['label'] = '';
+  $handler->display->display_options['fields']['label']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['label']['alter']['path'] = 'redhen_campaign/page/[page_id]';
+  $handler->display->display_options['fields']['label']['element_label_colon'] = FALSE;
+  /* Field: RedHen Campaign Page: Progress */
+  $handler->display->display_options['fields']['progress']['id'] = 'progress';
+  $handler->display->display_options['fields']['progress']['table'] = 'views_entity_redhen_campaign_page';
+  $handler->display->display_options['fields']['progress']['field'] = 'progress';
+  $handler->display->display_options['fields']['progress']['label'] = '';
+  $handler->display->display_options['fields']['progress']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['progress']['link_to_entity'] = 0;
   /* Sort criterion: RedHen Campaign Page: Progress */
   $handler->display->display_options['sorts']['progress']['id'] = 'progress';
   $handler->display->display_options['sorts']['progress']['table'] = 'redhen_campaign_page';
@@ -223,6 +248,11 @@ function redhen_raiser_campaign_pages_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'campaigns/%/leaderboard';
 
   /* Display: Block */
@@ -242,6 +272,11 @@ function redhen_raiser_campaign_pages_views_default_views() {
 
   /* Display: Page: team */
   $handler = $view->new_display('page', 'Page: team', 'page_team');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: RedHen Campaign Page: Team Page */

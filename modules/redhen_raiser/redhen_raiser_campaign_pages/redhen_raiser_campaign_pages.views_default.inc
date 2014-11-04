@@ -59,6 +59,10 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['fields']['expression']['precision'] = '0';
   $handler->display->display_options['fields']['expression']['prefix'] = '$';
   $handler->display->display_options['fields']['expression']['expression'] = '[pledged] / 100';
+  /* Field: Donation: Comment */
+  $handler->display->display_options['fields']['field_donation_comment']['id'] = 'field_donation_comment';
+  $handler->display->display_options['fields']['field_donation_comment']['table'] = 'field_data_field_donation_comment';
+  $handler->display->display_options['fields']['field_donation_comment']['field'] = 'field_donation_comment';
   /* Sort criterion: Donation: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'redhen_donation';

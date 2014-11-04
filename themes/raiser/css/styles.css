@@ -1378,7 +1378,7 @@ body.front #main #content {
   float: left;
   font-size: 1em;
   margin-top: 0.5em;
-  width: 80%;
+  width: 75%;
 }
 /* line 18, ../sass/components/_campaign-individual.scss */
 .redhen-campaign-page-individual .redhen_campaign_page_team {

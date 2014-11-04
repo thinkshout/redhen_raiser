@@ -32,10 +32,28 @@ function redhen_raiser_donations_default_redhen_donation_type() {
     "weight" : "0",
     "data" : null,
     "settings" : {
-      "contact_settings" : { "contact_type" : "contact", "contact_update_fields" : 1 },
+      "contact_settings" : {
+        "contact_type" : "contact",
+        "update_fields" : 0,
+        "fields" : { "field_organization" : "field_organization", "middle_name" : 0 },
+        "profile_selector" : "field_billing_address"
+      },
       "commerce_settings" : {
         "one_time_product_type" : "donation",
-        "line_item_type" : "redhen_raiser_donation"
+        "line_item_type" : "redhen_raiser_donation",
+        "product_options" : {
+          "product_select_label" : "",
+          "one_time_product" : "1",
+          "recurring" : []
+        },
+        "payment_methods" : [
+          {
+            "payment_method" : "iats_credit_card|cafb_iats_credit_card",
+            "label" : "",
+            "currency" : "USD",
+            "delete" : "Delete"
+          }
+        ]
       }
     },
     "rdf_mapping" : []

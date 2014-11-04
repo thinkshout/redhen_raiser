@@ -6,6 +6,20 @@
     background: $white;
     overflow: hidden;
     position: relative;
+    .redhen_campaign_title {
+      display: none;
+    }
+  }
+
+  #block-bean-campaign-banner .field-label-inline {
+    color: $white;
+    display: block;
+    font-family: $raiser-heading-font;
+    font-size: em(32);
+    left: em(11);
+    position: absolute;
+    top: em(80);
+    z-index: 3;
   }
 
   .main-content-wrapper {
@@ -46,20 +60,22 @@
     overflow: hidden;
     .field-label {
       font-weight: normal;
-      float: left; 
+      float: left;
+      padding-top: em(6);
+      margin-right: 2%;
       width: 48%;
     }
     a {
-      @include cta-btn; 
+      @include cta-btn;
       float: right;
     }
   }
   .view-all-button {
     padding: 2em;
     text-align: center;
-    a { 
+    a {
       margin: 0 auto;
-    float: none; } 
+      float: none; }
   }
 
   // Campaign story image
@@ -69,8 +85,8 @@
 
   // Video style
   iframe {
-    border: 3px solid $white;
     @include box-shadow(0 3px 5px $gray);
+    border: 3px solid $white;
     width: 100%;
   }
 
@@ -79,19 +95,21 @@
   #block-bean-campaign-progress {
     background: $primary-widget;
     color: $primary;
-    position: absolute;
     left: 0;
-    width: 95%;
-    padding-top: 2em;
     padding-bottom: 2em;
+    padding-top: 2em;
+    width: 105%;
+    .field-label-inline {
+      display: none;
+    }
 
     h2 { display: none; }
   }
 
   #block-bean-social-media-links {
-    padding-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 1em;
 
     .field-item {
       float: left;
@@ -99,14 +117,14 @@
 
 
     a {
-      background: url(../images/social.png) no-repeat;
       background-size: 214px;
+      background: url(../images/social.png) no-repeat;
       display: block;
-      width: 45px;
-      height: 45px;
       float: left;
-      text-indent: -9999px;
+      height: 45px;
       margin-right: 0.3em;
+      text-indent: -9999px;
+      width: 45px;
 
       &.twitter-link {
         background-position: 0 0;
@@ -122,6 +140,7 @@
       }
     }
   }
+
 
   // Promo block
   #block-bean-donation-matching {

@@ -322,6 +322,7 @@ function redhen_raiser_campaign_pages_views_default_views() {
     'field_end_date' => 'field_end_date',
     'redhen_campaign_goal' => 'redhen_campaign_goal',
     'progress' => 'progress',
+    'nothing' => 'nothing',
   );
   $handler->display->display_options['style_options']['default'] = 'field_end_date';
   $handler->display->display_options['style_options']['info'] = array(
@@ -368,7 +369,12 @@ function redhen_raiser_campaign_pages_views_default_views() {
       'empty_column' => 0,
     ),
     'progress' => array(
-      'align' => '',
+      'align' => 'views-align-right',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nothing' => array(
+      'align' => 'views-align-center',
       'separator' => '',
       'empty_column' => 0,
     ),
@@ -428,7 +434,18 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['fields']['progress']['id'] = 'progress';
   $handler->display->display_options['fields']['progress']['table'] = 'views_entity_redhen_campaign_page';
   $handler->display->display_options['fields']['progress']['field'] = 'progress';
+  $handler->display->display_options['fields']['progress']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['progress']['separator'] = '';
   $handler->display->display_options['fields']['progress']['link_to_entity'] = 0;
+  /* Field: Global: Math expression */
+  $handler->display->display_options['fields']['expression']['id'] = 'expression';
+  $handler->display->display_options['fields']['expression']['table'] = 'views';
+  $handler->display->display_options['fields']['expression']['field'] = 'expression';
+  $handler->display->display_options['fields']['expression']['label'] = 'Progress';
+  $handler->display->display_options['fields']['expression']['set_precision'] = TRUE;
+  $handler->display->display_options['fields']['expression']['precision'] = '0';
+  $handler->display->display_options['fields']['expression']['prefix'] = '$';
+  $handler->display->display_options['fields']['expression']['expression'] = '[progress]/100';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';

@@ -100,7 +100,11 @@
 
     input { font-size: 16px; }
   }
-
+}
+.page-redhen-campaign-add-general,
+.page-redhen-campaign-page-add,
+.page-redhen-campaign-edit,
+.page-redhen-campaign-page {
   .field-type-image {
     min-height: em(32);
     label {
@@ -116,6 +120,7 @@
     @include appearance(none);
     line-height: 1;
   }
+
   .form-actions {
     clear:both;
   }

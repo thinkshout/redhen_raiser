@@ -66,12 +66,6 @@
       clear: both;
     }
   }
-  #edit-field-logo-und-0-title,
-  #edit-field-logo-und-0-preview,
-  #edit-field-story-media-und-0-title,
-  #edit-field-story-media-und-0-preview {
-    margin-bottom: em(-16);
-  }
 }
 #edit-field-start-date,
 #edit-field-end-date {
@@ -120,4 +114,7 @@
       cursor: default;
     }
   }
+}
+#edit-cancel {
+  margin-left: em(16);
 }

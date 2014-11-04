@@ -42,7 +42,8 @@
     height: 150px;
     padding: 1em 1em 0;
     position: absolute;
-    width: 40%;
+    min-width: 40%;
+    max-width: 60%;
 
     .field-item {
       margin-top: 3em;

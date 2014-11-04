@@ -1,14 +1,47 @@
+
+.sidebar-first > .region-sidebar-first {
+  width: 95%;
+  padding: 0;
+}
 .region-sidebar-first {
   padding: 0;
-  width: 95%;
+
 
   #block-bean-campaign-promotion {
-    display: none;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding-bottom: em(16);
+    padding-left: em(8);
+    padding-right: em(8);
+    width: 100%;
+    img {
+      @include box-shadow(0 3px 5px $gray);
+      background: $white;
+      border-radius: em(8);
+      box-sizing: border-box;
+      padding: em(3);
+      width: 100%;
+    }
+    .field-name-field-promo-text p {
+      box-sizing: border-box;
+      font-size: em(14);
+      line-height: 1.2;
+      margin: 0;
+      padding: em(10) em(25);
+      text-align: center;
+      width: 100%;
+    }
   }
 
   #block-views-leaderboard-block {
-    padding-left: em(16);
+    box-sizing: border-box;
+    padding-left: em(8);
+    padding-right: em(8);
 
+    h2 {
+      font-size: em(20);
+      margin-top: em(8);
+    }
     .view-filters {
       position: relative;
       .views-exposed-widget {

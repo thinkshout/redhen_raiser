@@ -1083,7 +1083,7 @@ form select, form x:-moz-any-link, form x:only-child {
   left: 0;
   padding-bottom: 2em;
   padding-top: 2em;
-  width: 105%;
+  width: 100%;
 }
 /* line 102, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-campaign-page-progress .field-label-inline,
@@ -3571,42 +3571,80 @@ tr.selected td {
   font-size: 1.125em;
 }
 
-/* line 1, ../sass/components/_sidebar.scss */
+/* line 2, ../sass/components/_sidebar.scss */
+.sidebar-first > .region-sidebar-first {
+  width: 95%;
+  padding: 0;
+}
+
+/* line 6, ../sass/components/_sidebar.scss */
 .region-sidebar-first {
   padding: 0;
-  width: 95%;
 }
-/* line 5, ../sass/components/_sidebar.scss */
+/* line 10, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-bean-campaign-promotion {
-  display: none;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding-bottom: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  width: 100%;
 }
-/* line 9, ../sass/components/_sidebar.scss */
+/* line 17, ../sass/components/_sidebar.scss */
+.region-sidebar-first #block-bean-campaign-promotion img {
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+  background: white;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  padding: 0.1875em;
+  width: 100%;
+}
+/* line 25, ../sass/components/_sidebar.scss */
+.region-sidebar-first #block-bean-campaign-promotion .field-name-field-promo-text p {
+  box-sizing: border-box;
+  font-size: 0.875em;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0.625em 1.5625em;
+  text-align: center;
+  width: 100%;
+}
+/* line 36, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block {
-  padding-left: 1em;
+  box-sizing: border-box;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
-/* line 12, ../sass/components/_sidebar.scss */
+/* line 41, ../sass/components/_sidebar.scss */
+.region-sidebar-first #block-views-leaderboard-block h2 {
+  font-size: 1.25em;
+  margin-top: 0.5em;
+}
+/* line 45, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .view-filters {
   position: relative;
 }
-/* line 14, ../sass/components/_sidebar.scss */
+/* line 47, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .view-filters .views-exposed-widget {
   margin-bottom: 1em;
   padding-right: 0;
   width: auto;
 }
-/* line 19, ../sass/components/_sidebar.scss */
+/* line 52, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .view-filters .views-submit-button {
   position: absolute;
   right: 0;
   top: 2.0625em;
 }
-/* line 26, ../sass/components/_sidebar.scss */
+/* line 59, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .entity-redhen-campaign-page {
   font-size: 0.875em;
   min-height: 4.0625em;
   position: relative;
 }
-/* line 31, ../sass/components/_sidebar.scss */
+/* line 64, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .redhen_campaign_page_title {
   color: black;
   left: 4em;
@@ -3615,7 +3653,7 @@ tr.selected td {
   top: 0;
   z-index: 10;
 }
-/* line 39, ../sass/components/_sidebar.scss */
+/* line 72, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .field-name-redhen-campaign-goal {
   color: black;
   font-size: 1em;
@@ -3625,20 +3663,20 @@ tr.selected td {
   position: absolute;
   top: 0em;
 }
-/* line 47, ../sass/components/_sidebar.scss */
+/* line 80, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .field-name-redhen-campaign-goal .rhc_progress {
   display: inline-block;
   font-size: 1em;
 }
-/* line 52, ../sass/components/_sidebar.scss */
+/* line 85, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block img {
   width: 3em;
 }
-/* line 55, ../sass/components/_sidebar.scss */
+/* line 88, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .pager {
   margin-top: 0;
 }
-/* line 58, ../sass/components/_sidebar.scss */
+/* line 91, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .more-link {
   background: none;
   padding: 0.8em 1em;
@@ -3668,16 +3706,16 @@ tr.selected td {
   border: 3px solid #90c965;
   color: white;
 }
-/* line 65, ../sass/components/_sidebar.scss */
+/* line 98, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .more-link:hover, .region-sidebar-first #block-views-leaderboard-block .more-link:hover a {
   color: white;
 }
-/* line 68, ../sass/components/_sidebar.scss */
+/* line 101, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .more-link a {
   color: #5e9733;
   text-transform: capitalize;
 }
-/* line 71, ../sass/components/_sidebar.scss */
+/* line 104, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-views-leaderboard-block .more-link a:hover {
   color: white;
 }

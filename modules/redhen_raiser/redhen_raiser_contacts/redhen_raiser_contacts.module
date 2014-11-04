@@ -41,6 +41,10 @@ function redhen_raiser_contacts_entity_view_alter(&$build, $type) {
         $style = 'tile';
         break;
 
+      case "snippet":
+        $add_picture = TRUE;
+        $style = 'snippet_tile';
+        break;
     }
     if ($add_picture && $user->picture) {
       $build['avatar'] = array(

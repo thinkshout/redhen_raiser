@@ -631,8 +631,19 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           'close' => NULL,
           'open' => NULL,
         ),
-        'settings' => array(),
-        'status' => 0,
+        'settings' => array(
+          'confirmation_message' => 'Thank you for your donation!',
+          'confirmation_page' => '',
+          'donation_amounts' => '100|$100
+200|$200
+300|$300
+',
+          'donation_entry' => 'select',
+          'maximum_donation' => '',
+          'minimum_donation' => '',
+          'submit_label' => 'Donate',
+        ),
+        'status' => 1,
       ),
       'user_register_form' => FALSE,
     ),

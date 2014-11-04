@@ -1,4 +1,4 @@
-#block-redhen-raiser-campaign-updates-campaign-updates, 
+#block-redhen-raiser-campaign-updates-campaign-updates,
 #block-redhen-raiser-campaign-updates-campaign-page-updates,
 .view-campaign-updates {
   @include box-shadow(0 3px 5px $gray);
@@ -10,25 +10,22 @@
 
     h2 {
       position: absolute;
-      left: 85px;
       line-height: 1em;
       a {
-        color: $primary; 
-      } 
+        color: $primary;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     img {
       @include border-radius(8px);
-      float: left; 
+      float: left;
     }
 
     .field-name-body {
-      padding-left: 70px;
       padding-top: 1em;
-    }
-
-    .node-readmore {
-      padding-left: 70px; 
     }
   }
 }

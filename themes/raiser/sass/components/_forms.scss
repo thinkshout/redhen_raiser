@@ -68,7 +68,9 @@
   }
 }
 #edit-field-start-date,
-#edit-field-end-date {
+#edit-field-end-date,
+.main-content-wrapper .field-name-field-end-date,
+.main-content-wrapper .field-name-field-start-date {
   color: $black;
   font-size: em(16);
   margin-bottom: em(16);

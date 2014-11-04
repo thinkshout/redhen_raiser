@@ -2507,16 +2507,32 @@ footer #colophon a:hover {
 }
 
 /* line 6, ../sass/components/_leaderboard.scss */
+.page-campaigns-leaderboard table {
+  width: 100%;
+  -webkit-box-shadow: 0 2px 3px #989898;
+  -moz-box-shadow: 0 2px 3px #989898;
+  box-shadow: 0 2px 3px #989898;
+}
+/* line 10, ../sass/components/_leaderboard.scss */
+.page-campaigns-leaderboard tr.odd {
+  background-color: #e3edda;
+  border-bottom: none;
+}
+/* line 14, ../sass/components/_leaderboard.scss */
+.page-campaigns-leaderboard tr.even {
+  border-bottom: none;
+}
+/* line 17, ../sass/components/_leaderboard.scss */
 .page-campaigns-leaderboard td {
   padding: 0.3125em 0.625em;
   text-align: left;
   font-size: 1em;
 }
-/* line 11, ../sass/components/_leaderboard.scss */
+/* line 22, ../sass/components/_leaderboard.scss */
 .page-campaigns-leaderboard .views-field-progress:before {
   content: "$ ";
 }
-/* line 14, ../sass/components/_leaderboard.scss */
+/* line 25, ../sass/components/_leaderboard.scss */
 .page-campaigns-leaderboard .view-content {
   margin-top: 2em;
 }

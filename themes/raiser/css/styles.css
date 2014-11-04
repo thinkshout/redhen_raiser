@@ -2501,40 +2501,150 @@ footer #colophon a:hover {
     color: white;
   }
 }
-/* line 1, ../sass/components/_leaderboard.scss */
-#block-views-leaderboard-block {
-  clear: both;
-}
-
-/* line 6, ../sass/components/_leaderboard.scss */
+/* line 2, ../sass/components/_leaderboard.scss */
 .page-campaigns-leaderboard table {
   width: 100%;
   -webkit-box-shadow: 0 2px 3px #989898;
   -moz-box-shadow: 0 2px 3px #989898;
   box-shadow: 0 2px 3px #989898;
 }
-/* line 10, ../sass/components/_leaderboard.scss */
+/* line 6, ../sass/components/_leaderboard.scss */
 .page-campaigns-leaderboard tr.odd {
   background-color: #e3edda;
   border-bottom: none;
 }
-/* line 14, ../sass/components/_leaderboard.scss */
+/* line 10, ../sass/components/_leaderboard.scss */
 .page-campaigns-leaderboard tr.even {
   border-bottom: none;
 }
-/* line 17, ../sass/components/_leaderboard.scss */
+/* line 13, ../sass/components/_leaderboard.scss */
 .page-campaigns-leaderboard td {
   padding: 0.3125em 0.625em;
   text-align: left;
   font-size: 1em;
 }
-/* line 22, ../sass/components/_leaderboard.scss */
+/* line 18, ../sass/components/_leaderboard.scss */
 .page-campaigns-leaderboard .views-field-progress:before {
   content: "$ ";
 }
-/* line 25, ../sass/components/_leaderboard.scss */
+/* line 21, ../sass/components/_leaderboard.scss */
 .page-campaigns-leaderboard .view-content {
   margin-top: 2em;
+}
+
+/* line 26, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block {
+  box-sizing: border-box;
+  clear: both;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+/* line 32, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block h2 {
+  font-size: 1.25em;
+  margin-top: 0.5em;
+}
+/* line 36, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .view-filters {
+  position: relative;
+}
+/* line 38, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .view-filters .views-exposed-widget {
+  margin-bottom: 1em;
+  padding-right: 0;
+  width: auto;
+}
+/* line 43, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .view-filters .views-submit-button {
+  position: absolute;
+  right: 0;
+  top: 2.0625em;
+}
+/* line 50, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .entity-redhen-campaign-page {
+  font-size: 0.875em;
+  min-height: 4.0625em;
+  position: relative;
+}
+/* line 55, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .redhen_campaign_page_title {
+  left: 4em;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+/* line 61, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .redhen_campaign_page_title a {
+  color: black;
+}
+/* line 65, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .field-name-redhen-campaign-goal {
+  color: black;
+  font-size: 1em;
+  left: 4em;
+  padding-left: 0;
+  padding-top: 1.5em;
+  position: absolute;
+  top: 0em;
+}
+/* line 73, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .field-name-redhen-campaign-goal .rhc_progress {
+  display: inline-block;
+  font-size: 1em;
+}
+/* line 78, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block img {
+  width: 3em;
+  border-radius: 0.5em;
+}
+/* line 82, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .pager {
+  margin-top: 0;
+}
+/* line 85, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .more-link {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
+  background: none;
+  border: 3px solid #5e9733;
+  box-shadow: none;
+  color: #5e9733;
+  margin-left: 0em;
+  margin: 0 auto;
+  padding: 0.3125em 0.625em;
+  text-align: center;
+  width: 50%;
+}
+/* line 50, ../sass/_mixins.scss */
+#block-views-leaderboard-block .more-link:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 62, ../sass/_mixins.scss */
+#block-views-leaderboard-block .more-link:hover {
+  background: #5e9733;
+  border: 3px solid #90c965;
+  color: white;
+}
+/* line 93, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .more-link:hover, #block-views-leaderboard-block .more-link:hover a {
+  color: white;
+}
+/* line 96, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .more-link a {
+  color: #5e9733;
+  text-transform: capitalize;
+}
+/* line 99, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .more-link a:hover {
+  color: white;
 }
 
 /**
@@ -3581,7 +3691,7 @@ tr.selected td {
 .region-sidebar-first {
   padding: 0;
 }
-/* line 10, ../sass/components/_sidebar.scss */
+/* line 9, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-bean-campaign-promotion {
   box-sizing: border-box;
   margin-bottom: 0;
@@ -3590,7 +3700,7 @@ tr.selected td {
   padding-right: 0.5em;
   width: 100%;
 }
-/* line 17, ../sass/components/_sidebar.scss */
+/* line 16, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-bean-campaign-promotion img {
   -webkit-box-shadow: 0 3px 5px #989898;
   -moz-box-shadow: 0 3px 5px #989898;
@@ -3601,7 +3711,7 @@ tr.selected td {
   padding: 0.1875em;
   width: 100%;
 }
-/* line 25, ../sass/components/_sidebar.scss */
+/* line 24, ../sass/components/_sidebar.scss */
 .region-sidebar-first #block-bean-campaign-promotion .field-name-field-promo-text p {
   box-sizing: border-box;
   font-size: 0.875em;
@@ -3610,114 +3720,6 @@ tr.selected td {
   padding: 0.625em 1.5625em;
   text-align: center;
   width: 100%;
-}
-/* line 36, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block {
-  box-sizing: border-box;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-/* line 41, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block h2 {
-  font-size: 1.25em;
-  margin-top: 0.5em;
-}
-/* line 45, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .view-filters {
-  position: relative;
-}
-/* line 47, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .view-filters .views-exposed-widget {
-  margin-bottom: 1em;
-  padding-right: 0;
-  width: auto;
-}
-/* line 52, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .view-filters .views-submit-button {
-  position: absolute;
-  right: 0;
-  top: 2.0625em;
-}
-/* line 59, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .entity-redhen-campaign-page {
-  font-size: 0.875em;
-  min-height: 4.0625em;
-  position: relative;
-}
-/* line 64, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .redhen_campaign_page_title {
-  color: black;
-  left: 4em;
-  margin-top: 0;
-  position: absolute;
-  top: 0;
-  z-index: 10;
-}
-/* line 72, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .field-name-redhen-campaign-goal {
-  color: black;
-  font-size: 1em;
-  left: 4em;
-  padding-left: 0;
-  padding-top: 1.5em;
-  position: absolute;
-  top: 0em;
-}
-/* line 80, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .field-name-redhen-campaign-goal .rhc_progress {
-  display: inline-block;
-  font-size: 1em;
-}
-/* line 85, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block img {
-  width: 3em;
-}
-/* line 88, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .pager {
-  margin-top: 0;
-}
-/* line 91, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .more-link {
-  background: none;
-  padding: 0.8em 1em;
-  border-radius: 0.7em;
-  -webkit-box-shadow: 0 2px 3px #666666;
-  -moz-box-shadow: 0 2px 3px #666666;
-  box-shadow: 0 2px 3px #666666;
-  background: none;
-  border: 3px solid #5e9733;
-  box-shadow: none;
-  color: #5e9733;
-  margin-left: 0em;
-  margin: 0 auto;
-  text-align: center;
-  width: 50%;
-}
-/* line 50, ../sass/_mixins.scss */
-.region-sidebar-first #block-views-leaderboard-block .more-link:hover {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-/* line 62, ../sass/_mixins.scss */
-.region-sidebar-first #block-views-leaderboard-block .more-link:hover {
-  background: #5e9733;
-  border: 3px solid #90c965;
-  color: white;
-}
-/* line 98, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .more-link:hover, .region-sidebar-first #block-views-leaderboard-block .more-link:hover a {
-  color: white;
-}
-/* line 101, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .more-link a {
-  color: #5e9733;
-  text-transform: capitalize;
-}
-/* line 104, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-views-leaderboard-block .more-link a:hover {
-  color: white;
 }
 
 /* line 3, ../sass/components/_updates.scss */

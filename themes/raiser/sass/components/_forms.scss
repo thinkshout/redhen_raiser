@@ -95,9 +95,9 @@
 .form-radio,
 .form-type-radio {
   @include clear-btn;
-  padding: 0.4em 1em;
   cursor: pointer;
   display: inline-block;
+  padding: 0.4em 1em;
   input {
     display: none;
   }

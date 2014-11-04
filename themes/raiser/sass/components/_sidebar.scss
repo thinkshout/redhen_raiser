@@ -1,0 +1,78 @@
+.region-sidebar-first {
+  padding: 0;
+  width: 95%;
+
+  #block-bean-campaign-promotion {
+    display: none;
+  }
+
+  #block-views-leaderboard-block {
+    padding-left: em(16);
+
+    .view-filters {
+      position: relative;
+      .views-exposed-widget {
+        margin-bottom: em(16);
+        padding-right: 0;
+        width: auto;
+      }
+      .views-submit-button {
+        position: absolute;
+        right: 0;
+        top: em(33);
+      }
+    }
+
+    .entity-redhen-campaign-page {
+      font-size: em(14);
+      min-height: em(65);
+      position: relative;
+    }
+    .redhen_campaign_page_title {
+      color: $black;
+      left: em(64);
+      margin-top: 0;
+      position: absolute;
+      top: 0;
+      z-index: 10;
+    }
+    .field-name-redhen-campaign-goal {
+      color: $black;
+      font-size: em(16);
+      left: em(64);
+      padding-left: 0;
+      padding-top: em(24);
+      position: absolute;
+      top: em(0);
+      .rhc_progress {
+        display: inline-block;
+        font-size: em(16);
+      }
+    }
+    img {
+      width: em(48);
+    }
+    .pager {
+      margin-top: 0;
+    }
+    .more-link {
+      @include clear-btn;
+      margin-left: 0em;
+      margin: 0 auto;
+      text-align: center;
+      width: 50%;
+
+      &:hover, &:hover a {
+        color: $white;
+      }
+      a {
+        color: $primary;
+        text-transform: capitalize;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+}

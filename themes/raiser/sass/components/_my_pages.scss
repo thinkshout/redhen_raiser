@@ -1,26 +1,11 @@
 .page-user-my-pages,
 .page-user-orders,
-.page-redhen-campaign-donations {
+.page-redhen-campaign-donations,
+.page-redhen-campaign-update {
+
+  @include rasier-table;
 
   .main-content-wrapper {
     width: 98%;
   }
-
-  table {
-    width: 100%;
-    @include box-shadow(0 2px 3px $gray);
-  }
-  tr.odd {
-    background-color: $lt-primary;
-    border-bottom: none;
-  }
-  tr.even {
-    border-bottom: none;
-  }
-  td {
-    padding: em(5) em(8) em(3) em(8);
-    text-align: left;
-    font-size: em(14);
-  }
-
 }

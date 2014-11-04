@@ -1793,6 +1793,44 @@ body.front #main #content {
   display: none;
 }
 
+/* line 1, ../sass/components/_donors.scss */
+#block-views-campaign-donors-block {
+  -webkit-box-shadow: 0 3px 5px #989898;
+  -moz-box-shadow: 0 3px 5px #989898;
+  box-shadow: 0 3px 5px #989898;
+  background: white;
+  padding: 2em 1em;
+}
+/* line 129, ../sass/_mixins.scss */
+#block-views-campaign-donors-block table {
+  width: 100%;
+}
+/* line 132, ../sass/_mixins.scss */
+#block-views-campaign-donors-block th {
+  text-align: left;
+  padding-left: 0.25em;
+}
+/* line 136, ../sass/_mixins.scss */
+#block-views-campaign-donors-block tr.odd {
+  background-color: #e3edda;
+  border-bottom: none;
+}
+/* line 140, ../sass/_mixins.scss */
+#block-views-campaign-donors-block tr.even {
+  border-bottom: none;
+}
+/* line 143, ../sass/_mixins.scss */
+#block-views-campaign-donors-block td {
+  padding: 0.3125em 0.5em 0.1875em 0.5em;
+  text-align: left;
+  font-size: 0.875em;
+}
+/* line 6, ../sass/components/_donors.scss */
+#block-views-campaign-donors-block td {
+  font-size: 1em;
+  padding: 0.4375em 0.625em 0.3125em 0.625em;
+}
+
 /* line 1, ../sass/components/_footer.scss */
 footer {
   background: #5e9733;
@@ -2502,72 +2540,74 @@ footer #colophon a:hover {
     color: white;
   }
 }
-/* line 2, ../sass/components/_leaderboard.scss */
+/* line 129, ../sass/_mixins.scss */
 .page-campaigns-leaderboard table {
   width: 100%;
-  -webkit-box-shadow: 0 2px 3px #989898;
-  -moz-box-shadow: 0 2px 3px #989898;
-  box-shadow: 0 2px 3px #989898;
 }
-/* line 6, ../sass/components/_leaderboard.scss */
+/* line 132, ../sass/_mixins.scss */
+.page-campaigns-leaderboard th {
+  text-align: left;
+  padding-left: 0.25em;
+}
+/* line 136, ../sass/_mixins.scss */
 .page-campaigns-leaderboard tr.odd {
   background-color: #e3edda;
   border-bottom: none;
 }
-/* line 10, ../sass/components/_leaderboard.scss */
+/* line 140, ../sass/_mixins.scss */
 .page-campaigns-leaderboard tr.even {
   border-bottom: none;
 }
-/* line 13, ../sass/components/_leaderboard.scss */
+/* line 143, ../sass/_mixins.scss */
 .page-campaigns-leaderboard td {
-  padding: 0.3125em 0.625em;
+  padding: 0.3125em 0.5em 0.1875em 0.5em;
   text-align: left;
-  font-size: 1em;
+  font-size: 0.875em;
 }
-/* line 18, ../sass/components/_leaderboard.scss */
+/* line 3, ../sass/components/_leaderboard.scss */
 .page-campaigns-leaderboard .views-field-progress:before {
-  content: "$ ";
+  content: "$";
 }
-/* line 21, ../sass/components/_leaderboard.scss */
+/* line 6, ../sass/components/_leaderboard.scss */
 .page-campaigns-leaderboard .view-content {
   margin-top: 2em;
 }
 
-/* line 26, ../sass/components/_leaderboard.scss */
+/* line 11, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block {
   box-sizing: border-box;
   clear: both;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
-/* line 32, ../sass/components/_leaderboard.scss */
+/* line 17, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block h2 {
   font-size: 1.25em;
   margin-top: 0.5em;
 }
-/* line 36, ../sass/components/_leaderboard.scss */
+/* line 21, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .view-filters {
   position: relative;
 }
-/* line 38, ../sass/components/_leaderboard.scss */
+/* line 23, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .view-filters .views-exposed-widget {
   margin-bottom: 1em;
   padding-right: 0;
   width: auto;
 }
-/* line 43, ../sass/components/_leaderboard.scss */
+/* line 28, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .view-filters .views-submit-button {
   position: absolute;
   right: 0;
   top: 2.0625em;
 }
-/* line 50, ../sass/components/_leaderboard.scss */
+/* line 35, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .entity-redhen-campaign-page {
   font-size: 0.875em;
   min-height: 4.0625em;
   position: relative;
 }
-/* line 55, ../sass/components/_leaderboard.scss */
+/* line 40, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .redhen_campaign_page_title {
   left: 4em;
   margin-top: 0;
@@ -2575,11 +2615,11 @@ footer #colophon a:hover {
   top: 0;
   z-index: 10;
 }
-/* line 61, ../sass/components/_leaderboard.scss */
+/* line 46, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .redhen_campaign_page_title a {
   color: black;
 }
-/* line 65, ../sass/components/_leaderboard.scss */
+/* line 50, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .field-name-redhen-campaign-goal {
   color: black;
   font-size: 1em;
@@ -2589,21 +2629,21 @@ footer #colophon a:hover {
   position: absolute;
   top: 0em;
 }
-/* line 73, ../sass/components/_leaderboard.scss */
+/* line 58, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .field-name-redhen-campaign-goal .rhc_progress {
   display: inline-block;
   font-size: 1em;
 }
-/* line 78, ../sass/components/_leaderboard.scss */
+/* line 63, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block img {
   width: 3em;
   border-radius: 0.5em;
 }
-/* line 82, ../sass/components/_leaderboard.scss */
+/* line 67, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .pager {
   margin-top: 0;
 }
-/* line 85, ../sass/components/_leaderboard.scss */
+/* line 70, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .more-link {
   background: none;
   padding: 0.8em 1em;
@@ -2634,16 +2674,16 @@ footer #colophon a:hover {
   border: 3px solid #90c965;
   color: white;
 }
-/* line 93, ../sass/components/_leaderboard.scss */
+/* line 78, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .more-link:hover, #block-views-leaderboard-block .more-link:hover a {
   color: white;
 }
-/* line 96, ../sass/components/_leaderboard.scss */
+/* line 81, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .more-link a {
   color: #5e9733;
   text-transform: capitalize;
 }
-/* line 99, ../sass/components/_leaderboard.scss */
+/* line 84, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .more-link a:hover {
   color: white;
 }
@@ -3586,41 +3626,51 @@ tr.selected td {
   margin-top: 0;
 }
 
-/* line 5, ../sass/components/_my_pages.scss */
-.page-user-my-pages .main-content-wrapper,
-.page-user-orders .main-content-wrapper,
-.page-redhen-campaign-donations .main-content-wrapper {
-  width: 98%;
-}
-/* line 9, ../sass/components/_my_pages.scss */
+/* line 129, ../sass/_mixins.scss */
 .page-user-my-pages table,
 .page-user-orders table,
-.page-redhen-campaign-donations table {
+.page-redhen-campaign-donations table,
+.page-redhen-campaign-update table {
   width: 100%;
-  -webkit-box-shadow: 0 2px 3px #989898;
-  -moz-box-shadow: 0 2px 3px #989898;
-  box-shadow: 0 2px 3px #989898;
 }
-/* line 13, ../sass/components/_my_pages.scss */
+/* line 132, ../sass/_mixins.scss */
+.page-user-my-pages th,
+.page-user-orders th,
+.page-redhen-campaign-donations th,
+.page-redhen-campaign-update th {
+  text-align: left;
+  padding-left: 0.25em;
+}
+/* line 136, ../sass/_mixins.scss */
 .page-user-my-pages tr.odd,
 .page-user-orders tr.odd,
-.page-redhen-campaign-donations tr.odd {
+.page-redhen-campaign-donations tr.odd,
+.page-redhen-campaign-update tr.odd {
   background-color: #e3edda;
   border-bottom: none;
 }
-/* line 17, ../sass/components/_my_pages.scss */
+/* line 140, ../sass/_mixins.scss */
 .page-user-my-pages tr.even,
 .page-user-orders tr.even,
-.page-redhen-campaign-donations tr.even {
+.page-redhen-campaign-donations tr.even,
+.page-redhen-campaign-update tr.even {
   border-bottom: none;
 }
-/* line 20, ../sass/components/_my_pages.scss */
+/* line 143, ../sass/_mixins.scss */
 .page-user-my-pages td,
 .page-user-orders td,
-.page-redhen-campaign-donations td {
+.page-redhen-campaign-donations td,
+.page-redhen-campaign-update td {
   padding: 0.3125em 0.5em 0.1875em 0.5em;
   text-align: left;
   font-size: 0.875em;
+}
+/* line 8, ../sass/components/_my_pages.scss */
+.page-user-my-pages .main-content-wrapper,
+.page-user-orders .main-content-wrapper,
+.page-redhen-campaign-donations .main-content-wrapper,
+.page-redhen-campaign-update .main-content-wrapper {
+  width: 98%;
 }
 
 /* line 1, ../sass/components/_progress-bar.scss */

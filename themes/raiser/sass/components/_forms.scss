@@ -101,6 +101,13 @@
   input {
     display: none;
   }
+  .ajax-progress-throbber {
+    position: absolute;
+    color: $black;
+    line-height: 1.6;
+    left: 26%;
+    font-size: em(14);
+  }
   label {
     cursor: pointer;
   }

@@ -34,6 +34,12 @@ function redhen_raiser_contacts_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'redhen_campaign_page_owner_teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'snippet' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
@@ -59,6 +65,10 @@ function redhen_raiser_contacts_strongarm() {
             'weight' => '2',
             'visible' => FALSE,
           ),
+          'snippet' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
         ),
         'redhen_state' => array(
           'redhen_campaign_page_owner' => array(
@@ -81,6 +91,10 @@ function redhen_raiser_contacts_strongarm() {
             'weight' => '1',
             'visible' => FALSE,
           ),
+          'snippet' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
         ),
         'user' => array(
           'redhen_campaign_page_owner' => array(
@@ -100,6 +114,10 @@ function redhen_raiser_contacts_strongarm() {
             'visible' => FALSE,
           ),
           'redhen_campaign_page_owner_teaser' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'snippet' => array(
             'weight' => '0',
             'visible' => FALSE,
           ),

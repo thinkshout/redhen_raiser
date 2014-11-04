@@ -57,6 +57,12 @@ function redhen_raiser_contacts_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 4,
       ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -121,6 +127,12 @@ function redhen_raiser_contacts_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 3,
       ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -177,6 +189,12 @@ function redhen_raiser_contacts_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 5,
+      ),
+      'snippet' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',

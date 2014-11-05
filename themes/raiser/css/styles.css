@@ -1793,8 +1793,9 @@ body.front #main #content {
   display: none;
 }
 
-/* line 1, ../sass/components/_donors.scss */
-#block-views-campaign-donors-block {
+/* line 2, ../sass/components/_donors.scss */
+#block-views-campaign-donors-block,
+#block-views-campaign-page-donors-block {
   -webkit-box-shadow: 0 3px 5px #989898;
   -moz-box-shadow: 0 3px 5px #989898;
   box-shadow: 0 3px 5px #989898;
@@ -1802,31 +1803,37 @@ body.front #main #content {
   padding: 2em 1em;
 }
 /* line 129, ../sass/_mixins.scss */
-#block-views-campaign-donors-block table {
+#block-views-campaign-donors-block table,
+#block-views-campaign-page-donors-block table {
   width: 100%;
 }
 /* line 132, ../sass/_mixins.scss */
-#block-views-campaign-donors-block th {
+#block-views-campaign-donors-block th,
+#block-views-campaign-page-donors-block th {
   text-align: left;
   padding-left: 0.25em;
 }
 /* line 136, ../sass/_mixins.scss */
-#block-views-campaign-donors-block tr.odd {
+#block-views-campaign-donors-block tr.odd,
+#block-views-campaign-page-donors-block tr.odd {
   background-color: #e3edda;
   border-bottom: none;
 }
 /* line 140, ../sass/_mixins.scss */
-#block-views-campaign-donors-block tr.even {
+#block-views-campaign-donors-block tr.even,
+#block-views-campaign-page-donors-block tr.even {
   border-bottom: none;
 }
 /* line 143, ../sass/_mixins.scss */
-#block-views-campaign-donors-block td {
+#block-views-campaign-donors-block td,
+#block-views-campaign-page-donors-block td {
   padding: 0.3125em 0.5em 0.1875em 0.5em;
   text-align: left;
   font-size: 0.875em;
 }
-/* line 6, ../sass/components/_donors.scss */
-#block-views-campaign-donors-block td {
+/* line 7, ../sass/components/_donors.scss */
+#block-views-campaign-donors-block td,
+#block-views-campaign-page-donors-block td {
   font-size: 1em;
   padding: 0.4375em 0.625em 0.3125em 0.625em;
 }

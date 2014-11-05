@@ -1,4 +1,5 @@
-#block-views-campaign-donors-block {
+#block-views-campaign-donors-block,
+#block-views-campaign-page-donors-block {
   @include box-shadow(0 3px 5px $gray);
   @include rasier-table;
   background: $white;

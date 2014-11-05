@@ -29,14 +29,12 @@
       }
     }
     .fake-cancel {
+      @include muted-btn;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      background: none;
-      border: none;
-      color: $action;
-      cursor: pointer;
-      margin-left: em(16);
+      float: right;
+      padding: 0.6em 1em;
     }
     .fake-ok {
       @include cta-btn;

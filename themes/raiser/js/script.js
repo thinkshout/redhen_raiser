@@ -79,11 +79,20 @@ Drupal.behaviors.my_custom_behavior = {
         }
       },
 
+      contentHeight: function() {
+        var cHeight = _$('.one-sidebar #content'),
+            sHeight = _$('.one-sidebar .sidebar-first section');
+        if ( sHeight.height() > cHeight.height()) {
+          cHeight.css({'height':sHeight.height()+32});
+        };
+      },
+
       init: function() {
         this.toggleMenu();
         this.setRequiredFormFields();
         this.activeRadioButton();
         this.hideEmpty();
+        this.contentHeight();
       }
     } // end _cafb
 

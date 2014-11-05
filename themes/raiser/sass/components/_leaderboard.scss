@@ -1,4 +1,5 @@
-.page-campaigns-leaderboard {
+.page-campaigns-leaderboard,
+.page-campaign-pages-leaderboard {
   @include rasier-table;
   .views-field-progress:before {
     content: "$";
@@ -8,7 +9,8 @@
   }
 }
 
-#block-views-leaderboard-block {
+#block-views-leaderboard-block,
+#block-views-leaderboard-block-team {
   box-sizing: border-box;
   clear: both;
   padding-left: em(8);

@@ -32,6 +32,9 @@
       text-align: center;
       width: 100%;
     }
+    .clearfix:after {
+      content: "";
+    }
   }
 
 }

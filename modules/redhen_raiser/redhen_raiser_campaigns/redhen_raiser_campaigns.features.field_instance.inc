@@ -182,6 +182,58 @@ function redhen_raiser_campaigns_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'restrictions' => array(
+        'max' => array(
+          'date' => array(
+            'day' => 5,
+            'month' => 11,
+            'year' => 2014,
+          ),
+          'interval' => array(
+            'interval' => '',
+            'period' => 'second',
+          ),
+          'type' => 'disabled',
+        ),
+        'min' => array(
+          'date' => array(
+            'day' => 5,
+            'month' => 11,
+            'year' => 2014,
+          ),
+          'interval' => array(
+            'interval' => 'now',
+            'period' => 'second',
+          ),
+          'type' => 'interval',
+        ),
+      ),
+      'restrictions2' => array(
+        'max' => array(
+          'date' => NULL,
+          'host_entity_date' => array(
+            'end_date' => FALSE,
+            'field' => NULL,
+          ),
+          'host_entity_interval' => array(
+            'field' => NULL,
+          ),
+          'interval' => NULL,
+          'type' => 'disabled',
+        ),
+        'min' => array(
+          'date' => NULL,
+          'host_entity_date' => array(
+            'end_date' => FALSE,
+            'field' => NULL,
+          ),
+          'host_entity_interval' => array(
+            'field' => NULL,
+          ),
+          'interval' => NULL,
+          'type' => 'disabled',
+        ),
+      ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -193,7 +245,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'input_format_custom' => '',
         'label_position' => 'above',
         'text_parts' => array(),
-        'year_range' => '-3:+3',
+        'year_range' => '-0:+3',
       ),
       'type' => 'date_popup',
       'weight' => -6,
@@ -334,6 +386,58 @@ function redhen_raiser_campaigns_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'restrictions' => array(
+        'max' => array(
+          'date' => array(
+            'day' => 5,
+            'month' => 11,
+            'year' => 2014,
+          ),
+          'interval' => array(
+            'interval' => '',
+            'period' => 'second',
+          ),
+          'type' => 'disabled',
+        ),
+        'min' => array(
+          'date' => array(
+            'day' => 5,
+            'month' => 11,
+            'year' => 2014,
+          ),
+          'interval' => array(
+            'interval' => 'now',
+            'period' => 'second',
+          ),
+          'type' => 'disabled',
+        ),
+      ),
+      'restrictions2' => array(
+        'max' => array(
+          'date' => NULL,
+          'host_entity_date' => array(
+            'end_date' => FALSE,
+            'field' => NULL,
+          ),
+          'host_entity_interval' => array(
+            'field' => NULL,
+          ),
+          'interval' => NULL,
+          'type' => 'disabled',
+        ),
+        'min' => array(
+          'date' => NULL,
+          'host_entity_date' => array(
+            'end_date' => FALSE,
+            'field' => NULL,
+          ),
+          'host_entity_interval' => array(
+            'field' => NULL,
+          ),
+          'interval' => NULL,
+          'type' => 'disabled',
+        ),
+      ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -345,7 +449,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'input_format_custom' => '',
         'label_position' => 'above',
         'text_parts' => array(),
-        'year_range' => '-3:+3',
+        'year_range' => '-1:+3',
       ),
       'type' => 'date_popup',
       'weight' => -7,

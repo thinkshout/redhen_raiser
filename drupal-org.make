@@ -76,6 +76,12 @@ projects[ctools][subdir] = "contrib"
 projects[date][version] = "2.8"
 projects[date][subdir] = "contrib"
 
+; date_restrictions
+projects[date_restrictions][download][type] = "git"
+projects[date_restrictions][download][url] = "http://git.drupal.org/project/date_restrictions.git"
+projects[date_restrictions][download][revision] = "c6dc62f"
+projects[date_restrictions][subdir] = "contrib"
+
 ; elements
 projects[elements][version] = "1.4"
 projects[elements][subdir] = "contrib"

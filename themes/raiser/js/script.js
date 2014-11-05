@@ -73,10 +73,17 @@ Drupal.behaviors.my_custom_behavior = {
         });
       },
 
+      hideEmpty: function() {
+        if(!_$.trim( _$('#block-bean-campaign-promotion .content').html() ).length) {
+          _$('#block-bean-campaign-promotion').hide();
+        }
+      },
+
       init: function() {
         this.toggleMenu();
         this.setRequiredFormFields();
         this.activeRadioButton();
+        this.hideEmpty();
       }
     } // end _cafb
 

@@ -1,22 +1,7 @@
 .page-campaigns-leaderboard {
-  table {
-    width: 100%;
-    @include box-shadow(0 2px 3px $gray);
-  }
-  tr.odd {
-    background-color: $lt-primary;
-    border-bottom: none;
-  }
-  tr.even {
-    border-bottom: none;
-  }
-  td {
-    padding: em(5) em(10);
-    text-align: left;
-    font-size: em(16);
-  }
+  @include rasier-table;
   .views-field-progress:before {
-    content: "$ ";
+    content: "$";
   }
   .view-content {
     margin-top: em(32);

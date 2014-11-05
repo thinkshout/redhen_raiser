@@ -124,3 +124,25 @@
 @mixin raiser-box-shadow {
   @include box-shadow(0 2px 4px $black);
 }
+
+@mixin rasier-table {
+  table {
+    width: 100%;
+  }
+  th {
+    text-align: left;
+    padding-left: em(4);
+  }
+  tr.odd {
+    background-color: $lt-primary;
+    border-bottom: none;
+  }
+  tr.even {
+    border-bottom: none;
+  }
+  td {
+    padding: em(5) em(8) em(3) em(8);
+    text-align: left;
+    font-size: em(14);
+  }
+}

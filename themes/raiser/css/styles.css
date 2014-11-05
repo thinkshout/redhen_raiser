@@ -2038,10 +2038,9 @@ footer #colophon a:hover {
 #user-pass .form-actions {
   margin-top: 1em;
 }
-/* line 44, ../sass/components/_forms.scss */
-#user-login .form-actions #edit-cancel,
-#user-register-form .form-actions #edit-cancel,
-#user-pass .form-actions #edit-cancel {
+
+/* line 46, ../sass/components/_forms.scss */
+#edit-cancel {
   background: none;
   padding: 0.8em 1em;
   border-radius: 0.7em;
@@ -2054,18 +2053,14 @@ footer #colophon a:hover {
   padding: 0.6em 1em;
 }
 /* line 50, ../sass/_mixins.scss */
-#user-login .form-actions #edit-cancel:hover,
-#user-register-form .form-actions #edit-cancel:hover,
-#user-pass .form-actions #edit-cancel:hover {
+#edit-cancel:hover {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 /* line 88, ../sass/_mixins.scss */
-#user-login .form-actions #edit-cancel:hover,
-#user-register-form .form-actions #edit-cancel:hover,
-#user-pass .form-actions #edit-cancel:hover {
+#edit-cancel:hover {
   background: #989898;
   border: 3px solid #f1f1f1;
   color: white;

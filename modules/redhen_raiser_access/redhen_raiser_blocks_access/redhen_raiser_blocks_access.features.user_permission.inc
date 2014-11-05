@@ -87,7 +87,9 @@ function redhen_raiser_blocks_access_user_default_permissions() {
   // Exported permission: 'view bean page'.
   $permissions['view bean page'] = array(
     'name' => 'view bean page',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'bean',
   );
 

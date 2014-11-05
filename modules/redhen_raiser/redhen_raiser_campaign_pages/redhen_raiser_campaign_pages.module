@@ -19,6 +19,9 @@ function redhen_raiser_campaign_pages_views_pre_render(&$view) {
       $title_pattern = str_replace($needle, $value, $title_pattern);
     }
     $new_title = str_replace($view->args[0], $campaign->label, $title_pattern);
+    if ($campaign) {
+      $new_title = str_replace('$campaign_id', $campaign->campaign_id, $new_title);
+    }
     $view->set_title($new_title);
   }
 }

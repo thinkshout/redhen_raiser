@@ -469,6 +469,16 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'devel',
   );
 
+  // Exported permission: 'use text format rich_text'.
+  $permissions['use text format rich_text'] = array(
+    'name' => 'use text format rich_text',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
+    ),
+    'module' => 'filter',
+  );
+
   // Exported permission: 'view media'.
   $permissions['view media'] = array(
     'name' => 'view media',

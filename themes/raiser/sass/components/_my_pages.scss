@@ -1,11 +1,17 @@
 .page-user-my-pages,
 .page-user-orders,
 .page-redhen-campaign-donations,
-.page-redhen-campaign-update {
+.page-redhen-campaign-update,
+.page-redhen-campaign-page {
 
   @include rasier-table;
 
   .main-content-wrapper {
     width: 98%;
   }
+}
+.profile .user-picture {
+  float: none;
+  position: absolute;
+  right: 0;
 }

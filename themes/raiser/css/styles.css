@@ -947,6 +947,7 @@ form select, form x:-moz-any-link, form x:only-child {
   width: 100%;
   margin-left: 0%;
   margin-right: -100%;
+  margin-top: 1.5em;
   background: white;
 }
 @media (min-width: 992px) {
@@ -3632,14 +3633,16 @@ tr.selected td {
 .page-user-my-pages table,
 .page-user-orders table,
 .page-redhen-campaign-donations table,
-.page-redhen-campaign-update table {
+.page-redhen-campaign-update table,
+.page-redhen-campaign-page table {
   width: 100%;
 }
 /* line 132, ../sass/_mixins.scss */
 .page-user-my-pages th,
 .page-user-orders th,
 .page-redhen-campaign-donations th,
-.page-redhen-campaign-update th {
+.page-redhen-campaign-update th,
+.page-redhen-campaign-page th {
   text-align: left;
   padding-left: 0.25em;
 }
@@ -3647,7 +3650,8 @@ tr.selected td {
 .page-user-my-pages tr.odd,
 .page-user-orders tr.odd,
 .page-redhen-campaign-donations tr.odd,
-.page-redhen-campaign-update tr.odd {
+.page-redhen-campaign-update tr.odd,
+.page-redhen-campaign-page tr.odd {
   background-color: #e3edda;
   border-bottom: none;
 }
@@ -3655,24 +3659,34 @@ tr.selected td {
 .page-user-my-pages tr.even,
 .page-user-orders tr.even,
 .page-redhen-campaign-donations tr.even,
-.page-redhen-campaign-update tr.even {
+.page-redhen-campaign-update tr.even,
+.page-redhen-campaign-page tr.even {
   border-bottom: none;
 }
 /* line 143, ../sass/_mixins.scss */
 .page-user-my-pages td,
 .page-user-orders td,
 .page-redhen-campaign-donations td,
-.page-redhen-campaign-update td {
+.page-redhen-campaign-update td,
+.page-redhen-campaign-page td {
   padding: 0.3125em 0.5em 0.1875em 0.5em;
   text-align: left;
   font-size: 0.875em;
 }
-/* line 8, ../sass/components/_my_pages.scss */
+/* line 9, ../sass/components/_my_pages.scss */
 .page-user-my-pages .main-content-wrapper,
 .page-user-orders .main-content-wrapper,
 .page-redhen-campaign-donations .main-content-wrapper,
-.page-redhen-campaign-update .main-content-wrapper {
+.page-redhen-campaign-update .main-content-wrapper,
+.page-redhen-campaign-page .main-content-wrapper {
   width: 98%;
+}
+
+/* line 13, ../sass/components/_my_pages.scss */
+.profile .user-picture {
+  float: none;
+  position: absolute;
+  right: 0;
 }
 
 /* line 1, ../sass/components/_progress-bar.scss */
@@ -3744,8 +3758,9 @@ tr.selected td {
 .region-sidebar-first {
   padding: 0;
 }
-/* line 9, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-bean-campaign-promotion {
+/* line 10, ../sass/components/_sidebar.scss */
+.region-sidebar-first #block-bean-campaign-promotion,
+.region-sidebar-first #block-bean-campaign-page-promotion {
   box-sizing: border-box;
   margin-bottom: 0;
   margin-top: 1.5em;
@@ -3754,8 +3769,9 @@ tr.selected td {
   padding-right: 0.5em;
   width: 100%;
 }
-/* line 17, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-bean-campaign-promotion img {
+/* line 18, ../sass/components/_sidebar.scss */
+.region-sidebar-first #block-bean-campaign-promotion img,
+.region-sidebar-first #block-bean-campaign-page-promotion img {
   -webkit-box-shadow: 0 3px 5px #989898;
   -moz-box-shadow: 0 3px 5px #989898;
   box-shadow: 0 3px 5px #989898;
@@ -3765,8 +3781,9 @@ tr.selected td {
   padding: 0.1875em;
   width: 100%;
 }
-/* line 25, ../sass/components/_sidebar.scss */
-.region-sidebar-first #block-bean-campaign-promotion .field-name-field-promo-text p {
+/* line 26, ../sass/components/_sidebar.scss */
+.region-sidebar-first #block-bean-campaign-promotion .field-name-field-promo-text p,
+.region-sidebar-first #block-bean-campaign-page-promotion .field-name-field-promo-text p {
   box-sizing: border-box;
   font-size: 0.875em;
   line-height: 1.2;
@@ -3821,8 +3838,10 @@ tr.selected td {
   -o-border-radius: 8px;
   border-radius: 8px;
   float: left;
+  margin-top: 2.8125em;
+  margin-right: 0.5em;
 }
-/* line 27, ../sass/components/_updates.scss */
+/* line 29, ../sass/components/_updates.scss */
 #block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update .field-name-body,
 #block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update .field-name-body,
 .view-campaign-updates .node-campaign-update .field-name-body {

@@ -22,6 +22,8 @@
     img {
       @include border-radius(8px);
       float: left;
+      margin-top: em(45);
+      margin-right: em(8);
     }
 
     .field-name-body {

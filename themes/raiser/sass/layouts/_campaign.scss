@@ -24,7 +24,7 @@
 
   .main-content-wrapper {
     @include zen-grid-item(12,1);
-
+    margin-top:  1.5em;
     @include medium {
       @include zen-grid-item(8,1);
     }

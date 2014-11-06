@@ -38,16 +38,16 @@ function redhen_raiser_campaign_pages_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
         'label' => array(
-          'weight' => '4',
+          'weight' => '3',
         ),
         'owner' => array(
           'weight' => '0',
         ),
         'campaign' => array(
-          'weight' => '3',
+          'weight' => '0',
         ),
         'team' => array(
           'weight' => '1',

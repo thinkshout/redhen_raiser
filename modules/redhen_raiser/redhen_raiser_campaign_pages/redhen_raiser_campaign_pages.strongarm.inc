@@ -236,13 +236,13 @@ function redhen_raiser_campaign_pages_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '11',
+          'weight' => '5',
         ),
         'label' => array(
-          'weight' => '2',
+          'weight' => '9',
         ),
         'owner' => array(
-          'weight' => '4',
+          'weight' => '6',
         ),
         'campaign' => array(
           'weight' => '0',
@@ -251,7 +251,7 @@ function redhen_raiser_campaign_pages_strongarm() {
           'weight' => '1',
         ),
         'donate' => array(
-          'weight' => '3',
+          'weight' => '2',
         ),
       ),
       'display' => array(

@@ -48,6 +48,7 @@
   float: right;
   padding: 0.6em 1em;
 }
+#redhen-campaign-page-add-form,
 #redhen-campaign-campaign-page-form {
   .field-name-redhen-campaign-goal {
     color: $black;
@@ -58,7 +59,7 @@
       font-size: em(22);
       line-height: em(28);
     }
-    #edit-redhen-campaign-goal-und-0-value {
+    input[id^="edit-redhen-campaign-goal-und-0-value"] {
       float: right;
       width: 97%;
     }

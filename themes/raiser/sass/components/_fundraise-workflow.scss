@@ -5,6 +5,7 @@
 }
 
 .page-redhen-campaign-add-general,
+.page-redhen-campaign-page,
 .page-redhen-campaign-page-add,
 .page-redhen-campaign-edit {
 
@@ -47,33 +48,12 @@
     }
   }
 
-  .filter-wrapper, .filter-help {
+  .filter-wrapper,
+  .filter-help {
     float: none;
     margin: 0;
     padding: 0;
   }
-
-  .field-name-redhen-campaign-goal {
-    padding-left: 0;
-
-    label {
-      color: $black;
-      font-size: em(14);
-    }
-
-    .field-prefix {
-      background: $gray;
-      display: none;
-    }
-
-    .description {
-      color: $black;
-      font-size: em(12);
-    }
-
-    input { font-size: em(14); }
-  }
-
 
   .container-inline-date {
     .date-padding {
@@ -100,16 +80,12 @@
 
     input { font-size: 16px; }
   }
-}
-.page-redhen-campaign-add-general,
-.page-redhen-campaign-page-add,
-.page-redhen-campaign-edit,
-.page-redhen-campaign-page {
   .field-type-image {
     min-height: em(32);
-    label {
-      float: left;
-      margin-right: em(8);
+    .preview .form-item,
+    .preview .media-item {
+      margin-top: em(-16);
+      margin-left: 0;
     }
     .description {
       line-height: 1.7;
@@ -124,4 +100,35 @@
   .form-actions {
     clear:both;
   }
+  fieldset[id^="edit-field-story-und-0-format"] {
+    font-size: em(14);
+    padding-top: em(8);
+    .filter-help {
+      float: right;
+      width: 60%;
+      text-align: right;
+      a {
+        font-size: em(14);
+        padding: 0 em(24) 0 0;
+      }
+    }
+    .form-type-select {
+      margin: 0;
+      padding: 0;
+      select {
+        height: em(24);
+        line-height: 1;
+        padding: 0 em(20) 0 em(8);
+      }
+    }
+    .filter-guidelines {
+      display: none;
+    }
+  }
+
 }
+
+#redhen-campaign-page-add-form {
+    width: 66.6%;
+}
+

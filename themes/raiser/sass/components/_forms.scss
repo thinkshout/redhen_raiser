@@ -48,8 +48,15 @@
   float: right;
   padding: 0.6em 1em;
 }
-#redhen-campaign-page-add-form,
-#redhen-campaign-campaign-page-form {
+
+
+form[id^="redhen-campaign-page-add-form"],
+form[id^="redhen-campaign-campaign-form"],
+form[id^="redhen-campaign-campaign-page-form"] {
+  @include medium {
+    @include zen-grid-item(8,1);
+    width: 70%;
+  }
   .field-name-redhen-campaign-goal {
     color: $black;
     font-size: em(16);
@@ -68,21 +75,26 @@
     }
   }
 }
+
+
 #edit-field-start-date,
 #edit-field-end-date,
 .main-content-wrapper .field-name-field-end-date,
 .main-content-wrapper .field-name-field-start-date {
   color: $black;
   font-size: em(16);
-  margin-bottom: em(16);
   margin-left: 0;
-  margin-top: 0.5em;
+  margin-top: 0;
   fieldset {
     border: none;
     padding: 0;
+    margin: 0;
   }
   .container-inline-date .date-padding {
     padding: 0;
+  }
+  .container-inline-date .form-item {
+    margin-bottom: 0;
   }
   .form-item label {
     display: none;

@@ -6,7 +6,10 @@
 
 #main #content {
   margin-bottom: 2em;
-  padding: 0 0 2em 1em;
+  padding: 1em;
+  @include medium {
+    padding: 0 0 2em 1em;
+  }
 }
 
 #content-secondary {

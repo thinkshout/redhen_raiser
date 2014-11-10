@@ -10,8 +10,11 @@
     margin-bottom: 2em;
 
     h2 {
-      position: absolute;
       line-height: 1em;
+      @include medium {
+        position: absolute;
+      }
+
       a {
         color: $primary;
         &:hover {
@@ -28,7 +31,9 @@
     }
 
     .field-name-body {
-      padding-top: 1em;
+      @include medium {
+        padding-top: 1em;
+      }
     }
   }
   .entity-redhen-contact img {

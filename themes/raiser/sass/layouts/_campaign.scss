@@ -12,14 +12,18 @@
   }
 
   #block-bean-campaign-banner .field-label-inline {
-    color: $white;
-    display: block;
-    font-family: $raiser-heading-font;
-    font-size: em(32);
-    left: em(11);
-    position: absolute;
-    top: em(80);
-    z-index: 3;
+    @include medium {
+      color: $white;
+      display: block;
+      font-family: $raiser-heading-font;
+      font-size: em(32);
+      left: em(11);
+      position: absolute;
+      top: em(80);
+      z-index: 3;
+    }
+
+    position: relative;
   }
 
   .main-content-wrapper {
@@ -38,18 +42,21 @@
 
   aside {
     @include zen-grid-item(12,1);
+    clear: left;
+    position: relative;
+  
 
     @include medium {
       @include zen-grid-item(4,9);
+      background: $lt-gray;
+      height: 100%;
+      position: absolute;
+
+      .block-bean {
+        border-bottom: 1px solid $white;
+      }
     }
 
-    background: $lt-gray;
-    height: 100%;
-    position: absolute;
-
-    .block-bean {
-      border-bottom: 1px solid $white;
-    }
   }
 
   .view-all-button,
@@ -58,24 +65,43 @@
     margin-bottom: 2em;
     padding: 2em 1em;
     overflow: hidden;
+
     .field-label {
       font-weight: normal;
-      float: left;
-      padding-top: em(6);
-      margin-right: 2%;
-      width: 48%;
+      @include medium {
+        float: left;
+        padding-top: em(6);
+        margin-right: 2%;
+        width: 48%;
+      }
+
+      width: 100%;
     }
+
     a {
       @include cta-btn;
       float: right;
     }
   }
+
   .view-all-button {
     padding: 2em;
     text-align: center;
     a {
       margin: 0 auto;
-      float: none; }
+      float: none; 
+      font-size: 0.8em;
+      padding: 1em 0.5em;
+    }
+
+    @include medium {
+      a {
+        margin: 0 auto;
+        float: none; 
+        font-size: 100%;
+        padding: 0.8em 5em;
+      }
+    }
   }
 
   // Campaign story image
@@ -94,20 +120,22 @@
   #block-bean-campaign-page-progress,
   #block-bean-campaign-progress {
     background: $primary-widget;
-    color: $primary;
-    left: 0;
     padding-bottom: 2em;
-    margin-bottom: 0;
     padding-top: 2em;
-    width: 100%;
-    .field-label-inline {
-      display: none;
-    }
+    @include medium {
+      color: $primary;
+      left: 0;
+      margin-bottom: 0;
+      width: 100%;
+      .field-label-inline {
+        display: none;
+      }
 
-    h2 { display: none; }
+      h2 { display: none; }
 
-    .field-type-datetime {
-      margin-left: em(16);
+      .field-type-datetime {
+        margin-left: em(16);
+      }
     }
   }
 

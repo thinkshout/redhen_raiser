@@ -1,7 +1,9 @@
 
 .sidebar-first > .region-sidebar-first {
-  width: 95%;
-  padding: 0;
+  @include medium {
+    width: 95%;
+    padding: 0;
+  } 
 }
 .region-sidebar-first {
   padding: 0;

@@ -1,8 +1,11 @@
 .page-redhen-campaign #highlighted {
   @include box-shadow(0 2px 5px $gray);
   margin-top: 1em;
-  max-height: 300px;
   position: relative;
+
+  @include medium {
+    max-height: 300px;
+  }
 
   #block-bean-campaign-page-banner,
   #block-bean-campaign-banner {
@@ -11,17 +14,28 @@
       width: 100%;
     }
   }
+
+  .redhen_campaign_title,
   .redhen-campaign-general h2,
   .redhen_campaign_page_campaign {
+    @include text-shadow(0 2px 5px $black);
+    color: $white;
     display: block;
     font-family: $raiser-heading-font;
     font-size: em(32);
     left: em(11);
+    line-height: 1.2em;
     position: absolute;
-    top: em(80);
+    top: 2em;
     z-index: 3;
 
     a { color: $white; }
+
+    @include medium {
+      color: $white;
+      top: em(80);
+    }
+
   }
 
   .redhen-campaign-general h2 {
@@ -35,28 +49,52 @@
   }
 
   .field-name-field-teaser {
-    background: rgba(0,0,0,0.6);
-    bottom: 0;
-    color: $white;
-    font-size: 1.2em;
-    height: 150px;
-    padding: 1em 1em 0;
-    position: absolute;
-    min-width: 40%;
-    max-width: 60%;
+    margin-bottom: 1em;
+    max-width: none;
+    padding: 1em;
 
-    .field-item {
-      margin-top: 3em;
+    @include medium {
+      background: rgba(0,0,0,0.6);
+      bottom: 0;
+      color: $white;
+      font-size: 1.2em;
+      height: 150px;
+      padding: 1em 1em 0;
+      position: absolute;
+      min-width: 40%;
+      margin-bottom: 0;
+      max-width: 60%;
+
+      .field-item {
+        margin-top: 3em;
+      }
     }
+
   }
 
   .redhen_campaign_page_donate,
   .field-type-redhen-donation {
-    bottom: 2em;
-    position: absolute;
-    right: 1em;
-    z-index: 2;
+    padding: 1em;
 
-    a { @include cta-btn; }
+    a { 
+      @include cta-btn; 
+      display: block;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+
+    @include medium {
+      bottom: 2em;
+      margin-bottom: 0;
+      position: absolute;
+      right: 1em;
+      width: auto;
+      z-index: 2;
+
+      a {
+        margin-bottom: 0; 
+      }
+    }
+
   }
 }

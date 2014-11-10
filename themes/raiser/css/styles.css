@@ -1237,6 +1237,7 @@ body.front #main #content {
 #page {
   background-color: ffffff;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFE5E5E5');
+  background: linear-gradient(#ffffff, #e5e5e5);
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(63%, #ffffff), color-stop(63%, #ffffff), color-stop(100%, #e5e5e5));
   background-image: -webkit-linear-gradient(top, #ffffff 63%, #ffffff 63%, #e5e5e5 100%);
   background-image: -moz-linear-gradient(top, #ffffff 63%, #ffffff 63%, #e5e5e5 100%);

@@ -90,7 +90,7 @@ Drupal.behaviors.my_custom_behavior = {
       noCommas: function() {
         $("input[id^=edit-redhen-campaign-goal-und-0-value]").each(function(){
             this.value=this.value.replace(/,/g, "");
-        }).on('keyup', function(){
+        }).live('keyup', function(){
             this.value=this.value.replace(/,/g, "");
         });
       },

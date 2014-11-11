@@ -7,6 +7,7 @@
     max-height: 300px;
   }
 
+
   #block-bean-campaign-page-banner,
   #block-bean-campaign-banner {
     margin-bottom: 0;
@@ -31,6 +32,10 @@
 
     a { color: $white; }
 
+    @include small {
+      top: em(100);
+    }
+
     @include medium {
       color: $white;
       top: em(80);
@@ -52,6 +57,14 @@
     margin-bottom: 1em;
     max-width: none;
     padding: 1em;
+
+    @include small {
+      background: rgba(0,0,0,0.6);
+      color: $white;
+      padding: 1em;
+      position: absolute;
+      bottom: 8em;
+    }
 
     @include medium {
       background: rgba(0,0,0,0.6);

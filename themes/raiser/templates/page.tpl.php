@@ -109,10 +109,10 @@
       <?php endif; ?>
       <p class="tagline">Together We Can Solve Hunger&#8482;</p>
       <ul class="social">
-        <li><a class="twitter" href=""></a></li>
-        <li><a class="facebook" href="">Facebook</a></li>
-        <li><a class="linkedin" href="">LinkedIn</a></li>
-        <li><a class="google-plus" href="">Google +</a></li>
+        <li><a class="twitter" href="https://twitter.com/foodbankmetrodc"></a></li>
+        <li><a class="facebook" href="https://www.facebook.com/CapitalAreaFoodBank">Facebook</a></li>
+        <li><a class="linkedin" href="https://www.linkedin.com/company/capital-area-food-bank-of-dc">LinkedIn</a></li>
+        <li><a class="google-plus" href="https://plus.google.com/+CapitalAreaFoodBankOrg/posts">Google +</a></li>
       </ul>
     </div>
     <?php print render($page['footer']); ?>

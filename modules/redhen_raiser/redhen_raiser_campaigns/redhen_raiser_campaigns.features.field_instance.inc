@@ -738,11 +738,13 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'settings' => array(
           'confirmation_message' => 'Thank you for your donation!',
           'confirmation_page' => '',
-          'donation_amounts' => '5|$5
-25|$25
-100|$100
-250|$250
-500|$500',
+          'donation_amounts' => array(
+            5 => '$5',
+            25 => '$25',
+            100 => '$100',
+            250 => '$250',
+            500 => '$500',
+          ),
           'donation_entry' => 'radio_other',
           'maximum_donation' => '',
           'minimum_donation' => '',

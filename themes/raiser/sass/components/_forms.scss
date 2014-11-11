@@ -74,6 +74,10 @@ form[id^="redhen-campaign-campaign-page-form"] {
     input[id^="edit-redhen-campaign-goal-und-0-value"] {
       float: right;
       width: 97%;
+
+      @include xsmall {
+        width: 91%; 
+      }
     }
     .description {
       clear: both;
@@ -90,6 +94,13 @@ form[id^="redhen-campaign-campaign-page-form"] {
   font-size: em(16);
   margin-left: 0;
   margin-top: 0;
+
+  @include xsmall {
+    clear: left;
+    width: 100%;
+    input[type=text] { width: 100%; }
+  }
+
   fieldset {
     border: none;
     padding: 0;
@@ -97,9 +108,13 @@ form[id^="redhen-campaign-campaign-page-form"] {
   }
   .container-inline-date .date-padding {
     padding: 0;
+    width: 100%;
   }
   .container-inline-date .form-item {
     margin-bottom: 0;
+    @include xsmall {
+      width: 100%;
+    }
   }
   .form-item label {
     display: none;

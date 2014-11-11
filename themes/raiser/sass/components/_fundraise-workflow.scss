@@ -93,10 +93,17 @@
   .field-type-datetime {
     @include zen-grid-item(6,1);
     margin-right: auto;
+
+
     &#edit-field-end-date {
       @include zen-grid-item(6,1);
       font-size: em(16);
       margin-top: 0;
+
+      @include xsmall {
+        margin-top: 1em;
+        width: 100%; 
+      }
     }
     label {
       color: $black;

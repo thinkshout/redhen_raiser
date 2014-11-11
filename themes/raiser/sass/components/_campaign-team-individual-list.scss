@@ -1,6 +1,11 @@
 .page-campaigns {
 
   .views-row {
+    @include small {
+      float: left;
+      width: 48%;
+      margin-right: 2%;
+    }
     @include medium {
       display: inline-block;
       float: left;

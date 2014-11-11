@@ -34,7 +34,7 @@ function redhen_raiser_donations_default_redhen_donation_type() {
     "settings" : {
       "contact_settings" : {
         "contact_type" : "contact",
-        "update_fields" : 0,
+        "update_fields" : 1,
         "fields" : { "field_organization" : "field_organization", "middle_name" : 0 },
         "profile_selector" : "field_billing_address"
       },

@@ -8,16 +8,16 @@
 #user-login,
 #user-register-form,
 #user-pass {
-  background: $white;
-  border-radius: 0.7em;
+  //background: $white;
+  //border-radius: 0.7em;
   display: block;
   overflow: hidden;
   padding-bottom: 2em;
   @include zen-grid-item(12, 1);
-  @include box-shadow(0 2px 3px $gray);
+  //@include box-shadow(0 2px 3px $gray);
 
   @include large {
-    @include zen-grid-item(6,4);
+    //@include zen-grid-item(6,4);
   }
 
   fieldset {
@@ -25,6 +25,8 @@
     padding: 0;
     margin: 0;
   }
+
+  p { padding: 1em; }
 
   #edit-register,
   #edit-reset,
@@ -149,5 +151,16 @@ form[id^="redhen-campaign-campaign-page-form"] {
     label {
       cursor: default;
     }
+  }
+}
+
+.page-user,
+.page-user-edit {
+  #main #content {
+    @include box-shadow(0 3px 5px $gray);
+    background: $white;
+    margin-top: 1em;
+    overflow: hidden;
+    padding: 1em;
   }
 }

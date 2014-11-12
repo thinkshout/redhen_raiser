@@ -59,17 +59,24 @@ Drupal.behaviors.my_custom_behavior = {
       activeRadioButton: function() {
         var radio = _$('.form-radios input'),
             label = _$('.form-radios label').parent();
+            radio.each(function(){
+              if (_$(this).attr('checked')) {
+                _$(this).parent().addClass('checked');
+              }
+              if (!_$(this).attr('checked')) {
+                _$(this).parent().removeClass('checked');
+              }
+            });
         label.click(function(){
-            _$(this).not('.checked').find('input').attr('checked', true).change();
-        });
-
-        radio.each(function(){
-          if (_$(this).attr('checked')) {
-            _$(this).parent().addClass('checked');
-          }
-          if (!_$(this).attr('checked')) {
-            _$(this).parent().removeClass('checked');
-          }
+          _$(this).not('.checked').find('input').attr('checked', true).change();
+          radio.each(function(){
+            if (_$(this).attr('checked')) {
+              _$(this).parent().addClass('checked');
+            }
+            if (!_$(this).attr('checked')) {
+              _$(this).parent().removeClass('checked');
+            }
+          });
         });
       },
 

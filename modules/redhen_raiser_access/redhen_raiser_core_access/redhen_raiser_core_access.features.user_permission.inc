@@ -14,9 +14,17 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'access all views'.
+  $permissions['access all views'] = array(
+    'name' => 'access all views',
+    'roles' => array(),
+    'module' => 'views',
   );
 
   // Exported permission: 'access content'.
@@ -33,6 +41,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'node',
@@ -49,9 +58,17 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['access navbar'] = array(
     'name' => 'access navbar',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'navbar',
+  );
+
+  // Exported permission: 'access rules debug'.
+  $permissions['access rules debug'] = array(
+    'name' => 'access rules debug',
+    'roles' => array(),
+    'module' => 'rules',
   );
 
   // Exported permission: 'access site in maintenance mode'.
@@ -64,7 +81,9 @@ function redhen_raiser_core_access_user_default_permissions() {
   // Exported permission: 'access site reports'.
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'system',
   );
 
@@ -128,10 +147,19 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: 'administer filters'.
+  $permissions['administer filters'] = array(
+    'name' => 'administer filters',
+    'roles' => array(),
+    'module' => 'filter',
+  );
+
   // Exported permission: 'administer honeypot'.
   $permissions['administer honeypot'] = array(
     'name' => 'administer honeypot',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'honeypot',
   );
 
@@ -142,11 +170,38 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'image',
   );
 
+  // Exported permission: 'administer mailsystem'.
+  $permissions['administer mailsystem'] = array(
+    'name' => 'administer mailsystem',
+    'roles' => array(
+      'admin' => 'admin',
+    ),
+    'module' => 'mailsystem',
+  );
+
+  // Exported permission: 'administer mandrill'.
+  $permissions['administer mandrill'] = array(
+    'name' => 'administer mandrill',
+    'roles' => array(
+      'admin' => 'admin',
+    ),
+    'module' => 'mandrill',
+  );
+
   // Exported permission: 'administer media'.
   $permissions['administer media'] = array(
     'name' => 'administer media',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'media',
+  );
+
+  // Exported permission: 'administer module filter'.
+  $permissions['administer module filter'] = array(
+    'name' => 'administer module filter',
+    'roles' => array(),
+    'module' => 'module_filter',
   );
 
   // Exported permission: 'administer modules'.
@@ -159,7 +214,9 @@ function redhen_raiser_core_access_user_default_permissions() {
   // Exported permission: 'administer nodes'.
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'node',
   );
 
@@ -170,10 +227,28 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer pictures'.
+  $permissions['administer pictures'] = array(
+    'name' => 'administer pictures',
+    'roles' => array(),
+    'module' => 'picture',
+  );
+
+  // Exported permission: 'administer rules'.
+  $permissions['administer rules'] = array(
+    'name' => 'administer rules',
+    'roles' => array(
+      'admin' => 'admin',
+    ),
+    'module' => 'rules',
+  );
+
   // Exported permission: 'administer site configuration'.
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'system',
   );
 
@@ -184,17 +259,44 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'administer taxonomy'.
+  $permissions['administer taxonomy'] = array(
+    'name' => 'administer taxonomy',
+    'roles' => array(
+      'admin' => 'admin',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'administer themes'.
+  $permissions['administer themes'] = array(
+    'name' => 'administer themes',
+    'roles' => array(),
+    'module' => 'system',
+  );
+
   // Exported permission: 'administer users'.
   $permissions['administer users'] = array(
     'name' => 'administer users',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'administer views'.
+  $permissions['administer views'] = array(
+    'name' => 'administer views',
+    'roles' => array(),
+    'module' => 'views',
   );
 
   // Exported permission: 'block IP addresses'.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'system',
   );
 
@@ -210,6 +312,13 @@ function redhen_raiser_core_access_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(),
     'module' => 'node',
+  );
+
+  // Exported permission: 'bypass rules access'.
+  $permissions['bypass rules access'] = array(
+    'name' => 'bypass rules access',
+    'roles' => array(),
+    'module' => 'rules',
   );
 
   // Exported permission: 'cancel account'.
@@ -228,6 +337,15 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'configure mandrill templates'.
+  $permissions['configure mandrill templates'] = array(
+    'name' => 'configure mandrill templates',
+    'roles' => array(
+      'admin' => 'admin',
+    ),
+    'module' => 'mandrill_template',
+  );
+
   // Exported permission: 'customize ckeditor'.
   $permissions['customize ckeditor'] = array(
     'name' => 'customize ckeditor',
@@ -238,7 +356,9 @@ function redhen_raiser_core_access_user_default_permissions() {
   // Exported permission: 'delete revisions'.
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'node',
   );
 
@@ -289,7 +409,9 @@ function redhen_raiser_core_access_user_default_permissions() {
   // Exported permission: 'revert revisions'.
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'node',
   );
 
@@ -304,6 +426,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for bean'] = array(
     'name' => 'show format selection for bean',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -313,6 +436,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for commerce_cardonfile'] = array(
     'name' => 'show format selection for commerce_cardonfile',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -322,6 +446,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for commerce_customer_profile'] = array(
     'name' => 'show format selection for commerce_customer_profile',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -331,6 +456,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for commerce_line_item'] = array(
     'name' => 'show format selection for commerce_line_item',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -340,6 +466,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for commerce_order'] = array(
     'name' => 'show format selection for commerce_order',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -349,6 +476,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for commerce_product'] = array(
     'name' => 'show format selection for commerce_product',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -358,6 +486,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for commerce_recurring'] = array(
     'name' => 'show format selection for commerce_recurring',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -367,6 +496,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for file'] = array(
     'name' => 'show format selection for file',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -376,6 +506,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for node'] = array(
     'name' => 'show format selection for node',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -385,6 +516,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for redhen_campaign'] = array(
     'name' => 'show format selection for redhen_campaign',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -394,6 +526,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for redhen_campaign_page'] = array(
     'name' => 'show format selection for redhen_campaign_page',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -403,6 +536,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for redhen_contact'] = array(
     'name' => 'show format selection for redhen_contact',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -412,6 +546,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for redhen_donation'] = array(
     'name' => 'show format selection for redhen_donation',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -421,6 +556,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for rules_config'] = array(
     'name' => 'show format selection for rules_config',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -430,6 +566,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for taxonomy_term'] = array(
     'name' => 'show format selection for taxonomy_term',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -439,6 +576,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format selection for user'] = array(
     'name' => 'show format selection for user',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -448,6 +586,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show format tips'] = array(
     'name' => 'show format tips',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -457,6 +596,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['show more format tips link'] = array(
     'name' => 'show more format tips link',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
@@ -492,14 +632,19 @@ function redhen_raiser_core_access_user_default_permissions() {
   // Exported permission: 'view own unpublished content'.
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'view revisions'.
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'node',
   );
 
@@ -507,6 +652,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'system',

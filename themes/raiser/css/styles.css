@@ -1792,24 +1792,24 @@ body.front #main #content {
     top: 5em;
   }
 }
-/* line 46, ../sass/components/_campaign_banner.scss */
+/* line 45, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted .redhen-campaign-general h2 {
   top: 4em;
   max-width: 38%;
   line-height: 1.125em;
 }
-/* line 52, ../sass/components/_campaign_banner.scss */
+/* line 51, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted h2 {
   display: none;
 }
-/* line 56, ../sass/components/_campaign_banner.scss */
+/* line 55, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted .field-name-field-teaser {
   margin-bottom: 1em;
   max-width: none;
   padding: 1em;
 }
 @media (min-width: 768px) {
-  /* line 56, ../sass/components/_campaign_banner.scss */
+  /* line 55, ../sass/components/_campaign_banner.scss */
   .page-redhen-campaign #highlighted .field-name-field-teaser {
     background: rgba(0, 0, 0, 0.6);
     color: white;
@@ -1819,7 +1819,7 @@ body.front #main #content {
   }
 }
 @media (min-width: 992px) {
-  /* line 56, ../sass/components/_campaign_banner.scss */
+  /* line 55, ../sass/components/_campaign_banner.scss */
   .page-redhen-campaign #highlighted .field-name-field-teaser {
     background: rgba(0, 0, 0, 0.6);
     bottom: 0;
@@ -1828,21 +1828,21 @@ body.front #main #content {
     height: 150px;
     padding: 1em 1em 0;
     position: absolute;
-    min-width: 40%;
+    min-width: 50%;
     margin-bottom: 0;
     max-width: 60%;
   }
-  /* line 81, ../sass/components/_campaign_banner.scss */
+  /* line 80, ../sass/components/_campaign_banner.scss */
   .page-redhen-campaign #highlighted .field-name-field-teaser .field-item {
     margin-top: 3em;
   }
 }
-/* line 89, ../sass/components/_campaign_banner.scss */
+/* line 88, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted .redhen_campaign_page_donate,
 .page-redhen-campaign #highlighted .field-type-redhen-donation {
   padding: 1em;
 }
-/* line 92, ../sass/components/_campaign_banner.scss */
+/* line 91, ../sass/components/_campaign_banner.scss */
 .page-redhen-campaign #highlighted .redhen_campaign_page_donate a,
 .page-redhen-campaign #highlighted .field-type-redhen-donation a {
   background: none;
@@ -1875,7 +1875,7 @@ body.front #main #content {
   background: #ffab30;
 }
 @media (min-width: 992px) {
-  /* line 89, ../sass/components/_campaign_banner.scss */
+  /* line 88, ../sass/components/_campaign_banner.scss */
   .page-redhen-campaign #highlighted .redhen_campaign_page_donate,
   .page-redhen-campaign #highlighted .field-type-redhen-donation {
     bottom: 2em;
@@ -1885,7 +1885,7 @@ body.front #main #content {
     width: auto;
     z-index: 2;
   }
-  /* line 107, ../sass/components/_campaign_banner.scss */
+  /* line 106, ../sass/components/_campaign_banner.scss */
   .page-redhen-campaign #highlighted .redhen_campaign_page_donate a,
   .page-redhen-campaign #highlighted .field-type-redhen-donation a {
     margin-bottom: 0;
@@ -3852,7 +3852,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1415641739');
+  background-image: url('../images/progress.gif?1415813801');
 }
 
 /* line 1, ../sass/components/_modal.scss */

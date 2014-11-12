@@ -792,7 +792,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'redhen_campaign',
         'settings' => array(
-          'abbreviate' => 1,
+          'abbreviate' => 0,
           'characters' => array(
             'billion' => 'B',
             'million' => 'M',
@@ -815,7 +815,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'redhen_campaign',
         'settings' => array(
-          'abbreviate' => 1,
+          'abbreviate' => 0,
           'characters' => array(
             'billion' => 'B',
             'million' => 'M',

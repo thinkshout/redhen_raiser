@@ -85,12 +85,18 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['fields']['entity_id']['id'] = 'entity_id';
   $handler->display->display_options['fields']['entity_id']['table'] = 'redhen_donation';
   $handler->display->display_options['fields']['entity_id']['field'] = 'entity_id';
-  $handler->display->display_options['fields']['entity_id']['label'] = 'Campaign';
-  $handler->display->display_options['fields']['entity_id']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['entity_id']['label'] = 'Host Entity ID';
+  $handler->display->display_options['fields']['entity_id']['exclude'] = TRUE;
   $handler->display->display_options['fields']['entity_id']['alter']['text'] = 'link';
-  $handler->display->display_options['fields']['entity_id']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['entity_id']['alter']['path'] = 'redhen_campaign/[entity_id]';
   $handler->display->display_options['fields']['entity_id']['separator'] = '';
+  /* Field: Donation: Host entity type */
+  $handler->display->display_options['fields']['entity_type']['id'] = 'entity_type';
+  $handler->display->display_options['fields']['entity_type']['table'] = 'redhen_donation';
+  $handler->display->display_options['fields']['entity_type']['field'] = 'entity_type';
+  $handler->display->display_options['fields']['entity_type']['label'] = 'Campaign';
+  $handler->display->display_options['fields']['entity_type']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['entity_type']['alter']['path'] = 'redhen_campaign/[entity_id]';
   /* Field: Donation: Amount received. */
   $handler->display->display_options['fields']['received']['id'] = 'received';
   $handler->display->display_options['fields']['received']['table'] = 'redhen_donation';
@@ -127,8 +133,9 @@ else return -1;';
   $handler->display->display_options['arguments']['contact']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['contact']['summary_options']['items_per_page'] = '25';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: My Donations Page */
+  $handler = $view->new_display('page', 'My Donations Page', 'my_donations_page');
+  $handler->display->display_options['display_comment'] = 'see: redhen_raiser_donations_views_pre_render()';
   $handler->display->display_options['path'] = 'user/%user/my-donations';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'My Donations';

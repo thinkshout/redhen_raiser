@@ -2368,7 +2368,8 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   cursor: default;
 }
 
-/* line 159, ../sass/components/_forms.scss */
+/* line 160, ../sass/components/_forms.scss */
+.page-fundraise #main #content,
 .page-user #main #content,
 .page-user-edit #main #content {
   -webkit-box-shadow: 0 3px 5px #989898;
@@ -3852,7 +3853,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1415813801');
+  background-image: url('../images/progress.gif?1415641739');
 }
 
 /* line 1, ../sass/components/_modal.scss */

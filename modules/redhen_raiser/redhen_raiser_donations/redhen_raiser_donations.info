@@ -24,6 +24,7 @@ features[field_instance][] = commerce_customer_profile-billing-commerce_customer
 features[field_instance][] = commerce_product-donation-commerce_price
 features[field_instance][] = redhen_donation-redhen_raiser_donation-field_donation_comment
 features[redhen_donation_type][] = redhen_raiser_donation
+features[views_view][] = donations
 features[views_view][] = my_donations
 features_exclude[field_base][commerce_price] = commerce_price
 features_exclude[field_base][commerce_customer_address] = commerce_customer_address

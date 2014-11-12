@@ -10,6 +10,66 @@
 function redhen_raiser_content_access_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'administer contexts'.
+  $permissions['administer contexts'] = array(
+    'name' => 'administer contexts',
+    'roles' => array(
+      'admin' => 'admin',
+    ),
+    'module' => 'context_ui',
+  );
+
+  // Exported permission: 'administer fieldgroups'.
+  $permissions['administer fieldgroups'] = array(
+    'name' => 'administer fieldgroups',
+    'roles' => array(
+      'admin' => 'admin',
+    ),
+    'module' => 'field_group',
+  );
+
+  // Exported permission: 'administer menu'.
+  $permissions['administer menu'] = array(
+    'name' => 'administer menu',
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
+    ),
+    'module' => 'menu',
+  );
+
+  // Exported permission: 'administer pathauto'.
+  $permissions['administer pathauto'] = array(
+    'name' => 'administer pathauto',
+    'roles' => array(),
+    'module' => 'pathauto',
+  );
+
+  // Exported permission: 'administer url aliases'.
+  $permissions['administer url aliases'] = array(
+    'name' => 'administer url aliases',
+    'roles' => array(),
+    'module' => 'path',
+  );
+
+  // Exported permission: 'bypass date restrictions on edit'.
+  $permissions['bypass date restrictions on edit'] = array(
+    'name' => 'bypass date restrictions on edit',
+    'roles' => array(
+      'admin' => 'admin',
+    ),
+    'module' => 'date_restrictions',
+  );
+
+  // Exported permission: 'context ajax block access'.
+  $permissions['context ajax block access'] = array(
+    'name' => 'context ajax block access',
+    'roles' => array(
+      'admin' => 'admin',
+    ),
+    'module' => 'context_ui',
+  );
+
   // Exported permission: 'create any bean_entity_view bean'.
   $permissions['create any bean_entity_view bean'] = array(
     'name' => 'create any bean_entity_view bean',
@@ -21,6 +81,7 @@ function redhen_raiser_content_access_user_default_permissions() {
   $permissions['create any promo bean'] = array(
     'name' => 'create any promo bean',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'bean',
@@ -39,9 +100,19 @@ function redhen_raiser_content_access_user_default_permissions() {
   $permissions['create page content'] = array(
     'name' => 'create page content',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'create url aliases'.
+  $permissions['create url aliases'] = array(
+    'name' => 'create url aliases',
+    'roles' => array(
+      'admin' => 'admin',
+    ),
+    'module' => 'path',
   );
 
   // Exported permission: 'delete any bean_entity_view bean'.
@@ -55,6 +126,7 @@ function redhen_raiser_content_access_user_default_permissions() {
   $permissions['delete any campaign_update content'] = array(
     'name' => 'delete any campaign_update content',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'node',
@@ -64,6 +136,7 @@ function redhen_raiser_content_access_user_default_permissions() {
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'node',
@@ -73,6 +146,7 @@ function redhen_raiser_content_access_user_default_permissions() {
   $permissions['delete any promo bean'] = array(
     'name' => 'delete any promo bean',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'bean',
@@ -91,6 +165,7 @@ function redhen_raiser_content_access_user_default_permissions() {
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'node',
@@ -107,6 +182,7 @@ function redhen_raiser_content_access_user_default_permissions() {
   $permissions['edit any campaign_update content'] = array(
     'name' => 'edit any campaign_update content',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'node',
@@ -116,6 +192,7 @@ function redhen_raiser_content_access_user_default_permissions() {
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'node',
@@ -125,6 +202,7 @@ function redhen_raiser_content_access_user_default_permissions() {
   $permissions['edit any promo bean'] = array(
     'name' => 'edit any promo bean',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'bean',
@@ -143,9 +221,17 @@ function redhen_raiser_content_access_user_default_permissions() {
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'notify of path changes'.
+  $permissions['notify of path changes'] = array(
+    'name' => 'notify of path changes',
+    'roles' => array(),
+    'module' => 'pathauto',
   );
 
   // Exported permission: 'view any bean_entity_view bean'.

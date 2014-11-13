@@ -223,7 +223,9 @@ function redhen_raiser_core_access_user_default_permissions() {
   // Exported permission: 'administer permissions'.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'user',
   );
 

@@ -101,6 +101,18 @@ function redhen_raiser_donations_views_default_views() {
     'page' => 'page',
     'default' => 0,
   );
+
+  /* Display: Data export 2 */
+  $handler = $view->new_display('views_data_export', 'Data export 2', 'views_data_export_2');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_xls';
+  $handler->display->display_options['style_options']['provide_file'] = 1;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['path'] = 'donations/excel';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+  );
   $export['donations'] = $view;
 
   $view = new view();

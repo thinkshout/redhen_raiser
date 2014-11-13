@@ -11,11 +11,6 @@ function redhen_raiser_install() {
   // Set the admin theme. (NOTE: We don't want to enable it.)
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
-  // Set homepage
-  //variable_set('site_frontpage', 'home');
-
-  // Set the timezome @TODO - Figure out why the timezone in Features exports not being accepted.
-  variable_set('date_default_timezone', 'America/Los_Angeles');
 
   // Set default date formatters.
   variable_set('date_format_long', 'l, F j, Y - g:ia');
@@ -23,4 +18,7 @@ function redhen_raiser_install() {
   variable_set('date_format_short', 'D n/j g:i a');
 
   minimal_install();
+  // Copy image defaults.
+  mkdir('sites/default/files/redhen_raiser');
+  copy(DRUPAL_ROOT . '/profiles/redhen_raiser/themes/raiser/images/default-avatar.png', 'sites/default/files/redhen_raiser/default-avatar.png');
 }

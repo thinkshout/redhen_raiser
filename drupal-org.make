@@ -212,6 +212,11 @@ projects[token][subdir] = "contrib"
 projects[views][version] = "3.8"
 projects[views][subdir] = "contrib"
 
+; views_export_xls
+projects[views_export_xls][version] = "1.0"
+projects[views_export_xls][subdir] = "contrib"
+projects[views_export_xls][patch][] = "https://www.drupal.org/files/issues/views_export_xls-fix_icon_attachment_on_php5_5-2344865-5-D7.patch"
+
 ; views_infinite_scroll
 projects[views_infinite_scroll][version] = "1.1"
 projects[views_infinite_scroll][subdir] = "contrib"

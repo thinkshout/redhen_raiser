@@ -68,7 +68,7 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'redhen_donation';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Donation: RedHen Campaign Context Entity ID */
+  /* Contextual filter: Broken/missing handler */
   $handler->display->display_options['arguments']['redhen_campaign_context_id']['id'] = 'redhen_campaign_context_id';
   $handler->display->display_options['arguments']['redhen_campaign_context_id']['table'] = 'redhen_donation';
   $handler->display->display_options['arguments']['redhen_campaign_context_id']['field'] = 'redhen_campaign_context_id';
@@ -78,7 +78,7 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['arguments']['redhen_campaign_context_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['redhen_campaign_context_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['redhen_campaign_context_id']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Donation: RedHen Campaign Context Entity Type */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['redhen_campaign_context_type']['id'] = 'redhen_campaign_context_type';
   $handler->display->display_options['filters']['redhen_campaign_context_type']['table'] = 'redhen_donation';
   $handler->display->display_options['filters']['redhen_campaign_context_type']['field'] = 'redhen_campaign_context_type';
@@ -225,7 +225,7 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'view all';
   $handler->display->display_options['link_display'] = 'page';
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['access']['perm'] = 'access redhen campaign pages';
+  $handler->display->display_options['access']['perm'] = 'view redhen campaign pages';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';

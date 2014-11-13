@@ -13,14 +13,19 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'access checkout'.
   $permissions['access checkout'] = array(
     'name' => 'access checkout',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'commerce_checkout',
   );
 
   // Exported permission: 'administer card data'.
   $permissions['administer card data'] = array(
     'name' => 'administer card data',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_cardonfile',
   );
 
@@ -76,7 +81,9 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'administer line items'.
   $permissions['administer line items'] = array(
     'name' => 'administer line items',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_line_item',
   );
 
@@ -84,6 +91,7 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   $permissions['administer own redhen_raiser_donation redhen donation'] = array(
     'name' => 'administer own redhen_raiser_donation redhen donation',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'redhen_donation',
@@ -92,14 +100,18 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'administer payment methods'.
   $permissions['administer payment methods'] = array(
     'name' => 'administer payment methods',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_payment',
   );
 
   // Exported permission: 'administer payments'.
   $permissions['administer payments'] = array(
     'name' => 'administer payments',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_payment',
   );
 
@@ -113,14 +125,18 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'administer redhen donation types'.
   $permissions['administer redhen donation types'] = array(
     'name' => 'administer redhen donation types',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'redhen_donation',
   );
 
   // Exported permission: 'administer redhen donations'.
   $permissions['administer redhen donations'] = array(
     'name' => 'administer redhen donations',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'redhen_donation',
   );
 
@@ -128,6 +144,7 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   $permissions['administer redhen_raiser_donation redhen donation'] = array(
     'name' => 'administer redhen_raiser_donation redhen donation',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'redhen_donation',
@@ -157,7 +174,9 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'create any card data'.
   $permissions['create any card data'] = array(
     'name' => 'create any card data',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_cardonfile',
   );
 
@@ -185,7 +204,9 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'create commerce_order entities of bundle commerce_order'.
   $permissions['create commerce_order entities of bundle commerce_order'] = array(
     'name' => 'create commerce_order entities of bundle commerce_order',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_order',
   );
 
@@ -241,14 +262,18 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'create own card data'.
   $permissions['create own card data'] = array(
     'name' => 'create own card data',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'commerce_cardonfile',
   );
 
   // Exported permission: 'create payments'.
   $permissions['create payments'] = array(
     'name' => 'create payments',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_payment',
   );
 
@@ -265,42 +290,54 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'delete any card data'.
   $permissions['delete any card data'] = array(
     'name' => 'delete any card data',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_cardonfile',
   );
 
   // Exported permission: 'delete any redhen_raiser_donation redhen donation'.
   $permissions['delete any redhen_raiser_donation redhen donation'] = array(
     'name' => 'delete any redhen_raiser_donation redhen donation',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'redhen_donation',
   );
 
   // Exported permission: 'delete own card data'.
   $permissions['delete own card data'] = array(
     'name' => 'delete own card data',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'commerce_cardonfile',
   );
 
   // Exported permission: 'delete own redhen_raiser_donation redhen donation'.
   $permissions['delete own redhen_raiser_donation redhen donation'] = array(
     'name' => 'delete own redhen_raiser_donation redhen donation',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'redhen_donation',
   );
 
   // Exported permission: 'delete payments'.
   $permissions['delete payments'] = array(
     'name' => 'delete payments',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_payment',
   );
 
   // Exported permission: 'edit any card data'.
   $permissions['edit any card data'] = array(
     'name' => 'edit any card data',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_cardonfile',
   );
 
@@ -321,14 +358,18 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'edit any commerce_order entity'.
   $permissions['edit any commerce_order entity'] = array(
     'name' => 'edit any commerce_order entity',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_order',
   );
 
   // Exported permission: 'edit any commerce_order entity of bundle commerce_order'.
   $permissions['edit any commerce_order entity of bundle commerce_order'] = array(
     'name' => 'edit any commerce_order entity of bundle commerce_order',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_order',
   );
 
@@ -384,7 +425,9 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'edit own card data'.
   $permissions['edit own card data'] = array(
     'name' => 'edit own card data',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'commerce_cardonfile',
   );
 
@@ -405,14 +448,18 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'edit own commerce_order entities'.
   $permissions['edit own commerce_order entities'] = array(
     'name' => 'edit own commerce_order entities',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_order',
   );
 
   // Exported permission: 'edit own commerce_order entities of bundle commerce_order'.
   $permissions['edit own commerce_order entities of bundle commerce_order'] = array(
     'name' => 'edit own commerce_order entities of bundle commerce_order',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_order',
   );
 
@@ -468,28 +515,36 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'update any redhen_raiser_donation redhen donation'.
   $permissions['update any redhen_raiser_donation redhen donation'] = array(
     'name' => 'update any redhen_raiser_donation redhen donation',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'redhen_donation',
   );
 
   // Exported permission: 'update own redhen_raiser_donation redhen donation'.
   $permissions['update own redhen_raiser_donation redhen donation'] = array(
     'name' => 'update own redhen_raiser_donation redhen donation',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'redhen_donation',
   );
 
   // Exported permission: 'update payments'.
   $permissions['update payments'] = array(
     'name' => 'update payments',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_payment',
   );
 
   // Exported permission: 'view any card data'.
   $permissions['view any card data'] = array(
     'name' => 'view any card data',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_cardonfile',
   );
 
@@ -510,14 +565,18 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'view any commerce_order entity'.
   $permissions['view any commerce_order entity'] = array(
     'name' => 'view any commerce_order entity',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_order',
   );
 
   // Exported permission: 'view any commerce_order entity of bundle commerce_order'.
   $permissions['view any commerce_order entity of bundle commerce_order'] = array(
     'name' => 'view any commerce_order entity of bundle commerce_order',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_order',
   );
 
@@ -573,7 +632,9 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'view own card data'.
   $permissions['view own card data'] = array(
     'name' => 'view own card data',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'commerce_cardonfile',
   );
 
@@ -594,14 +655,20 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'view own commerce_order entities'.
   $permissions['view own commerce_order entities'] = array(
     'name' => 'view own commerce_order entities',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
+    ),
     'module' => 'commerce_order',
   );
 
   // Exported permission: 'view own commerce_order entities of bundle commerce_order'.
   $permissions['view own commerce_order entities of bundle commerce_order'] = array(
     'name' => 'view own commerce_order entities of bundle commerce_order',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'commerce_order',
   );
 
@@ -666,14 +733,18 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   // Exported permission: 'view payments'.
   $permissions['view payments'] = array(
     'name' => 'view payments',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'commerce_payment',
   );
 
   // Exported permission: 'view redhen_raiser_donation redhen donation'.
   $permissions['view redhen_raiser_donation redhen donation'] = array(
     'name' => 'view redhen_raiser_donation redhen donation',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'redhen_donation',
   );
 

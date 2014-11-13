@@ -13,7 +13,10 @@ function redhen_raiser_crm_access_user_default_permissions() {
   // Exported permission: 'access redhen'.
   $permissions['access redhen'] = array(
     'name' => 'access redhen',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+      'editor' => 'editor',
+    ),
     'module' => 'redhen',
   );
 
@@ -21,6 +24,7 @@ function redhen_raiser_crm_access_user_default_permissions() {
   $permissions['access redhen contacts'] = array(
     'name' => 'access redhen contacts',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'redhen_contact',
@@ -36,7 +40,9 @@ function redhen_raiser_crm_access_user_default_permissions() {
   // Exported permission: 'administer redhen contacts'.
   $permissions['administer redhen contacts'] = array(
     'name' => 'administer redhen contacts',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'redhen_contact',
   );
 
@@ -50,7 +56,9 @@ function redhen_raiser_crm_access_user_default_permissions() {
   // Exported permission: 'delete redhen contact revisions'.
   $permissions['delete redhen contact revisions'] = array(
     'name' => 'delete redhen contact revisions',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'redhen_contact',
   );
 
@@ -66,7 +74,9 @@ function redhen_raiser_crm_access_user_default_permissions() {
   // Exported permission: 'edit redhen contact revisions'.
   $permissions['edit redhen contact revisions'] = array(
     'name' => 'edit redhen contact revisions',
-    'roles' => array(),
+    'roles' => array(
+      'admin' => 'admin',
+    ),
     'module' => 'redhen_contact',
   );
 
@@ -74,6 +84,7 @@ function redhen_raiser_crm_access_user_default_permissions() {
   $permissions['manage redhen contacts'] = array(
     'name' => 'manage redhen contacts',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'redhen_contact',
@@ -92,6 +103,7 @@ function redhen_raiser_crm_access_user_default_permissions() {
   $permissions['view redhen contact revisions'] = array(
     'name' => 'view redhen contact revisions',
     'roles' => array(
+      'admin' => 'admin',
       'editor' => 'editor',
     ),
     'module' => 'redhen_contact',

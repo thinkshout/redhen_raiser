@@ -23,8 +23,10 @@ function redhen_raiser_donations_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Donations';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'access redhen campaign pages';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -78,45 +80,21 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['fields']['field_billing_address_postal_code']['field'] = 'field_billing_address_postal_code';
   $handler->display->display_options['fields']['field_billing_address_postal_code']['relationship'] = 'contact';
   $handler->display->display_options['fields']['field_billing_address_postal_code']['label'] = 'Zip Code';
-  /* Filter criterion: Donation: Amount received. */
-  $handler->display->display_options['filters']['received']['id'] = 'received';
-  $handler->display->display_options['filters']['received']['table'] = 'redhen_donation';
-  $handler->display->display_options['filters']['received']['field'] = 'received';
-  $handler->display->display_options['filters']['received']['operator'] = 'between';
-  $handler->display->display_options['filters']['received']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['received']['expose']['operator_id'] = 'received_op';
-  $handler->display->display_options['filters']['received']['expose']['label'] = 'Amount received.';
-  $handler->display->display_options['filters']['received']['expose']['operator'] = 'received_op';
-  $handler->display->display_options['filters']['received']['expose']['identifier'] = 'received';
-  $handler->display->display_options['filters']['received']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['received']['expose']['remember_roles'] = array(
-    2 => 0,
-    4 => '4',
-    3 => '3',
-    1 => 0,
-  );
-  /* Filter criterion: Donation: Date created */
-  $handler->display->display_options['filters']['created']['id'] = 'created';
-  $handler->display->display_options['filters']['created']['table'] = 'redhen_donation';
-  $handler->display->display_options['filters']['created']['field'] = 'created';
-  $handler->display->display_options['filters']['created']['operator'] = 'between';
-  $handler->display->display_options['filters']['created']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['created']['expose']['operator_id'] = 'created_op';
-  $handler->display->display_options['filters']['created']['expose']['label'] = 'Date created';
-  $handler->display->display_options['filters']['created']['expose']['description'] = 'A date in any machine readable format. CCYY-MM-DD HH:MM:SS is preferred.';
-  $handler->display->display_options['filters']['created']['expose']['operator'] = 'created_op';
-  $handler->display->display_options['filters']['created']['expose']['identifier'] = 'created';
-  $handler->display->display_options['filters']['created']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['created']['expose']['remember_roles'] = array(
-    2 => 0,
-    4 => '4',
-    3 => '3',
-    1 => 0,
-  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'redhen/donations';
+
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'feed_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'xls';
+  $handler->display->display_options['style_options']['filename'] = '%view.xls';
+  $handler->display->display_options['path'] = 'redhen/donations/xls';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+  );
   $export['donations'] = $view;
 
   $view = new view();

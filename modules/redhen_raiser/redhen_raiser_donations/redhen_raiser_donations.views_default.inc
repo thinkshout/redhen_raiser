@@ -37,6 +37,14 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['relationships']['contact']['id'] = 'contact';
   $handler->display->display_options['relationships']['contact']['table'] = 'redhen_donation';
   $handler->display->display_options['relationships']['contact']['field'] = 'contact';
+  /* Relationship: Donation: RedHen Campaign Context */
+  $handler->display->display_options['relationships']['redhen_campaign_context']['id'] = 'redhen_campaign_context';
+  $handler->display->display_options['relationships']['redhen_campaign_context']['table'] = 'redhen_donation';
+  $handler->display->display_options['relationships']['redhen_campaign_context']['field'] = 'redhen_campaign_context';
+  /* Relationship: Donation: RedHen Campaign Page Context */
+  $handler->display->display_options['relationships']['redhen_campaign_page_context']['id'] = 'redhen_campaign_page_context';
+  $handler->display->display_options['relationships']['redhen_campaign_page_context']['table'] = 'redhen_donation';
+  $handler->display->display_options['relationships']['redhen_campaign_page_context']['field'] = 'redhen_campaign_page_context';
   /* Field: Donation: Donation ID */
   $handler->display->display_options['fields']['donation_id']['id'] = 'donation_id';
   $handler->display->display_options['fields']['donation_id']['table'] = 'redhen_donation';
@@ -80,6 +88,21 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['fields']['field_billing_address_postal_code']['field'] = 'field_billing_address_postal_code';
   $handler->display->display_options['fields']['field_billing_address_postal_code']['relationship'] = 'contact';
   $handler->display->display_options['fields']['field_billing_address_postal_code']['label'] = 'Zip Code';
+  /* Field: RedHen Campaign: Campaign Name */
+  $handler->display->display_options['fields']['label']['id'] = 'label';
+  $handler->display->display_options['fields']['label']['table'] = 'redhen_campaign';
+  $handler->display->display_options['fields']['label']['field'] = 'label';
+  $handler->display->display_options['fields']['label']['relationship'] = 'redhen_campaign_context';
+  /* Field: RedHen Campaign Page: Type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'redhen_campaign_page';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['relationship'] = 'redhen_campaign_page_context';
+  /* Field: RedHen Campaign Page: Campaign Page Name */
+  $handler->display->display_options['fields']['label_1']['id'] = 'label_1';
+  $handler->display->display_options['fields']['label_1']['table'] = 'redhen_campaign_page';
+  $handler->display->display_options['fields']['label_1']['field'] = 'label';
+  $handler->display->display_options['fields']['label_1']['relationship'] = 'redhen_campaign_page_context';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');

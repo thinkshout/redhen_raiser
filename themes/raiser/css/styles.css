@@ -2179,14 +2179,25 @@ footer #colophon a:hover {
   color: white;
 }
 
-/* line 56, ../sass/components/_forms.scss */
+@media (min-width: 320px) and (max-width: 480px) {
+  /* line 54, ../sass/components/_forms.scss */
+  #edit-submit, #edit-cancel {
+    float: none;
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* line 66, ../sass/components/_forms.scss */
 #user-register-form #edit-submit,
 #user-pass #edit-submit {
   padding: 0.8em 1em;
 }
 
 @media (min-width: 992px) {
-  /* line 63, ../sass/components/_forms.scss */
+  /* line 73, ../sass/components/_forms.scss */
   form[id^="redhen-campaign-page-add-form"],
   form[id^="redhen-campaign-campaign-form"],
   form[id^="redhen-campaign-campaign-page-form"] {
@@ -2197,7 +2208,7 @@ footer #colophon a:hover {
     width: 70%;
   }
 }
-/* line 68, ../sass/components/_forms.scss */
+/* line 78, ../sass/components/_forms.scss */
 form[id^="redhen-campaign-page-add-form"] .field-name-redhen-campaign-goal,
 form[id^="redhen-campaign-campaign-form"] .field-name-redhen-campaign-goal,
 form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal {
@@ -2205,7 +2216,7 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   font-size: 1em;
   padding-left: 0em;
 }
-/* line 72, ../sass/components/_forms.scss */
+/* line 82, ../sass/components/_forms.scss */
 form[id^="redhen-campaign-page-add-form"] .field-name-redhen-campaign-goal .field-prefix,
 form[id^="redhen-campaign-campaign-form"] .field-name-redhen-campaign-goal .field-prefix,
 form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal .field-prefix {
@@ -2213,29 +2224,29 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   font-size: 1.375em;
   line-height: 1.75em;
 }
-/* line 77, ../sass/components/_forms.scss */
+/* line 87, ../sass/components/_forms.scss */
 form[id^="redhen-campaign-page-add-form"] .field-name-redhen-campaign-goal input[id^="edit-redhen-campaign-goal-und-0-value"],
 form[id^="redhen-campaign-campaign-form"] .field-name-redhen-campaign-goal input[id^="edit-redhen-campaign-goal-und-0-value"],
 form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal input[id^="edit-redhen-campaign-goal-und-0-value"] {
   float: right;
   width: 97%;
 }
-@media (max-width: 480px) {
-  /* line 77, ../sass/components/_forms.scss */
+@media (min-width: 320px) and (max-width: 480px) {
+  /* line 87, ../sass/components/_forms.scss */
   form[id^="redhen-campaign-page-add-form"] .field-name-redhen-campaign-goal input[id^="edit-redhen-campaign-goal-und-0-value"],
   form[id^="redhen-campaign-campaign-form"] .field-name-redhen-campaign-goal input[id^="edit-redhen-campaign-goal-und-0-value"],
   form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal input[id^="edit-redhen-campaign-goal-und-0-value"] {
     width: 91%;
   }
 }
-/* line 85, ../sass/components/_forms.scss */
+/* line 95, ../sass/components/_forms.scss */
 form[id^="redhen-campaign-page-add-form"] .field-name-redhen-campaign-goal .description,
 form[id^="redhen-campaign-campaign-form"] .field-name-redhen-campaign-goal .description,
 form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal .description {
   clear: both;
 }
 
-/* line 95, ../sass/components/_forms.scss */
+/* line 105, ../sass/components/_forms.scss */
 #edit-field-start-date,
 #edit-field-end-date,
 .main-content-wrapper .field-name-field-end-date,
@@ -2245,8 +2256,8 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   margin-left: 0;
   margin-top: 0;
 }
-@media (max-width: 480px) {
-  /* line 95, ../sass/components/_forms.scss */
+@media (min-width: 320px) and (max-width: 480px) {
+  /* line 105, ../sass/components/_forms.scss */
   #edit-field-start-date,
   #edit-field-end-date,
   .main-content-wrapper .field-name-field-end-date,
@@ -2254,7 +2265,7 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
     clear: left;
     width: 100%;
   }
-  /* line 104, ../sass/components/_forms.scss */
+  /* line 114, ../sass/components/_forms.scss */
   #edit-field-start-date input[type=text],
   #edit-field-end-date input[type=text],
   .main-content-wrapper .field-name-field-end-date input[type=text],
@@ -2262,7 +2273,7 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
     width: 100%;
   }
 }
-/* line 107, ../sass/components/_forms.scss */
+/* line 117, ../sass/components/_forms.scss */
 #edit-field-start-date fieldset,
 #edit-field-end-date fieldset,
 .main-content-wrapper .field-name-field-end-date fieldset,
@@ -2271,7 +2282,7 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   padding: 0;
   margin: 0;
 }
-/* line 112, ../sass/components/_forms.scss */
+/* line 122, ../sass/components/_forms.scss */
 #edit-field-start-date .container-inline-date .date-padding,
 #edit-field-end-date .container-inline-date .date-padding,
 .main-content-wrapper .field-name-field-end-date .container-inline-date .date-padding,
@@ -2279,15 +2290,15 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   padding: 0;
   width: 100%;
 }
-/* line 116, ../sass/components/_forms.scss */
+/* line 126, ../sass/components/_forms.scss */
 #edit-field-start-date .container-inline-date .form-item,
 #edit-field-end-date .container-inline-date .form-item,
 .main-content-wrapper .field-name-field-end-date .container-inline-date .form-item,
 .main-content-wrapper .field-name-field-start-date .container-inline-date .form-item {
   margin-bottom: 0;
 }
-@media (max-width: 480px) {
-  /* line 116, ../sass/components/_forms.scss */
+@media (min-width: 320px) and (max-width: 480px) {
+  /* line 126, ../sass/components/_forms.scss */
   #edit-field-start-date .container-inline-date .form-item,
   #edit-field-end-date .container-inline-date .form-item,
   .main-content-wrapper .field-name-field-end-date .container-inline-date .form-item,
@@ -2295,7 +2306,7 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
     width: 100%;
   }
 }
-/* line 122, ../sass/components/_forms.scss */
+/* line 132, ../sass/components/_forms.scss */
 #edit-field-start-date .form-item label,
 #edit-field-end-date .form-item label,
 .main-content-wrapper .field-name-field-end-date .form-item label,
@@ -2303,7 +2314,7 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   display: none;
 }
 
-/* line 128, ../sass/components/_forms.scss */
+/* line 138, ../sass/components/_forms.scss */
 .form-radio,
 .form-type-radio {
   background: none;
@@ -2335,12 +2346,12 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   border: 3px solid #90c965;
   color: white;
 }
-/* line 133, ../sass/components/_forms.scss */
+/* line 143, ../sass/components/_forms.scss */
 .form-radio input,
 .form-type-radio input {
   display: none;
 }
-/* line 136, ../sass/components/_forms.scss */
+/* line 146, ../sass/components/_forms.scss */
 .form-radio .ajax-progress-throbber,
 .form-type-radio .ajax-progress-throbber {
   position: absolute;
@@ -2349,12 +2360,12 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   left: 26%;
   font-size: 0.875em;
 }
-/* line 143, ../sass/components/_forms.scss */
+/* line 153, ../sass/components/_forms.scss */
 .form-radio label,
 .form-type-radio label {
   cursor: pointer;
 }
-/* line 146, ../sass/components/_forms.scss */
+/* line 156, ../sass/components/_forms.scss */
 .form-radio.checked,
 .form-type-radio.checked {
   background: #5e9733;
@@ -2362,13 +2373,14 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   color: white;
   cursor: default;
 }
-/* line 151, ../sass/components/_forms.scss */
+/* line 161, ../sass/components/_forms.scss */
 .form-radio.checked label,
 .form-type-radio.checked label {
   cursor: default;
 }
 
-/* line 159, ../sass/components/_forms.scss */
+/* line 170, ../sass/components/_forms.scss */
+.page-fundraise #main #content,
 .page-user #main #content,
 .page-user-edit #main #content {
   -webkit-box-shadow: 0 3px 5px #989898;
@@ -2574,7 +2586,7 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   font-size: 1em;
   margin-top: 0;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   /* line 98, ../sass/components/_fundraise-workflow.scss */
   .page-redhen-campaign-add-general .field-type-datetime#edit-field-end-date,
   .page-redhen-campaign-page-edit .field-type-datetime#edit-field-end-date,
@@ -3852,7 +3864,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1415813801');
+  background-image: url('../images/progress.gif?1415641739');
 }
 
 /* line 1, ../sass/components/_modal.scss */

@@ -51,6 +51,16 @@
   padding: 0.6em 1em;
 }
 
+#edit-submit, #edit-cancel {
+  @include xsmall {
+    float: none; 
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+    width: 100%;
+  }
+}
+
 #user-register-form,
 #user-pass {
   #edit-submit {
@@ -154,6 +164,7 @@ form[id^="redhen-campaign-campaign-page-form"] {
   }
 }
 
+.page-fundraise,
 .page-user,
 .page-user-edit {
   #main #content {

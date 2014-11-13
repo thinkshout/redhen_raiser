@@ -86,7 +86,7 @@ dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
-dependencies[] = views_export_xls
+dependencies[] = views_data_export
 dependencies[] = views_infinite_scroll
 
 ; RedHen Raiser

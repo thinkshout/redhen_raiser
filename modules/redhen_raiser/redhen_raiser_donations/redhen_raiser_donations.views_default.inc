@@ -85,12 +85,18 @@ function redhen_raiser_donations_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'redhen/donations';
 
-  /* Display: Feed */
-  $handler = $view->new_display('feed', 'Feed', 'feed_1');
+  /* Display: Data export */
+  $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['style_plugin'] = 'xls';
-  $handler->display->display_options['style_options']['filename'] = '%view.xls';
-  $handler->display->display_options['path'] = 'redhen/donations/xls';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 1;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['quote'] = 1;
+  $handler->display->display_options['style_options']['trim'] = 0;
+  $handler->display->display_options['style_options']['replace_newlines'] = 0;
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['style_options']['keep_html'] = 0;
+  $handler->display->display_options['path'] = 'redhen/donations/csv';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,

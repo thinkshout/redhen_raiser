@@ -46,12 +46,25 @@ function redhen_raiser_contacts_entity_view_alter(&$build, $type) {
         $style = 'snippet_tile';
         break;
     }
-    if ($add_picture && $user->picture) {
-      $build['avatar'] = array(
-        '#theme' => 'image_style',
-        '#path' => $user->picture->uri,
-        '#style_name' => $style,
-      );
+    if ($add_picture) {
+      $uri = FALSE;
+      if (isset($user->picture->uri)) {
+        $uri = $user->picture->uri;
+      }
+      else {
+        $default = variable_get('user_picture_default');
+        $val = str_replace('/sites/default/files/', '', $default, $count);
+        if ($count) {
+          $uri = $val;
+        }
+      }
+      if ($uri) {
+        $build['avatar'] = array(
+          '#theme' => 'image_style',
+          '#path' => $uri,
+          '#style_name' => $style,
+        );
+      }
     }
   }
 }

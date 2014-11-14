@@ -1,5 +1,5 @@
 name = RedHen Raiser Blocks & Widgets
-description = Basic blocks and widgets for use on the site. Can be disabled if RedHen Raiser Context is also disabled.
+description = Basic blocks and widgets for use on the site. Can be disabled if RedHen Raiser Context & Layout is also disabled.
 core = 7.x
 package = RedHen Raiser
 version = 7.x-1.0-alpha1

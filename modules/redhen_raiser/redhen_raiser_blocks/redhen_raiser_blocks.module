@@ -7,6 +7,64 @@
 include_once 'redhen_raiser_blocks.features.inc';
 
 /**
+ * Implements hook_block_info().
+ */
+function redhen_raiser_blocks_block_info() {
+  $blocks = array();
+
+  $blocks['branding'] = array(
+    'info' => t('Branding'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function redhen_raiser_blocks_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'branding':
+      $block['content'] = array();
+      $logo = theme_get_setting('logo');
+      if ($logo) {
+        $image = theme('image', array(
+          'path' => $logo,
+          'alt' => variable_get('site_name'),
+          'attributes' => array(
+            'class' => 'header__logo-image',
+          )));
+        $block['content']['logo'] = array(
+          '#type'    => 'link',
+          '#title'   => $image,
+          '#href'    => 'home',
+          '#options' => array(
+            'html' => TRUE,
+            'attributes' => array(
+              'class' => 'header__logo',
+              'id' => 'logo',
+            ),
+          ),
+        );
+      }
+      $slogan = variable_get('site_slogan');
+      if ($slogan) {
+        $block['content']['slogan'] = array(
+          '#markup' => '<p class="tagline">' . $slogan . '</p>',
+        );
+      }
+      break;
+
+  }
+
+  return $block;
+}
+
+
+/**
  * Implements hook_entity_view_alter().
  */
 function redhen_raiser_blocks_entity_view_alter(&$build, $type) {
@@ -42,6 +100,9 @@ function redhen_raiser_blocks_entity_view_alter(&$build, $type) {
   }
 }
 
+/**
+ * Helper function to format start and end dates.
+ */
 function _redhen_raiser_blocks_format_dates(&$build) {
   if (isset($build['field_start_date'])) {
     $start = strtotime($build['field_start_date']['#items'][0]['value']);
@@ -89,22 +150,22 @@ function redhen_raiser_blocks_create_default_blocks() {
           array(
             'url' => 'http://www.twitter.com',
             'title' => 'Twitter',
-            'attributes' => array('class' => 'twitter-link'),
+            'attributes' => array('class' => array('twitter-link')),
           ),
           array(
             'url' => 'http://www.facebook.com',
             'title' => 'Facebook',
-            'attributes' => array('class' => 'facebook-link'),
+            'attributes' => array('class' => array('facebook-link')),
           ),
           array(
             'url' => 'http://www.linkedin.com',
             'title' => 'LinkedIn',
-            'attributes' => array('class' => 'linkedin-link'),
+            'attributes' => array('class' => array('linkedin-link')),
           ),
           array(
             'url' => 'http://plus.google.com',
             'title' => 'Google+',
-            'attributes' => array('class' => 'googleplus-link'),
+            'attributes' => array('class' => array('googleplus-link')),
           ),
         ),
       ),
@@ -199,5 +260,15 @@ function redhen_raiser_create_beans($stubbed_beans) {
       }
     }
     $new_bean->save();
+  }
+}
+
+/**
+ * Implements hook_block_view_MODULE_DELTA_alter().
+ */
+function redhen_raiser_blocks_block_view_bean_social_media_links_alter(&$data, $block) {
+  $data['content']['bean']['social_media_links']['field_links']['#theme'] = 'item_list';
+  foreach ($data['content']['bean']['social_media_links']['field_links']['#items'] as &$item) {
+    $item = theme_link_formatter_link_default(array('element' => $item));
   }
 }

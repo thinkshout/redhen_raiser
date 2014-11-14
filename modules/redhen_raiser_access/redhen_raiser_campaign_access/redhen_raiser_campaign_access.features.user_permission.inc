@@ -22,6 +22,7 @@ function redhen_raiser_campaign_access_user_default_permissions() {
     'name' => 'administer redhen campaign pages',
     'roles' => array(
       'admin' => 'admin',
+      'editor' => 'editor',
     ),
     'module' => 'redhen_campaign',
   );
@@ -48,6 +49,7 @@ function redhen_raiser_campaign_access_user_default_permissions() {
     'name' => 'administer redhen campaigns',
     'roles' => array(
       'admin' => 'admin',
+      'editor' => 'editor',
     ),
     'module' => 'redhen_campaign',
   );

@@ -3,3 +3,11 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Implements hook_menu_alter().
+ */
+function redhen_raiser_content_access_menu_alter(&$items) {
+  $items['admin/config/media/browser']['access arguments'][0] = 'administer site configuration';
+  $items['admin/config/media/rebuild_types']['access arguments'][0] = 'administer site configuration';
+}

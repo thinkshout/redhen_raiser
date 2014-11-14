@@ -3,3 +3,12 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Implements hook_menu_alter().
+ */
+function redhen_raiser_commerce_access_menu_alter(&$items) {
+  // Don't show commerce top-level menu to people who can't do anything with it.
+  $items['admin/commerce']['access arguments'][0] = 'configure store';
+  $items['admin/commerce/config']['access arguments'][0] = 'configure store';
+}

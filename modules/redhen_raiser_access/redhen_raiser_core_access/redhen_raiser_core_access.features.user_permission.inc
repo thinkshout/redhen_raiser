@@ -193,6 +193,7 @@ function redhen_raiser_core_access_user_default_permissions() {
     'name' => 'administer media',
     'roles' => array(
       'admin' => 'admin',
+      'editor' => 'editor',
     ),
     'module' => 'media',
   );

@@ -49,22 +49,26 @@
   @include muted-btn;
   float: right;
   padding: 0.6em 1em;
+  box-sizing: border-box;
+  height: em(50);
 }
 
 #edit-submit, #edit-cancel {
   @include xsmall {
-    float: none; 
+    float: none;
     display: block;
     margin-bottom: 1em;
     text-align: center;
     width: 100%;
+    clear: both;
   }
 }
 
 #user-register-form,
 #user-pass {
   #edit-submit {
-    padding: 0.8em 1em; 
+    padding: 0.8em 1em;
+    float: left;
   }
 }
 
@@ -89,7 +93,7 @@ form[id^="redhen-campaign-campaign-page-form"] {
       width: 97%;
 
       @include xsmall {
-        width: 91%; 
+        width: 91%;
       }
     }
     .description {

@@ -3880,7 +3880,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1416000339');
+  background-image: url('../images/progress.gif?1415918639');
 }
 
 /* line 1, ../sass/components/_modal.scss */
@@ -4198,7 +4198,7 @@ tr.selected td {
   #block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update h2,
   .view-campaign-updates .node-campaign-update h2,
   .node-type-campaign-update .node-campaign-update .node-campaign-update h2 {
-    position: absolute;
+    margin-bottom: 0.5em;
   }
 }
 /* line 18, ../sass/components/_updates.scss */
@@ -4215,7 +4215,40 @@ tr.selected td {
 .node-type-campaign-update .node-campaign-update .node-campaign-update h2 a:hover {
   text-decoration: underline;
 }
-/* line 26, ../sass/components/_updates.scss */
+/* line 25, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update ol, #block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update ul,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update ol,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update ul,
+.view-campaign-updates .node-campaign-update ol,
+.view-campaign-updates .node-campaign-update ul,
+.node-type-campaign-update .node-campaign-update .node-campaign-update ol,
+.node-type-campaign-update .node-campaign-update .node-campaign-update ul {
+  margin: 0 0 1em 0;
+  left: 1.25em;
+  line-height: 1.2;
+  position: relative;
+}
+/* line 30, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update ol li, #block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update ul li,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update ol li,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update ul li,
+.view-campaign-updates .node-campaign-update ol li,
+.view-campaign-updates .node-campaign-update ul li,
+.node-type-campaign-update .node-campaign-update .node-campaign-update ol li,
+.node-type-campaign-update .node-campaign-update .node-campaign-update ul li {
+  font-size: 0.9375em;
+  list-style-position: outside;
+  margin-bottom: 0.1875em;
+  margin-left: 0;
+}
+/* line 38, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update p,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update p,
+.view-campaign-updates .node-campaign-update p,
+.node-type-campaign-update .node-campaign-update .node-campaign-update p {
+  margin: 0 0 1em 0;
+}
+/* line 42, ../sass/components/_updates.scss */
 #block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update img,
 #block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update img,
 .view-campaign-updates .node-campaign-update img,
@@ -4226,19 +4259,16 @@ tr.selected td {
   -o-border-radius: 8px;
   border-radius: 8px;
   float: left;
-  margin-top: 2.8125em;
   margin-right: 0.5em;
 }
-@media (min-width: 992px) {
-  /* line 33, ../sass/components/_updates.scss */
-  #block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update .field-name-body,
-  #block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update .field-name-body,
-  .view-campaign-updates .node-campaign-update .field-name-body,
-  .node-type-campaign-update .node-campaign-update .node-campaign-update .field-name-body {
-    padding-top: 1em;
-  }
+/* line 54, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update ul.links,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update ul.links,
+.view-campaign-updates .node-campaign-update ul.links,
+.node-type-campaign-update .node-campaign-update .node-campaign-update ul.links {
+  left: 0;
 }
-/* line 39, ../sass/components/_updates.scss */
+/* line 58, ../sass/components/_updates.scss */
 #block-redhen-raiser-campaign-updates-campaign-updates .entity-redhen-contact img,
 #block-redhen-raiser-campaign-updates-campaign-page-updates .entity-redhen-contact img,
 .view-campaign-updates .entity-redhen-contact img,

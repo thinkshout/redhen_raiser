@@ -36,27 +36,32 @@
 
   .entity-redhen-campaign-page {
     font-size: em(14);
-    min-height: em(65);
+    min-height: em(75);
     position: relative;
+    .entity-redhen-contact {
+      position: absolute;
+      width: em(42);
+      height: em(42);
+    }
+
   }
   .redhen_campaign_page_title {
-    left: em(64);
+    padding-left: em(56);
+    margin-bottom: em(4);
     margin-top: 0;
-    position: absolute;
-    top: 0;
+    line-height: 1;
     z-index: 10;
     a {
       color: $black;
+    }
+    &.clearfix:after {
+      content: "";
     }
   }
   .field-name-redhen-campaign-goal {
     color: $black;
     font-size: em(16);
-    left: em(64);
-    padding-left: 0;
-    padding-top: em(24);
-    position: absolute;
-    top: em(0);
+    padding-left: em(56);
     .rhc_progress {
       display: inline-block;
       font-size: em(16);

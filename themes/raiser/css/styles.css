@@ -3980,6 +3980,7 @@ tr.selected td {
 
 /* line 135, ../sass/_mixins.scss */
 .page-user-my-pages table,
+.page-user-my-donations table,
 .page-user-orders table,
 .page-redhen-campaign-donations table,
 .page-redhen-campaign-update table,
@@ -3988,6 +3989,7 @@ tr.selected td {
 }
 /* line 138, ../sass/_mixins.scss */
 .page-user-my-pages th,
+.page-user-my-donations th,
 .page-user-orders th,
 .page-redhen-campaign-donations th,
 .page-redhen-campaign-update th,
@@ -3997,6 +3999,7 @@ tr.selected td {
 }
 /* line 142, ../sass/_mixins.scss */
 .page-user-my-pages tr.odd,
+.page-user-my-donations tr.odd,
 .page-user-orders tr.odd,
 .page-redhen-campaign-donations tr.odd,
 .page-redhen-campaign-update tr.odd,
@@ -4006,6 +4009,7 @@ tr.selected td {
 }
 /* line 146, ../sass/_mixins.scss */
 .page-user-my-pages tr.even,
+.page-user-my-donations tr.even,
 .page-user-orders tr.even,
 .page-redhen-campaign-donations tr.even,
 .page-redhen-campaign-update tr.even,
@@ -4014,6 +4018,7 @@ tr.selected td {
 }
 /* line 149, ../sass/_mixins.scss */
 .page-user-my-pages td,
+.page-user-my-donations td,
 .page-user-orders td,
 .page-redhen-campaign-donations td,
 .page-redhen-campaign-update td,
@@ -4022,8 +4027,9 @@ tr.selected td {
   text-align: left;
   font-size: 0.875em;
 }
-/* line 9, ../sass/components/_my_pages.scss */
+/* line 10, ../sass/components/_my_pages.scss */
 .page-user-my-pages .main-content-wrapper,
+.page-user-my-donations .main-content-wrapper,
 .page-user-orders .main-content-wrapper,
 .page-redhen-campaign-donations .main-content-wrapper,
 .page-redhen-campaign-update .main-content-wrapper,
@@ -4031,7 +4037,7 @@ tr.selected td {
   width: 98%;
 }
 
-/* line 13, ../sass/components/_my_pages.scss */
+/* line 14, ../sass/components/_my_pages.scss */
 .profile .user-picture {
   float: none;
   position: absolute;

@@ -4223,9 +4223,9 @@ tr.selected td {
 .view-campaign-updates .node-campaign-update ul,
 .node-type-campaign-update .node-campaign-update .node-campaign-update ol,
 .node-type-campaign-update .node-campaign-update .node-campaign-update ul {
-  margin: 0 0 1em 0;
   left: 1.25em;
   line-height: 1.2;
+  margin: 0 0 1em 0;
   position: relative;
 }
 /* line 30, ../sass/components/_updates.scss */
@@ -4261,14 +4261,14 @@ tr.selected td {
   float: left;
   margin-right: 0.5em;
 }
-/* line 54, ../sass/components/_updates.scss */
+/* line 52, ../sass/components/_updates.scss */
 #block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update ul.links,
 #block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update ul.links,
 .view-campaign-updates .node-campaign-update ul.links,
 .node-type-campaign-update .node-campaign-update .node-campaign-update ul.links {
   left: 0;
 }
-/* line 58, ../sass/components/_updates.scss */
+/* line 56, ../sass/components/_updates.scss */
 #block-redhen-raiser-campaign-updates-campaign-updates .entity-redhen-contact img,
 #block-redhen-raiser-campaign-updates-campaign-page-updates .entity-redhen-contact img,
 .view-campaign-updates .entity-redhen-contact img,

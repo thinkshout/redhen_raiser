@@ -153,12 +153,13 @@ This link expires in one day and nothing will happen if it is not used.
   $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_password_reset_body';
   $strongarm->value = '<p>A request to reset the password for your account has been made at [site:name].</p>
-
-<p>You may now log in by clicking <a href="[user:one-time-login-url]?destination=[current-page:query:login_destination]">this link</a> or copying and pasting the reset code at the bottom of this message into your browser.</p>
+<p>You may now <a href="[user:one-time-login-url]">log in by clicking this link</a> or copying and pasting the reset code at the bottom of this message into your browser.</p>
 
 <p>This link can only be used once to log in and will lead you to a page where you can set your password. It expires after one day and nothing will happen if it\'s not used.</p>
 
-<p>Reset Code: [user:one-time-login-url]?destination=[current-page:query:login_destination]</p>
+<p>After setting your password, you will be able to log in using your email address and password by visiting [site:url-brief] and clicking "login".</p>
+
+<p>Reset Code: [user:one-time-login-url]</p>
 
 <p>--  [site:name] team</p>';
   $export['user_mail_password_reset_body'] = $strongarm;
@@ -174,14 +175,12 @@ This link expires in one day and nothing will happen if it is not used.
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_register_admin_created_body';
-  $strongarm->value = '<p>A site administrator at [site:name] has created an account for you. You may now log in by clicking <a href="[user:one-time-login-url]">this link</a> or copying and pasting the reset code at the bottom of this message into your browser.</p>
+  $strongarm->value = '<p>A site administrator at [site:name] has created an account for you. You may now <a href="[user:one-time-login-url]">log in by clicking this link</a> or copying and pasting the reset code at the bottom of this message into your browser.</p>
 
 <p>This link can only be used once to log in and will lead you to a page where you can set your password.</p>
 
-<p>After setting your password, you will be able to log in at [site:login-url] in the future using:</p>
+<p>After setting your password, you will be able to log in using your email address and password by visiting [site:url-brief] and clicking "login".</p>
 
-<p>Username: [user:mail]<br>
-Password: Your password</p>
 <p>Reset Code: [user:one-time-login-url]</p>
 
 <p>--  [site:name] team</p>';
@@ -198,15 +197,13 @@ Password: Your password</p>
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_register_no_approval_required_body';
-  $strongarm->value = '<p>Thank you for registering at [site:name]. You may now log in by clicking <a href="[user:one-time-login-url]?destination=[current-page:query:login_destination]">this link</a> or copying and pasting the reset code at the bottom of this message into your browser.</p>
+  $strongarm->value = '<p>Thank you for registering at [site:name]. You may now <a href="[user:one-time-login-url]">log in by clicking this link</a> or copying and pasting the reset code at the bottom of this message into your browser.</p>
 
 <p>This link can only be used once to log in and will lead you to a page where you can set your password.</p>
 
-<p>After setting your password, you will be able to log in at [site:login-url] in the future using:</p>
+<p>After setting your password, you will be able to log in using your email address and password by visiting [site:url-brief] and clicking "login".</p>
 
-<p>Username: [user:mail]<br>
-Password: Your password</p>
-<p>Reset Code: [user:one-time-login-url]?destination=[current-page:query:login_destination]</p>
+<p>Reset Code: [user:one-time-login-url]</p>
 
 <p>--  [site:name] team</p>';
   $export['user_mail_register_no_approval_required_body'] = $strongarm;
@@ -240,14 +237,14 @@ Password: Your password</p>
   $strongarm->name = 'user_mail_status_activated_body';
   $strongarm->value = '<p>Your account at [site:name] has been activated.</p>
 
-<p>You may now log in by clicking <a href="[user:one-time-login-url]">this link</a> or copying the reset code below into your browser.</p>
+<p>You may now <a href="[user:one-time-login-url]">log in by clicking this link</a> or copying and pasting the reset code at the bottom of this message into your browser.</p>
 
 <p>This link can only be used once to log in and will lead you to a page where you can set your password.</p>
 
-<p>After setting your password, you will be able to log in at [site:login-url] in the future using:</p>
-<p>Username: [user:name]<br />
-Password: Your password<br />
-Reset Code: [user:one-time-login-url]</p>
+<p>After setting your password, you will be able to log in using your email address and password by visiting [site:url-brief] and clicking "login".</p>
+
+<p>Reset Code: [user:one-time-login-url]</p>
+
 <p>--  [site:name] team</p>';
   $export['user_mail_status_activated_body'] = $strongarm;
 

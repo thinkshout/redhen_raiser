@@ -1962,15 +1962,15 @@ body.front #main #content {
 }
 
 /* line 1, ../sass/components/_footer.scss */
-footer {
+#footer-wrapper {
   background: #5e9733;
 }
 /* line 4, ../sass/components/_footer.scss */
-footer #main-menu h2 {
+#footer-wrapper #main-menu h2 {
   display: none;
 }
 /* line 6, ../sass/components/_footer.scss */
-footer #pre-footer {
+#footer-wrapper footer {
   background: white;
   border-bottom: 3px solid #e5e5e5;
   padding: 0.2em 1em;
@@ -1978,97 +1978,109 @@ footer #pre-footer {
   text-align: center;
 }
 /* line 13, ../sass/components/_footer.scss */
-footer #pre-footer #logo {
+#footer-wrapper footer #block-redhen-raiser-blocks-branding {
+  margin-bottom: auto;
+}
+/* line 17, ../sass/components/_footer.scss */
+#footer-wrapper footer #logo {
   display: block;
   margin-bottom: 1em;
   width: 100%;
 }
-/* line 17, ../sass/components/_footer.scss */
-footer #pre-footer #logo img {
+/* line 21, ../sass/components/_footer.scss */
+#footer-wrapper footer #logo img {
   width: 3.594em;
 }
-/* line 20, ../sass/components/_footer.scss */
-footer #pre-footer .tagline {
+/* line 24, ../sass/components/_footer.scss */
+#footer-wrapper footer .tagline {
   color: #f8971c;
   display: block;
   margin-bottom: 1em;
   font-family: Georgia, "Times New Roman", serif;
 }
-/* line 27, ../sass/components/_footer.scss */
-footer #pre-footer .social {
+/* line 31, ../sass/components/_footer.scss */
+#footer-wrapper footer #block-bean-social-media-links {
+  margin-bottom: auto;
+}
+/* line 33, ../sass/components/_footer.scss */
+#footer-wrapper footer #block-bean-social-media-links h3 {
+  display: none;
+}
+/* line 36, ../sass/components/_footer.scss */
+#footer-wrapper footer #block-bean-social-media-links ul {
   margin: 0;
   overflow: hidden;
   padding-left: 0;
   text-align: center;
 }
-/* line 33, ../sass/components/_footer.scss */
-footer #pre-footer .social li {
+/* line 42, ../sass/components/_footer.scss */
+#footer-wrapper footer #block-bean-social-media-links ul li {
   display: inline-block;
   list-style-type: none;
   text-align: center;
   position: relative;
 }
-/* line 39, ../sass/components/_footer.scss */
-footer #pre-footer .social li a {
+/* line 48, ../sass/components/_footer.scss */
+#footer-wrapper footer #block-bean-social-media-links ul li a {
   display: list-item;
   height: 41px;
   text-indent: -9999px;
   width: 41px;
 }
-/* line 45, ../sass/components/_footer.scss */
-footer #pre-footer .social li a.twitter {
+/* line 54, ../sass/components/_footer.scss */
+#footer-wrapper footer #block-bean-social-media-links ul li a[href*="twitter"] {
   background: url("../images/social.png") 0 0 no-repeat;
   background-size: 195px 42px;
   margin-bottom: -1.5em;
 }
-/* line 50, ../sass/components/_footer.scss */
-footer #pre-footer .social li a.facebook {
+/* line 59, ../sass/components/_footer.scss */
+#footer-wrapper footer #block-bean-social-media-links ul li a[href*="facebook"] {
   background: url("../images/social.png") -3.2em 0 no-repeat;
   background-size: 195px 42px;
 }
-/* line 54, ../sass/components/_footer.scss */
-footer #pre-footer .social li a.linkedin {
+/* line 63, ../sass/components/_footer.scss */
+#footer-wrapper footer #block-bean-social-media-links ul li a[href*="linkedin"] {
   background: url("../images/social.png") -6.4em 0 no-repeat;
   background-size: 195px 42px;
 }
-/* line 58, ../sass/components/_footer.scss */
-footer #pre-footer .social li a.google-plus {
+/* line 67, ../sass/components/_footer.scss */
+#footer-wrapper footer #block-bean-social-media-links ul li a[href*="google"] {
   background: url("../images/social.png") -9.6em 0 no-repeat;
   background-size: 195px 42px;
 }
-/* line 67, ../sass/components/_footer.scss */
-footer #colophon {
+/* line 76, ../sass/components/_footer.scss */
+#footer-wrapper #colophon {
   color: white;
   padding: 0.2em 1em;
   text-align: center;
 }
-/* line 72, ../sass/components/_footer.scss */
-footer #colophon a {
+/* line 81, ../sass/components/_footer.scss */
+#footer-wrapper #colophon a {
   color: white;
 }
-/* line 74, ../sass/components/_footer.scss */
-footer #colophon a:hover {
+/* line 83, ../sass/components/_footer.scss */
+#footer-wrapper #colophon a:hover {
   color: #f8971c;
 }
 
 @media (min-width: 768px) {
-  /* line 84, ../sass/components/_footer.scss */
-  footer #pre-footer {
+  /* line 93, ../sass/components/_footer.scss */
+  #footer-wrapper footer {
     text-align: left;
   }
-  /* line 87, ../sass/components/_footer.scss */
-  footer #pre-footer #logo {
+  /* line 96, ../sass/components/_footer.scss */
+  #footer-wrapper footer #logo {
     display: inline-block;
     float: left;
     margin-bottom: 0;
     width: 92px;
   }
-  /* line 92, ../sass/components/_footer.scss */
-  footer #pre-footer #logo img {
+  /* line 101, ../sass/components/_footer.scss */
+  #footer-wrapper footer #logo img {
     width: 100%;
   }
-  /* line 95, ../sass/components/_footer.scss */
-  footer #pre-footer .tagline {
+  /* line 104, ../sass/components/_footer.scss */
+  #footer-wrapper footer .tagline {
     display: inline;
     font-size: 1.25em;
     float: left;
@@ -2076,13 +2088,13 @@ footer #colophon a:hover {
     margin: 0;
     vertical-align: top;
   }
-  /* line 104, ../sass/components/_footer.scss */
-  footer #pre-footer .social {
+  /* line 113, ../sass/components/_footer.scss */
+  #footer-wrapper footer #block-bean-social-media-links ul {
     float: right;
     margin-top: 0.8em;
   }
-  /* line 110, ../sass/components/_footer.scss */
-  footer #colophon {
+  /* line 119, ../sass/components/_footer.scss */
+  #footer-wrapper #colophon {
     text-align: left;
   }
 }
@@ -3868,7 +3880,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1415918639');
+  background-image: url('../images/progress.gif?1416000339');
 }
 
 /* line 1, ../sass/components/_modal.scss */

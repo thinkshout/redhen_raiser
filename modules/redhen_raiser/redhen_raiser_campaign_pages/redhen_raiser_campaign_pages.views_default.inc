@@ -68,21 +68,16 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'redhen_donation';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Broken/missing handler */
-  $handler->display->display_options['arguments']['redhen_campaign_context_id']['id'] = 'redhen_campaign_context_id';
-  $handler->display->display_options['arguments']['redhen_campaign_context_id']['table'] = 'redhen_donation';
-  $handler->display->display_options['arguments']['redhen_campaign_context_id']['field'] = 'redhen_campaign_context_id';
-  $handler->display->display_options['arguments']['redhen_campaign_context_id']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['redhen_campaign_context_id']['default_argument_type'] = 'raw';
-  $handler->display->display_options['arguments']['redhen_campaign_context_id']['default_argument_options']['index'] = '2';
-  $handler->display->display_options['arguments']['redhen_campaign_context_id']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['redhen_campaign_context_id']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['redhen_campaign_context_id']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['redhen_campaign_context_type']['id'] = 'redhen_campaign_context_type';
-  $handler->display->display_options['filters']['redhen_campaign_context_type']['table'] = 'redhen_donation';
-  $handler->display->display_options['filters']['redhen_campaign_context_type']['field'] = 'redhen_campaign_context_type';
-  $handler->display->display_options['filters']['redhen_campaign_context_type']['value'] = 'redhen_campaign_page';
+  /* Contextual filter: Donation: RedHen Campaign Page Context */
+  $handler->display->display_options['arguments']['redhen_campaign_page_context']['id'] = 'redhen_campaign_page_context';
+  $handler->display->display_options['arguments']['redhen_campaign_page_context']['table'] = 'redhen_donation';
+  $handler->display->display_options['arguments']['redhen_campaign_page_context']['field'] = 'redhen_campaign_page_context';
+  $handler->display->display_options['arguments']['redhen_campaign_page_context']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['redhen_campaign_page_context']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['redhen_campaign_page_context']['default_argument_options']['index'] = '2';
+  $handler->display->display_options['arguments']['redhen_campaign_page_context']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['redhen_campaign_page_context']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['redhen_campaign_page_context']['summary_options']['items_per_page'] = '25';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');

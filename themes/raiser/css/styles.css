@@ -2932,52 +2932,60 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
 #block-views-leaderboard-block .entity-redhen-campaign-page,
 #block-views-leaderboard-block-team .entity-redhen-campaign-page {
   font-size: 0.875em;
-  min-height: 4.0625em;
+  min-height: 4.6875em;
   position: relative;
 }
-/* line 42, ../sass/components/_leaderboard.scss */
-#block-views-leaderboard-block .redhen_campaign_page_title,
-#block-views-leaderboard-block-team .redhen_campaign_page_title {
-  left: 4em;
-  margin-top: 0;
+/* line 41, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .entity-redhen-campaign-page .entity-redhen-contact,
+#block-views-leaderboard-block-team .entity-redhen-campaign-page .entity-redhen-contact {
   position: absolute;
-  top: 0;
-  z-index: 10;
+  width: 2.625em;
+  height: 2.625em;
 }
 /* line 48, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .redhen_campaign_page_title,
+#block-views-leaderboard-block-team .redhen_campaign_page_title {
+  padding-left: 3.5em;
+  margin-bottom: 0.25em;
+  margin-top: 0;
+  line-height: 1;
+  z-index: 10;
+}
+/* line 54, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .redhen_campaign_page_title a,
 #block-views-leaderboard-block-team .redhen_campaign_page_title a {
   color: black;
 }
-/* line 52, ../sass/components/_leaderboard.scss */
+/* line 57, ../sass/components/_leaderboard.scss */
+#block-views-leaderboard-block .redhen_campaign_page_title.clearfix:after,
+#block-views-leaderboard-block-team .redhen_campaign_page_title.clearfix:after {
+  content: "";
+}
+/* line 61, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .field-name-redhen-campaign-goal,
 #block-views-leaderboard-block-team .field-name-redhen-campaign-goal {
   color: black;
   font-size: 1em;
-  left: 4em;
-  padding-left: 0;
-  padding-top: 1.5em;
-  position: absolute;
-  top: 0em;
+  padding-left: 3.5em;
 }
-/* line 60, ../sass/components/_leaderboard.scss */
+/* line 65, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .field-name-redhen-campaign-goal .rhc_progress,
 #block-views-leaderboard-block-team .field-name-redhen-campaign-goal .rhc_progress {
   display: inline-block;
   font-size: 1em;
 }
-/* line 65, ../sass/components/_leaderboard.scss */
+/* line 70, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block img,
 #block-views-leaderboard-block-team img {
   width: 3em;
   border-radius: 0.5em;
 }
-/* line 69, ../sass/components/_leaderboard.scss */
+/* line 74, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .pager,
 #block-views-leaderboard-block-team .pager {
   margin-top: 0;
 }
-/* line 72, ../sass/components/_leaderboard.scss */
+/* line 77, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .more-link,
 #block-views-leaderboard-block-team .more-link {
   background: none;
@@ -3011,19 +3019,19 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   border: 3px solid #90c965;
   color: white;
 }
-/* line 80, ../sass/components/_leaderboard.scss */
+/* line 85, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .more-link:hover, #block-views-leaderboard-block .more-link:hover a,
 #block-views-leaderboard-block-team .more-link:hover,
 #block-views-leaderboard-block-team .more-link:hover a {
   color: white;
 }
-/* line 83, ../sass/components/_leaderboard.scss */
+/* line 88, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .more-link a,
 #block-views-leaderboard-block-team .more-link a {
   color: #5e9733;
   text-transform: capitalize;
 }
-/* line 86, ../sass/components/_leaderboard.scss */
+/* line 91, ../sass/components/_leaderboard.scss */
 #block-views-leaderboard-block .more-link a:hover,
 #block-views-leaderboard-block-team .more-link a:hover {
   color: white;
@@ -3875,7 +3883,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1416000339');
+  background-image: url('../images/progress.gif?1415918639');
 }
 
 /* line 1, ../sass/components/_modal.scss */
@@ -4193,7 +4201,7 @@ tr.selected td {
   #block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update h2,
   .view-campaign-updates .node-campaign-update h2,
   .node-type-campaign-update .node-campaign-update .node-campaign-update h2 {
-    position: absolute;
+    margin-bottom: 0.5em;
   }
 }
 /* line 18, ../sass/components/_updates.scss */
@@ -4210,7 +4218,40 @@ tr.selected td {
 .node-type-campaign-update .node-campaign-update .node-campaign-update h2 a:hover {
   text-decoration: underline;
 }
-/* line 26, ../sass/components/_updates.scss */
+/* line 25, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update ol, #block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update ul,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update ol,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update ul,
+.view-campaign-updates .node-campaign-update ol,
+.view-campaign-updates .node-campaign-update ul,
+.node-type-campaign-update .node-campaign-update .node-campaign-update ol,
+.node-type-campaign-update .node-campaign-update .node-campaign-update ul {
+  left: 1.25em;
+  line-height: 1.2;
+  margin: 0 0 1em 0;
+  position: relative;
+}
+/* line 30, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update ol li, #block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update ul li,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update ol li,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update ul li,
+.view-campaign-updates .node-campaign-update ol li,
+.view-campaign-updates .node-campaign-update ul li,
+.node-type-campaign-update .node-campaign-update .node-campaign-update ol li,
+.node-type-campaign-update .node-campaign-update .node-campaign-update ul li {
+  font-size: 0.9375em;
+  list-style-position: outside;
+  margin-bottom: 0.1875em;
+  margin-left: 0;
+}
+/* line 38, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update p,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update p,
+.view-campaign-updates .node-campaign-update p,
+.node-type-campaign-update .node-campaign-update .node-campaign-update p {
+  margin: 0 0 1em 0;
+}
+/* line 42, ../sass/components/_updates.scss */
 #block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update img,
 #block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update img,
 .view-campaign-updates .node-campaign-update img,
@@ -4221,19 +4262,16 @@ tr.selected td {
   -o-border-radius: 8px;
   border-radius: 8px;
   float: left;
-  margin-top: 2.8125em;
   margin-right: 0.5em;
 }
-@media (min-width: 992px) {
-  /* line 33, ../sass/components/_updates.scss */
-  #block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update .field-name-body,
-  #block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update .field-name-body,
-  .view-campaign-updates .node-campaign-update .field-name-body,
-  .node-type-campaign-update .node-campaign-update .node-campaign-update .field-name-body {
-    padding-top: 1em;
-  }
+/* line 52, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .node-campaign-update ul.links,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .node-campaign-update ul.links,
+.view-campaign-updates .node-campaign-update ul.links,
+.node-type-campaign-update .node-campaign-update .node-campaign-update ul.links {
+  left: 0;
 }
-/* line 39, ../sass/components/_updates.scss */
+/* line 56, ../sass/components/_updates.scss */
 #block-redhen-raiser-campaign-updates-campaign-updates .entity-redhen-contact img,
 #block-redhen-raiser-campaign-updates-campaign-page-updates .entity-redhen-contact img,
 .view-campaign-updates .entity-redhen-contact img,

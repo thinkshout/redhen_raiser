@@ -733,7 +733,9 @@ function redhen_raiser_campaigns_field_default_field_instances() {
       'default_redhen_donation_settings' => array(
         'scheduling' => array(
           'close' => NULL,
+          'close_source' => 'field_end_date',
           'open' => NULL,
+          'open_source' => 'field_start_date',
         ),
         'settings' => array(
           'confirmation_message' => 'Thank you for your donation!',

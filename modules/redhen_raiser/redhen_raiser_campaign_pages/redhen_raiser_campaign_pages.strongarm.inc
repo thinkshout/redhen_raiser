@@ -34,6 +34,12 @@ function redhen_raiser_campaign_pages_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'snippet' => array(
+        'custom_settings' => TRUE,
+      ),
+      'promotion' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -75,7 +81,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '-10',
+            'weight' => '2',
             'visible' => TRUE,
           ),
           'promotion' => array(
@@ -105,7 +111,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '-10',
+            'weight' => '0',
             'visible' => TRUE,
           ),
           'promotion' => array(
@@ -135,7 +141,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '-10',
+            'weight' => '3',
             'visible' => TRUE,
           ),
           'promotion' => array(
@@ -165,7 +171,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '-10',
+            'weight' => '4',
             'visible' => TRUE,
           ),
           'promotion' => array(
@@ -191,7 +197,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '-10',
+            'weight' => '1',
             'visible' => TRUE,
           ),
           'promotion' => array(
@@ -265,7 +271,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '1',
+            'weight' => '2',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -291,7 +297,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '2',
+            'weight' => '3',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -317,7 +323,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '6',
+            'weight' => '7',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -343,7 +349,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '7',
+            'weight' => '8',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -373,7 +379,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => FALSE,
           ),
           'promotion' => array(

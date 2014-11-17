@@ -81,6 +81,12 @@ form {
   button {
     @include cta-btn;
   }
+  @include xsmall {
+    input[type=submit],
+    button {
+      padding: 0.8em 2em;
+    }
+  }
 
   a.button {
     @include clear-btn;

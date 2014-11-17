@@ -179,3 +179,8 @@ form[id^="redhen-campaign-campaign-page-form"] {
     padding: 1em;
   }
 }
+@include xsmall {
+  .ajax-progress-throbber {
+    display: none;
+  }
+}

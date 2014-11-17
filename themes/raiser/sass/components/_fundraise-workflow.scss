@@ -102,7 +102,7 @@
 
       @include xsmall {
         margin-top: 1em;
-        width: 100%; 
+        width: 100%;
       }
     }
     label {
@@ -164,5 +164,23 @@
   }
 
 }
+@include xsmall {
+  .page-redhen-campaign-add-general,
+  .page-redhen-campaign-page-edit,
+  .page-redhen-campaign-page-add,
+  .page-redhen-campaign-edit {
+    fieldset[id^="edit-field-story-und-0-format"] {
+      .filter-help {
+        display: none;
+      }
+    }
 
+  }
+  .page-redhen-campaign-donate {
+    form select,
+    form input[type=text] {
+      max-width: 285px;
+    }
+  }
+}
 

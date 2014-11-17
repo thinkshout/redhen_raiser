@@ -96,9 +96,6 @@
 
   <!-- FOOTER -->
   <div id="footer-wrapper">
-    <?php if ($site_slogan): ?>
-      <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
-    <?php endif; ?>
 
     <?php print render($page['footer']); ?>
 

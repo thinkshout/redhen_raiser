@@ -87,7 +87,7 @@ Drupal.behaviors.my_custom_behavior = {
       },
 
       contentHeight: function() {
-        var cHeight = _$('.one-sidebar #content'),
+        var cHeight = _$('.one-sidebar #content .main-content-wrapper'),
             sHeight = _$('.one-sidebar .sidebar-first section');
         if ( sHeight.height() > cHeight.height()) {
           cHeight.css({'height':sHeight.height()+32});
@@ -107,7 +107,7 @@ Drupal.behaviors.my_custom_behavior = {
         this.setRequiredFormFields();
         this.activeRadioButton();
         this.hideEmpty();
-        this.contentHeight();
+        //this.contentHeight();
         this.noCommas();
       }
     } // end _cafb

@@ -11,7 +11,7 @@
 function redhen_raiser_donations_install() {
   // Create default Donation Product.
   $donation_product_settings = array(
-    'sku' => 'DONATION',
+    'sku' => '501c3GIFT',
     'title' => 'Donation',
     'type' => 'donation',
   );
@@ -19,7 +19,4 @@ function redhen_raiser_donations_install() {
   entity_save('commerce_product', $donation_product);
   // @todo: initialize price
   commerce_product_configure_product_type('donation');
-  // Create default Donation Page.
-
-  // Configure default Donation Page.
 }

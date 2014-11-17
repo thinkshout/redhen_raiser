@@ -656,8 +656,7 @@ function redhen_raiser_commerce_access_user_default_permissions() {
   $permissions['view own commerce_order entities'] = array(
     'name' => 'view own commerce_order entities',
     'roles' => array(
-      'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
+      'admin' => 'admin',
     ),
     'module' => 'commerce_order',
   );

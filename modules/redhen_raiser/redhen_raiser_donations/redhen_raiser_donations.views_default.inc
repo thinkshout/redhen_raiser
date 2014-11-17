@@ -161,10 +161,14 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'donation_id' => 'donation_id',
-    'received' => 'received',
-    'field_donation_comment' => 'field_donation_comment',
+    'campaign_id' => 'campaign_id',
+    'page_id' => 'page_id',
     'created' => 'created',
-    'entity_id' => 'entity_id',
+    'field_donation_comment' => 'field_donation_comment',
+    'label_1' => 'label_1',
+    'label' => 'label',
+    'received' => 'received',
+    'expression' => 'expression',
   );
   $handler->display->display_options['style_options']['default'] = 'created';
   $handler->display->display_options['style_options']['info'] = array(
@@ -175,7 +179,21 @@ function redhen_raiser_donations_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'received' => array(
+    'campaign_id' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'page_id' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'created' => array(
       'sortable' => 1,
       'default_sort_order' => 'desc',
       'align' => 'views-align-right',
@@ -189,17 +207,29 @@ function redhen_raiser_donations_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'created' => array(
-      'sortable' => 1,
+    'label_1' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'label' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'received' => array(
+      'sortable' => 0,
       'default_sort_order' => 'desc',
       'align' => 'views-align-right',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'entity_id' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => 'views-align-center',
+    'expression' => array(
+      'align' => 'views-align-right',
       'separator' => '',
       'empty_column' => 0,
     ),
@@ -213,7 +243,6 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['relationships']['redhen_campaign_page_context']['id'] = 'redhen_campaign_page_context';
   $handler->display->display_options['relationships']['redhen_campaign_page_context']['table'] = 'redhen_donation';
   $handler->display->display_options['relationships']['redhen_campaign_page_context']['field'] = 'redhen_campaign_page_context';
-  $handler->display->display_options['relationships']['redhen_campaign_page_context']['required'] = TRUE;
   /* Relationship: RedHen Campaign Page: Team Page */
   $handler->display->display_options['relationships']['team']['id'] = 'team';
   $handler->display->display_options['relationships']['team']['table'] = 'redhen_campaign_page';
@@ -271,8 +300,24 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['fields']['received']['id'] = 'received';
   $handler->display->display_options['fields']['received']['table'] = 'redhen_donation';
   $handler->display->display_options['fields']['received']['field'] = 'received';
-  $handler->display->display_options['fields']['received']['label'] = 'Amount';
-  $handler->display->display_options['fields']['received']['prefix'] = '$';
+  $handler->display->display_options['fields']['received']['label'] = 'Raw Amount';
+  $handler->display->display_options['fields']['received']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['received']['separator'] = '';
+  /* Field: Global: Math expression */
+  $handler->display->display_options['fields']['expression']['id'] = 'expression';
+  $handler->display->display_options['fields']['expression']['table'] = 'views';
+  $handler->display->display_options['fields']['expression']['field'] = 'expression';
+  $handler->display->display_options['fields']['expression']['label'] = 'Amount';
+  $handler->display->display_options['fields']['expression']['precision'] = '0';
+  $handler->display->display_options['fields']['expression']['prefix'] = '$';
+  $handler->display->display_options['fields']['expression']['expression'] = '[received] / 100';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href=\'/redhen/donation/[donation_id]\'>view</a>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Contextual filter: Donation: RedHen Contact contact_id */
   $handler->display->display_options['arguments']['contact']['id'] = 'contact';
   $handler->display->display_options['arguments']['contact']['table'] = 'redhen_donation';

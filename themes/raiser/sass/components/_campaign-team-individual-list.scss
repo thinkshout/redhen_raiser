@@ -104,13 +104,5 @@
         clear: both;
       }
     }
-
   }
-  @include xsmall {
-    h2 {
-      line-height: 1.2;
-      margin-bottom: em(8);
-    }
-  }
-
 }

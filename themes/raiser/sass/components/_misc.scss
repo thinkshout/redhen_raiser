@@ -190,6 +190,11 @@
 .comment__title {      /* Comment title. */
   margin: 0;
 }
+@include xsmall {
+  .page__title {
+    margin-top: em(8);
+  }
+}
 
 /**
  * Messages.

@@ -35,6 +35,11 @@ p {
   line-height: 1.5em;
   margin-bottom: 2em;
 }
+@include xsmall {
+  h2 {
+    line-height: 1.2;
+  }
+}
 
 // Links
 a, a:visited {

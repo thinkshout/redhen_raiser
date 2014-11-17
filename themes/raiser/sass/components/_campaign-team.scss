@@ -5,23 +5,23 @@
     margin-right: 1em;
 
     img {
-      border-radius: 8px; 
+      border-radius: 8px;
     }
   }
 
   .redhen_campaign_page_campaign {
-    width: 75%; 
+    width: 75%;
   }
 
   .redhen_campaign_page_title {
-    float: left; 
+    float: left;
     font-size: em(16);
     width: 75%;
   }
 
   .redhen_campaign_page_team {
     display: block;
-    float: left; 
+    float: left;
     font-size: em(14);
     width: 75%;
   }
@@ -31,10 +31,19 @@
   }
 
   .field-label {
-    font-weight: normal; 
+    font-weight: normal;
   }
 
   .clearfix:after {
-    display: inline !important; 
+    display: inline !important;
+  }
+}
+@include xsmall {
+  .redhen-campaign-page-team {
+    .redhen_campaign_page_title,
+    .redhen_campaign_page_team,
+    .redhen_campaign_page_campaign {
+      width: 100%;
+    }
   }
 }

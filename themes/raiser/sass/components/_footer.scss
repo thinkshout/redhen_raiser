@@ -6,16 +6,16 @@
   footer {
     background: $white;
     border-bottom: 3px solid $page-bg;
-    padding: 0.2em 1em; 
+    padding: 0.2em 1em;
     overflow: hidden;
     text-align: center;
 
     #block-redhen-raiser-blocks-branding {
-      margin-bottom: auto; 
+      margin-bottom: auto;
     }
 
     #logo {
-      display: block; 
+      display: block;
       margin-bottom: 1em;
       width: 100%;
       img { width: 3.594em; }
@@ -26,7 +26,7 @@
       display: block;
       margin-bottom: 1em;
       font-family: $raiser-heading-font;
-    } 
+    }
 
     #block-bean-social-media-links {
       margin-bottom: auto;
@@ -53,19 +53,19 @@
           width: 41px;
 
           &[href*="twitter"] {
-            background: url('../images/social.png') 0 0 no-repeat; 
+            background: url('../images/social.png') 0 0 no-repeat;
             background-size: 195px 42px;
           }
           &[href*="facebook"] {
-            background: url('../images/social.png') -3.2em 0 no-repeat; 
+            background: url('../images/social.png') -3.2em 0 no-repeat;
             background-size: 195px 42px;
           }
           &[href*="linkedin"] {
-            background: url('../images/social.png') -6.4em 0 no-repeat; 
+            background: url('../images/social.png') -6.4em 0 no-repeat;
             background-size: 195px 42px;
           }
           &[href*="google"] {
-            background: url('../images/social.png') -9.6em 0 no-repeat; 
+            background: url('../images/social.png') -9.6em 0 no-repeat;
             background-size: 195px 42px;
           }
         }
@@ -75,26 +75,26 @@
 
   #colophon {
     color: $white;
-    padding: 0.2em 1em; 
+    padding: 0.2em 1em;
     text-align: center;
 
-    a { 
+    a {
       color: $white;
       &:hover {
-        color: $action; 
-      } 
+        color: $action;
+      }
     }
   }
 }
 
 @include small {
   #footer-wrapper {
-  
+
     footer {
       text-align: left;
 
       #logo {
-        display: inline-block; 
+        display: inline-block;
         float: left;
         margin-bottom: 0;
         width: 92px;
@@ -111,13 +111,22 @@
       }
 
       #block-bean-social-media-links ul {
-        float: right; 
+        float: right;
         margin-top: 0.8em;
       }
-    } 
+    }
 
     #colophon {
-      text-align: left; 
+      text-align: left;
+    }
+  }
+}
+@include xsmall {
+  #footer-wrapper {
+    .inline li {
+      padding: 0 em(12);
+      text-align: center;
+      display: inline-block;
     }
   }
 }

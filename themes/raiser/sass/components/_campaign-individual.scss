@@ -29,11 +29,11 @@
     width: 75%;
 
     .field-label {
-      width: 25%; 
+      width: 25%;
     }
 
     .field-items {
-      width: 75%; 
+      width: 75%;
     }
   }
 
@@ -43,5 +43,15 @@
 
   .clearfix:after {
     display: inline !important;
+  }
+}
+
+@include xsmall {
+  .redhen-campaign-page-individual {
+    .redhen_campaign_page_title,
+    .redhen_campaign_page_team,
+    .redhen_campaign_page_campaign {
+      width: 100%;
+    }
   }
 }

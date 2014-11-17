@@ -2011,37 +2011,37 @@ body.front #main #content {
 /* line 31, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links {
   margin-bottom: auto;
+  padding-bottom: 0;
 }
-/* line 33, ../sass/components/_footer.scss */
+/* line 34, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links h3 {
   display: none;
 }
-/* line 36, ../sass/components/_footer.scss */
+/* line 37, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul {
   margin: 0;
   overflow: hidden;
   padding-left: 0;
   text-align: center;
 }
-/* line 42, ../sass/components/_footer.scss */
+/* line 43, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul li {
   display: inline-block;
   list-style-type: none;
   text-align: center;
   position: relative;
 }
-/* line 48, ../sass/components/_footer.scss */
+/* line 49, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul li a {
   display: list-item;
   height: 41px;
   text-indent: -9999px;
   width: 41px;
 }
-/* line 54, ../sass/components/_footer.scss */
+/* line 55, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul li a[href*="twitter"] {
   background: url("../images/social.png") 0 0 no-repeat;
   background-size: 195px 42px;
-  margin-bottom: -1.5em;
 }
 /* line 59, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul li a[href*="facebook"] {
@@ -3898,7 +3898,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1416012803');
+  background-image: url('../images/progress.gif?1416252274');
 }
 
 /* line 1, ../sass/components/_modal.scss */
@@ -4072,6 +4072,19 @@ tr.selected td {
   float: none;
   position: absolute;
   right: 0;
+}
+/* line 18, ../sass/components/_my_pages.scss */
+.profile .user-picture a {
+  cursor: default;
+}
+/* line 21, ../sass/components/_my_pages.scss */
+.profile .user-picture img {
+  background: white;
+  border-radius: 1.125em;
+  margin-right: -0.625em;
+  margin-top: -0.375em;
+  padding: 0.625em;
+  max-width: 7.8125em;
 }
 
 /* line 1, ../sass/components/_progress-bar.scss */

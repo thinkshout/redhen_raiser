@@ -15,4 +15,15 @@
   float: none;
   position: absolute;
   right: 0;
+  a {
+    cursor: default;
+  }
+  img {
+    background: $white;
+    border-radius: em(18);
+    margin-right: em(-10);
+    margin-top: em(-6);
+    padding: em(10);
+    max-width: em(125);
+  }
 }

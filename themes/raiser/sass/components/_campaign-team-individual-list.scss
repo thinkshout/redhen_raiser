@@ -1,24 +1,6 @@
 .page-campaigns {
 
   .views-row {
-    @include small {
-      float: left;
-      width: 48%;
-      margin-right: 2%;
-    }
-    @include medium {
-      display: inline-block;
-      float: left;
-      margin-bottom: 2em;
-      margin-right: 2%;
-      min-height: em(300);
-      padding: 1em 0;
-      position: relative;
-      width: 31.33333%;
-      &:nth-child(3n+4) {
-        clear: both;
-      }
-    }
 
     @include box-shadow(0 3px 5px $gray);
     background: $white;
@@ -94,5 +76,41 @@
     .clearfix:after {
       display: block !important;
     }
+    @include xsmall {
+      width: 100%;
+      margin-right: 2%;
+      position: relative;
+      .redhen_campaign_page_title {
+        width: 100%;
+      }
+    }
+    @include small {
+      float: left;
+      width: 48%;
+      margin-right: 2%;
+      min-height: em(415);
+      position: relative;
+    }
+    @include medium {
+      display: inline-block;
+      float: left;
+      margin-bottom: 2em;
+      margin-right: 2%;
+      min-height: em(300);
+      padding: 1em 0;
+      position: relative;
+      width: 31.33333%;
+      &:nth-child(3n+4) {
+        clear: both;
+      }
+    }
+
   }
+  @include xsmall {
+    h2 {
+      line-height: 1.2;
+      margin-bottom: em(8);
+    }
+  }
+
 }

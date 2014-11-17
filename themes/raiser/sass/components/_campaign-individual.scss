@@ -24,6 +24,17 @@
 
   .redhen_campaign_page_campaign {
     font-size: em(14);
+    overflow: hidden;
+    position: relative;
+    width: 75%;
+
+    .field-label {
+      width: 25%; 
+    }
+
+    .field-items {
+      width: 75%; 
+    }
   }
 
   .field-label {

@@ -1439,12 +1439,23 @@ body.front #main #content {
 /* line 25, ../sass/components/_campaign-individual.scss */
 .redhen-campaign-page-individual .redhen_campaign_page_campaign {
   font-size: 0.875em;
+  overflow: hidden;
+  position: relative;
+  width: 75%;
 }
-/* line 29, ../sass/components/_campaign-individual.scss */
+/* line 31, ../sass/components/_campaign-individual.scss */
+.redhen-campaign-page-individual .redhen_campaign_page_campaign .field-label {
+  width: 25%;
+}
+/* line 35, ../sass/components/_campaign-individual.scss */
+.redhen-campaign-page-individual .redhen_campaign_page_campaign .field-items {
+  width: 75%;
+}
+/* line 40, ../sass/components/_campaign-individual.scss */
 .redhen-campaign-page-individual .field-label {
   font-weight: normal;
 }
-/* line 33, ../sass/components/_campaign-individual.scss */
+/* line 44, ../sass/components/_campaign-individual.scss */
 .redhen-campaign-page-individual .clearfix:after {
   display: inline !important;
 }
@@ -1700,27 +1711,31 @@ body.front #main #content {
   border-radius: 8px;
 }
 /* line 12, ../sass/components/_campaign-team.scss */
+.redhen-campaign-page-team .redhen_campaign_page_campaign {
+  width: 75%;
+}
+/* line 16, ../sass/components/_campaign-team.scss */
 .redhen-campaign-page-team .redhen_campaign_page_title {
   float: left;
   font-size: 1em;
   width: 75%;
 }
-/* line 18, ../sass/components/_campaign-team.scss */
+/* line 22, ../sass/components/_campaign-team.scss */
 .redhen-campaign-page-team .redhen_campaign_page_team {
   display: block;
   float: left;
   font-size: 0.875em;
   width: 75%;
 }
-/* line 25, ../sass/components/_campaign-team.scss */
+/* line 29, ../sass/components/_campaign-team.scss */
 .redhen-campaign-page-team .redhen_campaign_page_campaign {
   font-size: 0.875em;
 }
-/* line 29, ../sass/components/_campaign-team.scss */
+/* line 33, ../sass/components/_campaign-team.scss */
 .redhen-campaign-page-team .field-label {
   font-weight: normal;
 }
-/* line 33, ../sass/components/_campaign-team.scss */
+/* line 37, ../sass/components/_campaign-team.scss */
 .redhen-campaign-page-team .clearfix:after {
   display: inline !important;
 }
@@ -3883,7 +3898,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1415918639');
+  background-image: url('../images/progress.gif?1416012803');
 }
 
 /* line 1, ../sass/components/_modal.scss */

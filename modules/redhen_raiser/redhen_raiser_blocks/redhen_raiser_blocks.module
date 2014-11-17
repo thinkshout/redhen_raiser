@@ -150,22 +150,22 @@ function redhen_raiser_blocks_create_default_blocks() {
           array(
             'url' => 'http://www.twitter.com',
             'title' => 'Twitter',
-            'attributes' => array('class' => array('twitter-link')),
+            'attributes' => array('class' => 'twitter-link'),
           ),
           array(
             'url' => 'http://www.facebook.com',
             'title' => 'Facebook',
-            'attributes' => array('class' => array('facebook-link')),
+            'attributes' => array('class' => 'facebook-link'),
           ),
           array(
             'url' => 'http://www.linkedin.com',
             'title' => 'LinkedIn',
-            'attributes' => array('class' => array('linkedin-link')),
+            'attributes' => array('class' => 'linkedin-link'),
           ),
           array(
             'url' => 'http://plus.google.com',
             'title' => 'Google+',
-            'attributes' => array('class' => array('googleplus-link')),
+            'attributes' => array('class' => 'googleplus-link'),
           ),
         ),
       ),

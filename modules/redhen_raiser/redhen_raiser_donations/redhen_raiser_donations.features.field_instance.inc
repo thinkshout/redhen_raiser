@@ -196,6 +196,58 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_dedication'
+  $field_instances['redhen_donation-redhen_raiser_donation-field_dedication'] = array(
+    'bundle' => 'redhen_raiser_donation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+    ),
+    'entity_type' => 'redhen_donation',
+    'field_name' => 'field_dedication',
+    'label' => 'Donation in honor of',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+            'rich_text' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_donation_comment'
   $field_instances['redhen_donation-redhen_raiser_donation-field_donation_comment'] = array(
     'bundle' => 'redhen_raiser_donation',
@@ -244,7 +296,7 @@ function redhen_raiser_donations_field_default_field_instances() {
         'rows' => 4,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -252,6 +304,7 @@ function redhen_raiser_donations_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Address');
   t('Comment');
+  t('Donation in honor of');
   t('Price');
 
   return $field_instances;

@@ -4083,6 +4083,7 @@ tr.selected td {
   margin-right: -0.625em;
   margin-top: -0.375em;
   padding: 0.625em;
+  max-width: 7.8125em;
 }
 
 /* line 1, ../sass/components/_progress-bar.scss */

@@ -30,6 +30,7 @@
 
     #block-bean-social-media-links {
       margin-bottom: auto;
+      padding-bottom: 0;
       h3 { display: none; }
     }
 
@@ -54,7 +55,6 @@
           &[href*="twitter"] {
             background: url('../images/social.png') 0 0 no-repeat; 
             background-size: 195px 42px;
-            margin-bottom: -1.5em;
           }
           &[href*="facebook"] {
             background: url('../images/social.png') -3.2em 0 no-repeat; 

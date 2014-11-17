@@ -3898,7 +3898,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1416012803');
+  background-image: url('../images/progress.gif?1415918639');
 }
 
 /* line 1, ../sass/components/_modal.scss */
@@ -4072,6 +4072,18 @@ tr.selected td {
   float: none;
   position: absolute;
   right: 0;
+}
+/* line 18, ../sass/components/_my_pages.scss */
+.profile .user-picture a {
+  cursor: default;
+}
+/* line 21, ../sass/components/_my_pages.scss */
+.profile .user-picture img {
+  background: white;
+  border-radius: 1.125em;
+  margin-right: -0.625em;
+  margin-top: -0.375em;
+  padding: 0.625em;
 }
 
 /* line 1, ../sass/components/_progress-bar.scss */

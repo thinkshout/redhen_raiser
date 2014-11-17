@@ -3898,7 +3898,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1415918639');
+  background-image: url('../images/progress.gif?1416252274');
 }
 
 /* line 1, ../sass/components/_modal.scss */
@@ -4084,6 +4084,7 @@ tr.selected td {
   margin-right: -0.625em;
   margin-top: -0.375em;
   padding: 0.625em;
+  max-width: 7.8125em;
 }
 
 /* line 1, ../sass/components/_progress-bar.scss */

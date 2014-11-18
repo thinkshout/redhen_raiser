@@ -2418,19 +2418,24 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
 }
 
 /* line 184, ../sass/components/_forms.scss */
-input:invalid {
-  box-shadow: none;
-}
-
-/* line 188, ../sass/components/_forms.scss */
 .page-redhen-campaign-edit .field-type-image .preview {
   width: 100%;
 }
-/* line 190, ../sass/components/_forms.scss */
+/* line 186, ../sass/components/_forms.scss */
 .page-redhen-campaign-edit .field-type-image .preview .media-item {
   display: block;
   padding: 0.2em;
   width: 100%;
+}
+
+/* line 194, ../sass/components/_forms.scss */
+input:invalid {
+  box-shadow: none;
+}
+
+/* line 199, ../sass/components/_forms.scss */
+select::-ms-expand {
+  display: none;
 }
 
 /* line 2, ../sass/components/_fundraise-workflow.scss */

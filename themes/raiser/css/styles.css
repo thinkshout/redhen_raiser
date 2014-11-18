@@ -2417,6 +2417,11 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
   padding: 1em;
 }
 
+/* line 184, ../sass/components/_forms.scss */
+input:invalid {
+  box-shadow: none;
+}
+
 /* line 2, ../sass/components/_fundraise-workflow.scss */
 .page-fundraise a[href="/cafb-dc/redhen_campaign/add/general"] {
   background: none;

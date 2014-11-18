@@ -229,6 +229,9 @@ function redhen_raiser_core_password_form($override_link = FALSE) {
 function redhen_raiser_core_form_user_pass_reset_alter(&$form, &$form_state, $form_id) {
   if (!empty($_GET['destination'])) {
     $_SESSION['destination'] = $_GET['destination'];
+    if (!empty($_GET['team'])) {
+      $_SESSION['destination'] .= '&team=' . $_GET['team'];
+    }
   }
   $reset_user = user_load(arg(2));
   if ($reset_user) {

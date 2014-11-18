@@ -184,3 +184,12 @@ form[id^="redhen-campaign-campaign-page-form"] {
 input:invalid {
   box-shadow: none;
 }
+
+.page-redhen-campaign-edit .field-type-image .preview {
+  width: 100%;
+  .media-item {
+    display: block;
+    padding: 0.2em;
+    width: 100%;
+  }
+}

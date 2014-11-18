@@ -2422,6 +2422,17 @@ input:invalid {
   box-shadow: none;
 }
 
+/* line 188, ../sass/components/_forms.scss */
+.page-redhen-campaign-edit .field-type-image .preview {
+  width: 100%;
+}
+/* line 190, ../sass/components/_forms.scss */
+.page-redhen-campaign-edit .field-type-image .preview .media-item {
+  display: block;
+  padding: 0.2em;
+  width: 100%;
+}
+
 /* line 2, ../sass/components/_fundraise-workflow.scss */
 .page-fundraise a[href="/cafb-dc/redhen_campaign/add/general"] {
   background: none;

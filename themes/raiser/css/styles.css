@@ -2069,76 +2069,75 @@ body.front #main #content {
 /* line 37, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul {
   margin: 0;
-  overflow: hidden;
   padding-left: 0;
   text-align: center;
 }
-/* line 43, ../sass/components/_footer.scss */
+/* line 42, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul li {
   display: inline-block;
   list-style-type: none;
   text-align: center;
   position: relative;
 }
-/* line 49, ../sass/components/_footer.scss */
+/* line 48, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul li a {
   display: list-item;
   height: 41px;
   text-indent: -9999px;
   width: 41px;
 }
-/* line 55, ../sass/components/_footer.scss */
+/* line 54, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul li a[href*="twitter"] {
   background: url("../images/social.png") 0 0 no-repeat;
   background-size: 195px 42px;
 }
-/* line 59, ../sass/components/_footer.scss */
+/* line 58, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul li a[href*="facebook"] {
   background: url("../images/social.png") -3.2em 0 no-repeat;
   background-size: 195px 42px;
 }
-/* line 63, ../sass/components/_footer.scss */
+/* line 62, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul li a[href*="linkedin"] {
   background: url("../images/social.png") -6.4em 0 no-repeat;
   background-size: 195px 42px;
 }
-/* line 67, ../sass/components/_footer.scss */
+/* line 66, ../sass/components/_footer.scss */
 #footer-wrapper footer #block-bean-social-media-links ul li a[href*="google"] {
   background: url("../images/social.png") -9.6em 0 no-repeat;
   background-size: 195px 42px;
 }
-/* line 76, ../sass/components/_footer.scss */
+/* line 75, ../sass/components/_footer.scss */
 #footer-wrapper #colophon {
   color: white;
   padding: 0.2em 1em;
   text-align: center;
 }
-/* line 81, ../sass/components/_footer.scss */
+/* line 80, ../sass/components/_footer.scss */
 #footer-wrapper #colophon a {
   color: white;
 }
-/* line 83, ../sass/components/_footer.scss */
+/* line 82, ../sass/components/_footer.scss */
 #footer-wrapper #colophon a:hover {
   color: #f8971c;
 }
 
 @media (min-width: 768px) {
-  /* line 93, ../sass/components/_footer.scss */
+  /* line 92, ../sass/components/_footer.scss */
   #footer-wrapper footer {
     text-align: left;
   }
-  /* line 96, ../sass/components/_footer.scss */
+  /* line 95, ../sass/components/_footer.scss */
   #footer-wrapper footer #logo {
     display: inline-block;
     float: left;
     margin-bottom: 0;
     width: 92px;
   }
-  /* line 101, ../sass/components/_footer.scss */
+  /* line 100, ../sass/components/_footer.scss */
   #footer-wrapper footer #logo img {
     width: 100%;
   }
-  /* line 104, ../sass/components/_footer.scss */
+  /* line 103, ../sass/components/_footer.scss */
   #footer-wrapper footer .tagline {
     display: inline;
     font-size: 1.25em;
@@ -2147,18 +2146,18 @@ body.front #main #content {
     margin: 0;
     vertical-align: top;
   }
-  /* line 113, ../sass/components/_footer.scss */
+  /* line 112, ../sass/components/_footer.scss */
   #footer-wrapper footer #block-bean-social-media-links ul {
     float: right;
     margin-top: 0.8em;
   }
-  /* line 119, ../sass/components/_footer.scss */
+  /* line 118, ../sass/components/_footer.scss */
   #footer-wrapper #colophon {
     text-align: left;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  /* line 126, ../sass/components/_footer.scss */
+  /* line 125, ../sass/components/_footer.scss */
   #footer-wrapper .inline li {
     padding: 0 0.75em;
     text-align: center;
@@ -2481,6 +2480,27 @@ form[id^="redhen-campaign-campaign-page-form"] .field-name-redhen-campaign-goal 
     display: none;
   }
 }
+/* line 189, ../sass/components/_forms.scss */
+.page-redhen-campaign-edit .field-type-image .preview {
+  width: 100%;
+}
+/* line 191, ../sass/components/_forms.scss */
+.page-redhen-campaign-edit .field-type-image .preview .media-item {
+  display: block;
+  padding: 0.2em;
+  width: 100%;
+}
+
+/* line 199, ../sass/components/_forms.scss */
+input:invalid {
+  box-shadow: none;
+}
+
+/* line 204, ../sass/components/_forms.scss */
+select::-ms-expand {
+  display: none;
+}
+
 /* line 2, ../sass/components/_fundraise-workflow.scss */
 .page-fundraise a[href="/cafb-dc/redhen_campaign/add/general"] {
   background: none;

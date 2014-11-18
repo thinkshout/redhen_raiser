@@ -184,3 +184,23 @@ form[id^="redhen-campaign-campaign-page-form"] {
     display: none;
   }
 }
+
+// Expand media items on campaign edit page
+.page-redhen-campaign-edit .field-type-image .preview {
+  width: 100%;
+  .media-item {
+    display: block;
+    padding: 0.2em;
+    width: 100%;
+  }
+}
+
+// Fixes FF red border on required inputs
+input:invalid {
+  box-shadow: none;
+}
+
+// Removes IE arrow on custom selects
+select::-ms-expand {
+  display: none;
+}

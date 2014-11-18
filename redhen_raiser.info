@@ -51,6 +51,7 @@ dependencies[] = date_api
 dependencies[] = date_popup
 dependencies[] = date_restrictions
 dependencies[] = date_restrictions_minmax
+dependencies[] = date_views
 dependencies[] = devel
 dependencies[] = diff
 dependencies[] = elements

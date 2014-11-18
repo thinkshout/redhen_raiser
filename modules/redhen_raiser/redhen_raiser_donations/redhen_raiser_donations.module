@@ -29,3 +29,20 @@ function redhen_raiser_donations_commerce_line_item_type_info() {
 function redhen_raiser_donations_menu_alter(&$items) {
   $items['redhen_campaign/%entity_object/donate']['type'] = MENU_NORMAL_ITEM;
 }
+
+/**
+ * Implements hook_menu().
+ */
+function redhen_raiser_donations_menu() {
+  $items = array();
+
+  $items['redhen/donation_reports'] = array(
+    'title' => 'Donation Reports',
+    'access callback' => 'user_access',
+    'access arguments' => array('view redhen_raiser_donation redhen donation'),
+    'page callback' => 'drupal_goto',
+    'page arguments' => array('redhen/donations'),
+    //'type' => MENU_CALLBACK,
+  );
+  return $items;
+}

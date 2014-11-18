@@ -15,7 +15,7 @@ function redhen_raiser_install() {
   // Set default date formatters.
   variable_set('date_format_long', 'l, F j, Y - g:ia');
   variable_set('date_format_medium', 'D, m/d/Y - g:ia');
-  variable_set('date_format_short', 'D n/j g:i a');
+  variable_set('date_format_short', 'n/j/y g:i a');
 
   minimal_install();
   // Copy image defaults.

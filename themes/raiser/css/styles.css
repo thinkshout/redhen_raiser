@@ -1969,6 +1969,12 @@ body.front #main #content {
   display: none;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  /* line 28, ../sass/components/_donation-form.scss */
+  .page-redhen-campaign-donate h2#page-title {
+    margin-top: -1em;
+  }
+}
 /* line 2, ../sass/components/_donors.scss */
 #block-views-campaign-donors-block,
 #block-views-campaign-page-donors-block {

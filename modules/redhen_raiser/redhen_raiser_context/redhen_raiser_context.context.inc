@@ -206,6 +206,51 @@ function redhen_raiser_context_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'donate_page';
+  $context->description = 'Applies to campaign donate pages.';
+  $context->tag = 'Campaigns';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'redhen_campaign/*/donate' => 'redhen_campaign/*/donate',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean-campaign-progress' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-progress',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+        'bean-campaign-promotion' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-promotion',
+          'region' => 'sidebar_first',
+          'weight' => '-9',
+        ),
+        'views-leaderboard-block' => array(
+          'module' => 'views',
+          'delta' => 'leaderboard-block',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Applies to campaign donate pages.');
+  t('Campaigns');
+  $export['donate_page'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'everything_raiser';
   $context->description = 'Context applied to all pages in the Raiser theme';
   $context->tag = 'General';

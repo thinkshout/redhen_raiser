@@ -16,6 +16,10 @@ function redhen_raiser_blocks_block_info() {
     'info' => t('Branding'),
     'cache' => DRUPAL_CACHE_GLOBAL,
   );
+  $blocks['social_media_share'] = array(
+    'info' => t('Social Media Share'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
 
   return $blocks;
 }
@@ -55,6 +59,31 @@ function redhen_raiser_blocks_block_view($delta = '') {
         $block['content']['slogan'] = array(
           '#markup' => '<p class="tagline">' . $slogan . '</p>',
         );
+      }
+      break;
+
+    case 'social_media_share':
+      $url = url(current_path(), array('absolute' => true));
+      $block = bean_block_view('social_media_links');
+      $links = &$block['content']['bean']['social_media_links']['field_links'];
+      foreach (element_children($links) as $index) {
+        switch ($links[$index]['#element']['title']) {
+          case 'Twitter':
+            $links[$index]['#element']['url'] = 'https://twitter.com/home?status=' . $url;
+            break;
+
+          case 'Facebook':
+            $links[$index]['#element']['url'] = 'https://www.facebook.com/sharer/sharer.php?u=' . $url;
+            break;
+
+          case 'LinkedIn':
+            $links[$index]['#element']['url'] = 'https://www.linkedin.com/shareArticle?mini=true&url=' . $url . '&title=' . drupal_get_title() . '&summary=&source=';
+            break;
+
+          case 'Google+':
+            $links[$index]['#element']['url'] = 'https://plus.google.com/share?url=' . $url;
+            break;
+        }
       }
       break;
 

@@ -27,7 +27,9 @@ function redhen_raiser_donations_commerce_line_item_type_info() {
  * Implements hook_menu_alter().
  */
 function redhen_raiser_donations_menu_alter(&$items) {
-  $items['redhen_campaign/%entity_object/donate']['type'] = MENU_NORMAL_ITEM;
+  if (isset($items['redhen_campaign/%redhen_campaign/donate'])) {
+    $items['redhen_campaign/%redhen_campaign/donate']['type'] = MENU_NORMAL_ITEM;
+  }
 }
 
 /**

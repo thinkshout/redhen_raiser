@@ -14,11 +14,11 @@ function redhen_raiser_campaign_updates_block_info() {
 
   $blocks['campaign_page_updates'] = array(
     'info' => t('Fundraising Page Updates'),
-    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'cache' => DRUPAL_NO_CACHE,
   );
   $blocks['campaign_updates'] = array(
     'info' => t('Fundraising Campaign Updates'),
-    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'cache' => DRUPAL_NO_CACHE,
   );
 
   return $blocks;

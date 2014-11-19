@@ -151,7 +151,7 @@ return redhen_campaign_page_access(\'edit\', $page);';
 
   /* Display: Campaign Pages Tab */
   $handler = $view->new_display('page', 'Campaign Pages Tab', 'page');
-  $handler->display->display_options['path'] = 'redhen_campaign/page/%/update';
+  $handler->display->display_options['path'] = 'redhen_campaign/page/%redhen_campaign_page/update';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Updates';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -206,7 +206,7 @@ return redhen_campaign_access(\'edit\', $campaign);';
   $handler->display->display_options['filters']['field_page_context_target_id']['table'] = 'field_data_field_page_context';
   $handler->display->display_options['filters']['field_page_context_target_id']['field'] = 'field_page_context_target_id';
   $handler->display->display_options['filters']['field_page_context_target_id']['operator'] = 'empty';
-  $handler->display->display_options['path'] = 'redhen_campaign/%/update';
+  $handler->display->display_options['path'] = 'redhen_campaign/%redhen_campaign/update';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Updates';
   $handler->display->display_options['menu']['weight'] = '0';

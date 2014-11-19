@@ -141,7 +141,7 @@ function redhen_raiser_campaign_pages_views_default_views() {
   /* Display: Campaign's Pages */
   $handler = $view->new_display('page', 'Campaign\'s Pages', 'campaign_pages');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = '<a href="/redhen_campaign/$campaign_id">Fundraisers for %1</a>';
+  $handler->display->display_options['title'] = 'Fundraisers for %1';
   $handler->display->display_options['display_comment'] = 'See: redhen_raiser_campaign_pages_views_pre_render()';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: RedHen Campaign Page: Parent Campaign */
@@ -199,7 +199,7 @@ function redhen_raiser_campaign_pages_views_default_views() {
       ),
     ),
   );
-  $handler->display->display_options['path'] = 'campaigns/%/pages';
+  $handler->display->display_options['path'] = 'redhen_campaign/%redhen_campaign/pages';
   $export['campaign_pages'] = $view;
 
   $view = new view();

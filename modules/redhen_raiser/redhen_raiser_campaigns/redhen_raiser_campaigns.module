@@ -29,33 +29,38 @@ function redhen_raiser_campaigns_entity_info_alter(&$entity_info) {
  */
 function redhen_raiser_campaigns_entity_view_alter(&$build, $type) {
   if ($type == 'redhen_campaign') {
-    if ($build['#view_mode'] == 'teaser') {
-      // Link the label.
-      if (!empty($build['label']['#items'][0]['#markup'])) {
-        $uri = $build['#entity']->uri();
-        $path = $uri['path'];
+    switch ($build['#view_mode']) {
+      case 'banner':
+      case 'teaser':
+        // Link the label.
+        if (!empty($build['label']['#items'][0]['#markup'])) {
+          $uri = $build['#entity']->uri();
+          $path = $uri['path'];
 
-        $build['label']['#items'][0]['#markup'] = l(
-          $build['label']['#items'][0]['#markup'],
-          $path
+          $build['label']['#items'][0]['#markup'] = l(
+            $build['label']['#items'][0]['#markup'],
+            $path
+          );
+        }
+        break;
+
+      case 'full':
+        $options = array(
+          'attributes' => array(
+            'class' => 'redhen-campaign-pages-button',
+          ),
         );
-      }
-    }
-    if ($build['#view_mode'] == 'full') {
-      $options = array(
-        'attributes' => array(
-          'class' => 'redhen-campaign-pages-button',
-        ),
-      );
-      $build['pages'] = array(
-        '#markup' => l(t('View all Teams and Individuals'), 'campaigns/' . $build['#entity']->campaign_id . '/pages', $options),
-        '#weight' => 100,
-        '#prefix' => '<div class="view-all-button">',
-        '#suffix' => '</div>',
-      );
-      $build['join']['#label_hidden'] = FALSE;
-      $build['join']['#label'] = 'Ready to contribute to the cause? Fundraise for this campaign now.';
-      _redhen_raiser_core_colectomify($build['join']);
+        $build['pages'] = array(
+          '#markup' => l(t('View all Teams and Individuals'), 'redhen_campaign/' . $build['#entity']->campaign_id . '/pages', $options),
+          '#weight' => 100,
+          '#prefix' => '<div class="view-all-button">',
+          '#suffix' => '</div>',
+        );
+        $build['join']['#label_hidden'] = FALSE;
+        $build['join']['#label'] = 'Ready to contribute to the cause? Fundraise for this campaign now.';
+        _redhen_raiser_core_colectomify($build['join']);
+        break;
+
     }
   }
 }

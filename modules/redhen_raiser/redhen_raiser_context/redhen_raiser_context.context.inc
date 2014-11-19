@@ -13,6 +13,39 @@ function redhen_raiser_context_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'campaign_config';
+  $context->description = 'This context applies to all RedHen Campaign config tabs.';
+  $context->tag = 'Campaigns';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'redhen_campaign/*/*' => 'redhen_campaign/*/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean-campaign-banner' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-banner',
+          'region' => 'highlighted',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Campaigns');
+  t('This context applies to all RedHen Campaign config tabs.');
+  $export['campaign_config'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'campaign_home';
   $context->description = 'This context applies to all RedHen Campaigns.';
   $context->tag = 'Campaigns';
@@ -73,6 +106,39 @@ function redhen_raiser_context_context_default_contexts() {
   t('Campaigns');
   t('This context applies to all RedHen Campaigns.');
   $export['campaign_home'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'campaign_page_config';
+  $context->description = 'This context applies to all RedHen Campaign Page admin tabs.';
+  $context->tag = 'Campaigns';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'redhen_campaign/page/*/*' => 'redhen_campaign/page/*/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean-campaign-page-banner' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-page-banner',
+          'region' => 'highlighted',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Campaigns');
+  t('This context applies to all RedHen Campaign Page admin tabs.');
+  $export['campaign_page_config'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

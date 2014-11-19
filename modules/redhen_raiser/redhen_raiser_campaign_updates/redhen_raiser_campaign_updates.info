@@ -27,5 +27,5 @@ features[variable][] = node_preview_campaign_update
 features[variable][] = node_submitted_campaign_update
 features[variable][] = pathauto_node_campaign_update_pattern
 features[views_view][] = campaign_update_admin
-mtime = 1416352588
+mtime = 1416427302
 project path = profiles/redhen_raiser/modules/redhen_raiser

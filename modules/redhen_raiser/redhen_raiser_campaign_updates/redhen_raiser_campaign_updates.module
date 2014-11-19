@@ -323,3 +323,31 @@ function redhen_raiser_campaign_updates_redirect($form, &$form_state) {
 function redhen_raiser_campaign_updates_page_context_callback($form, &$form_state) {
   return $form['field_page_context'];
 }
+
+/**
+ * Implements hook_menu_alter().
+ */
+function redhen_raiser_campaign_updates_menu_alter(&$items) {
+  ksort($items);
+  if (isset($items['redhen_campaign/%redhen_campaign/update'])) {
+    $items['redhen_campaign/%redhen_campaign/update']['access callback'] = 'redhen_campaign_access';
+    $items['redhen_campaign/%redhen_campaign/update']['access arguments'] = array('edit', 1);
+  }
+  if (isset($items['redhen_campaign/page/%redhen_campaign_page/update'])) {
+    $items['redhen_campaign/page/%redhen_campaign_page/update']['access callback'] = 'redhen_campaign_page_access';
+    $items['redhen_campaign/page/%redhen_campaign_page/update']['access arguments'] = array('edit', 2);
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function redhen_raiser_campaign_updates_module_implements_alter(&$implementations, $hook) {
+  switch ($hook) {
+    case 'menu_alter':
+      unset ($implementations['redhen_raiser_campaign_updates']);
+      $implementations['redhen_raiser_campaign_updates'] = FALSE;
+      break;
+
+  }
+}

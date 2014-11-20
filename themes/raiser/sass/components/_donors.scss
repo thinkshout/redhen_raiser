@@ -7,5 +7,16 @@
   td {
     font-size: em(16);
     padding: em(7) em(10) em(5) em(10);
+    vertical-align: top;
+
+    &.views-field-full-name {
+      width: 23%; 
+    }
+    &.views-field-expression {
+      width: 10%;
+    }
+    &.views-field-field-donation-comment {
+      width: 66%; 
+    }
   }
 }

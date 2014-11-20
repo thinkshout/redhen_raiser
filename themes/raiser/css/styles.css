@@ -2041,6 +2041,22 @@ body.front #main #content {
 #block-views-campaign-page-donors-block td {
   font-size: 1em;
   padding: 0.4375em 0.625em 0.3125em 0.625em;
+  vertical-align: top;
+}
+/* line 12, ../sass/components/_donors.scss */
+#block-views-campaign-donors-block td.views-field-full-name,
+#block-views-campaign-page-donors-block td.views-field-full-name {
+  width: 23%;
+}
+/* line 15, ../sass/components/_donors.scss */
+#block-views-campaign-donors-block td.views-field-expression,
+#block-views-campaign-page-donors-block td.views-field-expression {
+  width: 10%;
+}
+/* line 18, ../sass/components/_donors.scss */
+#block-views-campaign-donors-block td.views-field-field-donation-comment,
+#block-views-campaign-page-donors-block td.views-field-field-donation-comment {
+  width: 66%;
 }
 
 /* line 1, ../sass/components/_footer.scss */

@@ -760,6 +760,7 @@ form select {
   -moz-appearance: none;
   appearance: none;
   background: transparent url(../images/select.png) no-repeat 97% center;
+  background-size: 0.5em;
   border-radius: 4px;
   border: 2px solid #5e9733;
   color: #5e9733;
@@ -770,7 +771,7 @@ form select {
   margin-top: 2px;
   padding: 5px 20px 5px 10px;
 }
-/* line 109, ../sass/base/_base.scss */
+/* line 110, ../sass/base/_base.scss */
 form select:disabled {
   background-color: #f1f1f1;
   background-image: none;
@@ -778,7 +779,7 @@ form select:disabled {
   color: #989898;
   cursor: default;
 }
-/* line 118, ../sass/base/_base.scss */
+/* line 119, ../sass/base/_base.scss */
 form select, form x:-moz-any-link, form x:only-child {
   background: none;
 }

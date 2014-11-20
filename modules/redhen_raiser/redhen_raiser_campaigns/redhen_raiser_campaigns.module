@@ -18,6 +18,10 @@ function redhen_raiser_campaigns_entity_info_alter(&$entity_info) {
     'label' => t('Banner'),
     'custom settings' => TRUE,
   );
+  $entity_info['redhen_campaign']['view modes']['contextual_banner'] = array(
+    'label' => t('Contextual Banner'),
+    'custom settings' => TRUE,
+  );
   $entity_info['redhen_campaign']['view modes']['promotion'] = array(
     'label' => t('Promo'),
     'custom settings' => TRUE,
@@ -31,6 +35,7 @@ function redhen_raiser_campaigns_entity_view_alter(&$build, $type) {
   if ($type == 'redhen_campaign') {
     switch ($build['#view_mode']) {
       case 'banner':
+      case 'contextual_banner':
       case 'teaser':
         // Link the label.
         if (!empty($build['label']['#items'][0]['#markup'])) {

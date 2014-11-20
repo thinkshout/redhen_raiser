@@ -30,6 +30,7 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -137,11 +138,21 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['relationships']['redhen_campaign_page_context']['id'] = 'redhen_campaign_page_context';
   $handler->display->display_options['relationships']['redhen_campaign_page_context']['table'] = 'redhen_donation';
   $handler->display->display_options['relationships']['redhen_campaign_page_context']['field'] = 'redhen_campaign_page_context';
+  /* Field: Donation: URL */
+  $handler->display->display_options['fields']['url_1']['id'] = 'url_1';
+  $handler->display->display_options['fields']['url_1']['table'] = 'views_entity_redhen_donation';
+  $handler->display->display_options['fields']['url_1']['field'] = 'url';
+  $handler->display->display_options['fields']['url_1']['label'] = '';
+  $handler->display->display_options['fields']['url_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['url_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['url_1']['display_as_link'] = FALSE;
+  $handler->display->display_options['fields']['url_1']['link_to_entity'] = 0;
   /* Field: Donation: Donation ID */
   $handler->display->display_options['fields']['donation_id']['id'] = 'donation_id';
   $handler->display->display_options['fields']['donation_id']['table'] = 'redhen_donation';
   $handler->display->display_options['fields']['donation_id']['field'] = 'donation_id';
-  $handler->display->display_options['fields']['donation_id']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['donation_id']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['donation_id']['alter']['path'] = '[url_1] ';
   $handler->display->display_options['fields']['donation_id']['separator'] = '';
   /* Field: Donation: Amount received. */
   $handler->display->display_options['fields']['received_1']['id'] = 'received_1';
@@ -168,32 +179,65 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['fields']['received']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['received']['alter']['text'] = '$[expression]';
   $handler->display->display_options['fields']['received']['separator'] = '';
+  /* Field: RedHen Campaign Page: URL */
+  $handler->display->display_options['fields']['url_3']['id'] = 'url_3';
+  $handler->display->display_options['fields']['url_3']['table'] = 'views_entity_redhen_campaign_page';
+  $handler->display->display_options['fields']['url_3']['field'] = 'url';
+  $handler->display->display_options['fields']['url_3']['relationship'] = 'redhen_campaign_page_context';
+  $handler->display->display_options['fields']['url_3']['label'] = '';
+  $handler->display->display_options['fields']['url_3']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['url_3']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['url_3']['display_as_link'] = FALSE;
+  $handler->display->display_options['fields']['url_3']['link_to_entity'] = 0;
+  /* Field: RedHen Campaign: URL */
+  $handler->display->display_options['fields']['url_2']['id'] = 'url_2';
+  $handler->display->display_options['fields']['url_2']['table'] = 'views_entity_redhen_campaign';
+  $handler->display->display_options['fields']['url_2']['field'] = 'url';
+  $handler->display->display_options['fields']['url_2']['relationship'] = 'redhen_campaign_context';
+  $handler->display->display_options['fields']['url_2']['label'] = '';
+  $handler->display->display_options['fields']['url_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['url_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['url_2']['display_as_link'] = FALSE;
+  $handler->display->display_options['fields']['url_2']['link_to_entity'] = 0;
   /* Field: RedHen Campaign: Campaign Name */
   $handler->display->display_options['fields']['label']['id'] = 'label';
   $handler->display->display_options['fields']['label']['table'] = 'redhen_campaign';
   $handler->display->display_options['fields']['label']['field'] = 'label';
   $handler->display->display_options['fields']['label']['relationship'] = 'redhen_campaign_context';
+  $handler->display->display_options['fields']['label']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['label']['alter']['path'] = '[url_2] ';
   /* Field: RedHen Campaign Page: Campaign Page Name */
   $handler->display->display_options['fields']['label_1']['id'] = 'label_1';
   $handler->display->display_options['fields']['label_1']['table'] = 'redhen_campaign_page';
   $handler->display->display_options['fields']['label_1']['field'] = 'label';
   $handler->display->display_options['fields']['label_1']['relationship'] = 'redhen_campaign_page_context';
+  $handler->display->display_options['fields']['label_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['label_1']['alter']['path'] = '[url_3]';
   /* Field: Contact: Billing Address - Postal code */
   $handler->display->display_options['fields']['field_billing_address_postal_code']['id'] = 'field_billing_address_postal_code';
   $handler->display->display_options['fields']['field_billing_address_postal_code']['table'] = 'field_data_field_billing_address';
   $handler->display->display_options['fields']['field_billing_address_postal_code']['field'] = 'field_billing_address_postal_code';
   $handler->display->display_options['fields']['field_billing_address_postal_code']['relationship'] = 'contact';
   $handler->display->display_options['fields']['field_billing_address_postal_code']['label'] = 'Zip Code';
-  /* Field: Contact: First name */
-  $handler->display->display_options['fields']['first_name']['id'] = 'first_name';
-  $handler->display->display_options['fields']['first_name']['table'] = 'redhen_contact';
-  $handler->display->display_options['fields']['first_name']['field'] = 'first_name';
-  $handler->display->display_options['fields']['first_name']['relationship'] = 'contact';
-  /* Field: Contact: Last name */
-  $handler->display->display_options['fields']['last_name']['id'] = 'last_name';
-  $handler->display->display_options['fields']['last_name']['table'] = 'redhen_contact';
-  $handler->display->display_options['fields']['last_name']['field'] = 'last_name';
-  $handler->display->display_options['fields']['last_name']['relationship'] = 'contact';
+  /* Field: Contact: URL */
+  $handler->display->display_options['fields']['url']['id'] = 'url';
+  $handler->display->display_options['fields']['url']['table'] = 'views_entity_redhen_contact';
+  $handler->display->display_options['fields']['url']['field'] = 'url';
+  $handler->display->display_options['fields']['url']['relationship'] = 'contact';
+  $handler->display->display_options['fields']['url']['label'] = '';
+  $handler->display->display_options['fields']['url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['url']['display_as_link'] = FALSE;
+  $handler->display->display_options['fields']['url']['link_to_entity'] = 0;
+  /* Field: Contact: Full name */
+  $handler->display->display_options['fields']['full_name']['id'] = 'full_name';
+  $handler->display->display_options['fields']['full_name']['table'] = 'views_entity_redhen_contact';
+  $handler->display->display_options['fields']['full_name']['field'] = 'full_name';
+  $handler->display->display_options['fields']['full_name']['relationship'] = 'contact';
+  $handler->display->display_options['fields']['full_name']['label'] = 'Contact';
+  $handler->display->display_options['fields']['full_name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['full_name']['alter']['path'] = '[url]';
+  $handler->display->display_options['fields']['full_name']['link_to_entity'] = 0;
   /* Field: Contact: Default email */
   $handler->display->display_options['fields']['email']['id'] = 'email';
   $handler->display->display_options['fields']['email']['table'] = 'views_entity_redhen_contact';
@@ -206,17 +250,9 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['fields']['created']['table'] = 'redhen_donation';
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = 'Date';
-  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['date_format'] = 'short';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'm/d/Y';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'html5_tools_iso8601';
-  /* Field: Donation: Date created */
-  $handler->display->display_options['fields']['created_1']['id'] = 'created_1';
-  $handler->display->display_options['fields']['created_1']['table'] = 'redhen_donation';
-  $handler->display->display_options['fields']['created_1']['field'] = 'created';
-  $handler->display->display_options['fields']['created_1']['label'] = 'Time';
-  $handler->display->display_options['fields']['created_1']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['created_1']['custom_date_format'] = 'H:i';
-  $handler->display->display_options['fields']['created_1']['second_date_format'] = 'html5_tools_iso8601';
   /* Filter criterion: Date: Date (redhen_donation) */
   $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['table'] = 'redhen_donation';
@@ -226,7 +262,6 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['exposed'] = TRUE;
   $handler->display->display_options['filters']['date_filter']['expose']['operator_id'] = 'date_filter_op';
   $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'Date';
-  $handler->display->display_options['filters']['date_filter']['expose']['use_operator'] = TRUE;
   $handler->display->display_options['filters']['date_filter']['expose']['operator'] = 'date_filter_op';
   $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['expose']['remember_roles'] = array(
@@ -235,37 +270,40 @@ function redhen_raiser_donations_views_default_views() {
     4 => 0,
     3 => 0,
   );
+  $handler->display->display_options['filters']['date_filter']['form_type'] = 'date_popup';
   $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
     'redhen_donation.created' => 'redhen_donation.created',
   );
   $handler->display->display_options['filters']['date_filter']['date_method'] = 'AND';
-  /* Filter criterion: Donation: RedHen Campaign Context */
-  $handler->display->display_options['filters']['redhen_campaign_context']['id'] = 'redhen_campaign_context';
-  $handler->display->display_options['filters']['redhen_campaign_context']['table'] = 'redhen_donation';
-  $handler->display->display_options['filters']['redhen_campaign_context']['field'] = 'redhen_campaign_context';
-  $handler->display->display_options['filters']['redhen_campaign_context']['group'] = 1;
-  $handler->display->display_options['filters']['redhen_campaign_context']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['redhen_campaign_context']['expose']['operator_id'] = 'redhen_campaign_context_op';
-  $handler->display->display_options['filters']['redhen_campaign_context']['expose']['label'] = 'Campaign';
-  $handler->display->display_options['filters']['redhen_campaign_context']['expose']['operator'] = 'redhen_campaign_context_op';
-  $handler->display->display_options['filters']['redhen_campaign_context']['expose']['identifier'] = 'redhen_campaign_context';
-  $handler->display->display_options['filters']['redhen_campaign_context']['expose']['remember_roles'] = array(
+  /* Filter criterion: RedHen Campaign: Campaign Name */
+  $handler->display->display_options['filters']['label']['id'] = 'label';
+  $handler->display->display_options['filters']['label']['table'] = 'redhen_campaign';
+  $handler->display->display_options['filters']['label']['field'] = 'label';
+  $handler->display->display_options['filters']['label']['relationship'] = 'redhen_campaign_context';
+  $handler->display->display_options['filters']['label']['operator'] = 'contains';
+  $handler->display->display_options['filters']['label']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['label']['expose']['operator_id'] = 'label_op';
+  $handler->display->display_options['filters']['label']['expose']['label'] = 'Campaign Name';
+  $handler->display->display_options['filters']['label']['expose']['operator'] = 'label_op';
+  $handler->display->display_options['filters']['label']['expose']['identifier'] = 'label';
+  $handler->display->display_options['filters']['label']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     4 => 0,
     3 => 0,
   );
-  /* Filter criterion: Donation: RedHen Campaign Page Context */
-  $handler->display->display_options['filters']['redhen_campaign_page_context']['id'] = 'redhen_campaign_page_context';
-  $handler->display->display_options['filters']['redhen_campaign_page_context']['table'] = 'redhen_donation';
-  $handler->display->display_options['filters']['redhen_campaign_page_context']['field'] = 'redhen_campaign_page_context';
-  $handler->display->display_options['filters']['redhen_campaign_page_context']['group'] = 1;
-  $handler->display->display_options['filters']['redhen_campaign_page_context']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['redhen_campaign_page_context']['expose']['operator_id'] = 'redhen_campaign_page_context_op';
-  $handler->display->display_options['filters']['redhen_campaign_page_context']['expose']['label'] = 'Fundraiser';
-  $handler->display->display_options['filters']['redhen_campaign_page_context']['expose']['operator'] = 'redhen_campaign_page_context_op';
-  $handler->display->display_options['filters']['redhen_campaign_page_context']['expose']['identifier'] = 'redhen_campaign_page_context';
-  $handler->display->display_options['filters']['redhen_campaign_page_context']['expose']['remember_roles'] = array(
+  /* Filter criterion: RedHen Campaign Page: Campaign Page Name */
+  $handler->display->display_options['filters']['label_1']['id'] = 'label_1';
+  $handler->display->display_options['filters']['label_1']['table'] = 'redhen_campaign_page';
+  $handler->display->display_options['filters']['label_1']['field'] = 'label';
+  $handler->display->display_options['filters']['label_1']['relationship'] = 'redhen_campaign_page_context';
+  $handler->display->display_options['filters']['label_1']['operator'] = 'contains';
+  $handler->display->display_options['filters']['label_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['label_1']['expose']['operator_id'] = 'label_1_op';
+  $handler->display->display_options['filters']['label_1']['expose']['label'] = 'Team or Donor';
+  $handler->display->display_options['filters']['label_1']['expose']['operator'] = 'label_1_op';
+  $handler->display->display_options['filters']['label_1']['expose']['identifier'] = 'label_1';
+  $handler->display->display_options['filters']['label_1']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     4 => 0,

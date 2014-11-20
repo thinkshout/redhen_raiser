@@ -20,16 +20,16 @@
     text-indent: -9999px;
     width: 45px;
 
-    &[href*="twitter"] {
+    &.twitter-link {
       background-position: 0 0;
     }
-    &[href*="facebook"] {
+    &.facebook-link {
       background-position: -56px 0;
     }
-    &[href*="linkedin"] {
+    &.linkin-link {
       background-position: -112px 0;
     }
-    &[href*="google"] {
+    &.googleplus-link {
       background-position: -168px 0;
     }
   }

@@ -34,6 +34,10 @@
     }
 
     background: $white;
+    h2.page__title {
+      line-height: 1.2em; 
+      margin-bottom: 0.5em;
+    }
   }
 
   aside {

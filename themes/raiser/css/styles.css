@@ -980,7 +980,13 @@ form select, form x:-moz-any-link, form x:only-child {
     margin-right: -66.66667%;
   }
 }
-/* line 39, ../sass/layouts/_campaign.scss */
+/* line 37, ../sass/layouts/_campaign.scss */
+.page-redhen-campaign .main-content-wrapper h2.page__title,
+.page-redhen-campaign-edit .main-content-wrapper h2.page__title {
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+/* line 43, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign aside,
 .page-redhen-campaign-edit aside {
   float: left;
@@ -991,7 +997,7 @@ form select, form x:-moz-any-link, form x:only-child {
   position: relative;
 }
 @media (min-width: 992px) {
-  /* line 39, ../sass/layouts/_campaign.scss */
+  /* line 43, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign aside,
   .page-redhen-campaign-edit aside {
     float: left;
@@ -1002,13 +1008,13 @@ form select, form x:-moz-any-link, form x:only-child {
     height: 100%;
     position: absolute;
   }
-  /* line 51, ../sass/layouts/_campaign.scss */
+  /* line 55, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign aside .block-bean,
   .page-redhen-campaign-edit aside .block-bean {
     border-bottom: 1px solid white;
   }
 }
-/* line 59, ../sass/layouts/_campaign.scss */
+/* line 63, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign .view-all-button,
 .page-redhen-campaign .redhen_campaign_join_link,
 .page-redhen-campaign-edit .view-all-button,
@@ -1018,7 +1024,7 @@ form select, form x:-moz-any-link, form x:only-child {
   padding: 2em 1em;
   overflow: hidden;
 }
-/* line 65, ../sass/layouts/_campaign.scss */
+/* line 69, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign .view-all-button .field-label,
 .page-redhen-campaign .redhen_campaign_join_link .field-label,
 .page-redhen-campaign-edit .view-all-button .field-label,
@@ -1027,7 +1033,7 @@ form select, form x:-moz-any-link, form x:only-child {
   width: 100%;
 }
 @media (min-width: 992px) {
-  /* line 65, ../sass/layouts/_campaign.scss */
+  /* line 69, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign .view-all-button .field-label,
   .page-redhen-campaign .redhen_campaign_join_link .field-label,
   .page-redhen-campaign-edit .view-all-button .field-label,
@@ -1038,7 +1044,7 @@ form select, form x:-moz-any-link, form x:only-child {
     width: 48%;
   }
 }
-/* line 77, ../sass/layouts/_campaign.scss */
+/* line 81, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign .view-all-button a,
 .page-redhen-campaign .redhen_campaign_join_link a,
 .page-redhen-campaign-edit .view-all-button a,
@@ -1074,13 +1080,13 @@ form select, form x:-moz-any-link, form x:only-child {
   color: white;
   background: #ffab30;
 }
-/* line 83, ../sass/layouts/_campaign.scss */
+/* line 87, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign .view-all-button,
 .page-redhen-campaign-edit .view-all-button {
   padding: 2em;
   text-align: center;
 }
-/* line 86, ../sass/layouts/_campaign.scss */
+/* line 90, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign .view-all-button a,
 .page-redhen-campaign-edit .view-all-button a {
   margin: 0 auto;
@@ -1089,7 +1095,7 @@ form select, form x:-moz-any-link, form x:only-child {
   padding: 1em 0.5em;
 }
 @media (min-width: 992px) {
-  /* line 94, ../sass/layouts/_campaign.scss */
+  /* line 98, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign .view-all-button a,
   .page-redhen-campaign-edit .view-all-button a {
     margin: 0 auto;
@@ -1098,12 +1104,12 @@ form select, form x:-moz-any-link, form x:only-child {
     padding: 0.8em 5em;
   }
 }
-/* line 105, ../sass/layouts/_campaign.scss */
+/* line 109, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign .field-name-field-story-media img,
 .page-redhen-campaign-edit .field-name-field-story-media img {
   width: 100%;
 }
-/* line 109, ../sass/layouts/_campaign.scss */
+/* line 113, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign iframe,
 .page-redhen-campaign-edit iframe {
   -webkit-box-shadow: 0 3px 5px #989898;
@@ -1112,7 +1118,7 @@ form select, form x:-moz-any-link, form x:only-child {
   border: 3px solid white;
   width: 100%;
 }
-/* line 117, ../sass/layouts/_campaign.scss */
+/* line 121, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-campaign-page-progress,
 .page-redhen-campaign #block-bean-campaign-progress,
 .page-redhen-campaign-edit #block-bean-campaign-page-progress,
@@ -1122,7 +1128,7 @@ form select, form x:-moz-any-link, form x:only-child {
   padding-top: 2em;
 }
 @media (min-width: 992px) {
-  /* line 117, ../sass/layouts/_campaign.scss */
+  /* line 121, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign #block-bean-campaign-page-progress,
   .page-redhen-campaign #block-bean-campaign-progress,
   .page-redhen-campaign-edit #block-bean-campaign-page-progress,
@@ -1132,21 +1138,21 @@ form select, form x:-moz-any-link, form x:only-child {
     margin-bottom: 0;
     width: 100%;
   }
-  /* line 126, ../sass/layouts/_campaign.scss */
+  /* line 130, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign #block-bean-campaign-page-progress .field-label-inline,
   .page-redhen-campaign #block-bean-campaign-progress .field-label-inline,
   .page-redhen-campaign-edit #block-bean-campaign-page-progress .field-label-inline,
   .page-redhen-campaign-edit #block-bean-campaign-progress .field-label-inline {
     display: none;
   }
-  /* line 130, ../sass/layouts/_campaign.scss */
+  /* line 134, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign #block-bean-campaign-page-progress h2,
   .page-redhen-campaign #block-bean-campaign-progress h2,
   .page-redhen-campaign-edit #block-bean-campaign-page-progress h2,
   .page-redhen-campaign-edit #block-bean-campaign-progress h2 {
     display: none;
   }
-  /* line 132, ../sass/layouts/_campaign.scss */
+  /* line 136, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign #block-bean-campaign-page-progress .field-type-datetime,
   .page-redhen-campaign #block-bean-campaign-progress .field-type-datetime,
   .page-redhen-campaign-edit #block-bean-campaign-page-progress .field-type-datetime,
@@ -1154,7 +1160,7 @@ form select, form x:-moz-any-link, form x:only-child {
     margin-left: 1em;
   }
 }
-/* line 138, ../sass/layouts/_campaign.scss */
+/* line 142, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-redhen-raiser-blocks-social-media-share,
 .page-redhen-campaign-edit #block-redhen-raiser-blocks-social-media-share {
   margin-left: auto;
@@ -1163,12 +1169,12 @@ form select, form x:-moz-any-link, form x:only-child {
   padding-top: 1em;
   padding-bottom: 1em;
 }
-/* line 145, ../sass/layouts/_campaign.scss */
+/* line 149, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-redhen-raiser-blocks-social-media-share .field-item,
 .page-redhen-campaign-edit #block-redhen-raiser-blocks-social-media-share .field-item {
   float: left;
 }
-/* line 150, ../sass/layouts/_campaign.scss */
+/* line 154, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-redhen-raiser-blocks-social-media-share a,
 .page-redhen-campaign-edit #block-redhen-raiser-blocks-social-media-share a {
   background: url(../images/social.png) no-repeat;
@@ -1180,43 +1186,43 @@ form select, form x:-moz-any-link, form x:only-child {
   text-indent: -9999px;
   width: 45px;
 }
-/* line 160, ../sass/layouts/_campaign.scss */
+/* line 164, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-redhen-raiser-blocks-social-media-share a[href*="twitter"],
 .page-redhen-campaign-edit #block-redhen-raiser-blocks-social-media-share a[href*="twitter"] {
   background-position: 0 0;
 }
-/* line 163, ../sass/layouts/_campaign.scss */
+/* line 167, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-redhen-raiser-blocks-social-media-share a[href*="facebook"],
 .page-redhen-campaign-edit #block-redhen-raiser-blocks-social-media-share a[href*="facebook"] {
   background-position: -56px 0;
 }
-/* line 166, ../sass/layouts/_campaign.scss */
+/* line 170, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-redhen-raiser-blocks-social-media-share a[href*="linkedin"],
 .page-redhen-campaign-edit #block-redhen-raiser-blocks-social-media-share a[href*="linkedin"] {
   background-position: -112px 0;
 }
-/* line 169, ../sass/layouts/_campaign.scss */
+/* line 173, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-redhen-raiser-blocks-social-media-share a[href*="google"],
 .page-redhen-campaign-edit #block-redhen-raiser-blocks-social-media-share a[href*="google"] {
   background-position: -168px 0;
 }
-/* line 177, ../sass/layouts/_campaign.scss */
+/* line 181, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-donation-matching,
 .page-redhen-campaign-edit #block-bean-donation-matching {
   margin-right: 1.2em;
   margin-top: 1em;
 }
-/* line 181, ../sass/layouts/_campaign.scss */
+/* line 185, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-donation-matching .block-title,
 .page-redhen-campaign-edit #block-bean-donation-matching .block-title {
   display: none;
 }
-/* line 183, ../sass/layouts/_campaign.scss */
+/* line 187, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-donation-matching .bean-promo,
 .page-redhen-campaign-edit #block-bean-donation-matching .bean-promo {
   text-align: center;
 }
-/* line 186, ../sass/layouts/_campaign.scss */
+/* line 190, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-donation-matching .bean-promo img,
 .page-redhen-campaign-edit #block-bean-donation-matching .bean-promo img {
   -webkit-border-radius: 8px;
@@ -1230,7 +1236,7 @@ form select, form x:-moz-any-link, form x:only-child {
   border: 3px solid white;
   width: 100%;
 }
-/* line 193, ../sass/layouts/_campaign.scss */
+/* line 197, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-donation-matching .bean-promo p,
 .page-redhen-campaign-edit #block-bean-donation-matching .bean-promo p {
   margin: 1em 0;

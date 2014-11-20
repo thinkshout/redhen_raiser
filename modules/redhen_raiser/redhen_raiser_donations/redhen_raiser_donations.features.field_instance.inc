@@ -204,7 +204,7 @@ function redhen_raiser_donations_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -213,11 +213,12 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
     'entity_type' => 'redhen_donation',
     'field_name' => 'field_dedication',
-    'label' => 'Donation in honor of',
+    'label' => 'A tribute to (Name)',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'email' => 0,
           'plain_text' => 'plain_text',
           'rich_text' => 'rich_text',
         ),
@@ -225,6 +226,9 @@ function redhen_raiser_donations_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'email' => array(
+              'weight' => 0,
+            ),
             'plain_text' => array(
               'weight' => 10,
             ),
@@ -244,7 +248,7 @@ function redhen_raiser_donations_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 21,
     ),
   );
 
@@ -296,16 +300,143 @@ function redhen_raiser_donations_field_default_field_instances() {
         'rows' => 4,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_letter_request'
+  $field_instances['redhen_donation-redhen_raiser_donation-field_letter_request'] = array(
+    'bundle' => 'redhen_raiser_donation',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 10,
+      ),
+    ),
+    'entity_type' => 'redhen_donation',
+    'field_name' => 'field_letter_request',
+    'label' => 'Please mail a letter on my behalf',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 24,
+    ),
+  );
+
+  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_tribute_comments'
+  $field_instances['redhen_donation-redhen_raiser_donation-field_tribute_comments'] = array(
+    'bundle' => 'redhen_raiser_donation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+    ),
+    'entity_type' => 'redhen_donation',
+    'field_name' => 'field_tribute_comments',
+    'label' => 'Comments',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'email' => 'email',
+          'plain_text' => 'plain_text',
+          'rich_text' => 'rich_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'email' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+            'rich_text' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 23,
+    ),
+  );
+
+  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_tribute_type'
+  $field_instances['redhen_donation-redhen_raiser_donation-field_tribute_type'] = array(
+    'bundle' => 'redhen_raiser_donation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 8,
+      ),
+    ),
+    'entity_type' => 'redhen_donation',
+    'field_name' => 'field_tribute_type',
+    'label' => 'Type',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 22,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A tribute to (Name)');
   t('Address');
   t('Comment');
-  t('Donation in honor of');
+  t('Comments');
+  t('Please mail a letter on my behalf');
   t('Price');
+  t('Type');
 
   return $field_instances;
 }

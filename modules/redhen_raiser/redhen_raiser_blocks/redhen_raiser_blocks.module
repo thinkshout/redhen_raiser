@@ -259,6 +259,27 @@ function redhen_raiser_blocks_create_default_blocks() {
         'entity_id_position' => '2',
       ),
     ),
+    'campaign-context-banner' => array(
+      'type' => 'bean_entity_view',
+      'label' => 'Campaign Context Banner',
+      'title' => '',
+      'data' => array(
+        'entity_type' => 'redhen_campaign',
+        'entity_view_mode' => 'contextual_banner',
+        'entity_id_position' => '1',
+      ),
+    ),
+    'campaign-page-progress-query-con' => array(
+      'type' => 'bean_entity_view',
+      'label' => 'Campaign Page Progress (query context)',
+      'title' => '',
+      'data' => array(
+        'entity_type' => 'redhen_campaign_page',
+        'entity_view_mode' => 'progress',
+        'entity_id_position' => '',
+        'entity_argument' => 'campaign_page',
+      ),
+    ),
   );
   redhen_raiser_create_beans($stubbed_beans);
 }

@@ -8,6 +8,10 @@
     border-right: 1px solid $lt-gray;
     padding-right: 1em;
 
+    .form-item {
+      margin: 1em 0; 
+    }
+
     fieldset {
       border: none;
       padding: 0;

@@ -1932,28 +1932,32 @@ body.front #main #content {
   padding-right: 1em;
 }
 /* line 11, ../sass/components/_donation-form.scss */
+.page-redhen-campaign-donate form .form-item {
+  margin: 1em 0;
+}
+/* line 15, ../sass/components/_donation-form.scss */
 .page-redhen-campaign-donate form fieldset {
   border: none;
   padding: 0;
 }
-/* line 15, ../sass/components/_donation-form.scss */
+/* line 19, ../sass/components/_donation-form.scss */
 .page-redhen-campaign-donate form fieldset legend {
   font-size: 1.25em;
 }
-/* line 20, ../sass/components/_donation-form.scss */
+/* line 24, ../sass/components/_donation-form.scss */
 .page-redhen-campaign-donate form #edit-product-label {
   display: none;
 }
-/* line 25, ../sass/components/_donation-form.scss */
+/* line 29, ../sass/components/_donation-form.scss */
 .page-redhen-campaign-donate .group-tribute {
   margin: 1em 0 2em;
 }
-/* line 28, ../sass/components/_donation-form.scss */
+/* line 32, ../sass/components/_donation-form.scss */
 .page-redhen-campaign-donate .group-tribute .fieldset-legend {
   background-image: none !important;
   padding-left: 0 !important;
 }
-/* line 33, ../sass/components/_donation-form.scss */
+/* line 37, ../sass/components/_donation-form.scss */
 .page-redhen-campaign-donate .group-tribute a.fieldset-title {
   background: none;
   padding: 0.8em 1em;
@@ -1982,7 +1986,7 @@ body.front #main #content {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  /* line 42, ../sass/components/_donation-form.scss */
+  /* line 46, ../sass/components/_donation-form.scss */
   .page-redhen-campaign-donate h2#page-title {
     margin-top: -1em;
   }

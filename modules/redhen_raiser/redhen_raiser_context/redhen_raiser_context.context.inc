@@ -26,9 +26,9 @@ function redhen_raiser_context_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'bean-campaign-banner' => array(
+        'bean-campaign-context-banner' => array(
           'module' => 'bean',
-          'delta' => 'campaign-banner',
+          'delta' => 'campaign-context-banner',
           'region' => 'highlighted',
           'weight' => '-10',
         ),
@@ -227,6 +227,12 @@ function redhen_raiser_context_context_default_contexts() {
         'redhen_campaign/*/donate' => 'redhen_campaign/*/donate',
       ),
     ),
+    'query_param' => array(
+      'values' => array(
+        'parameters' => 'a:1:{i:0;a:2:{s:4:"name";s:13:"campaign_page";s:8:"operator";s:7:"not_set";}}',
+        'require_all_params' => 1,
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -252,13 +258,58 @@ function redhen_raiser_context_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Applies to campaign donate pages.');
   t('Campaigns');
   $export['donate_page'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'donate_page_pages';
+  $context->description = 'Applies to campaign donate pages with a page context.';
+  $context->tag = 'Campaigns';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'redhen_campaign/*/donate' => 'redhen_campaign/*/donate',
+      ),
+    ),
+    'query_param' => array(
+      'values' => array(
+        'parameters' => 'a:1:{i:0;a:2:{s:4:"name";s:13:"campaign_page";s:8:"operator";s:9:"not_empty";}}',
+        'require_all_params' => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean-campaign-page-progress-query-con' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-page-progress-query-con',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+        'bean-campaign-promotion' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-promotion',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Applies to campaign donate pages with a page context.');
+  t('Campaigns');
+  $export['donate_page_pages'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

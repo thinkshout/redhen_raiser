@@ -1944,9 +1944,45 @@ body.front #main #content {
 .page-redhen-campaign-donate form #edit-product-label {
   display: none;
 }
+/* line 25, ../sass/components/_donation-form.scss */
+.page-redhen-campaign-donate .group-tribute {
+  margin: 1em 0 2em;
+}
+/* line 28, ../sass/components/_donation-form.scss */
+.page-redhen-campaign-donate .group-tribute .fieldset-legend {
+  background-image: none !important;
+  padding-left: 0 !important;
+}
+/* line 33, ../sass/components/_donation-form.scss */
+.page-redhen-campaign-donate .group-tribute a.fieldset-title {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 2px 3px #666666;
+  -moz-box-shadow: 0 2px 3px #666666;
+  box-shadow: 0 2px 3px #666666;
+  background: none;
+  border: 3px solid #5e9733;
+  box-shadow: none;
+  color: #5e9733;
+  padding: 0.4em 1em;
+}
+/* line 50, ../sass/_mixins.scss */
+.page-redhen-campaign-donate .group-tribute a.fieldset-title:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 62, ../sass/_mixins.scss */
+.page-redhen-campaign-donate .group-tribute a.fieldset-title:hover {
+  background: #5e9733;
+  border: 3px solid #90c965;
+  color: white;
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
-  /* line 28, ../sass/components/_donation-form.scss */
+  /* line 42, ../sass/components/_donation-form.scss */
   .page-redhen-campaign-donate h2#page-title {
     margin-top: -1em;
   }

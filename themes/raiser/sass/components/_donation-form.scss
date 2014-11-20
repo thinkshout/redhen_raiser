@@ -21,6 +21,20 @@
       display: none;
     }
   }
+
+  .group-tribute {
+    margin: 1em 0 2em; 
+
+    .fieldset-legend {
+      background-image: none !important;
+      padding-left: 0 !important; 
+    }
+
+    a.fieldset-title {
+      @include clear-btn; 
+      padding: 0.4em 1em;
+    }
+  }
 }
 
 @include xsmall {

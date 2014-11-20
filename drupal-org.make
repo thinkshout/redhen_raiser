@@ -21,6 +21,7 @@ projects[bean][subdir] = "contrib"
 ; bean_entity_view
 projects[bean_entity_view][version] = "1.0-beta2"
 projects[bean_entity_view][subdir] = "contrib"
+projects[bean_entity_view][patch][] = "https://www.drupal.org/files/issues/Allow_query_vars_to_specify_entity.patch"
 
 ; better_formats
 projects[better_formats][version] = "1.0-beta1"

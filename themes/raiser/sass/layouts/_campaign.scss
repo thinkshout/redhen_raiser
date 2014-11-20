@@ -135,9 +135,11 @@
     }
   }
 
-  #block-bean-social-media-links {
+  #block-redhen-raiser-blocks-social-media-share {
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-top: 1em;
     padding-bottom: 1em;
 
     .field-item {
@@ -146,8 +148,8 @@
 
 
     a {
-      background-size: 214px;
       background: url(../images/social.png) no-repeat;
+      background-size: 214px;
       display: block;
       float: left;
       height: 45px;
@@ -155,16 +157,16 @@
       text-indent: -9999px;
       width: 45px;
 
-      &.twitter-link {
+      &[href*="twitter"] {
         background-position: 0 0;
       }
-      &.facebook-link {
+      &[href*="facebook"] {
         background-position: -56px 0;
       }
-      &.linkedin-link {
+      &[href*="linkedin"] {
         background-position: -112px 0;
       }
-      &.googleplus-link {
+      &[href*="google"] {
         background-position: -168px 0;
       }
     }

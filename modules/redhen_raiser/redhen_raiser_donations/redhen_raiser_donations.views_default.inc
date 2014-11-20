@@ -281,7 +281,6 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
 
-
   /* Display: CSV export */
   $handler = $view->new_display('views_data_export', 'CSV export', 'views_data_export_1');
   $handler->display->display_options['pager']['type'] = 'none';

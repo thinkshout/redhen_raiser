@@ -51,19 +51,19 @@
           text-indent: -9999px;
           width: 41px;
 
-          &[href*="twitter"] {
+          &.twitter-link {
             background: url('../images/social.png') 0 0 no-repeat;
             background-size: 195px 42px;
           }
-          &[href*="facebook"] {
+          &.facebook-link {
             background: url('../images/social.png') -3.2em 0 no-repeat;
             background-size: 195px 42px;
           }
-          &[href*="linkedin"] {
+          &.linkedin-link {
             background: url('../images/social.png') -6.4em 0 no-repeat;
             background-size: 195px 42px;
           }
-          &[href*="google"] {
+          &.googleplus-link {
             background: url('../images/social.png') -9.6em 0 no-repeat;
             background-size: 195px 42px;
           }

@@ -1,5 +1,7 @@
-.page-campaigns {
-
+.page-redhen-campaign-pages {
+  .main-content-wrapper {
+    width: 100%; 
+  }
   .views-row {
 
     @include box-shadow(0 3px 5px $gray);

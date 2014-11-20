@@ -4405,7 +4405,14 @@ tr.selected td {
 .node-type-campaign-update .node-campaign-update .node-campaign-update ul.links {
   left: 0;
 }
-/* line 56, ../sass/components/_updates.scss */
+/* line 57, ../sass/components/_updates.scss */
+#block-redhen-raiser-campaign-updates-campaign-updates .field-name-body,
+#block-redhen-raiser-campaign-updates-campaign-page-updates .field-name-body,
+.view-campaign-updates .field-name-body,
+.node-type-campaign-update .node-campaign-update .field-name-body {
+  margin-top: 3em;
+}
+/* line 60, ../sass/components/_updates.scss */
 #block-redhen-raiser-campaign-updates-campaign-updates .entity-redhen-contact img,
 #block-redhen-raiser-campaign-updates-campaign-page-updates .entity-redhen-contact img,
 .view-campaign-updates .entity-redhen-contact img,

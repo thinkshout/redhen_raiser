@@ -53,6 +53,10 @@
       left: 0;
     }
   }
+
+  .field-name-body {
+    margin-top: 3em; 
+  }
   .entity-redhen-contact img {
     @include box-shadow(0 3px 5px $gray);
     border-radius: em(5);

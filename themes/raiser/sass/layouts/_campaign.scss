@@ -140,44 +140,6 @@
     }
   }
 
-  #block-redhen-raiser-blocks-social-media-share {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-
-    .field-item {
-      float: left;
-    }
-
-
-    a {
-      background: url(../images/social.png) no-repeat;
-      background-size: 214px;
-      display: block;
-      float: left;
-      height: 45px;
-      margin-right: 0.3em;
-      text-indent: -9999px;
-      width: 45px;
-
-      &[href*="twitter"] {
-        background-position: 0 0;
-      }
-      &[href*="facebook"] {
-        background-position: -56px 0;
-      }
-      &[href*="linkedin"] {
-        background-position: -112px 0;
-      }
-      &[href*="google"] {
-        background-position: -168px 0;
-      }
-    }
-  }
-
-
   // Promo block
   #block-bean-donation-matching {
     margin-right: 1.2em;

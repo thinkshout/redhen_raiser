@@ -155,7 +155,7 @@ function redhen_raiser_context_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'campaigns/*/*' => 'campaigns/*/*',
+        'redhen_campaign/page/*' => 'redhen_campaign/page/*',
       ),
     ),
   );

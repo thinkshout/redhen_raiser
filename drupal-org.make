@@ -68,6 +68,10 @@ projects[context][subdir] = "contrib"
 projects[context_condition_theme][version] = "1.0"
 projects[context_condition_theme][subdir] = "contrib"
 
+; context_query_param
+projects[context_query_param][version] = "1.3"
+projects[context_query_param][subdir] = "contrib"
+
 ; ctools
 projects[ctools][version] = "1.4"
 projects[ctools][subdir] = "contrib"

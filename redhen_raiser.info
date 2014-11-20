@@ -44,6 +44,7 @@ dependencies[] = commerce_recurring
 dependencies[] = commerce_features
 dependencies[] = context
 dependencies[] = context_condition_theme
+dependencies[] = context_query_param
 dependencies[] = context_ui
 dependencies[] = ctools
 dependencies[] = date

@@ -35,6 +35,25 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'picture',
         'weight' => 1,
       ),
+      'contextual_banner' => array(
+        'label' => 'hidden',
+        'module' => 'picture',
+        'settings' => array(
+          'colorbox_settings' => array(
+            'colorbox_caption' => 'auto',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_group' => '',
+            'colorbox_multivalue_index' => NULL,
+          ),
+          'fallback_image_style' => 'banner_xl',
+          'image_link' => '',
+          'picture_mapping' => 'banner_image',
+        ),
+        'type' => 'picture',
+        'weight' => 1,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'picture',
@@ -130,6 +149,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
+      ),
+      'contextual_banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'default' => array(
         'label' => 'above',
@@ -265,6 +290,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 5,
       ),
+      'contextual_banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -330,6 +361,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'contextual_banner' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -469,6 +506,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'contextual_banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -532,6 +575,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
+      ),
+      'contextual_banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -620,6 +669,13 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'contextual_banner' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -690,6 +746,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         ),
         'type' => 'redhen_donation_link',
         'weight' => 3,
+      ),
+      'contextual_banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -773,6 +835,12 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'contextual_banner' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

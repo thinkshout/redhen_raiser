@@ -43,5 +43,5 @@ features[redhen_campaign_type][] = general
 features[variable][] = field_bundle_settings_redhen_campaign__general
 features[variable][] = pathauto_redhen_campaign_pattern
 features[views_view][] = campaign_donors
-mtime = 1416352588
+mtime = 1416448192
 project path = profiles/redhen_raiser/modules/redhen_raiser/

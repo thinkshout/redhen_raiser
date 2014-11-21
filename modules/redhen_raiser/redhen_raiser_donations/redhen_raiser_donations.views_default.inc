@@ -250,18 +250,41 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['fields']['created']['table'] = 'redhen_donation';
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = 'Date';
-  $handler->display->display_options['fields']['created']['date_format'] = 'short';
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'm/d/Y';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'html5_tools_iso8601';
+  /* Filter criterion: Date: Date (redhen_donation) */
+  $handler->display->display_options['filters']['date_filter_1']['id'] = 'date_filter_1';
+  $handler->display->display_options['filters']['date_filter_1']['table'] = 'redhen_donation';
+  $handler->display->display_options['filters']['date_filter_1']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter_1']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter_1']['group'] = 1;
+  $handler->display->display_options['filters']['date_filter_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['date_filter_1']['expose']['operator_id'] = 'date_filter_1_op';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['label'] = 'Start Date';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['operator'] = 'date_filter_1_op';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['identifier'] = 'date_filter_1';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['date_filter_1']['form_type'] = 'date_popup';
+  $handler->display->display_options['filters']['date_filter_1']['year_range'] = '-10:+1';
+  $handler->display->display_options['filters']['date_filter_1']['date_fields'] = array(
+    'redhen_donation.created' => 'redhen_donation.created',
+  );
+  $handler->display->display_options['filters']['date_filter_1']['date_method'] = 'AND';
   /* Filter criterion: Date: Date (redhen_donation) */
   $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['table'] = 'redhen_donation';
   $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
-  $handler->display->display_options['filters']['date_filter']['operator'] = 'between';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '<=';
   $handler->display->display_options['filters']['date_filter']['group'] = 1;
   $handler->display->display_options['filters']['date_filter']['exposed'] = TRUE;
   $handler->display->display_options['filters']['date_filter']['expose']['operator_id'] = 'date_filter_op';
-  $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'Date';
+  $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'End Date';
   $handler->display->display_options['filters']['date_filter']['expose']['operator'] = 'date_filter_op';
   $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['expose']['remember_roles'] = array(
@@ -271,6 +294,7 @@ function redhen_raiser_donations_views_default_views() {
     3 => 0,
   );
   $handler->display->display_options['filters']['date_filter']['form_type'] = 'date_popup';
+  $handler->display->display_options['filters']['date_filter']['year_range'] = '-10:+1';
   $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
     'redhen_donation.created' => 'redhen_donation.created',
   );
@@ -281,6 +305,7 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['filters']['label']['field'] = 'label';
   $handler->display->display_options['filters']['label']['relationship'] = 'redhen_campaign_context';
   $handler->display->display_options['filters']['label']['operator'] = 'contains';
+  $handler->display->display_options['filters']['label']['group'] = 1;
   $handler->display->display_options['filters']['label']['exposed'] = TRUE;
   $handler->display->display_options['filters']['label']['expose']['operator_id'] = 'label_op';
   $handler->display->display_options['filters']['label']['expose']['label'] = 'Campaign Name';
@@ -298,6 +323,7 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['filters']['label_1']['field'] = 'label';
   $handler->display->display_options['filters']['label_1']['relationship'] = 'redhen_campaign_page_context';
   $handler->display->display_options['filters']['label_1']['operator'] = 'contains';
+  $handler->display->display_options['filters']['label_1']['group'] = 1;
   $handler->display->display_options['filters']['label_1']['exposed'] = TRUE;
   $handler->display->display_options['filters']['label_1']['expose']['operator_id'] = 'label_1_op';
   $handler->display->display_options['filters']['label_1']['expose']['label'] = 'Team or Donor';

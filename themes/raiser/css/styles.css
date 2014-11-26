@@ -1652,15 +1652,16 @@ body.front #main #content {
 .page-redhen-campaign-pages .views-row .redhen_campaign_page_title {
   font-size: 1em;
   margin-left: 1em;
+  margin-right: 1em;
   margin-top: 0;
-  width: 80%;
+  width: 87%;
 }
-/* line 66, ../sass/components/_campaign-team-individual-list.scss */
+/* line 67, ../sass/components/_campaign-team-individual-list.scss */
 .page-redhen-campaign-pages .views-row .redhen-campaign-page-team .field-name-field-logo {
   margin: 0 1em 1em 1em;
   float: none;
 }
-/* line 69, ../sass/components/_campaign-team-individual-list.scss */
+/* line 70, ../sass/components/_campaign-team-individual-list.scss */
 .page-redhen-campaign-pages .views-row .redhen-campaign-page-team .field-name-field-logo img {
   border-radius: 0.5em;
   -webkit-box-shadow: 0 3px 5px #989898;
@@ -1668,7 +1669,7 @@ body.front #main #content {
   box-shadow: 0 3px 5px #989898;
   width: 100%;
 }
-/* line 78, ../sass/components/_campaign-team-individual-list.scss */
+/* line 79, ../sass/components/_campaign-team-individual-list.scss */
 .page-redhen-campaign-pages .views-row .clearfix:after {
   display: block !important;
 }
@@ -1679,7 +1680,7 @@ body.front #main #content {
     margin-right: 2%;
     position: relative;
   }
-  /* line 85, ../sass/components/_campaign-team-individual-list.scss */
+  /* line 86, ../sass/components/_campaign-team-individual-list.scss */
   .page-redhen-campaign-pages .views-row .redhen_campaign_page_title {
     width: 100%;
   }
@@ -1706,7 +1707,7 @@ body.front #main #content {
     position: relative;
     width: 31.33333%;
   }
-  /* line 105, ../sass/components/_campaign-team-individual-list.scss */
+  /* line 106, ../sass/components/_campaign-team-individual-list.scss */
   .page-redhen-campaign-pages .views-row:nth-child(3n+4) {
     clear: both;
   }
@@ -4041,7 +4042,7 @@ tr.selected td {
 /* line 808, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1416514438');
+  background-image: url('../images/progress.gif?1416518021');
 }
 
 /* line 1, ../sass/components/_modal.scss */

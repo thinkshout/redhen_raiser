@@ -156,6 +156,8 @@ projects[navbar][version] = "1.4"
 projects[navbar][subdir] = "contrib"
 ; Patch to add top-level icons for commerce menu, etc.
 projects[navbar][patch][] = "https://www.drupal.org/files/issues/navbar-contrib-icons-1954912-20.patch"
+; Patch to fix admin scrolling in IE
+projects[navbar][patch][] = "https://www.drupal.org/files/issues/page_scroll_IE-2183753-21.patch"
 
 ; pathauto requires token
 projects[pathauto][version] = "1.2"

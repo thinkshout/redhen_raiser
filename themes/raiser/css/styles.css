@@ -1650,9 +1650,9 @@ body.front #main #content {
 /* line 57, ../sass/components/_campaign-team-individual-list.scss */
 .page-redhen-campaign-pages .views-row .redhen_campaign_page_campaign,
 .page-redhen-campaign-pages .views-row .redhen_campaign_page_title {
+  float: none;
   font-size: 1em;
   margin-left: 1em;
-  margin-right: 1em;
   margin-top: 0;
   width: 87%;
 }

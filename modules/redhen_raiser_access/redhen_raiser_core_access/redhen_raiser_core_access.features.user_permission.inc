@@ -47,13 +47,6 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'access devel information'.
-  $permissions['access devel information'] = array(
-    'name' => 'access devel information',
-    'roles' => array(),
-    'module' => 'devel',
-  );
-
   // Exported permission: 'access navbar'.
   $permissions['access navbar'] = array(
     'name' => 'access navbar',
@@ -374,13 +367,6 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'media',
   );
 
-  // Exported permission: 'execute php code'.
-  $permissions['execute php code'] = array(
-    'name' => 'execute php code',
-    'roles' => array(),
-    'module' => 'devel',
-  );
-
   // Exported permission: 'generate features'.
   $permissions['generate features'] = array(
     'name' => 'generate features',
@@ -603,13 +589,6 @@ function redhen_raiser_core_access_user_default_permissions() {
       'editor' => 'editor',
     ),
     'module' => 'better_formats',
-  );
-
-  // Exported permission: 'switch users'.
-  $permissions['switch users'] = array(
-    'name' => 'switch users',
-    'roles' => array(),
-    'module' => 'devel',
   );
 
   // Exported permission: 'use text format rich_text'.

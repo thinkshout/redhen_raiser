@@ -64,7 +64,7 @@ function redhen_raiser_donations_default_redhen_donation_type() {
         },
         "payment_methods" : [
           {
-            "payment_method" : "iats_credit_card|cafb_iats_credit_card",
+            "payment_method" : "iats_credit_card|rules_iats_payments_credit_card_payment_cafb",
             "label" : "",
             "currency" : "USD",
             "delete" : "Delete"

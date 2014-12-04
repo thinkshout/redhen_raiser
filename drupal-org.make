@@ -74,7 +74,7 @@ projects[context_query_param][version] = "1.3"
 projects[context_query_param][subdir] = "contrib"
 
 ; ctools
-projects[ctools][version] = "1.4"
+projects[ctools][version] = "1.5"
 projects[ctools][subdir] = "contrib"
 
 ; date

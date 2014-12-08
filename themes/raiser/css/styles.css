@@ -4042,7 +4042,7 @@ tr.selected td {
 /* line 808, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1416518021');
+  background-image: url('../images/progress.gif?1418059837');
 }
 
 /* line 1, ../sass/components/_modal.scss */
@@ -4354,7 +4354,7 @@ tr.selected td {
 #block-redhen-raiser-blocks-social-media-share .field-item {
   float: left;
 }
-/* line 13, ../sass/components/_social-media.scss */
+/* line 12, ../sass/components/_social-media.scss */
 #block-redhen-raiser-blocks-social-media-share a {
   background: url(../images/social.png) no-repeat;
   background-size: 214px;
@@ -4365,19 +4365,19 @@ tr.selected td {
   text-indent: -9999px;
   width: 45px;
 }
-/* line 23, ../sass/components/_social-media.scss */
+/* line 22, ../sass/components/_social-media.scss */
 #block-redhen-raiser-blocks-social-media-share a.twitter-link {
   background-position: 0 0;
 }
-/* line 26, ../sass/components/_social-media.scss */
+/* line 25, ../sass/components/_social-media.scss */
 #block-redhen-raiser-blocks-social-media-share a.facebook-link {
   background-position: -56px 0;
 }
-/* line 29, ../sass/components/_social-media.scss */
-#block-redhen-raiser-blocks-social-media-share a.linkin-link {
+/* line 28, ../sass/components/_social-media.scss */
+#block-redhen-raiser-blocks-social-media-share a.linkedin-link {
   background-position: -112px 0;
 }
-/* line 32, ../sass/components/_social-media.scss */
+/* line 31, ../sass/components/_social-media.scss */
 #block-redhen-raiser-blocks-social-media-share a.googleplus-link {
   background-position: -168px 0;
 }

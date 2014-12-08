@@ -264,8 +264,8 @@ function redhen_raiser_campaign_updates_form_campaign_update_node_form_alter(&$f
     $lang = $form['field_page_context']['#language'];
     if (!isset($form_state['all_pages'])) {
       $form_state['all_pages'] = array(
-        'teams' => $form['field_page_context'][$lang]['#options']['Team'],
-        'individuals' => $form['field_page_context'][$lang]['#options']['Individual'],
+        'teams' => isset($form['field_page_context'][$lang]['#options']['Team']) ? $form['field_page_context'][$lang]['#options']['Team'] : array(),
+        'individuals' => isset($form['field_page_context'][$lang]['#options']['Individual']) ? $form['field_page_context'][$lang]['#options']['Individual'] : array(),
       );
     }
     // Rebuild our page selection to make it more intuitive:

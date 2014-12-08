@@ -153,20 +153,6 @@ function _redhen_raiser_blocks_format_dates(&$build) {
       $build['field_end_date'][0]['#markup'] = '<span class="date-display-interval-past">Fundraiser has ended.</span>';
     }
     else {
-      if ($build['field_end_date']['#formatter'] == "format_interval") {
-        // Unfortunately, the interval formatter lacks a "round up" option.
-        // This would be better as an option added to that formatter. @todo
-        $words = explode(' ', strip_tags($build['field_end_date'][0]['#markup']));
-        if (count($words) == 2) {
-          switch ($words[1]) {
-            case 'day':
-            case 'days':
-              $num = $words[0];
-              $build['field_end_date'][0]['#markup'] = str_replace($num, $num + 1, $build['field_end_date'][0]['#markup']);
-              break;
-          }
-        }
-      }
       $prepend = '<span class="date-display-interval-all">';
       if ($remaining < (7 * 24 * 60 * 60)) {
         $prepend .= "Only ";

@@ -80,6 +80,7 @@ projects[ctools][subdir] = "contrib"
 ; date
 projects[date][version] = "2.8"
 projects[date][subdir] = "contrib"
+projects[date][patch][] = "https://www.drupal.org/files/issues/date_add_rounding_option_to_interval_formatter.patch"
 
 ; date_restrictions
 projects[date_restrictions][download][type] = "git"

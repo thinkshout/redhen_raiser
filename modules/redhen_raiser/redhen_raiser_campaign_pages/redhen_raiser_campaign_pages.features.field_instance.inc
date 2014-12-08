@@ -135,6 +135,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'settings' => array(
           'interval' => 1,
           'interval_display' => 'raw time hence',
+          'round' => 1,
         ),
         'type' => 'format_interval',
         'weight' => 1,
@@ -748,6 +749,7 @@ function redhen_raiser_campaign_pages_field_default_field_instances() {
         'settings' => array(
           'interval' => 1,
           'interval_display' => 'raw time hence',
+          'round' => 1,
         ),
         'type' => 'format_interval',
         'weight' => 1,

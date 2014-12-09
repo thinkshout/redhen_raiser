@@ -15,6 +15,20 @@
   #block-bean-campaign-context-banner,
   #block-bean-campaign-banner {
     margin-bottom: 0;
+    .content {
+      height: 300px;
+      overflow: hidden;
+      width: 100%;
+      @include mobile {
+        height: auto;
+      }
+    }
+
+    .field-name-field-banner-image {
+      position: absolute;
+      width: 100%;
+    }
+
     img {
       width: 100%;
     }
@@ -24,25 +38,29 @@
   .redhen-campaign-general h2,
   .redhen_campaign_page_campaign {
     @include text-shadow(0 2px 5px $black);
+    background: rgba(0,0,0,0.6);
+    box-sizing: border-box;
     color: $white;
     display: block;
+    float: left;
     font-family: $raiser-heading-font;
     font-size: em(32);
-    left: em(11);
-    line-height: 1.2em;
-    position: absolute;
-    top: 2em;
+    left: auto;
+    line-height: 1;
+    margin-top: 4.5em;
+    padding-left: em(9);
+    padding-top: em(9);
+    position: relative;
+    top: auto;
+    width: 515px;
     z-index: 3;
 
     a { color: $white; }
 
-    @include small {
-      top: em(100);
-    }
+    @include mobile {
+      width: 100%;
+      margin-top: 0;
 
-    @include medium {
-      color: $white;
-      top: em(80);
     }
   }
 
@@ -57,59 +75,46 @@
   }
 
   .field-name-field-teaser {
-    margin-bottom: 1em;
+    background: rgba(0,0,0,0.6);
+    bottom: auto;
+    box-sizing: border-box;
+    clear: both;
+    color: $white;
+    float: left;
+    font-size: 1.2em;
+    height: 150px;
+    margin-bottom: 0;
     max-width: none;
-    padding: 1em;
+    padding: 0.5em 1em 0;
+    position: relative;
+    width: 515px;
 
-    @include small {
-      background: rgba(0,0,0,0.6);
-      color: $white;
-      padding: 1em;
-      position: absolute;
-      bottom: 8em;
+    @include mobile {
+      width: 100%;
     }
-
-    @include medium {
-      background: rgba(0,0,0,0.6);
-      bottom: 0;
-      color: $white;
-      font-size: 1.2em;
-      height: 150px;
-      padding: 1em 1em 0;
-      position: absolute;
-      min-width: 50%;
-      margin-bottom: 0;
-      max-width: 60%;
-
-      .field-item {
-        margin-top: 3em;
-      }
-    }
-
   }
 
   .redhen_campaign_page_donate,
   .field-type-redhen-donation {
+    bottom: 2em;
+    margin-bottom: 0;
     padding: 1em;
-
+    position: absolute;
+    right: 1em;
+    width: auto;
+    z-index: 2;
     a {
       @include cta-btn;
       display: block;
-      margin-bottom: 1em;
       text-align: center;
     }
 
-    @include medium {
-      bottom: 2em;
-      margin-bottom: 0;
-      position: absolute;
-      right: 1em;
-      width: auto;
-      z-index: 2;
-
-      a {
-        margin-bottom: 0;
-      }
+    @include mobile {
+      bottom: 0em;
+      left: 50%;
+      margin-left: -132px;
+      width: 265px;
+      box-sizing: border-box;
     }
 
   }

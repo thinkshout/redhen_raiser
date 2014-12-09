@@ -119,7 +119,12 @@
 
 @mixin xsmall {
   @media (min-width: 320px) and (max-width: 480px) {
-    @content; 
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
   }
 }
 

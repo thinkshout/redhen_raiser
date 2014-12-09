@@ -1105,12 +1105,19 @@ form select, form x:-moz-any-link, form x:only-child {
     padding: 0.8em 5em;
   }
 }
-/* line 109, ../sass/layouts/_campaign.scss */
+@media (max-width: 767px) {
+  /* line 87, ../sass/layouts/_campaign.scss */
+  .page-redhen-campaign .view-all-button,
+  .page-redhen-campaign-edit .view-all-button {
+    padding: 2em 0em;
+  }
+}
+/* line 112, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign .field-name-field-story-media img,
 .page-redhen-campaign-edit .field-name-field-story-media img {
   width: 100%;
 }
-/* line 113, ../sass/layouts/_campaign.scss */
+/* line 116, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign iframe,
 .page-redhen-campaign-edit iframe {
   -webkit-box-shadow: 0 3px 5px #989898;
@@ -1119,7 +1126,7 @@ form select, form x:-moz-any-link, form x:only-child {
   border: 3px solid white;
   width: 100%;
 }
-/* line 122, ../sass/layouts/_campaign.scss */
+/* line 125, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-campaign-page-progress-query-con,
 .page-redhen-campaign #block-bean-campaign-page-progress,
 .page-redhen-campaign #block-bean-campaign-progress,
@@ -1131,7 +1138,7 @@ form select, form x:-moz-any-link, form x:only-child {
   padding-top: 2em;
 }
 @media (min-width: 992px) {
-  /* line 122, ../sass/layouts/_campaign.scss */
+  /* line 125, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign #block-bean-campaign-page-progress-query-con,
   .page-redhen-campaign #block-bean-campaign-page-progress,
   .page-redhen-campaign #block-bean-campaign-progress,
@@ -1143,7 +1150,7 @@ form select, form x:-moz-any-link, form x:only-child {
     margin-bottom: 0;
     width: 100%;
   }
-  /* line 131, ../sass/layouts/_campaign.scss */
+  /* line 134, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign #block-bean-campaign-page-progress-query-con .field-label-inline,
   .page-redhen-campaign #block-bean-campaign-page-progress .field-label-inline,
   .page-redhen-campaign #block-bean-campaign-progress .field-label-inline,
@@ -1152,7 +1159,7 @@ form select, form x:-moz-any-link, form x:only-child {
   .page-redhen-campaign-edit #block-bean-campaign-progress .field-label-inline {
     display: none;
   }
-  /* line 135, ../sass/layouts/_campaign.scss */
+  /* line 138, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign #block-bean-campaign-page-progress-query-con h2,
   .page-redhen-campaign #block-bean-campaign-page-progress h2,
   .page-redhen-campaign #block-bean-campaign-progress h2,
@@ -1161,7 +1168,7 @@ form select, form x:-moz-any-link, form x:only-child {
   .page-redhen-campaign-edit #block-bean-campaign-progress h2 {
     display: none;
   }
-  /* line 137, ../sass/layouts/_campaign.scss */
+  /* line 140, ../sass/layouts/_campaign.scss */
   .page-redhen-campaign #block-bean-campaign-page-progress-query-con .field-type-datetime,
   .page-redhen-campaign #block-bean-campaign-page-progress .field-type-datetime,
   .page-redhen-campaign #block-bean-campaign-progress .field-type-datetime,
@@ -1171,23 +1178,23 @@ form select, form x:-moz-any-link, form x:only-child {
     margin-left: 1em;
   }
 }
-/* line 144, ../sass/layouts/_campaign.scss */
+/* line 147, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-donation-matching,
 .page-redhen-campaign-edit #block-bean-donation-matching {
   margin-right: 1.2em;
   margin-top: 1em;
 }
-/* line 148, ../sass/layouts/_campaign.scss */
+/* line 151, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-donation-matching .block-title,
 .page-redhen-campaign-edit #block-bean-donation-matching .block-title {
   display: none;
 }
-/* line 150, ../sass/layouts/_campaign.scss */
+/* line 153, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-donation-matching .bean-promo,
 .page-redhen-campaign-edit #block-bean-donation-matching .bean-promo {
   text-align: center;
 }
-/* line 153, ../sass/layouts/_campaign.scss */
+/* line 156, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-donation-matching .bean-promo img,
 .page-redhen-campaign-edit #block-bean-donation-matching .bean-promo img {
   -webkit-border-radius: 8px;
@@ -1201,7 +1208,7 @@ form select, form x:-moz-any-link, form x:only-child {
   border: 3px solid white;
   width: 100%;
 }
-/* line 160, ../sass/layouts/_campaign.scss */
+/* line 163, ../sass/layouts/_campaign.scss */
 .page-redhen-campaign #block-bean-donation-matching .bean-promo p,
 .page-redhen-campaign-edit #block-bean-donation-matching .bean-promo p {
   margin: 1em 0;

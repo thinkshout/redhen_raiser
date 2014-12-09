@@ -35,7 +35,7 @@
 
     background: $white;
     h2.page__title {
-      line-height: 1.2em; 
+      line-height: 1.2em;
       margin-bottom: 0.5em;
     }
   }
@@ -44,7 +44,7 @@
     @include zen-grid-item(12,1);
     clear: left;
     position: relative;
-  
+
 
     @include medium {
       @include zen-grid-item(4,9);
@@ -89,7 +89,7 @@
     text-align: center;
     a {
       margin: 0 auto;
-      float: none; 
+      float: none;
       font-size: 0.8em;
       padding: 1em 0.5em;
     }
@@ -97,10 +97,13 @@
     @include medium {
       a {
         margin: 0 auto;
-        float: none; 
+        float: none;
         font-size: 100%;
         padding: 0.8em 5em;
       }
+    }
+    @include mobile {
+      padding: 2em 0em;
     }
   }
 

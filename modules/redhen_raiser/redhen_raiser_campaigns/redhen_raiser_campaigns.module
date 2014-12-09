@@ -85,3 +85,12 @@ function redhen_raiser_campaigns_load_active() {
   }
   return array();
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function redhen_raiser_campaigns_form_redhen_campaign_campaign_form_alter(&$form, &$form_state, $form_id) {
+  $form['field_teaser'][$form['field_teaser']['#language']][0]['value']['#maxlength'] = 128;
+  $form['label']['#maxlength'] = 50;
+  $form['label']['#description'] = t('<i>(50 character limit)</i>');
+}

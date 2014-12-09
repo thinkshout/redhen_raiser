@@ -18,6 +18,8 @@ function redhen_raiser_install() {
   variable_set('date_format_short', 'n/j/y g:i a');
 
   minimal_install();
+  variable_set('site_name', variable_get('site_name', 'RedHen Raiser Site Name'));
+  variable_set('site_slogan', variable_get('site_slogan', 'RedHen Raiser Site Slogan™'));
   // Copy image defaults.
   if (!file_exists('sites/default/files/redhen_raiser/default-avatar.png')) {
     if (!file_exists('sites/default/files/redhen_raiser/')) {

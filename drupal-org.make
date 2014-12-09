@@ -147,9 +147,7 @@ projects[media_youtube][version] = "2.0-rc4"
 projects[media_youtube][subdir] = "contrib"
 
 ; module_filter
-projects[module_filter][download][type] = "git"
-projects[module_filter][download][url] = "http://git.drupal.org/project/module_filter.git"
-projects[module_filter][download][revision] = "c7fd7f5"
+projects[module_filter][version] = "2.0-alpha2"
 projects[module_filter][subdir] = "contrib"
 
 ; navbar

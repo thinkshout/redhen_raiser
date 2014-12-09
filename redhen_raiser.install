@@ -5,7 +5,7 @@
  */
 function redhen_raiser_install() {
   include_once DRUPAL_ROOT . '/profiles/minimal/minimal.install';
-   // Turn off Adv Help warning for Views.
+  // Turn off Adv Help warning for Views.
   variable_set('views_ui_show_advanced_help_warning', '0');
 
   // Set the admin theme. (NOTE: We don't want to enable it.)
@@ -19,6 +19,10 @@ function redhen_raiser_install() {
 
   minimal_install();
   // Copy image defaults.
-  mkdir('sites/default/files/redhen_raiser');
-  copy(DRUPAL_ROOT . '/profiles/redhen_raiser/themes/raiser/images/default-avatar.png', 'sites/default/files/redhen_raiser/default-avatar.png');
+  if (!file_exists('sites/default/files/redhen_raiser/default-avatar.png')) {
+    if (!file_exists('sites/default/files/redhen_raiser/')) {
+      mkdir('sites/default/files/redhen_raiser');
+    }
+    copy(DRUPAL_ROOT . '/profiles/redhen_raiser/themes/raiser/images/default-avatar.png', 'sites/default/files/redhen_raiser/default-avatar.png');
+  }
 }

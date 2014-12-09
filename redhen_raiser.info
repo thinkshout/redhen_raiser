@@ -71,6 +71,7 @@ dependencies[] = media_internet
 dependencies[] = media_youtube
 dependencies[] = module_filter
 dependencies[] = navbar
+dependencies[] = navbar_flush_cache
 dependencies[] = picture
 dependencies[] = image
 dependencies[] = file_entity

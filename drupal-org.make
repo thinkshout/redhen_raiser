@@ -160,6 +160,12 @@ projects[navbar][patch][] = "https://www.drupal.org/files/issues/navbar-contrib-
 ; Patch to fix admin scrolling in IE
 projects[navbar][patch][] = "https://www.drupal.org/files/issues/page_scroll_IE-2183753-21.patch"
 
+; navbar_flush_cache
+projects[navbar_flush_cache][download][type] = "git"
+projects[navbar_flush_cache][download][url] = "http://git.drupal.org/project/navbar_flush_cache.git"
+projects[navbar_flush_cache][download][revision] = "a3624ba"
+projects[navbar_flush_cache][subdir] = "contrib"
+
 ; pathauto requires token
 projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"

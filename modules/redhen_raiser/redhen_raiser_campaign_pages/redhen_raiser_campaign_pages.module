@@ -144,4 +144,7 @@ function _redhen_raiser_campaign_pages_contact_image_post_render($html, $variabl
 function redhen_raiser_campaign_pages_form_redhen_campaign_campaign_page_form_alter(&$form, &$form_state, $form_id) {
   $form['campaign']['#access'] = user_access('administer redhen campaign pages') || empty($form_state['campaign']);
   $form['team']['#access'] = user_access('administer redhen campaign pages') || empty($form_state['team']);
+  if (isset($form['field_teaser'])) {
+    $form['field_teaser'][$form['field_teaser']['#language']][0]['value']['#maxlength'] = 128;
+  }
 }

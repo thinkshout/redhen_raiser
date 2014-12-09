@@ -163,24 +163,6 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'image',
   );
 
-  // Exported permission: 'administer mailsystem'.
-  $permissions['administer mailsystem'] = array(
-    'name' => 'administer mailsystem',
-    'roles' => array(
-      'admin' => 'admin',
-    ),
-    'module' => 'mailsystem',
-  );
-
-  // Exported permission: 'administer mandrill'.
-  $permissions['administer mandrill'] = array(
-    'name' => 'administer mandrill',
-    'roles' => array(
-      'admin' => 'admin',
-    ),
-    'module' => 'mandrill',
-  );
-
   // Exported permission: 'administer media'.
   $permissions['administer media'] = array(
     'name' => 'administer media',
@@ -331,15 +313,6 @@ function redhen_raiser_core_access_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(),
     'module' => 'user',
-  );
-
-  // Exported permission: 'configure mandrill templates'.
-  $permissions['configure mandrill templates'] = array(
-    'name' => 'configure mandrill templates',
-    'roles' => array(
-      'admin' => 'admin',
-    ),
-    'module' => 'mandrill_template',
   );
 
   // Exported permission: 'customize ckeditor'.

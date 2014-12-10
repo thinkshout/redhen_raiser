@@ -2904,10 +2904,6 @@ select::-ms-expand {
   display: block;
   float: left;
 }
-/* line 9, ../sass/components/_header.scss */
-#header #logo img {
-  width: 3.594em;
-}
 /* line 12, ../sass/components/_header.scss */
 #header #menu-toggle {
   display: block;
@@ -2969,10 +2965,6 @@ select::-ms-expand {
   /* line 48, ../sass/components/_header.scss */
   #header {
     padding: 0.2em 1em;
-  }
-  /* line 51, ../sass/components/_header.scss */
-  #header #logo img {
-    width: 40%;
   }
   /* line 53, ../sass/components/_header.scss */
   #header #menu-toggle {
@@ -4057,7 +4049,7 @@ tr.selected td {
 /* line 808, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1418081532');
+  background-image: url('../images/progress.gif?1418059837');
 }
 
 /* line 1, ../sass/components/_modal.scss */

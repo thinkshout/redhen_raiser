@@ -61,5 +61,4 @@ features[variable][] = user_picture_style
 features[variable][] = user_pictures
 features[variable][] = user_register
 features[variable][] = user_signatures
-mtime = 1418088515
 project path = profiles/redhen_raiser/modules/redhen_raiser

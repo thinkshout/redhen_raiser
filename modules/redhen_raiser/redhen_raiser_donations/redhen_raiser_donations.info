@@ -44,5 +44,4 @@ features[views_view][] = donations
 features[views_view][] = my_donations
 features_exclude[field_base][commerce_price] = commerce_price
 features_exclude[field_base][commerce_customer_address] = commerce_customer_address
-mtime = 1416526426
 project path = profiles/redhen_raiser/modules/redhen_raiser

@@ -107,6 +107,7 @@ projects[entityreference][subdir] = "contrib"
 ; features
 projects[features][version] = "2.2"
 projects[features][subdir] = "contrib"
+projects[features][patch][] = "https://www.drupal.org/files/issues/2381739-features-mtime.patch"
 
 ; field_group
 projects[field_group][version] = "1.4"

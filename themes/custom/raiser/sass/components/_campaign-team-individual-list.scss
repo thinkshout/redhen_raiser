@@ -1,0 +1,111 @@
+.page-redhen-campaign-pages {
+  .main-content-wrapper {
+    width: 100%;
+  }
+  .views-row {
+
+    @include box-shadow(0 3px 5px $gray);
+    background: $white;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    padding-bottom: 2em;
+    padding-top: 1em;
+
+    h2 {
+     font-size: em(18);
+     line-height: 1em;
+     margin-top: 0;
+     padding: 0 1em;
+     text-align: left;
+
+      a { color: $primary; }
+    }
+    .redhen_campaign_page_team {
+      padding-left: em(22);
+      margin-top: em(8);
+      line-height: 1;
+      position: absolute;
+      width: 100%;
+      bottom: em(12);
+      font-size: em(12);
+
+    }
+    .field-name-redhen-campaign-goal {
+      color: $primary;
+      font-size: em(22);
+      padding-left: em(12);
+      .rhc_progress {
+        display: inline;
+        font-size: em(16);
+      }
+    }
+
+    .redhen-contact-contact {
+      margin: 0 em(16) em(16) em(16);
+      display: block;
+      text-align: center;
+      float: none;
+      img {
+        border-radius: em(8);
+        @include box-shadow(0 3px 5px $gray);
+        width: 100%;
+      }
+
+    }
+
+    .redhen_campaign_page_campaign,
+    .redhen_campaign_page_title {
+      float: none;
+      font-size: em(16);
+      margin-left: 1em;
+      margin-top: 0;
+      width: 87%;
+    }
+
+
+    .redhen-campaign-page-team {
+      .field-name-field-logo {
+        margin: 0 em(16) em(16) em(16);
+        float: none;
+        img {
+          border-radius: em(8);
+          @include box-shadow(0 3px 5px $gray);
+          width: 100%;
+        }
+      }
+
+    }
+
+    .clearfix:after {
+      display: block !important;
+    }
+    @include xsmall {
+      width: 100%;
+      margin-right: 2%;
+      position: relative;
+      .redhen_campaign_page_title {
+        width: 100%;
+      }
+    }
+    @include small {
+      float: left;
+      width: 48%;
+      margin-right: 2%;
+      min-height: em(415);
+      position: relative;
+    }
+    @include medium {
+      display: inline-block;
+      float: left;
+      margin-bottom: 2em;
+      margin-right: 2%;
+      min-height: em(300);
+      padding: 1em 0;
+      position: relative;
+      width: 31.33333%;
+      &:nth-child(3n+4) {
+        clear: both;
+      }
+    }
+  }
+}

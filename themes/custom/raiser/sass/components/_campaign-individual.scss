@@ -1,0 +1,57 @@
+.redhen-campaign-page-individual {
+  .redhen-contact-contact {
+    float: left;
+    margin-right: 1em;
+
+    .content img {
+      border-radius: 8px;
+    }
+  }
+
+  .redhen_campaign_page_title {
+    float: left;
+    font-size: em(16);
+    margin-top: 0.5em;
+    width: 75%;
+  }
+
+  .redhen_campaign_page_team {
+    display: block;
+    float: left;
+    font-size: em(14);
+    width: 75%;
+  }
+
+  .redhen_campaign_page_campaign {
+    font-size: em(14);
+    overflow: hidden;
+    position: relative;
+    width: 75%;
+
+    .field-label {
+      width: 25%;
+    }
+
+    .field-items {
+      width: 75%;
+    }
+  }
+
+  .field-label {
+    font-weight: normal;
+  }
+
+  .clearfix:after {
+    display: inline !important;
+  }
+}
+
+@include xsmall {
+  .redhen-campaign-page-individual {
+    .redhen_campaign_page_title,
+    .redhen_campaign_page_team,
+    .redhen_campaign_page_campaign {
+      width: 100%;
+    }
+  }
+}

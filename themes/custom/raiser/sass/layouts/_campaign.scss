@@ -1,0 +1,168 @@
+.page-redhen-campaign,
+.page-redhen-campaign-edit {
+
+  #content {
+    @include box-shadow(0 3px 5px $gray);
+    background: $white;
+    overflow: hidden;
+    position: relative;
+    .redhen_campaign_title {
+      display: none;
+    }
+  }
+
+  #block-bean-campaign-banner .field-label-inline {
+    @include medium {
+      color: $white;
+      display: block;
+      font-family: $raiser-heading-font;
+      font-size: em(32);
+      left: em(11);
+      position: absolute;
+      top: em(80);
+      z-index: 3;
+    }
+
+    position: relative;
+  }
+
+  .main-content-wrapper {
+    @include zen-grid-item(12,1);
+    margin-top:  1.5em;
+    @include medium {
+      @include zen-grid-item(8,1);
+    }
+
+    background: $white;
+    h2.page__title {
+      line-height: 1.2em;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  aside {
+    @include zen-grid-item(12,1);
+    clear: left;
+    position: relative;
+
+
+    @include medium {
+      @include zen-grid-item(4,9);
+      background: $lt-gray;
+      height: 100%;
+      position: absolute;
+
+      .block-bean {
+        border-bottom: 1px solid $white;
+      }
+    }
+
+  }
+
+  .view-all-button,
+  .redhen_campaign_join_link {
+    background: $lt-gray;
+    margin-bottom: 2em;
+    padding: 2em 1em;
+    overflow: hidden;
+
+    .field-label {
+      font-weight: normal;
+      @include medium {
+        float: left;
+        padding-top: em(6);
+        margin-right: 2%;
+        width: 48%;
+      }
+
+      width: 100%;
+    }
+
+    a {
+      @include cta-btn;
+      float: right;
+    }
+  }
+
+  .view-all-button {
+    padding: 2em;
+    text-align: center;
+    a {
+      margin: 0 auto;
+      float: none;
+      font-size: 0.8em;
+      padding: 1em 0.5em;
+    }
+
+    @include medium {
+      a {
+        margin: 0 auto;
+        float: none;
+        font-size: 100%;
+        padding: 0.8em 5em;
+      }
+    }
+    @include mobile {
+      padding: 2em 0em;
+    }
+  }
+
+  // Campaign story image
+  .field-name-field-story-media {
+    img { width: 100%; }
+  }
+
+  // Video style
+  iframe {
+    @include box-shadow(0 3px 5px $gray);
+    border: 3px solid $white;
+    width: 100%;
+  }
+
+  // Progress widget
+  #block-bean-campaign-page-progress-query-con,
+  #block-bean-campaign-page-progress,
+  #block-bean-campaign-progress {
+    background: $primary-widget;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    @include medium {
+      color: $primary;
+      left: 0;
+      margin-bottom: 0;
+      width: 100%;
+      .field-label-inline {
+        display: none;
+      }
+
+      h2 { display: none; }
+
+      .field-type-datetime {
+        margin-left: em(16);
+      }
+    }
+  }
+
+  // Promo block
+  #block-bean-donation-matching {
+    margin-right: 1.2em;
+    margin-top: 1em;
+
+    .block-title { display: none; }
+
+    .bean-promo {
+      text-align: center;
+
+      img {
+        @include border-radius(8px);
+        @include box-shadow(0 3px 5px $gray);
+        border: 3px solid $white;
+        width: 100%;
+      }
+
+      p {
+        margin: 1em 0;
+      }
+    }
+  }
+} // end .page-redhen-campaign

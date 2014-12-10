@@ -1,0 +1,186 @@
+.page-fundraise {
+  a[href="/cafb-dc/redhen_campaign/add/general"] {
+    @include cta-btn
+  }
+}
+
+.page-redhen-campaign-add-general,
+.page-redhen-campaign-page-edit,
+.page-redhen-campaign-page-add,
+.page-redhen-campaign-edit {
+  #content {
+    @include box-shadow(0 3px 5px $gray);
+    background: $white;
+    overflow: hidden;
+    position: relative;
+    margin-top:  1.5em;
+    .redhen_campaign_title {
+      display: none;
+    }
+  }
+  .main-content-wrapper {
+    @include zen-grid-item(12,1);
+    background: $white;
+
+    .page__title,
+    .form-item-field-banner-image-und-0-fid {
+      display: none;
+    }
+  }
+
+  h2#page-title {
+    display: block;
+  }
+
+  .tabs-primary {
+    @include zen-grid-item(17,1);
+    float: none;
+  }
+
+  legend {
+    color: $black;
+    font-weight: bold;
+    width: 100%;
+    border-bottom: 2px solid $black;
+  }
+  .field-type-datetime legend {
+    font-weight: normal;
+    border-bottom: none;
+  }
+
+  fieldset {
+    border: none;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-top: em(32);
+  }
+
+  .fieldset-description {
+    @include box-shadow(0 3px 5px $gray);
+    background: $lt-gray;
+    display: none;
+    padding: em(16);
+    position: absolute;
+    right: em(0);
+    margin-top: em(-56);
+    width: zen-grid-item-width(3);
+    @include medium {
+      display: block;
+    }
+
+    .fieldset-description-title {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: em(16);
+      margin-top: em(8);
+    }
+  }
+
+  .filter-wrapper,
+  .filter-help {
+    float: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container-inline-date {
+    .date-padding {
+      padding: 0;
+    }
+  }
+
+  .field-type-datetime {
+    @include zen-grid-item(6,1);
+    margin-right: auto;
+
+
+    &#edit-field-end-date {
+      @include zen-grid-item(6,1);
+      font-size: em(16);
+      margin-top: 0;
+
+      @include xsmall {
+        margin-top: 1em;
+        width: 100%;
+      }
+    }
+    label {
+      color: $black;
+      font-size: em(16);
+    }
+
+    .description {
+      color: black;
+    }
+
+    input { font-size: 16px; }
+  }
+  .field-type-image {
+    min-height: em(32);
+    .preview .form-item,
+    .preview .media-item {
+      margin-top: em(-16);
+      margin-left: 0;
+    }
+    .description {
+      line-height: 1.7;
+    }
+  }
+
+  a.button {
+    @include appearance(none);
+    line-height: 1;
+  }
+
+  .form-actions {
+    clear:both;
+    margin-top: em(24);
+  }
+  fieldset[id^="edit-field-story-und-0-format"] {
+    font-size: em(14);
+    padding-top: em(8);
+    .filter-help {
+      float: right;
+      width: 60%;
+      text-align: right;
+      a {
+        font-size: em(14);
+        padding: 0 em(24) 0 0;
+      }
+    }
+    .form-type-select {
+      margin: 0;
+      padding: 0;
+      select {
+        height: em(24);
+        line-height: 1;
+        padding: 0 em(20) 0 em(8);
+      }
+    }
+    .filter-guidelines {
+      display: none;
+    }
+  }
+}
+
+@include xsmall {
+  .page-redhen-campaign-add-general,
+  .page-redhen-campaign-page-edit,
+  .page-redhen-campaign-page-add,
+  .page-redhen-campaign-edit {
+    fieldset[id^="edit-field-story-und-0-format"] {
+      .filter-help {
+        display: none;
+      }
+    }
+
+  }
+  .page-redhen-campaign-donate {
+    form select,
+    form input[type=text] {
+      max-width: 285px;
+    }
+  }
+}
+

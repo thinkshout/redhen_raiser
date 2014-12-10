@@ -1,0 +1,50 @@
+.page-redhen-campaign-donate {
+  h2#page-title {
+    display: block;
+    margin: 1em 0
+  }
+
+  form {
+    border-right: 1px solid $lt-gray;
+    padding-right: 1em;
+
+    .form-item {
+      margin: 1em 0; 
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+
+      legend {
+        font-size: 1.25em;
+      }
+    }
+
+    #edit-product-label {
+      display: none;
+    }
+  }
+
+  .group-tribute {
+    margin: 1em 0 2em; 
+
+    .fieldset-legend {
+      background-image: none !important;
+      padding-left: 0 !important; 
+    }
+
+    a.fieldset-title {
+      @include clear-btn; 
+      padding: 0.4em 1em;
+    }
+  }
+}
+
+@include xsmall {
+  .page-redhen-campaign-donate {
+    h2#page-title {
+      margin-top: em(-16);
+    }
+  }
+}

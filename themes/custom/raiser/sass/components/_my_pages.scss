@@ -1,0 +1,29 @@
+.page-user-my-pages,
+.page-user-my-donations,
+.page-user-orders,
+.page-redhen-campaign-donations,
+.page-redhen-campaign-update,
+.page-redhen-campaign-page-update {
+
+  @include rasier-table;
+
+  .main-content-wrapper {
+    width: 98%;
+  }
+}
+.profile .user-picture {
+  float: none;
+  position: absolute;
+  right: 0;
+  a {
+    cursor: default;
+  }
+  img {
+    background: $white;
+    border-radius: em(18);
+    margin-right: em(-10);
+    margin-top: em(-6);
+    padding: em(10);
+    max-width: em(125);
+  }
+}

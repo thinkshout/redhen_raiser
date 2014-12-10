@@ -1,0 +1,159 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+
+// Raiser Mixins
+//==================
+
+// BUTTONS
+@mixin raiser-btn {
+  background: none;
+  padding: 0.8em 1em;
+  border-radius: 0.7em;
+  @include box-shadow(0 2px 3px $gray - 50);
+
+  &:hover {
+    @include transition(all 0.5s);
+  }
+}
+
+@mixin clear-btn {
+  @include raiser-btn;
+  background: none;
+  border: 3px solid $primary;
+  box-shadow: none;
+  color: $primary;
+
+  &:hover {
+    background: $primary;
+    border: 3px solid $primary + 50;
+    color: $white;
+  }
+}
+
+@mixin cta-btn {
+  @include raiser-btn;
+  background: $action;
+  border: 3px solid $white;
+  color: $white;
+  text-transform: uppercase;
+  padding: 0.8em 5em;
+
+  &:hover {
+    color: $white;
+    background: $action + 20;
+  }
+}
+
+@mixin muted-btn {
+  @include raiser-btn;
+  border: 3px solid $gray;
+  color: $gray;
+
+  &:hover {
+    background: $gray;
+    border: 3px solid $lt-gray;
+    color: $white;
+  }
+}
+
+// Breakpoints
+//==================
+
+/* Large desktop */
+@mixin large {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// Desktop
+@mixin medium {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+
+// Tablet
+@mixin small {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin xsmall {
+  @media (min-width: 320px) and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+// Style Mixins
+//================
+
+// Box shadow
+@mixin raiser-box-shadow {
+  @include box-shadow(0 2px 4px $black);
+}
+
+@mixin rasier-table {
+  table {
+    width: 100%;
+  }
+  th {
+    text-align: left;
+    padding-left: em(4);
+  }
+  tr.odd {
+    background-color: $lt-primary;
+    border-bottom: none;
+  }
+  tr.even {
+    border-bottom: none;
+  }
+  td {
+    padding: em(5) em(8) em(3) em(8);
+    text-align: left;
+    font-size: em(14);
+  }
+}

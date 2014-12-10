@@ -1,0 +1,121 @@
+.page-redhen-campaign #highlighted {
+  @include box-shadow(0 2px 5px $gray);
+  margin-top: 1em;
+  position: relative;
+
+  @include medium {
+    max-height: 300px;
+  }
+
+  #block-bean-campaign-context-banner {
+    margin-bottom: 0;
+  }
+
+  #block-bean-campaign-page-banner,
+  #block-bean-campaign-context-banner,
+  #block-bean-campaign-banner {
+    margin-bottom: 0;
+    .content {
+      height: 300px;
+      overflow: hidden;
+      width: 100%;
+      @include mobile {
+        height: auto;
+      }
+    }
+
+    .field-name-field-banner-image {
+      position: absolute;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .redhen_campaign_title,
+  .redhen-campaign-general h2,
+  .redhen_campaign_page_campaign {
+    @include text-shadow(0 2px 5px $black);
+    background: rgba(0,0,0,0.6);
+    box-sizing: border-box;
+    color: $white;
+    display: block;
+    float: left;
+    font-family: $raiser-heading-font;
+    font-size: em(32);
+    left: auto;
+    line-height: 1;
+    margin-top: 4.5em;
+    padding-left: em(9);
+    padding-top: em(9);
+    position: relative;
+    top: auto;
+    width: 515px;
+    z-index: 3;
+
+    a { color: $white; }
+
+    @include mobile {
+      width: 100%;
+      margin-top: 0;
+
+    }
+  }
+
+  .redhen-campaign-general h2 {
+    top: 4em;
+    max-width: 38%;
+    line-height: em(18);
+  }
+
+  h2 {
+    display: none;
+  }
+
+  .field-name-field-teaser {
+    background: rgba(0,0,0,0.6);
+    bottom: auto;
+    box-sizing: border-box;
+    clear: both;
+    color: $white;
+    float: left;
+    font-size: 1.2em;
+    height: 150px;
+    margin-bottom: 0;
+    max-width: none;
+    padding: 0.5em 1em 0;
+    position: relative;
+    width: 515px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .redhen_campaign_page_donate,
+  .field-type-redhen-donation {
+    bottom: 2em;
+    margin-bottom: 0;
+    padding: 1em;
+    position: absolute;
+    right: 1em;
+    width: auto;
+    z-index: 2;
+    a {
+      @include cta-btn;
+      display: block;
+      text-align: center;
+    }
+
+    @include mobile {
+      bottom: 0em;
+      left: 50%;
+      margin-left: -132px;
+      width: 265px;
+      box-sizing: border-box;
+    }
+
+  }
+}

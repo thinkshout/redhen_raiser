@@ -1,0 +1,206 @@
+// Account forms
+.page-user,
+.not-logged-in.page-fundraise {
+  h2.page__title {
+    text-align: center;
+  }
+}
+#user-login,
+#user-register-form,
+#user-pass {
+  //background: $white;
+  //border-radius: 0.7em;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 2em;
+  @include zen-grid-item(12, 1);
+  //@include box-shadow(0 2px 3px $gray);
+
+  @include large {
+    //@include zen-grid-item(6,4);
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  p { padding: 1em; }
+
+  #edit-register,
+  #edit-reset,
+  #edit-login,
+  .form-item,
+  .form-actions {
+    padding: 0em 1em;
+  }
+
+  #edit-register,
+  #edit-reset {
+    display: block;
+  }
+
+  .form-actions {
+    margin-top: 1em;
+  }
+}
+#edit-cancel {
+  @include muted-btn;
+  float: right;
+  padding: 0.6em 1em;
+  box-sizing: border-box;
+  height: em(50);
+}
+
+#edit-submit, #edit-cancel {
+  @include xsmall {
+    float: none;
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+    width: 100%;
+    clear: both;
+  }
+}
+
+#user-register-form,
+#user-pass {
+  #edit-submit {
+    padding: 0.8em 1em;
+    float: left;
+  }
+}
+
+form[id^="redhen-campaign-page-add-form"],
+form[id^="redhen-campaign-campaign-form"],
+form[id^="redhen-campaign-campaign-page-form"] {
+  @include medium {
+    @include zen-grid-item(8,1);
+    width: 70%;
+  }
+  .field-name-redhen-campaign-goal {
+    color: $black;
+    font-size: em(16);
+    padding-left: em(0);
+    .field-prefix {
+      color: $primary;
+      font-size: em(22);
+      line-height: em(28);
+    }
+    input[id^="edit-redhen-campaign-goal-und-0-value"] {
+      float: right;
+      width: 97%;
+
+      @include xsmall {
+        width: 91%;
+      }
+    }
+    .description {
+      clear: both;
+    }
+  }
+}
+
+
+#edit-field-start-date,
+#edit-field-end-date,
+.main-content-wrapper .field-name-field-end-date,
+.main-content-wrapper .field-name-field-start-date {
+  color: $black;
+  font-size: em(16);
+  margin-left: 0;
+  margin-top: 0;
+
+  @include xsmall {
+    clear: left;
+    width: 100%;
+    input[type=text] { width: 100%; }
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .container-inline-date .date-padding {
+    padding: 0;
+    width: 100%;
+  }
+  .container-inline-date .form-item {
+    margin-bottom: 0;
+    @include xsmall {
+      width: 100%;
+    }
+  }
+  .form-item label {
+    display: none;
+  }
+}
+
+.form-radio,
+.form-type-radio {
+  @include clear-btn;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.4em 1em;
+  input {
+    display: none;
+  }
+  .ajax-progress-throbber {
+    position: absolute;
+    color: $black;
+    line-height: 1.6;
+    left: 26%;
+    font-size: em(14);
+  }
+  label {
+    cursor: pointer;
+  }
+  &.checked {
+    background: $primary;
+    border: 3px solid $primary + 50;
+    color: $white;
+    cursor: default;
+    label {
+      cursor: default;
+    }
+  }
+}
+
+.page-fundraise,
+.page-user,
+.page-user-edit {
+  #main #content {
+    @include box-shadow(0 3px 5px $gray);
+    background: $white;
+    margin-top: 1em;
+    overflow: hidden;
+    padding: 1em;
+  }
+}
+@include xsmall {
+  .ajax-progress-throbber {
+    display: none;
+  }
+}
+
+// Expand media items on campaign edit page
+.page-redhen-campaign-edit .field-type-image .preview {
+  width: 100%;
+  .media-item {
+    display: block;
+    padding: 0.2em;
+    width: 100%;
+  }
+}
+
+// Fixes FF red border on required inputs
+input:invalid {
+  box-shadow: none;
+}
+
+// Removes IE arrow on custom selects
+select::-ms-expand {
+  display: none;
+}

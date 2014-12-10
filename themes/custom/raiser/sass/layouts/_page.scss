@@ -1,0 +1,9 @@
+// Global page styles
+#page {
+  background-color: ffffff; // Old browsers
+  @include filter-gradient(#ffffff, #e5e5e5, vertical); // IE6-9
+  background: linear-gradient(#ffffff, #e5e5e5); // IE 10-11
+  @include background-image(linear-gradient(top, #ffffff 63%,#ffffff 63%,#e5e5e5 100%));
+
+  overflow: hidden;
+}

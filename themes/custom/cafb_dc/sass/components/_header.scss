@@ -1,0 +1,77 @@
+#header {
+  background: $white;
+  padding: 0.2em 1em;
+  @include box-shadow($gray 0 2px 5px);
+  
+  #logo {
+    display: block; 
+    float: left;
+    //img { width: 3.594em; }
+  }
+
+  #menu-toggle {
+    display: block; 
+    float: right;
+    line-height: 2.5em;
+  }
+  
+  #secondary-menu {
+    clear: both;
+    display: none;
+    float: left;
+    width: 100%;
+
+    .links li {
+      display: block;
+      margin: 0 0 1em;
+
+      &.first {
+        margin-top: 1.5em; 
+
+        a {
+          @include clear-btn;
+          padding: 0.5em 0;
+          display: inline-block;
+          text-align: center;
+          width: 100%;
+        } 
+      }
+      
+      & li:not(.first) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+@include small {
+  #header {
+    padding: 0.2em 1em;
+
+    //#logo img { width: 40%; }
+
+    #menu-toggle { display: none; }
+    
+    #secondary-menu {
+      clear: none;
+      display: block; 
+      float: right;
+      line-height: 4.428em;
+      width: auto;
+
+      .links li {
+        display: inline; 
+
+        &.first {
+          margin-top: 0;
+
+          a {
+            @include clear-btn;
+            display: inline; 
+            padding: 0.8em 1em;
+          }
+        }
+      }
+    } 
+  }
+}

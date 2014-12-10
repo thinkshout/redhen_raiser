@@ -36,8 +36,7 @@ function redhen_raiser_campaigns_field_group_info() {
         'required_fields' => 1,
         'classes' => 'group-customize field-group-fieldset',
         'description' => '<span class="fieldset-description-title">Customization Tips</span>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare hoc videndum est, possitne nobis hoc ratio philosophorum dare. Sed tamen est aliquid, quod nobis non liceat, liceat illis. Ita enim vivunt quidam, ut eorum vita refellatur oratio.',
+<p>Find a great banner image: it sets the tone for the campaign and will be displayed on most of the sub-pages in the campaign.</p>',
       ),
       'formatter' => 'open',
     ),
@@ -70,7 +69,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare hoc videndum est,
         'required_fields' => 1,
         'classes' => 'group-funding field-group-fieldset',
         'description' => '<span class="fieldset-description-title">Funding Tip</span>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quantum Aristoxeni ingenium consumptum videmus in musicis? Si enim ad populum me vocas, eum. Duo Reges: constructio interrete.',
+<p>Keep your Title concise and use the Teaser for more specifics.</p>
+<p>Set an ambitious goal!</p>',
       ),
       'formatter' => 'open',
     ),
@@ -100,8 +100,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quantum Aristoxeni inge
         'required_fields' => 1,
         'classes' => 'group-story field-group-fieldset',
         'description' => '<span class="fieldset-description-title">Story Tip</span>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cupit enim dícere nihil posse ad beatam vitam deesse sapienti. Non est ista, inquam, Piso, magna dissensio.',
+<p>Personalize your fundraiser with an image or video, and tell a story about why this cause is important.</p>',
       ),
       'formatter' => 'open',
     ),

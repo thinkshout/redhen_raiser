@@ -71,8 +71,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare hoc videndum est,
         'required_fields' => 1,
         'classes' => 'group-customize field-group-fieldset',
         'description' => '<span class="fieldset-description-title">Customization Tips</span>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare hoc videndum est, possitne nobis hoc ratio philosophorum dare. Sed tamen est aliquid, quod nobis non liceat, liceat illis. Ita enim vivunt quidam, ut eorum vita refellatur oratio.',
+<p>If your team is based around an organization or group, use that groups name to name your team.</p>
+<p>Set an ambitious goal!</p>',
       ),
       'formatter' => 'open',
     ),
@@ -160,8 +160,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cupit enim dícere nihi
         'required_fields' => 1,
         'classes' => 'group-story field-group-fieldset',
         'description' => '<span class="fieldset-description-title">Story Tip</span>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cupit enim dícere nihil posse ad beatam vitam deesse sapienti. Non est ista, inquam, Piso, magna dissensio.',
+<p>Customize your page with an image or video, and tell a story about your team\'s connection to the cause.</p>',
       ),
       'formatter' => 'open',
     ),

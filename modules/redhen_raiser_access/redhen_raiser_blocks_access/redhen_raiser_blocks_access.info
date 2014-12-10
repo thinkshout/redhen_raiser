@@ -1,7 +1,7 @@
 name = RedHen Raiser Blocks & Widgets Access
 core = 7.x
 package = RedHen Raiser Permissions
-version = 7.x-1.0-alpha1
+version = 7.x-1.0
 project = redhen_raiser_blocks_access
 dependencies[] = bean
 dependencies[] = features

@@ -1,6 +1,9 @@
 name = RedHen Raiser
 description = Team Based Fundraising
 core = 7.x
+distribution_name = RedHen Raiser
+exclusive = TRUE
+version = 1.0
 
 ; Core
 dependencies[] = block
@@ -106,8 +109,8 @@ dependencies[] = redhen_raiser_styles
 dependencies[] = redhen_raiser_views
 ; Note that we do not do this:
 ; dependencies[] = redhen_raiser_defaults
-; defaults is enabled by the install script in redhen_raiser_custom_config() if
-; desired.
+; redhen_raiser_defaults can be enabled by the install script in
+; redhen_raiser_custom_config() if desired.
 
 ; RedHen Raiser permissions
 dependencies[] = redhen_raiser_core_access

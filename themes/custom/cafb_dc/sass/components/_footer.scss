@@ -1,0 +1,131 @@
+#footer-wrapper {
+  background: $primary;
+
+  #main-menu h2 { display: none; }
+
+  footer {
+    background: $white;
+    border-bottom: 3px solid $page-bg;
+    padding: 0.2em 1em;
+    overflow: hidden;
+    text-align: center;
+
+    #block-redhen-raiser-blocks-branding {
+      margin-bottom: auto;
+    }
+
+    #logo {
+      display: block;
+      margin-bottom: 1em;
+      width: 100%;
+      img { width: 3.594em; }
+    }
+
+    .tagline {
+      color: $action;
+      display: block;
+      margin-bottom: 1em;
+      font-family: $raiser-heading-font;
+    }
+
+    #block-bean-social-media-links {
+      margin-bottom: auto;
+      padding-bottom: 0;
+      h3 { display: none; }
+    }
+
+    #block-bean-social-media-links ul {
+      margin: 0;
+      padding-left: 0;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        list-style-type: none;
+        text-align: center;
+        position: relative;
+
+        a {
+          display: list-item;
+          height: 41px;
+          text-indent: -9999px;
+          width: 41px;
+
+          &.twitter-link {
+            background: url('../images/social.png') 0 0 no-repeat;
+            background-size: 195px 42px;
+          }
+          &.facebook-link {
+            background: url('../images/social.png') -3.2em 0 no-repeat;
+            background-size: 195px 42px;
+          }
+          &.linkedin-link {
+            background: url('../images/social.png') -6.4em 0 no-repeat;
+            background-size: 195px 42px;
+          }
+          &.googleplus-link {
+            background: url('../images/social.png') -9.6em 0 no-repeat;
+            background-size: 195px 42px;
+          }
+        }
+      }
+    }
+  }
+
+  #colophon {
+    color: $white;
+    padding: 0.2em 1em;
+    text-align: center;
+
+    a {
+      color: $white;
+      &:hover {
+        color: $action;
+      }
+    }
+  }
+}
+
+@include small {
+  #footer-wrapper {
+
+    footer {
+      text-align: left;
+
+      #logo {
+        display: inline-block;
+        float: left;
+        margin-bottom: 0;
+        width: 92px;
+        img { width: 100% }
+      }
+
+      .tagline {
+        display: inline;
+        font-size: 1.25em;
+        float: left;
+        line-height: 3em;
+        margin: 0;
+        vertical-align: top;
+      }
+
+      #block-bean-social-media-links ul {
+        float: right;
+        margin-top: 0.8em;
+      }
+    }
+
+    #colophon {
+      text-align: left;
+    }
+  }
+}
+@include xsmall {
+  #footer-wrapper {
+    .inline li {
+      padding: 0 em(12);
+      text-align: center;
+      display: inline-block;
+    }
+  }
+}

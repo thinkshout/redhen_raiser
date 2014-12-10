@@ -1,0 +1,17 @@
+#main {
+  max-width: 820px; 
+  margin: 0 auto;
+  padding-bottom: 3em;
+}
+
+#main #content {
+  margin-bottom: 2em;
+  padding: 1em;
+  @include medium {
+    padding: 0 0 2em 1em;
+  }
+}
+
+#content-secondary {
+  @include zen-clear;
+}

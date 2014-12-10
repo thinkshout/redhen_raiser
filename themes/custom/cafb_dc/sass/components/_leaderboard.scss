@@ -1,0 +1,96 @@
+.page-campaigns-leaderboard,
+.page-campaign-pages-leaderboard {
+  @include rasier-table;
+  .views-field-progress:before {
+    content: "$";
+  }
+  .view-content {
+    margin-top: em(32);
+  }
+}
+
+#block-views-leaderboard-block,
+#block-views-leaderboard-block-team {
+  box-sizing: border-box;
+  clear: both;
+  padding-left: em(8);
+  padding-right: em(8);
+
+  h2 {
+    font-size: em(20);
+    margin-top: em(8);
+  }
+  .view-filters {
+    position: relative;
+    .views-exposed-widget {
+      margin-bottom: em(16);
+      padding-right: 0;
+      width: auto;
+    }
+    .views-submit-button {
+      position: absolute;
+      right: 0;
+      top: em(33);
+    }
+  }
+
+  .entity-redhen-campaign-page {
+    font-size: em(14);
+    min-height: em(75);
+    position: relative;
+    .entity-redhen-contact {
+      position: absolute;
+      width: em(42);
+      height: em(42);
+    }
+
+  }
+  .redhen_campaign_page_title {
+    padding-left: em(56);
+    margin-bottom: em(4);
+    margin-top: 0;
+    line-height: 1;
+    z-index: 10;
+    a {
+      color: $black;
+    }
+    &.clearfix:after {
+      content: "";
+    }
+  }
+  .field-name-redhen-campaign-goal {
+    color: $black;
+    font-size: em(16);
+    padding-left: em(56);
+    .rhc_progress {
+      display: inline-block;
+      font-size: em(16);
+    }
+  }
+  img {
+    width: em(48);
+    border-radius: em(8);
+  }
+  .pager {
+    margin-top: 0;
+  }
+  .more-link {
+    @include clear-btn;
+    margin-left: 0em;
+    margin: 0 auto;
+    padding: em(5) em(10);
+    text-align: center;
+    width: 50%;
+
+    &:hover, &:hover a {
+      color: $white;
+    }
+    a {
+      color: $primary;
+      text-transform: capitalize;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}

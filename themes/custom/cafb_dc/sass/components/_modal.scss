@@ -1,0 +1,55 @@
+.section-media {
+  padding: 0;
+  margin: 0;
+  max-width: 785px;
+  .ui-widget-content {
+    border: 4px solid $primary;
+    padding: 0;
+  }
+  #media-browser-tabset {
+    .ui-tabs-nav {
+      border: none;
+      border-bottom: 4px solid $primary;
+      border-radius: 0;
+      background: $page-bg;
+    }
+    .media-browser-tab {
+      border: none;
+      padding: 0 em(16) em(16);
+    }
+    .form-type-file {
+      line-height: 1.6;
+      font-size: em(16);
+      font-family: $raiser-body-font;
+      input {
+        line-height: 1;
+      }
+      .description {
+        margin-top: em(20);
+      }
+    }
+    .fake-cancel {
+      @include muted-btn;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      float: right;
+      padding: 0.6em 1em;
+    }
+    .fake-ok {
+      @include cta-btn;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    h3 {
+      font-family: $raiser-body-font;
+      font-size: em(16);
+      line-height: 1.6;
+      margin-bottom: em(8);
+    }
+    ul {
+      margin-top: 0;
+    }
+  }
+}

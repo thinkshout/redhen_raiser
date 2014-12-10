@@ -1,0 +1,3 @@
+task :serve do
+  system 'bundle exec compass watch'
+end

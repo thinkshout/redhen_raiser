@@ -1,0 +1,108 @@
+.front {
+  #block-views-campaigns-block {
+    padding: 1em;
+
+    h2.block-title { 
+      margin-bottom: 2em; 
+      text-align: center; 
+    }
+    
+    .views-row {
+      background: $white;
+      @include box-shadow(0 2px 5px $gray + 20);
+      margin-bottom: 1em;
+      padding-top: 1em;
+      padding-bottom: 2em;
+      position: relative;
+      overflow: hidden;
+
+      @include small {
+        float: left;
+        margin-right: 1%;
+        margin-left: 1%;
+        width: 48%; 
+      }
+
+      @include medium {
+        display: inline-block;
+        margin-bottom: 2em;
+        margin-right: 1%;
+        margin-left: 1%;
+        min-height: em(340);
+        width: 31.33333%;  
+        float: left;
+        padding: 1em 0;
+      } 
+
+
+      
+      // Campaign list title
+      .redhen_campaign_title {
+        font-family: $raiser-heading-font; 
+        text-align: left; 
+        line-height: 1em;
+        margin-bottom: 1em;
+        margin-top: 0;
+        padding: 0 1em;
+
+        a { 
+          color: $primary; 
+          font-size: em(18);
+        }
+      }
+      
+      // Campaign list image
+      .field-name-field-banner-image {
+        margin-bottom: 1em;
+        padding: 0 1em; 
+        text-align: center;
+
+        img {
+          border-radius: em(8);
+          @include box-shadow(0 3px 5px $gray);
+          width: 100%;
+        }
+      }
+
+      .field-name-redhen-campaign-goal {
+        color: $black;
+        font-size: em(16);
+      }
+
+
+
+      .rhc_progress {
+        display: inline; 
+        font-size: em(16);
+        color: $action;
+      }
+
+      .redhen_campaign_join_link {
+        background: $lt-gray;
+        margin-top: 1em;
+        overflow: hidden;
+        padding: 1em;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        div { 
+          display: block;
+          float: none; 
+          text-align: center;
+        }
+        
+        a {
+          @include cta-btn; 
+          border: 2px solid $white;
+          font-size: em(14);
+          padding: 0.5em;
+          text-align: center;
+          margin-right: 2em;
+        } 
+      }
+
+    }
+  }
+}
+

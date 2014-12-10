@@ -1,0 +1,35 @@
+#block-redhen-raiser-blocks-social-media-share {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  .field-item {
+    float: left;
+  }
+
+  a {
+    background: url(../images/social.png) no-repeat;
+    background-size: 214px;
+    display: block;
+    float: left;
+    height: 45px;
+    margin-right: 0.3em;
+    text-indent: -9999px;
+    width: 45px;
+
+    &.twitter-link {
+      background-position: 0 0;
+    }
+    &.facebook-link {
+      background-position: -56px 0;
+    }
+    &.linkedin-link {
+      background-position: -112px 0;
+    }
+    &.googleplus-link {
+      background-position: -168px 0;
+    }
+  }
+}

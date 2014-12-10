@@ -1,0 +1,48 @@
+.redhen-campaign-thermo-percent-bar-wrapper {
+  @include box-shadow(0 2px 3px #999);
+  background: $primary-widget + 20;
+  border-radius: 5px;
+  border: 3px solid $white;
+  height: em(16);
+  margin-top: 0.5em;
+  margin: 0.5em auto 0 0;
+  padding: 0;
+  width: 90%;
+
+  .redhen-campaign-thermo-percent-bar {
+    @include border-radius(3px 0 0 3px);
+    background: $primary;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.field-name-redhen-campaign-goal {
+  color: $white;
+  font-size: em(20);
+  padding-left: 1em;
+
+  .rhc_progress {
+    color: $primary;
+    display: block;
+    font-size: em(36);
+    margin-bottom: 0.3em;
+  }
+
+  .rhc_goal {
+    color: $primary;
+  }
+}
+
+.field-name-field-start-date,
+.field-name-field-end-date {
+  color: $white;
+  font-size: em(18);
+  margin-left: 1em;
+  margin-top: 0.5em;
+
+  .date-display-interval {
+    color: $action;
+    font-size: em(18);
+  }
+}

@@ -49,6 +49,7 @@ stylesheets[all][] = system.messages.css
 stylesheets[all][] = system.theme.css
 
 ; Then we add our own stylesheet.
+stylesheets[all][] = css/fontawesome/font-awesome.css
 stylesheets[all][] = css/styles.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.

@@ -684,7 +684,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     'bundle' => 'general',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This teaser will appear on the banner image overlay below the title, and on some preview displays of this Campaign.',
+    'description' => 'This teaser will appear on the banner image overlay below the title, and on some preview displays of this Campaign. <i>(128 character limit)</i>',
     'display' => array(
       'banner' => array(
         'label' => 'hidden',
@@ -979,7 +979,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
   t('Start Date');
   t('Story');
   t('Story Image/Video');
-  t('This teaser will appear on the banner image overlay below the title, and on some preview displays of this Campaign.');
+  t('This teaser will appear on the banner image overlay below the title, and on some preview displays of this Campaign. <i>(128 character limit)</i>');
 
   return $field_instances;
 }

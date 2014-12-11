@@ -268,13 +268,6 @@ libraries[underscore][type] = "library"
 libraries[modernizr][download][type] = "get"
 libraries[modernizr][download][url] = "https://github.com/Modernizr/Modernizr/archive/v2.7.1.tar.gz"
 
-; chosen
-libraries[chosen][download][type] = git
-libraries[chosen][download][url] = https://github.com/harvesthq/chosen.git
-libraries[chosen][directory_name] = "chosen"
-libraries[chosen][type] = "library"
-;libraries[chosen][revision] = "333899ca51"
-
 ;-----------------------------------------
 ; Themes
 ;-----------------------------------------

@@ -35,12 +35,17 @@ Start in the same directory that this Readme sits in.
 
 Now visit your website and run the installer. If you run it with Drush, specify
 the "redhen_raiser" profile.
+
 Create a "page" type node and set it's path to "home" to add content to the
 home page.
+
+Add any content to the top level of the Main Menu to have it appear in the menu
+at the bottom of the site.
 
 To enable payment, go to:
 store -> configuration -> payment methods
 Add your payment method (or enable commerce_payment_example to test)
+
 
 # Customization
 If you'd like to develop on top of RedHen Raiser while retaining the ability to

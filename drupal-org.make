@@ -188,11 +188,7 @@ projects[redhen_donation][version] = "1.0"
 projects[redhen_donation][subdir] = "contrib"
 
 ; redhen_campaign
-;projects[redhen_campaign][version] = ""
-projects[redhen_campaign][type] = "module"
-projects[redhen_campaign][download][type] = git
-projects[redhen_campaign][download][branch] = 7.x-1.x
-projects[redhen_campaign][download][url] = "git@github.com:thinkshout/redhen_campaign.git"
+projects[redhen_campaign][version] = "1.0"
 projects[redhen_campaign][subdir] = "contrib"
 
 ; rules

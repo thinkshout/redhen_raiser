@@ -265,11 +265,8 @@ libraries[underscore][directory_name] = "underscore"
 libraries[underscore][type] = "library"
 
 ; modernizr (used by navbar)
-libraries[modernizr][download][type] = git
-libraries[modernizr][download][url] = https://github.com/BrianGilbert/modernizer-navbar.git
-libraries[modernizr][download][revision] = 5b89d92
-libraries[modernizr][directory_name] = "modernizr"
-libraries[modernizr][type] = "library"
+libraries[modernizr][download][type] = "get"
+libraries[modernizr][download][url] = "https://github.com/Modernizr/Modernizr/archive/v2.7.1.tar.gz"
 
 ; chosen
 libraries[chosen][download][type] = git

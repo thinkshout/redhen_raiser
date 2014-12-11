@@ -65,9 +65,9 @@ projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/com
 projects[context][version] = "3.3"
 projects[context][subdir] = "contrib"
 
-; context_condition_theme
-projects[context_condition_theme][version] = "1.0"
-projects[context_condition_theme][subdir] = "contrib"
+; context_condition_admin_theme
+projects[context_condition_admin_theme][version] = "1.0"
+projects[context_condition_admin_theme][subdir] = "contrib"
 
 ; context_query_param
 projects[context_query_param][version] = "1.3"

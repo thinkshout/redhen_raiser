@@ -85,6 +85,7 @@ projects[date][patch][] = "https://www.drupal.org/files/issues/date_add_rounding
 ; date_restrictions
 projects[date_restrictions][download][type] = "git"
 projects[date_restrictions][download][url] = "http://git.drupal.org/project/date_restrictions.git"
+projects[date_restrictions][download][branch] = "7.x-1.x"
 projects[date_restrictions][download][revision] = "c6dc62f"
 projects[date_restrictions][subdir] = "contrib"
 
@@ -162,6 +163,7 @@ projects[navbar][patch][] = "https://www.drupal.org/files/issues/page_scroll_IE-
 ; navbar_flush_cache
 projects[navbar_flush_cache][download][type] = "git"
 projects[navbar_flush_cache][download][url] = "http://git.drupal.org/project/navbar_flush_cache.git"
+projects[navbar_flush_cache][download][branch] = "7.x-1.x"
 projects[navbar_flush_cache][download][revision] = "a3624ba"
 projects[navbar_flush_cache][subdir] = "contrib"
 
@@ -245,7 +247,7 @@ projects[ftools][subdir] = "developer"
 
 ; autopager
 libraries[autopager][download][type] = get
-libraries[autopager][download][url] = http://jquery-autopager.googlecode.com/files/jquery.autopager-1.0.0.js
+libraries[autopager][download][url] = https://jquery-autopager.googlecode.com/files/jquery.autopager-1.0.0.js
 libraries[autopager][directory_name] = "autopager"
 libraries[autopager][type] = "library"
 

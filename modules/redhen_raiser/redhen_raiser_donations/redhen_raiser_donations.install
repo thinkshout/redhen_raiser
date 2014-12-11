@@ -19,4 +19,31 @@ function redhen_raiser_donations_install() {
   entity_save('commerce_product', $donation_product);
   // @todo: initialize price
   commerce_product_configure_product_type('donation');
+  // Create default RedHen Donation object.
+  $rh_donation_type_settings = array(
+    'name' => 'redhen_raiser_donation',
+    'label' => 'RedHen Raiser Donation',
+    'status' => REDHEN_STATE_ACTIVE,
+    'module' => 'redhen_raiser_donations',
+    'settings' => array(
+      'contact_settings' => array(
+        'contact_type' => 'contact',
+        'update_fields' => 1,
+        'fields' => array(
+          'field_organization' => 'field_organization',
+          'middle_name' => 0,
+        ),
+        'profile_selector' => 'field_billing_address',
+      ),
+      'commerce_settings' => array(
+        'one_time_product_type' => 'donation',
+        'line_item_type' => 'redhen_raiser_donation',
+        'product_options' => array(
+          'one_time_product' => '1',
+        ),
+      ),
+    ),
+  );
+  $rh_donation_type = entity_create('redhen_donation_type', $rh_donation_type_settings);
+  entity_save('redhen_donation_type', $rh_donation_type);
 }

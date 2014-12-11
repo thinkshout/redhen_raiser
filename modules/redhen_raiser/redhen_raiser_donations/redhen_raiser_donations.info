@@ -39,7 +39,6 @@ features[field_instance][] = redhen_donation-redhen_raiser_donation-field_letter
 features[field_instance][] = redhen_donation-redhen_raiser_donation-field_tribute_comments
 features[field_instance][] = redhen_donation-redhen_raiser_donation-field_tribute_type
 features[menu_custom][] = management
-features[redhen_donation_type][] = redhen_raiser_donation
 features[views_view][] = donations
 features[views_view][] = my_donations
 features_exclude[field_base][commerce_price] = commerce_price

@@ -33,7 +33,8 @@ Start in the same directory that this Readme sits in.
 : cp -R . *your/web/root*/profiles/redhen_raiser
 : cd *your/web/root*
 
-Now visit your website and run the installer. 
+Now visit your website and run the installer. If you run it with Drush, specify
+the "redhen_raiser" profile.
 Optionally, enable the redhen_raiser_defaults module.
 Create a "page" type node and set it's path to "home" to add content to the
 home page.

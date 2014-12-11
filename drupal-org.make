@@ -56,6 +56,7 @@ projects[commerce_cardonfile][patch][] = "https://www.drupal.org/files/issues/co
 ; commerce_recurring
 projects[commerce_recurring][download][type] = "git"
 projects[commerce_recurring][download][url] = "http://git.drupal.org/project/commerce_recurring.git"
+projects[commerce_recurring][download][branch] = "7.x-2.x"
 projects[commerce_recurring][download][revision] = "007e2ed"
 projects[commerce_recurring][subdir] = "contrib"
 projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/commerce_recurring-custom_order_types-2273443-1.patch"

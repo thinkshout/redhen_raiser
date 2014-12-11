@@ -107,10 +107,7 @@ dependencies[] = redhen_raiser_campaign_pages
 dependencies[] = redhen_raiser_campaign_updates
 dependencies[] = redhen_raiser_styles
 dependencies[] = redhen_raiser_views
-; Note that we do not do this:
-; dependencies[] = redhen_raiser_defaults
-; redhen_raiser_defaults can be enabled by the install script in
-; redhen_raiser_custom_config() if desired.
+; redhen_raiser_defaults is enabled in the install script.
 
 ; RedHen Raiser permissions
 dependencies[] = redhen_raiser_core_access

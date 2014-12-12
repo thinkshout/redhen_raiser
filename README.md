@@ -42,6 +42,9 @@ home page.
 Add any content to the top level of the Main Menu to have it appear in the menu
 at the bottom of the site.
 
+Go to Content -> Blocks and edit the "Social Media Links" block to link to your
+organization's social media pages.
+
 To enable payment, go to:
 store -> configuration -> payment methods
 Add your payment method (or enable commerce_payment_example to test)

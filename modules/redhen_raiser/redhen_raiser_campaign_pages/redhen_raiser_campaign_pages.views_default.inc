@@ -40,13 +40,32 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['relationships']['contact']['id'] = 'contact';
   $handler->display->display_options['relationships']['contact']['table'] = 'redhen_donation';
   $handler->display->display_options['relationships']['contact']['field'] = 'contact';
+  /* Field: Donation: I prefer to make this donation anonymously */
+  $handler->display->display_options['fields']['field_anonymous']['id'] = 'field_anonymous';
+  $handler->display->display_options['fields']['field_anonymous']['table'] = 'field_data_field_anonymous';
+  $handler->display->display_options['fields']['field_anonymous']['field'] = 'field_anonymous';
+  $handler->display->display_options['fields']['field_anonymous']['label'] = 'Anonymous';
+  $handler->display->display_options['fields']['field_anonymous']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_anonymous']['type'] = 'list_key';
   /* Field: Contact: Full name */
   $handler->display->display_options['fields']['full_name']['id'] = 'full_name';
   $handler->display->display_options['fields']['full_name']['table'] = 'views_entity_redhen_contact';
   $handler->display->display_options['fields']['full_name']['field'] = 'full_name';
   $handler->display->display_options['fields']['full_name']['relationship'] = 'contact';
   $handler->display->display_options['fields']['full_name']['label'] = 'Name';
+  $handler->display->display_options['fields']['full_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['full_name']['link_to_entity'] = 0;
+  /* Field: Views: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['label'] = 'Name';
+  $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional']['if'] = 'field_anonymous';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '6';
+  $handler->display->display_options['fields']['views_conditional']['then'] = 'Anonymous';
+  $handler->display->display_options['fields']['views_conditional']['or'] = '[full_name]';
+  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
   /* Field: Donation: Amount pledged. */
   $handler->display->display_options['fields']['pledged']['id'] = 'pledged';
   $handler->display->display_options['fields']['pledged']['table'] = 'redhen_donation';

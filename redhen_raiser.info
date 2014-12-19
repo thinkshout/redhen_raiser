@@ -91,6 +91,7 @@ dependencies[] = short_scale_formatter
 dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = views
+dependencies[] = views_conditional
 dependencies[] = views_ui
 dependencies[] = views_data_export
 dependencies[] = views_infinite_scroll

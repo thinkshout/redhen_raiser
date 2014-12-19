@@ -226,6 +226,10 @@ projects[views_data_export][subdir] = "contrib"
 projects[views_infinite_scroll][version] = "1.1"
 projects[views_infinite_scroll][subdir] = "contrib"
 
+; views_conditional
+projects[views_conditional][version] = "1.3"
+projects[views_conditional][subdir] = "contrib"
+
 ;-----------------------------------------
 ; Developer tools
 ;-----------------------------------------

@@ -120,6 +120,8 @@
         _raiser.setMenuState();
       });
 
+      // Auto-focus the login username.
+      $("#user-login #edit-name").focus();
     } // end attach
   };
 

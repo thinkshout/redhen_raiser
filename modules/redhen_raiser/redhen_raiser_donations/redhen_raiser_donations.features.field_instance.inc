@@ -196,6 +196,43 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_anonymous'
+  $field_instances['redhen_donation-redhen_raiser_donation-field_anonymous'] = array(
+    'bundle' => 'redhen_raiser_donation',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 11,
+      ),
+    ),
+    'entity_type' => 'redhen_donation',
+    'field_name' => 'field_anonymous',
+    'label' => 'I prefer to make this donation anonymously',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_dedication'
   $field_instances['redhen_donation-redhen_raiser_donation-field_dedication'] = array(
     'bundle' => 'redhen_raiser_donation',
@@ -434,6 +471,7 @@ function redhen_raiser_donations_field_default_field_instances() {
   t('Address');
   t('Comment');
   t('Comments');
+  t('I prefer to make this donation anonymously');
   t('Please mail a letter on my behalf');
   t('Price');
   t('Type');

@@ -340,6 +340,15 @@ function redhen_raiser_core_access_user_default_permissions() {
     'module' => 'media',
   );
 
+  // Exported permission: 'flush caches'.
+  $permissions['flush caches'] = array(
+    'name' => 'flush caches',
+    'roles' => array(
+      'admin' => 'admin',
+    ),
+    'module' => 'navbar_flush_cache',
+  );
+
   // Exported permission: 'generate features'.
   $permissions['generate features'] = array(
     'name' => 'generate features',
@@ -568,6 +577,7 @@ function redhen_raiser_core_access_user_default_permissions() {
   $permissions['use text format rich_text'] = array(
     'name' => 'use text format rich_text',
     'roles' => array(
+      'admin' => 'admin',
       'authenticated user' => 'authenticated user',
       'editor' => 'editor',
     ),

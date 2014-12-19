@@ -65,6 +65,7 @@ features[user_permission][] = change own username
 features[user_permission][] = customize ckeditor
 features[user_permission][] = delete revisions
 features[user_permission][] = edit media
+features[user_permission][] = flush caches
 features[user_permission][] = generate features
 features[user_permission][] = import media
 features[user_permission][] = manage features

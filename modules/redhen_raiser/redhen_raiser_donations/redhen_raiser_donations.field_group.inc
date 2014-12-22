@@ -24,9 +24,10 @@ function redhen_raiser_donations_field_group_info() {
     'weight' => '51',
     'children' => array(
       0 => 'field_dedication',
-      1 => 'field_tribute_type',
-      2 => 'field_letter_request',
-      3 => 'field_tribute_comments',
+      1 => 'field_letter_request',
+      2 => 'field_tribute_comments',
+      3 => 'field_tribute_type',
+      4 => 'field_tribute_address',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

@@ -171,6 +171,11 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['fields']['expression']['precision'] = '0';
   $handler->display->display_options['fields']['expression']['separator'] = '';
   $handler->display->display_options['fields']['expression']['expression'] = '[received_1]/100';
+  /* Field: Donation: I prefer to make this donation anonymously */
+  $handler->display->display_options['fields']['field_anonymous']['id'] = 'field_anonymous';
+  $handler->display->display_options['fields']['field_anonymous']['table'] = 'field_data_field_anonymous';
+  $handler->display->display_options['fields']['field_anonymous']['field'] = 'field_anonymous';
+  $handler->display->display_options['fields']['field_anonymous']['label'] = 'Anonymous';
   /* Field: Donation: Amount received. */
   $handler->display->display_options['fields']['received']['id'] = 'received';
   $handler->display->display_options['fields']['received']['table'] = 'redhen_donation';
@@ -253,6 +258,46 @@ function redhen_raiser_donations_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'm/d/Y';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'html5_tools_iso8601';
+  /* Field: Donation: Type */
+  $handler->display->display_options['fields']['field_tribute_type']['id'] = 'field_tribute_type';
+  $handler->display->display_options['fields']['field_tribute_type']['table'] = 'field_data_field_tribute_type';
+  $handler->display->display_options['fields']['field_tribute_type']['field'] = 'field_tribute_type';
+  $handler->display->display_options['fields']['field_tribute_type']['label'] = 'Tribute Type';
+  /* Field: Donation: A tribute to (Name) */
+  $handler->display->display_options['fields']['field_dedication']['id'] = 'field_dedication';
+  $handler->display->display_options['fields']['field_dedication']['table'] = 'field_data_field_dedication';
+  $handler->display->display_options['fields']['field_dedication']['field'] = 'field_dedication';
+  $handler->display->display_options['fields']['field_dedication']['label'] = 'Tribute to';
+  /* Field: Donation: Please mail a letter on my behalf */
+  $handler->display->display_options['fields']['field_letter_request']['id'] = 'field_letter_request';
+  $handler->display->display_options['fields']['field_letter_request']['table'] = 'field_data_field_letter_request';
+  $handler->display->display_options['fields']['field_letter_request']['field'] = 'field_letter_request';
+  $handler->display->display_options['fields']['field_letter_request']['label'] = 'Tribute Letter';
+  /* Field: Donation: Tribute address - Full name */
+  $handler->display->display_options['fields']['field_tribute_address_name_line']['id'] = 'field_tribute_address_name_line';
+  $handler->display->display_options['fields']['field_tribute_address_name_line']['table'] = 'field_data_field_tribute_address';
+  $handler->display->display_options['fields']['field_tribute_address_name_line']['field'] = 'field_tribute_address_name_line';
+  $handler->display->display_options['fields']['field_tribute_address_name_line']['label'] = 'Tribute address - Name';
+  /* Field: Donation: Tribute address - Thoroughfare (i.e. Street address) */
+  $handler->display->display_options['fields']['field_tribute_address_thoroughfare']['id'] = 'field_tribute_address_thoroughfare';
+  $handler->display->display_options['fields']['field_tribute_address_thoroughfare']['table'] = 'field_data_field_tribute_address';
+  $handler->display->display_options['fields']['field_tribute_address_thoroughfare']['field'] = 'field_tribute_address_thoroughfare';
+  $handler->display->display_options['fields']['field_tribute_address_thoroughfare']['label'] = 'Tribute address - Street 1';
+  /* Field: Donation: Tribute address - Premise (i.e. Apartment / Suite number) */
+  $handler->display->display_options['fields']['field_tribute_address_premise']['id'] = 'field_tribute_address_premise';
+  $handler->display->display_options['fields']['field_tribute_address_premise']['table'] = 'field_data_field_tribute_address';
+  $handler->display->display_options['fields']['field_tribute_address_premise']['field'] = 'field_tribute_address_premise';
+  $handler->display->display_options['fields']['field_tribute_address_premise']['label'] = 'Tribute address - Street 2';
+  /* Field: Donation: Tribute address - Locality (i.e. City) */
+  $handler->display->display_options['fields']['field_tribute_address_locality']['id'] = 'field_tribute_address_locality';
+  $handler->display->display_options['fields']['field_tribute_address_locality']['table'] = 'field_data_field_tribute_address';
+  $handler->display->display_options['fields']['field_tribute_address_locality']['field'] = 'field_tribute_address_locality';
+  $handler->display->display_options['fields']['field_tribute_address_locality']['label'] = 'Tribute address - City';
+  /* Field: Donation: Tribute address - Postal code */
+  $handler->display->display_options['fields']['field_tribute_address_postal_code']['id'] = 'field_tribute_address_postal_code';
+  $handler->display->display_options['fields']['field_tribute_address_postal_code']['table'] = 'field_data_field_tribute_address';
+  $handler->display->display_options['fields']['field_tribute_address_postal_code']['field'] = 'field_tribute_address_postal_code';
+  $handler->display->display_options['fields']['field_tribute_address_postal_code']['label'] = 'Tribute address - Zip';
   /* Filter criterion: Date: Date (redhen_donation) */
   $handler->display->display_options['filters']['date_filter_1']['id'] = 'date_filter_1';
   $handler->display->display_options['filters']['date_filter_1']['table'] = 'redhen_donation';

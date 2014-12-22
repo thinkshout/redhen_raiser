@@ -47,3 +47,14 @@ function redhen_raiser_donations_menu() {
   );
   return $items;
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function redhen_raiser_donations_form_redhen_donation_form_alter(&$form, &$form_state, $form_id) {
+  if (isset($form['field_tribute_address']) && isset($form['field_letter_request'])) {
+    $form['field_tribute_address']['#states']['invisible'] = array(
+      ':input[name="field_letter_request[und]"]' => array('checked' => FALSE),
+    );
+  }
+}

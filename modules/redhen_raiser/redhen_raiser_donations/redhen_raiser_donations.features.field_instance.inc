@@ -378,6 +378,61 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_tribute_address'
+  $field_instances['redhen_donation-redhen_raiser_donation-field_tribute_address'] = array(
+    'bundle' => 'redhen_raiser_donation',
+    'default_value' => array(
+      0 => array(
+        'element_key' => 'redhen_donation|redhen_raiser_donation|field_tribute_address|und|0',
+        'thoroughfare' => '',
+        'premise' => '',
+        'locality' => '',
+        'administrative_area' => '',
+        'postal_code' => '',
+        'country' => 'US',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'To whom should the tribute notification letter be sent?',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 12,
+      ),
+    ),
+    'entity_type' => 'redhen_donation',
+    'field_name' => 'field_tribute_address',
+    'label' => 'Tribute address',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield',
+      'settings' => array(
+        'available_countries' => array(),
+        'format_handlers' => array(
+          'address' => 'address',
+          'name-oneline' => 'name-oneline',
+          'address-hide-country' => 0,
+          'organisation' => 0,
+          'name-full' => 0,
+        ),
+      ),
+      'type' => 'addressfield_standard',
+      'weight' => 25,
+    ),
+  );
+
   // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_tribute_comments'
   $field_instances['redhen_donation-redhen_raiser_donation-field_tribute_comments'] = array(
     'bundle' => 'redhen_raiser_donation',
@@ -474,6 +529,8 @@ function redhen_raiser_donations_field_default_field_instances() {
   t('I prefer to make this donation anonymously');
   t('Please mail a letter on my behalf');
   t('Price');
+  t('To whom should the tribute notification letter be sent?');
+  t('Tribute address');
   t('Type');
 
   return $field_instances;

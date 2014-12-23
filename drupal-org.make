@@ -187,7 +187,11 @@ projects[redhen][patch][] = "https://www.drupal.org/files/issues/allow_use_of_pa
 projects[redhen][patch][] = "https://www.drupal.org/files/issues/default_flag_invalid_for_database.patch"
 
 ; redhen_donation
-projects[redhen_donation][version] = "1.0"
+; projects[redhen_donation][version] = "1.0"
+projects[redhen_donation][download][type] = "git"
+projects[redhen_donation][download][url] = "http://git.drupal.org/project/redhen_donation.git"
+projects[redhen_donation][download][branch] = "7.x-1.x"
+projects[redhen_donation][download][revision] = "bd1a353"
 projects[redhen_donation][subdir] = "contrib"
 
 ; redhen_campaign

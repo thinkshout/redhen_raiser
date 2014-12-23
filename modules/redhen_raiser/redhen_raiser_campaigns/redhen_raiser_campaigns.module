@@ -55,11 +55,16 @@ function redhen_raiser_campaigns_entity_view_alter(&$build, $type) {
             'class' => 'redhen-campaign-pages-button',
           ),
         );
+        $query = new EntityFieldQuery();
+        $query->entityCondition('entity_type', 'redhen_campaign_page')
+          ->propertyCondition('campaign', $build['#entity']->campaign_id, '=');
+        $total_pages = $query->count()->execute();
         $build['pages'] = array(
           '#markup' => l(t('View all Teams and Individuals'), 'redhen_campaign/' . $build['#entity']->campaign_id . '/pages', $options),
           '#weight' => 100,
           '#prefix' => '<div class="view-all-button">',
           '#suffix' => '</div>',
+          '#access' => $total_pages,
         );
         $build['join']['#label_hidden'] = FALSE;
         $build['join']['#label'] = 'Ready to contribute to the cause? Fundraise for this campaign now.';

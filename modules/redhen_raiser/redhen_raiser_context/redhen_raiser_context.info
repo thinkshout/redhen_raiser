@@ -20,6 +20,7 @@ features[context][] = donate_page
 features[context][] = donate_page_pages
 features[context][] = homepage
 features[context][] = sitewide
+features[context][] = updates
 features[ctools][] = context:context:3
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2

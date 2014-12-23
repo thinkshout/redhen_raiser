@@ -378,5 +378,40 @@ function redhen_raiser_context_context_default_contexts() {
   t('General');
   $export['sitewide'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'updates';
+  $context->description = '';
+  $context->tag = 'Basic Content';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'campaign_update' => 'campaign_update',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'redhen_raiser_campaign_updates-campaign_update_banner' => array(
+          'module' => 'redhen_raiser_campaign_updates',
+          'delta' => 'campaign_update_banner',
+          'region' => 'highlighted',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Basic Content');
+  $export['updates'] = $context;
+
   return $export;
 }

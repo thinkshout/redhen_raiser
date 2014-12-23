@@ -20,6 +20,10 @@ function redhen_raiser_campaign_updates_block_info() {
     'info' => t('Fundraising Campaign Updates'),
     'cache' => DRUPAL_NO_CACHE,
   );
+  $blocks['campaign_update_banner'] = array(
+    'info' => t('Campaign Banner for Updates'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
 
   return $blocks;
 }
@@ -37,6 +41,10 @@ function redhen_raiser_campaign_updates_block_view($delta = '') {
 
     case 'campaign_updates':
       $block['content'] = redhen_raiser_campaign_updates_campaign_list();
+      break;
+
+    case 'campaign_update_banner':
+      $block['content'] = redhen_raiser_campaign_updates_campaign_context_banner();
       break;
 
   }
@@ -70,6 +78,25 @@ function redhen_raiser_campaign_updates_page_list() {
     );
     return redhen_raiser_campaign_updates_list($include, $page->campaign, $page_id, $page->team);
   }
+}
+
+/**
+ * Render the parent campaign (or page) banner style for update context.
+ */
+function redhen_raiser_campaign_updates_campaign_context_banner() {
+  $nid = arg(1);
+  if ($nid) {
+    $update = node_load($nid);
+    if ($update) {
+      $wrapper = entity_metadata_wrapper('node', $update);
+      $campaign = $wrapper->field_campaign_context->value();
+      // @todo check for page context first and render if present.
+      if ($campaign) {
+        return entity_view('redhen_campaign', array($campaign), 'contextual_banner');
+      }
+    }
+  }
+  return array();
 }
 
 /**

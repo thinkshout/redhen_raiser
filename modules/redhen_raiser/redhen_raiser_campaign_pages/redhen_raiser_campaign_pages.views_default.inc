@@ -121,11 +121,7 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '60';
-  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '300';
-  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
@@ -138,10 +134,17 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'teaser';
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="field field-label-inline clearfix redhen_campaign_join_link">
+  <div class="field-label">Ready to contribute to the cause? Fundraise for this campaign now.&nbsp;</div>
+  <div class="join"><a href="/redhen_campaign_page/add?campaign=!1">Join Now</a></div>
+</div>
+';
+  $handler->display->display_options['footer']['area_text_custom']['tokenize'] = TRUE;
   /* Field: RedHen Campaign Page: Redhen campaign page ID */
   $handler->display->display_options['fields']['page_id']['id'] = 'page_id';
   $handler->display->display_options['fields']['page_id']['table'] = 'redhen_campaign_page';

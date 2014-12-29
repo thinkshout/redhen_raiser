@@ -67,9 +67,10 @@
 }
 
 .node-type-campaign-update .main-content-wrapper {
-  @include box-shadow(0 0px 5px $gray);
+  @include box-shadow(0 2px 2px $gray);
 }
 .node-type-campaign-update #main #content {
-  @include box-shadow(0 0px 5px $gray);
+  @include box-shadow(0 2px 2px $gray);
   padding: 0;
+  position: relative;
 }

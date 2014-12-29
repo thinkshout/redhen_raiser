@@ -1,7 +1,7 @@
 #block-redhen-raiser-campaign-updates-campaign-updates,
 #block-redhen-raiser-campaign-updates-campaign-page-updates,
 .view-campaign-updates,
-.node-type-campaign-update .node-campaign-update {
+.node-type-campaign-update .main-content-wrapper {
   @include box-shadow(0 3px 5px $gray);
   background: $white;
   padding: 2em 1em;
@@ -64,4 +64,12 @@
     right: em(16);
 
   }
+}
+
+.node-type-campaign-update .main-content-wrapper {
+  @include box-shadow(0 0px 5px $gray);
+}
+.node-type-campaign-update #main #content {
+  @include box-shadow(0 0px 5px $gray);
+  padding: 0;
 }

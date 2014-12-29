@@ -1,4 +1,4 @@
-.page-redhen-campaign #highlighted {
+#highlighted {
   @include box-shadow(0 2px 5px $gray);
   margin-top: 1em;
   position: relative;
@@ -11,6 +11,7 @@
     margin-bottom: 0;
   }
 
+  #block-redhen-raiser-campaign-updates-campaign-update-banner,
   #block-bean-campaign-page-banner,
   #block-bean-campaign-context-banner,
   #block-bean-campaign-banner {

@@ -52,7 +52,12 @@ function redhen_raiser_donations_menu() {
  * Implements hook_form_alter().
  */
 function redhen_raiser_donations_form_redhen_donation_form_alter(&$form, &$form_state, $form_id) {
-  if (isset($form['field_tribute_address']) && isset($form['field_letter_request'])) {
+  $parent_entity = entity_load_single($form['#entity']->entity_type, $form['#entity']->entity_id);
+  $parent_wrapper = entity_metadata_wrapper($form['#entity']->entity_type, $parent_entity);
+  if (!isset($parent_wrapper->field_allow_dedication) || !$parent_wrapper->field_allow_dedication->value()) {
+    field_group_hide_field_groups($form, array('group_tribute'));
+  }
+  elseif (isset($form['field_tribute_address']) && isset($form['field_letter_request'])) {
     $form['field_tribute_address']['#states']['invisible'] = array(
       ':input[name="field_letter_request[und]"]' => array('checked' => FALSE),
     );

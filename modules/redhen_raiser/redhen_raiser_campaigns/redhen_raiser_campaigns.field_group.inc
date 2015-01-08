@@ -60,7 +60,8 @@ function redhen_raiser_campaigns_field_group_info() {
       1 => 'field_end_date',
       2 => 'field_start_date',
       3 => 'field_teaser',
-      4 => 'label',
+      4 => 'field_allow_dedication',
+      5 => 'label',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

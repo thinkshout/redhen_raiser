@@ -10,6 +10,79 @@
 function redhen_raiser_campaigns_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'redhen_campaign-general-field_allow_dedication'
+  $field_instances['redhen_campaign-general-field_allow_dedication'] = array(
+    'bundle' => 'general',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Enable donors to make their donation a tribute in honor or memory of someone.',
+    'display' => array(
+      'banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contextual_banner' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 11,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'progress' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'promotion' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'redhen_campaign',
+    'field_name' => 'field_allow_dedication',
+    'label' => 'Allow Dedication',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => -7,
+    ),
+  );
+
   // Exported field_instance: 'redhen_campaign-general-field_banner_image'
   $field_instances['redhen_campaign-general-field_banner_image'] = array(
     'bundle' => 'general',
@@ -274,7 +347,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'year_range' => '-0:+3',
       ),
       'type' => 'date_popup',
-      'weight' => -6,
+      'weight' => -5,
     ),
   );
 
@@ -491,7 +564,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'year_range' => '-1:+3',
       ),
       'type' => 'date_popup',
-      'weight' => -7,
+      'weight' => -6,
     ),
   );
 
@@ -969,9 +1042,11 @@ function redhen_raiser_campaigns_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('(recommended size: 603x263)');
   t('(recommended size: 800x320)');
+  t('Allow Dedication');
   t('Banner Image');
   t('Campaign Teaser');
   t('Donation Type');
+  t('Enable donors to make their donation a tribute in honor or memory of someone.');
   t('End Date');
   t('How much money are you raising?');
   t('Promotion');

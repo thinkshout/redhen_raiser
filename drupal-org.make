@@ -62,8 +62,8 @@ projects[commerce_recurring][subdir] = "contrib"
 projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/commerce_recurring-custom_order_types-2273443-1.patch"
 projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/commerce_recurring-Alter_recurring_price-2263371-1.patch"
 
-; context requires ctools 1.7+ (jquery_ui & admin recommended)
-projects[context][version] = "3.3"
+; context requires ctools (jquery_ui & admin recommended)
+projects[context][version] = "3.6"
 projects[context][subdir] = "contrib"
 
 ; context_condition_admin_theme
@@ -107,9 +107,8 @@ projects[entityreference][version] = "1.1"
 projects[entityreference][subdir] = "contrib"
 
 ; features
-projects[features][version] = "2.2"
+projects[features][version] = "2.3"
 projects[features][subdir] = "contrib"
-projects[features][patch][] = "https://www.drupal.org/files/issues/2381739-features-mtime.patch"
 
 ; field_group
 projects[field_group][version] = "1.4"
@@ -154,12 +153,10 @@ projects[module_filter][version] = "2.0-alpha2"
 projects[module_filter][subdir] = "contrib"
 
 ; navbar
-projects[navbar][version] = "1.4"
+projects[navbar][version] = "1.5"
 projects[navbar][subdir] = "contrib"
 ; Patch to add top-level icons for commerce menu, etc.
 projects[navbar][patch][] = "https://www.drupal.org/files/issues/navbar-contrib-icons-1954912-20.patch"
-; Patch to fix admin scrolling in IE
-projects[navbar][patch][] = "https://www.drupal.org/files/issues/page_scroll_IE-2183753-21.patch"
 
 ; navbar_flush_cache
 projects[navbar_flush_cache][download][type] = "git"

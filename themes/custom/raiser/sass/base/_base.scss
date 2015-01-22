@@ -63,12 +63,12 @@ form {
   textarea {
     border: 2px solid $primary;
     border-radius: 4px;
-    color: $primary;
+    color: $black;
     padding: 0.5em;
     width: 100%;
 
     &:focus {
-      background: $lt-primary;
+      background: $lt-gray;
       outline: none;
       @include transition(all 0.3s);
     }

@@ -17,8 +17,11 @@ export CHROME_SANDBOX=/opt/google/chrome/chrome-sandbox
 # This is meant to setup the server on Travis-CI so that it can run the tests.
 #
 system_install() {
+  echo $BUILD_TOP
+
   # Add the Google Chrome packages.
   header Setting up APT
+  pwd
   wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
   sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
   sudo apt-get update > /dev/null
@@ -32,12 +35,6 @@ system_install() {
   # drupalorg_drush not currently used
   drush dl -y drupalorg_drush-7.x-1.x-dev --destination=$HOME/.drush
   drush cc drush
-
-  # Build Behat dependencies
-  header Installing Behat
-  cd tests
-  composer install --prefer-source --no-interaction
-  cd ../
 
   # Setup display for Selenium
   header Starting X
@@ -74,14 +71,17 @@ system_install() {
 # Setup Drupal to run the tests.
 #
 before_tests() {
+  pwd
+  cd $BUILD_TOP
 
   # Build the current branch.
   header Building RedHen Raiser
+  pwd
   drush make --yes drupal-org-core.make --prepare-install ../drupal
   drush make --yes drupal-org.make --no-core --contrib-destination=profiles/redhen_raiser
   cp -R . ../drupal/profiles/redhen_raiser
 
-  cd drupal
+  cd ../drupal
 
   # Setup files directory
   sudo chmod -R 777 sites/all
@@ -89,9 +89,6 @@ before_tests() {
   mkdir sites/default/private
   mkdir sites/default/private/files
   mkdir sites/default/private/temp
-
-  # Switch to the RedHen Raiser platform built from Git (if we aren't there already).
-  cd ../drupal
 
   # Do the site install (either the current revision or old for the upgrade).
   header Installing Drupal
@@ -122,20 +119,25 @@ before_tests() {
 run_tests() {
   header Running tests
 
-  # Make the Travis tests repos agnostic by injecting drupal_root with BEHAT_PARAMS
-  export BEHAT_PARAMS="extensions[Drupal\\DrupalExtension\\Extension][drupal][drupal_root]=$BUILD_TOP/drupal"
+  cd $BUILD_TOP
+  pwd
 
-  # Change to the behat tests directory.
-  cd drupal/profiles/redhen_raiser/tests
+  # Build Behat dependencies
+  header Installing Behat
+  cd tests
+  composer install --no-interaction
+
+  # Make the Travis tests repos agnostic by injecting drupal_root with BEHAT_PARAMS
+  #export BEHAT_PARAMS="extensions[Drupal\\DrupalExtension\\Extension][drupal][drupal_root]=$BUILD_TOP/drupal"
 
   # Check if any features are overridden.
   #run_test ../../../../scripts/check-overridden.sh
 
-  # First, run all the tests in Firefox.
+  # First, run all the tests
   run_test ./bin/behat --config behat.travis.yml
 
   # Then run some Chrome-only tests.
-  run_test ./bin/behat --config behat.travis.yml -p chrome
+  #run_test ./bin/behat --config behat.travis.yml -p chrome
 }
 
 # after_tests

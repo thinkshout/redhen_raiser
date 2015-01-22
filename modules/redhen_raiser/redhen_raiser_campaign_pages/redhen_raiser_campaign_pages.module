@@ -42,7 +42,6 @@ function redhen_raiser_campaign_pages_entity_info_alter(&$entity_info) {
     'label' => t('Banner'),
     'custom settings' => TRUE,
   );
-  );
   $entity_info['redhen_campaign_page']['view modes']['contextual_banner'] = array(
     'label' => t('Contextual Banner'),
     'custom settings' => TRUE,

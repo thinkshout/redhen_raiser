@@ -20,6 +20,8 @@ system_install() {
   echo $BUILD_TOP
 
   pwd
+  
+  ls
 
   # Create a database for our Drupal site.
   mysql -e 'create database drupal;'
@@ -96,7 +98,6 @@ before_tests() {
 run_tests() {
   header Running tests
 
-  cd $BUILD_TOP
   pwd
 
   # Build Behat dependencies

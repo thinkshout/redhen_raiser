@@ -45,7 +45,7 @@ system_install() {
 # Setup Drupal to run the tests.
 #
 before_tests() {
-  # Go into repo directory. Not sure why we aren't there already.
+  # Go into repo directory.
   cd $BUILD_TOP/redhen_raiser
 
   # Build the current branch.
@@ -91,7 +91,8 @@ before_tests() {
 run_tests() {
   header Running tests
 
-  pwd
+  # Go into repo directory.
+  cd $BUILD_TOP/redhen_raiser
 
   # Build Behat dependencies
   header Installing Behat

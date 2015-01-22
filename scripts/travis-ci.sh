@@ -70,7 +70,7 @@ before_tests() {
 
   # Run the webserver
   header Starting webserver
-  drush runserver --server=builtin 8888 > /dev/null 2>&1 &
+  drush runserver 8888 > /dev/null 2>&1 &
   echo $! > /tmp/web-server-pid
   wait_for_port 8888
 

@@ -281,13 +281,13 @@ function redhen_raiser_blocks_create_default_blocks() {
       ),
     ),
   );
-  redhen_raiser_create_beans($stubbed_beans);
+  redhen_raiser_blocks_create_beans($stubbed_beans);
 }
 
 /**
  * Helper to create beans.
  */
-function redhen_raiser_create_beans($stubbed_beans) {
+function redhen_raiser_blocks_create_beans($stubbed_beans) {
   foreach ($stubbed_beans as $name => $stubbed_bean) {
     $new_bean = bean_create(array('type' => $stubbed_bean['type']));
     $new_bean->label = $stubbed_bean['label'];

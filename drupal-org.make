@@ -184,7 +184,7 @@ projects[picture][subdir] = "contrib"
 ; redhen
 projects[redhen][download][type] = "git"
 projects[redhen][download][url] = "http://git.drupal.org/project/redhen.git"
-projects[redhen][download][branch] = "7.x-1.x-dev"
+projects[redhen][download][branch] = "7.x-1.x"
 projects[redhen][subdir] = "contrib"
 projects[redhen][patch][] = "https://www.drupal.org/files/issues/allow_use_of_page_view_setting.patch"
 projects[redhen][patch][] = "https://www.drupal.org/files/issues/default_flag_invalid_for_database.patch"

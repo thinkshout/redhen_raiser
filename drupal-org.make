@@ -144,6 +144,10 @@ projects[media][version] = "1.4"
 projects[media][subdir] = "contrib"
 projects[media][patch][] = "https://www.drupal.org/files/issues/change_select_button_when_value_exists.patch"
 
+; media_vimeo
+projects[media_vimeo][version] = "2.0"
+projects[media_vimeo][subdir] = "contrib"
+
 ; media_youtube
 projects[media_youtube][version] = "2.0-rc4"
 projects[media_youtube][subdir] = "contrib"

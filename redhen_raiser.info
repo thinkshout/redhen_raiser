@@ -71,6 +71,7 @@ dependencies[] = link
 dependencies[] = list
 dependencies[] = media
 dependencies[] = media_internet
+dependencies[] = media_vimeo
 dependencies[] = media_youtube
 dependencies[] = module_filter
 dependencies[] = navbar

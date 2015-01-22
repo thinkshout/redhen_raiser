@@ -28,10 +28,12 @@ exist.
 
 Start in the same directory that this Readme sits in.
 
+```
 : drush make drupal-org-core.make *your/web/root*
 : drush make --no-core --contrib-destination drupal-org.make .
 : cp -R . *your/web/root*/profiles/redhen_raiser
 : cd *your/web/root*
+```
 
 Now visit your website and run the installer. If you run it with Drush, specify
 the "redhen_raiser" profile.
@@ -63,3 +65,5 @@ and push to your own repo.
 Of specific note: creating a module called "redhen_raiser_custom_install" will
 allow you to run installation functions and enable default modules when the
 redhen_raiser installation profile runs.
+
+[![Build Status](https://travis-ci.org/thinkshout/redhen_raiser.svg?branch=ci)](https://travis-ci.org/thinkshout/redhen_raiser)

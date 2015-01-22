@@ -1,3 +1,6 @@
+# Use container based infrastructure
+sudo: false
+
 branches:
   # Update to 7.x-1.x to only test 7.x-1.x branch when ready
   only: ci

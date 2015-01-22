@@ -6,7 +6,6 @@ EXIT_VALUE=0
 
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export DISPLAY=:99.0
-export CHROME_SANDBOX=/opt/google/chrome/chrome-sandbox
 
 ##
 # SCRIPT COMMANDS
@@ -17,11 +16,7 @@ export CHROME_SANDBOX=/opt/google/chrome/chrome-sandbox
 # This is meant to setup the server on Travis-CI so that it can run the tests.
 #
 system_install() {
-  echo $BUILD_TOP
-
   pwd
-  
-  ls
 
   # Create a database for our Drupal site.
   mysql -e 'create database drupal;'
@@ -62,9 +57,6 @@ before_tests() {
 
   cd ../drupal
 
-  # Setup files directory
-  sudo chmod -R 777 sites/all
-
   mkdir sites/default/private
   mkdir sites/default/private/files
   mkdir sites/default/private/temp
@@ -82,7 +74,8 @@ before_tests() {
   echo $! > /tmp/web-server-pid
   wait_for_port 8888
 
-  cd ..
+  # Go back to the repo directory
+  cd -
 
   # Run the selenium server
   header Starting selenium

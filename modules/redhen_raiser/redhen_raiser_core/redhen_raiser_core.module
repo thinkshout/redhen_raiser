@@ -117,41 +117,43 @@ function redhen_raiser_login_form($override_link = FALSE) {
  * We universally make some customizations to the registration form.
  */
 function redhen_raiser_core_form_user_register_form_alter(&$form, &$form_state, $form_id) {
-  $form['account']['name']['#description'] = NULL;
-  $form['account']['mail']['#description'] = NULL;
-  $form['account']['pass']['#description'] = NULL;
-  $form['actions']['submit']['#value'] = "Create Account";
-  // Fix up the RedHen form:
-  unset($form['redhen_contact']['#title']);
-  $form['redhen_contact']['form']['#weight'] = $form['account']['#weight'] - .1;
-  $allowed_fields = array('name');
-  foreach (element_children($form['redhen_contact']['form']) as $fieldname) {
-    $field = &$form['redhen_contact']['form'][$fieldname];
-    if (!in_array($fieldname, $allowed_fields) && empty($field['#required'])) {
-      $field['#access'] = FALSE;
+  if (!user_access('administer users')){
+    $form['account']['name']['#description'] = NULL;
+    $form['account']['mail']['#description'] = NULL;
+    $form['account']['pass']['#description'] = NULL;
+    $form['actions']['submit']['#value'] = "Create Account";
+    // Fix up the RedHen form:
+    unset($form['redhen_contact']['#title']);
+    $form['redhen_contact']['form']['#weight'] = $form['account']['#weight'] - .1;
+    $allowed_fields = array('name');
+    foreach (element_children($form['redhen_contact']['form']) as $fieldname) {
+      $field = &$form['redhen_contact']['form'][$fieldname];
+      if (!in_array($fieldname, $allowed_fields) && empty($field['#required'])) {
+        $field['#access'] = FALSE;
+      }
     }
-  }
-  $form['redhen_contact']['form']['name']['middle_name']['#access'] = FALSE;
-  $form['login'] = array(
-    '#type' => 'link',
-    '#title' => t("Already have an account? Sign in."),
-    '#href' => 'user/login',
-    '#weight' => 20,
-  );
-  if (isset($_GET['destination'])) {
-    $form['login']['#options']['query']['destination'] = $_GET['destination'];
-  }
+    $form['redhen_contact']['form']['name']['middle_name']['#access'] = FALSE;
+    $form['login'] = array(
+      '#type' => 'link',
+      '#title' => t("Already have an account? Sign in."),
+      '#href' => 'user/login',
+      '#weight' => 20,
+    );
+    if (isset($_GET['destination'])) {
+      $form['login']['#options']['query']['destination'] = $_GET['destination'];
+    }
 
-  $form['actions']['cancel'] = array(
-    '#type' => 'link',
-    '#title' => t('Cancel'),
-    '#href' => '<front>',
-    '#weight' => 100,
-  );
-  $form['redhen_contact']['account'] = $form['account'];
-  $form['account']['mail']['#required'] = FALSE;
-  $form['account']['#access'] = FALSE;
-  array_unshift($form['#validate'], 'redhen_raiser_core_registration_validate');
+    $form['actions']['cancel'] = array(
+      '#type' => 'link',
+      '#title' => t('Cancel'),
+      '#href' => '<front>',
+      '#weight' => 100,
+    );
+    $form['redhen_contact']['account'] = $form['account'];
+    $form['account']['mail']['#required'] = FALSE;
+    $form['account']['#access'] = FALSE;
+    array_unshift($form['#validate'], 'redhen_raiser_core_registration_validate');
+  }
 }
 
 /**

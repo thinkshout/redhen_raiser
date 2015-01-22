@@ -7,11 +7,6 @@ language: php
 php:
   - 5.4
 
-mysql:
-  database: drupal
-  username: root
-  encoding: utf8
-
 install:
   # Copy the script into a stable location.
   - cp scripts/travis-ci.sh $HOME/

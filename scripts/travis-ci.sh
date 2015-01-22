@@ -70,8 +70,7 @@ before_tests() {
 
   # Run the webserver
   header Starting webserver
-  drush runserver --server=builtin 8888 > /dev/null 2>&1 &
-  echo $! > /tmp/web-server-pid
+  drush runserver 8888 > /dev/null 2>&1 &
   wait_for_port 8888
 
   # Go back to the repo directory
@@ -80,7 +79,6 @@ before_tests() {
   # Run the selenium server
   header Starting selenium
   java -jar $HOME/selenium-server-standalone-2.41.0.jar > /dev/null 2>&1 &
-  echo $! > /tmp/selenium-server-pid
   wait_for_port 4444
 }
 
@@ -108,8 +106,6 @@ run_tests() {
   # First, run all the tests
   run_test ./bin/behat --config behat.travis.yml
 
-  # Then run some Chrome-only tests.
-  #run_test ./bin/behat --config behat.travis.yml -p chrome
 }
 
 # after_tests
@@ -119,12 +115,8 @@ run_tests() {
 after_tests() {
   header Cleaning up after tests
 
-  WEB_SERVER_PID=`cat /tmp/webserver-server-pid`
-  SELENIUM_SERVER_PID=`cat /tmp/selenium-server-pid`
+  # Nothing yet
 
-  # Stop the servers we started
-  kill $WEB_SERVER_PID
-  kill $SELENIUM_SERVER_PID
 }
 
 ##

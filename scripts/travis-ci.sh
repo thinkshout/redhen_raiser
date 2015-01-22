@@ -16,8 +16,6 @@ export DISPLAY=:99.0
 # This is meant to setup the server on Travis-CI so that it can run the tests.
 #
 system_install() {
-  pwd
-
   # Create a database for our Drupal site.
   mysql -e 'create database drupal;'
 
@@ -47,6 +45,8 @@ system_install() {
 # Setup Drupal to run the tests.
 #
 before_tests() {
+  # Go into repo directory. Not sure why we aren't there already.
+  cd $BUILD_TOP/redhen_raiser
 
   # Build the current branch.
   header Building RedHen Raiser

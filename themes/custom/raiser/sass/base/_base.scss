@@ -7,6 +7,7 @@ body {
 
 body {
   background: $page-bg;
+  color: $black;
   font-family: $raiser-body-font;
 }
 
@@ -63,7 +64,7 @@ form {
   textarea {
     border: 1px solid $gray;
     border-radius: 4px;
-    color: $primary;
+    color: $black;
     padding: 0.5em;
     width: 100%;
     @include box-shadow(0 0 3px $gray inset);

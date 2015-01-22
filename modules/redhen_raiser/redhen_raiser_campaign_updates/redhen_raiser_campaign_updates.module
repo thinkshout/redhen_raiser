@@ -89,10 +89,17 @@ function redhen_raiser_campaign_updates_campaign_context_banner() {
     $update = node_load($nid);
     if ($update) {
       $wrapper = entity_metadata_wrapper('node', $update);
-      $campaign = $wrapper->field_campaign_context->value();
-      // @todo check for page context first and render if present.
-      if ($campaign) {
-        return entity_view('redhen_campaign', array($campaign), 'contextual_banner');
+      $entity = NULL;
+      if ($page = $wrapper->field_page_context->value()) {
+        $entity = $page;
+        $entity_type = 'redhen_campaign_page';
+      }
+      else {
+        $entity = $wrapper->field_campaign_context->value();
+        $entity_type = 'redhen_campaign';
+      }
+      if ($entity) {
+        return entity_view($entity_type, array($entity), 'contextual_banner');
       }
     }
   }

@@ -7,13 +7,15 @@
     max-height: 300px;
   }
 
-  #block-bean-campaign-context-banner {
+  #block-bean-campaign-context-banner,
+  #block-bean-campaign-page-context-banner{
     margin-bottom: 0;
   }
 
   #block-redhen-raiser-campaign-updates-campaign-update-banner,
   #block-bean-campaign-page-banner,
   #block-bean-campaign-context-banner,
+  #block-bean-campaign-page-context-banner,
   #block-bean-campaign-banner {
     margin-bottom: 0;
     .content {

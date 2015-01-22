@@ -31,7 +31,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'default' => array(
         'label' => 'above',
@@ -227,7 +227,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'default' => array(
         'label' => 'above',
@@ -368,7 +368,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 9,
       ),
       'default' => array(
         'label' => 'above',
@@ -444,7 +444,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'default' => array(
         'label' => 'above',
@@ -585,7 +585,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -677,7 +677,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -867,10 +867,13 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'weight' => 3,
       ),
       'contextual_banner' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
+        'label' => 'hidden',
+        'module' => 'redhen_donation',
+        'settings' => array(
+          'label' => 'Donate',
+        ),
+        'type' => 'redhen_donation_link',
+        'weight' => 3,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -963,7 +966,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'default' => array(
         'label' => 'above',

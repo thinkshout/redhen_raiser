@@ -52,7 +52,7 @@ before_tests() {
   header Building RedHen Raiser
   pwd
   drush make --yes drupal-org-core.make --prepare-install ../drupal
-  drush make --yes drupal-org.make --no-core --contrib-destination=profiles/redhen_raiser
+  drush make --yes drupal-org.make --no-core --contrib-destination .
   cp -R . ../drupal/profiles/redhen_raiser
 
   cd ../drupal

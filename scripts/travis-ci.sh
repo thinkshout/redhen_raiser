@@ -19,12 +19,7 @@ export CHROME_SANDBOX=/opt/google/chrome/chrome-sandbox
 system_install() {
   echo $BUILD_TOP
 
-  # Add the Google Chrome packages.
-  header Setting up APT
   pwd
-  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-  sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-  sudo apt-get update > /dev/null
 
   # Create a database for our Drupal site.
   mysql -e 'create database drupal;'
@@ -41,25 +36,9 @@ system_install() {
   sh -e /etc/init.d/xvfb start
   sleep 5
 
-  # Get Chrome and ChromeDriver
-  header Installing Google Chrome
-  sudo apt-get install google-chrome-stable
-  wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
-  unzip -a chromedriver_linux64.zip
-
-  # Insane hack from jsdevel:
-  #   https://github.com/jsdevel/travis-debugging/blob/master/shim.bash
-  # This allows chrome-sandbox to work in side of OpenVZ, because I can't
-  # figure out how to start chrome with --no-sandbox.
-  sudo rm -f $CHROME_SANDBOX
-  sudo wget https://googledrive.com/host/0B5VlNZ_Rvdw6NTJoZDBSVy1ZdkE -O $CHROME_SANDBOX
-  sudo chown root:root $CHROME_SANDBOX
-  sudo chmod 4755 $CHROME_SANDBOX
-  sudo md5sum $CHROME_SANDBOX
-
   # Get Selenium
   header Downloading Selenium
-  wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar
+  wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar -P $HOME/
 
   # Disable sendmail
   echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
@@ -71,8 +50,6 @@ system_install() {
 # Setup Drupal to run the tests.
 #
 before_tests() {
-  pwd
-  cd $BUILD_TOP
 
   # Build the current branch.
   header Building RedHen Raiser
@@ -107,7 +84,7 @@ before_tests() {
 
   # Run the selenium server
   header Starting selenium
-  java -jar selenium-server-standalone-2.41.0.jar -Dwebdriver.chrome.driver=`pwd`/chromedriver > /dev/null 2>&1 &
+  java -jar $HOME/selenium-server-standalone-2.41.0.jar > /dev/null 2>&1 &
   echo $! > /tmp/selenium-server-pid
   wait_for_port 4444
 }

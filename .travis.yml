@@ -11,9 +11,6 @@ install:
   # Copy the script into a stable location.
   - cp scripts/travis-ci.sh $HOME/
 
-  # Move to the directory above, where we should remain.
-  - cd ..
-
   # Start by doing system installation.
   - $HOME/travis-ci.sh system-install
 

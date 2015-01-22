@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Installation hooks for redhen_raiser_blocks module.
+ */
+
+/**
+ * Add the Contextual bean for Campaign Pages.
+ */
+function redhen_raiser_blocks_update_7000(&$sandbox) {
+
+    $stubbed_beans = array(
+      'campaign-page-context-banner' => array(
+        'type' => 'bean_entity_view',
+        'label' => 'Campaign Page Context Banner',
+        'title' => '',
+        'data' => array(
+          'entity_type' => 'redhen_campaign_page',
+          'entity_view_mode' => 'contextual_banner',
+          'entity_id_position' => '',
+          'entity_argument' => 'campaign_page',
+        ),
+      ),
+    );
+    redhen_raiser_blocks_create_beans($stubbed_beans);
+}

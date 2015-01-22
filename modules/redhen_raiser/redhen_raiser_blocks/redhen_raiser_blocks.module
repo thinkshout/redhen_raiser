@@ -269,6 +269,17 @@ function redhen_raiser_blocks_create_default_blocks() {
         'entity_id_position' => '1',
       ),
     ),
+    'campaign-page-context-banner' => array(
+      'type' => 'bean_entity_view',
+      'label' => 'Campaign Page Context Banner',
+      'title' => '',
+      'data' => array(
+        'entity_type' => 'redhen_campaign_page',
+        'entity_view_mode' => 'contextual_banner',
+        'entity_id_position' => '',
+        'entity_argument' => 'campaign_page',
+      ),
+    ),
     'campaign-page-progress-query-con' => array(
       'type' => 'bean_entity_view',
       'label' => 'Campaign Page Progress (query context)',

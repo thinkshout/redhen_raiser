@@ -45,16 +45,14 @@ system_install() {
 # Setup Drupal to run the tests.
 #
 before_tests() {
-  # Go into repo directory.
-  cd $BUILD_TOP/redhen_raiser
 
   # Build the current branch.
   header Building RedHen Raiser
-  pwd
   drush make --yes drupal-org-core.make --prepare-install ../drupal
   drush make --yes drupal-org.make --no-core --contrib-destination .
   cp -R . ../drupal/profiles/redhen_raiser
 
+  # Go to the Drupal install directory
   cd ../drupal
 
   mkdir sites/default/private
@@ -88,9 +86,6 @@ before_tests() {
 #
 run_tests() {
   header Running tests
-
-  # Go into repo directory.
-  cd $BUILD_TOP/redhen_raiser
 
   # Build Behat dependencies
   header Installing Behat
@@ -154,6 +149,7 @@ run_command() {
 # Wait for a specific port to respond to connections.
 wait_for_port() {
   local port=$1
+  # TODO this should timeout at some point
   while echo | telnet localhost $port 2>&1 | grep -qe 'Connection refused'; do
     echo "Connection refused on port $port. Waiting 5 seconds..."
     sleep 5
@@ -166,9 +162,6 @@ wait_for_port() {
 
 # Capture all errors and set our overall exit value.
 trap 'set_error' ERR
-
-# We want to always start from the same directory:
-cd $BUILD_TOP
 
 case $COMMAND in
   system-install)

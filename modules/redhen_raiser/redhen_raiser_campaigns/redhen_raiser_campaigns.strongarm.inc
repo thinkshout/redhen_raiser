@@ -106,7 +106,7 @@ function redhen_raiser_campaigns_strongarm() {
             'visible' => TRUE,
           ),
           'contextual_banner' => array(
-            'weight' => '3',
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),

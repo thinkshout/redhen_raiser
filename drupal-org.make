@@ -11,7 +11,7 @@ core = 7.x
 
 
 ; addressfield
-projects[addressfield][version] = "1.0-beta5"
+projects[addressfield][version] = "1.0"
 projects[addressfield][subdir] = "contrib"
 
 ; bean
@@ -32,7 +32,7 @@ projects[breakpoints][version] = "1.3"
 projects[breakpoints][subdir] = "contrib"
 
 ; commerce
-projects[commerce][version] = "1.10"
+projects[commerce][version] = "1.11"
 projects[commerce][subdir] = "contrib"
 projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_payment_method_callback_comment_fix.patch"
 
@@ -144,6 +144,10 @@ projects[media][version] = "1.4"
 projects[media][subdir] = "contrib"
 projects[media][patch][] = "https://www.drupal.org/files/issues/change_select_button_when_value_exists.patch"
 
+; media_vimeo
+projects[media_vimeo][version] = "2.0"
+projects[media_vimeo][subdir] = "contrib"
+
 ; media_youtube
 projects[media_youtube][version] = "2.0-rc4"
 projects[media_youtube][subdir] = "contrib"
@@ -174,14 +178,14 @@ projects[pathauto_entity][version] = "1.0"
 projects[pathauto_entity][subdir] = "contrib"
 
 ; picture
-projects[picture][version] = "2.7"
+projects[picture][version] = "2.9"
 projects[picture][subdir] = "contrib"
 
 ; redhen
-;projects[redhen][version] = "1.8"
+projects[redhen][download][type] = "git"
+projects[redhen][download][url] = "http://git.drupal.org/project/redhen.git"
+projects[redhen][download][branch] = "7.x-1.x"
 projects[redhen][subdir] = "contrib"
-projects[redhen][patch][] = "https://www.drupal.org/files/issues/allow_use_of_page_view_setting.patch"
-projects[redhen][patch][] = "https://www.drupal.org/files/issues/default_flag_invalid_for_database.patch"
 
 ; redhen_donation
 ; projects[redhen_donation][version] = "1.0"
@@ -196,6 +200,7 @@ projects[redhen_campaign][version] = "1.0"
 projects[redhen_campaign][subdir] = "contrib"
 
 ; rules
+; Note that pending https://www.drupal.org/node/2403851 Rules 2.8 doesn't work with Commerce.
 projects[rules][version] = "2.7"
 projects[rules][subdir] = "contrib"
 

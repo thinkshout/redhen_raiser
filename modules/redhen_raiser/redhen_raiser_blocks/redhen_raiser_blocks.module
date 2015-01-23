@@ -269,6 +269,17 @@ function redhen_raiser_blocks_create_default_blocks() {
         'entity_id_position' => '1',
       ),
     ),
+    'campaign-page-context-banner' => array(
+      'type' => 'bean_entity_view',
+      'label' => 'Campaign Page Context Banner',
+      'title' => '',
+      'data' => array(
+        'entity_type' => 'redhen_campaign_page',
+        'entity_view_mode' => 'contextual_banner',
+        'entity_id_position' => '',
+        'entity_argument' => 'campaign_page',
+      ),
+    ),
     'campaign-page-progress-query-con' => array(
       'type' => 'bean_entity_view',
       'label' => 'Campaign Page Progress (query context)',
@@ -281,13 +292,13 @@ function redhen_raiser_blocks_create_default_blocks() {
       ),
     ),
   );
-  redhen_raiser_create_beans($stubbed_beans);
+  redhen_raiser_blocks_create_beans($stubbed_beans);
 }
 
 /**
  * Helper to create beans.
  */
-function redhen_raiser_create_beans($stubbed_beans) {
+function redhen_raiser_blocks_create_beans($stubbed_beans) {
   foreach ($stubbed_beans as $name => $stubbed_bean) {
     $new_bean = bean_create(array('type' => $stubbed_bean['type']));
     $new_bean->label = $stubbed_bean['label'];

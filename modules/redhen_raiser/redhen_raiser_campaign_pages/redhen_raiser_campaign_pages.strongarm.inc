@@ -92,6 +92,10 @@ function redhen_raiser_campaign_pages_strongarm() {
             'weight' => '1',
             'visible' => TRUE,
           ),
+          'contextual_banner' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
         ),
         'campaign' => array(
           'banner' => array(
@@ -122,6 +126,10 @@ function redhen_raiser_campaign_pages_strongarm() {
             'weight' => '4',
             'visible' => FALSE,
           ),
+          'contextual_banner' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
         ),
         'team' => array(
           'banner' => array(
@@ -150,6 +158,10 @@ function redhen_raiser_campaign_pages_strongarm() {
           ),
           'snippet' => array(
             'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'contextual_banner' => array(
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),
@@ -182,6 +194,10 @@ function redhen_raiser_campaign_pages_strongarm() {
             'weight' => '2',
             'visible' => FALSE,
           ),
+          'contextual_banner' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
         ),
         'owner' => array(
           'teaser' => array(
@@ -207,6 +223,10 @@ function redhen_raiser_campaign_pages_strongarm() {
           'snippet' => array(
             'weight' => '0',
             'visible' => TRUE,
+          ),
+          'contextual_banner' => array(
+            'weight' => '6',
+            'visible' => FALSE,
           ),
         ),
       ),
@@ -237,6 +257,15 @@ function redhen_raiser_campaign_pages_strongarm() {
       ),
       'token' => array(
         'custom_settings' => FALSE,
+      ),
+      'snippet' => array(
+        'custom_settings' => TRUE,
+      ),
+      'promotion' => array(
+        'custom_settings' => TRUE,
+      ),
+      'contextual_banner' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -286,6 +315,14 @@ function redhen_raiser_campaign_pages_strongarm() {
             'weight' => '-10',
             'visible' => TRUE,
           ),
+          'default' => array(
+            'weight' => '-10',
+            'visible' => TRUE,
+          ),
+          'contextual_banner' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
         ),
         'campaign' => array(
           'progress' => array(
@@ -312,6 +349,14 @@ function redhen_raiser_campaign_pages_strongarm() {
             'weight' => '-10',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '-10',
+            'visible' => TRUE,
+          ),
+          'contextual_banner' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
         ),
         'team' => array(
           'progress' => array(
@@ -336,6 +381,14 @@ function redhen_raiser_campaign_pages_strongarm() {
           ),
           'snippet' => array(
             'weight' => '-10',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '-10',
+            'visible' => TRUE,
+          ),
+          'contextual_banner' => array(
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),
@@ -364,6 +417,14 @@ function redhen_raiser_campaign_pages_strongarm() {
             'weight' => '-10',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '-10',
+            'visible' => TRUE,
+          ),
+          'contextual_banner' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
         ),
         'owner' => array(
           'banner' => array(
@@ -389,6 +450,14 @@ function redhen_raiser_campaign_pages_strongarm() {
           'snippet' => array(
             'weight' => '-10',
             'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '-10',
+            'visible' => TRUE,
+          ),
+          'contextual_banner' => array(
+            'weight' => '6',
+            'visible' => FALSE,
           ),
         ),
       ),

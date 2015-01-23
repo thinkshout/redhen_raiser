@@ -274,3 +274,17 @@ function _redhen_raiser_core_colectomify(&$field) {
   $field['#label_display'] = 'inlinec';
   $field['#post_render'] = array('colectomy' => 'colectomy_post_render');
 }
+
+/**
+ * Implements hook_media_browser_plugins_alter().
+ *
+ * Provides more intuitive names for the media selection tabs.
+ */
+function redhen_raiser_core_media_browser_plugins_alter(&$plugin_output) {
+  if (isset($plugin_output['upload'])) {
+    $plugin_output['upload']['#title'] = 'Image';
+  }
+  if (isset($plugin_output['media_internet'])) {
+    $plugin_output['media_internet']['#title'] = 'Video';
+  }
+}

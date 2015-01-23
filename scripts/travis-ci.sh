@@ -90,7 +90,7 @@ run_tests() {
   # Check if any features are overridden.
   header Checking for overridden features
   cd ../drupal/profiles/redhen_raiser/scripts
-  run_test check-overridden.sh
+  run_test ./check-overridden.sh
 
   # Back to repository directory
   cd -

@@ -22,10 +22,3 @@ script:
 
 after_script:
   - scripts/travis-ci.sh after-tests
-
-notifications:
-  email:
-    recipients:
-      - tauno@thinkshout.com
-    on_success: always
-    on_failure: always

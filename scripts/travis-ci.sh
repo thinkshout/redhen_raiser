@@ -96,7 +96,11 @@ run_tests() {
   #export BEHAT_PARAMS="extensions[Drupal\\DrupalExtension\\Extension][drupal][drupal_root]=$BUILD_TOP/drupal"
 
   # Check if any features are overridden.
-  run_test ../scripts/check-overridden.sh
+  cd ../drupal/profiles/redhen_raiser/scripts
+  run_test check-overridden.sh
+
+  # Back to repository
+  cd -
 
   # First, run all the tests
   run_test ./bin/behat --config behat.travis.yml

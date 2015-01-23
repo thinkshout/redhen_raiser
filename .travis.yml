@@ -1,0 +1,31 @@
+# Use container based infrastructure
+sudo: false
+
+branches:
+  # Only test the 7.x-1.x branch
+  only: 7.x-1.x
+
+language: php
+
+php:
+  - 5.4
+
+install:
+  # Start by doing system installation.
+  - scripts/travis-ci.sh system-install
+
+before_script:
+  - scripts/travis-ci.sh before-tests
+
+script:
+  - scripts/travis-ci.sh run-tests
+
+after_script:
+  - scripts/travis-ci.sh after-tests
+
+notifications:
+  email:
+    recipients:
+      - tauno@thinkshout.com
+    on_success: always
+    on_failure: always

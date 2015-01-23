@@ -5,3 +5,6 @@ themes/contrib
 libraries
 Gemfile.lock
 .sass-cache
+tests/bin
+tests/vendor
+*~

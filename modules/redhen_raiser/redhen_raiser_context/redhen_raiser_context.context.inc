@@ -22,6 +22,12 @@ function redhen_raiser_context_context_default_contexts() {
         'redhen_campaign/*/*' => 'redhen_campaign/*/*',
       ),
     ),
+    'query_param' => array(
+      'values' => array(
+        'parameters' => 'a:1:{i:0;a:2:{s:4:"name";s:13:"campaign_page";s:8:"operator";s:7:"not_set";}}',
+        'require_all_params' => 1,
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -35,7 +41,7 @@ function redhen_raiser_context_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
@@ -219,7 +225,7 @@ function redhen_raiser_context_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'donate_page';
-  $context->description = 'Applies to campaign donate pages.';
+  $context->description = 'Applies to donations for campaigns, but not for pages.';
   $context->tag = 'Campaigns';
   $context->conditions = array(
     'path' => array(
@@ -262,7 +268,7 @@ function redhen_raiser_context_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Applies to campaign donate pages.');
+  t('Applies to donations for campaigns, but not for pages.');
   t('Campaigns');
   $export['donate_page'] = $context;
 
@@ -288,6 +294,12 @@ function redhen_raiser_context_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'bean-campaign-page-context-banner' => array(
+          'module' => 'bean',
+          'delta' => 'campaign-page-context-banner',
+          'region' => 'highlighted',
+          'weight' => '-10',
+        ),
         'bean-campaign-page-progress-query-con' => array(
           'module' => 'bean',
           'delta' => 'campaign-page-progress-query-con',

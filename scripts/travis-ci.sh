@@ -87,6 +87,14 @@ before_tests() {
 run_tests() {
   header Running tests
 
+  # Check if any features are overridden.
+  header Checking for overridden features
+  cd ../drupal/profiles/redhen_raiser/scripts
+  run_test check-overridden.sh
+
+  # Back to repository directory
+  cd -
+
   # Build Behat dependencies
   header Installing Behat
   cd tests
@@ -94,13 +102,6 @@ run_tests() {
 
   # Make the Travis tests repos agnostic by injecting drupal_root with BEHAT_PARAMS
   #export BEHAT_PARAMS="extensions[Drupal\\DrupalExtension\\Extension][drupal][drupal_root]=$BUILD_TOP/drupal"
-
-  # Check if any features are overridden.
-  cd ../drupal/profiles/redhen_raiser/scripts
-  run_test check-overridden.sh
-
-  # Back to repository
-  cd -
 
   # First, run all the tests
   run_test ./bin/behat --config behat.travis.yml

@@ -66,4 +66,4 @@ Of specific note: creating a module called "redhen_raiser_custom_install" will
 allow you to run installation functions and enable default modules when the
 redhen_raiser installation profile runs.
 
-[![Build Status](https://travis-ci.org/thinkshout/redhen_raiser.svg?branch=ci)](https://travis-ci.org/thinkshout/redhen_raiser)
+[![Build Status](https://travis-ci.org/thinkshout/redhen_raiser.svg?branch=7.x-1.x)](https://travis-ci.org/thinkshout/redhen_raiser)

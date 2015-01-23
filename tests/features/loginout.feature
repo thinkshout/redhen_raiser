@@ -23,11 +23,11 @@ Scenario: Logs out of the site
   Then I should see "Login"
     And I should not see "My account"
 
-#Scenario: Attempts login with wrong credentials.
-#  Given I am on "/"
-#  When I follow "Log In"
-#    And I fill in "Username" with "badusername"
-#    And I fill in "Password" with "boguspass"
-#    And I press "Log in"
-#  Then I should see "Sorry, unrecognized username or password."
-#    And I should not see "My account"
+Scenario: Attempts login with wrong credentials.
+  Given I am on "/"
+  When I follow "Login"
+    And I fill in "E-mail" with "badusername@notreal.com"
+    And I fill in "Password" with "boguspass"
+    And I press "Log In"
+  Then I should see "Sorry, unrecognized username or password."
+    And I should not see "My account"

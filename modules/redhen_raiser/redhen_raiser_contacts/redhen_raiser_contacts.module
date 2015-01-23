@@ -48,6 +48,7 @@ function redhen_raiser_contacts_entity_view_alter(&$build, $type) {
     }
     if ($add_picture) {
       $uri = FALSE;
+      $user_profile = '/fundraiser-profile/' . $user->uid;
       if (isset($user->picture->uri)) {
         $uri = $user->picture->uri;
       }
@@ -61,7 +62,9 @@ function redhen_raiser_contacts_entity_view_alter(&$build, $type) {
       if ($uri) {
         $build['avatar'] = array(
           '#theme' => 'image_style',
+          '#prefix' => '<a href="'.$user_profile.'" class="user-profile">',
           '#path' => $uri,
+          '#suffix' => '</a>',
           '#style_name' => $style,
         );
       }

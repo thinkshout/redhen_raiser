@@ -62,6 +62,7 @@ function redhen_raiser_views_views_default_views() {
   $handler->display->display_options['fields']['field_organization']['table'] = 'field_data_field_organization';
   $handler->display->display_options['fields']['field_organization']['field'] = 'field_organization';
   $handler->display->display_options['fields']['field_organization']['relationship'] = 'contact_id';
+  $handler->display->display_options['fields']['field_organization']['hide_empty'] = TRUE;
   /* Field: RedHen Campaign Page: Campaign Page Name */
   $handler->display->display_options['fields']['label']['id'] = 'label';
   $handler->display->display_options['fields']['label']['table'] = 'redhen_campaign_page';
@@ -69,6 +70,7 @@ function redhen_raiser_views_views_default_views() {
   $handler->display->display_options['fields']['label']['relationship'] = 'redhen_campaign_page';
   $handler->display->display_options['fields']['label']['label'] = 'Fundraiser';
   $handler->display->display_options['fields']['label']['alter']['path'] = '[url]';
+  $handler->display->display_options['fields']['label']['hide_empty'] = TRUE;
   /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';

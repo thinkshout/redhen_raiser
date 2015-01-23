@@ -16,6 +16,7 @@ dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = module_filter
 dependencies[] = navbar
+dependencies[] = navbar_flush_cache
 dependencies[] = node
 dependencies[] = picture
 dependencies[] = rules

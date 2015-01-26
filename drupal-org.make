@@ -182,21 +182,15 @@ projects[picture][version] = "2.9"
 projects[picture][subdir] = "contrib"
 
 ; redhen
-projects[redhen][download][type] = "git"
-projects[redhen][download][url] = "http://git.drupal.org/project/redhen.git"
-projects[redhen][download][branch] = "7.x-1.x"
+projects[redhen][version] = "1.9"
 projects[redhen][subdir] = "contrib"
 
 ; redhen_donation
-; projects[redhen_donation][version] = "1.0"
-projects[redhen_donation][download][type] = "git"
-projects[redhen_donation][download][url] = "http://git.drupal.org/project/redhen_donation.git"
-projects[redhen_donation][download][branch] = "7.x-1.x"
-projects[redhen_donation][download][revision] = "b4dde7901048aa2def60048f8ddf6268c3bc47eb"
+projects[redhen_donation][version] = "1.1"
 projects[redhen_donation][subdir] = "contrib"
 
 ; redhen_campaign
-projects[redhen_campaign][version] = "1.0"
+projects[redhen_campaign][version] = "1.1"
 projects[redhen_campaign][subdir] = "contrib"
 
 ; rules

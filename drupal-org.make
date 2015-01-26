@@ -169,6 +169,10 @@ projects[navbar_flush_cache][download][branch] = "7.x-1.x"
 projects[navbar_flush_cache][download][revision] = "a3624ba"
 projects[navbar_flush_cache][subdir] = "contrib"
 
+; options_element
+projects[options_element][version] = "1.12"
+projects[options_element][subdir] = "contrib"
+
 ; pathauto requires token
 projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"

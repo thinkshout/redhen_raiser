@@ -178,10 +178,8 @@ projects[picture][version] = "2.7"
 projects[picture][subdir] = "contrib"
 
 ; redhen
-;projects[redhen][version] = "1.8"
+projects[redhen][version] = "1.9"
 projects[redhen][subdir] = "contrib"
-projects[redhen][patch][] = "https://www.drupal.org/files/issues/allow_use_of_page_view_setting.patch"
-projects[redhen][patch][] = "https://www.drupal.org/files/issues/default_flag_invalid_for_database.patch"
 
 ; redhen_donation
 ; projects[redhen_donation][version] = "1.0"

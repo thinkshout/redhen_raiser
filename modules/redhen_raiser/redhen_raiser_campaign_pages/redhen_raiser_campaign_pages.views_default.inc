@@ -295,8 +295,19 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['fields']['progress']['table'] = 'views_entity_redhen_campaign_page';
   $handler->display->display_options['fields']['progress']['field'] = 'progress';
   $handler->display->display_options['fields']['progress']['label'] = '';
+  $handler->display->display_options['fields']['progress']['exclude'] = TRUE;
   $handler->display->display_options['fields']['progress']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['progress']['separator'] = '';
   $handler->display->display_options['fields']['progress']['link_to_entity'] = 0;
+  /* Field: Global: Math expression */
+  $handler->display->display_options['fields']['expression']['id'] = 'expression';
+  $handler->display->display_options['fields']['expression']['table'] = 'views';
+  $handler->display->display_options['fields']['expression']['field'] = 'expression';
+  $handler->display->display_options['fields']['expression']['label'] = '';
+  $handler->display->display_options['fields']['expression']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['expression']['precision'] = '0';
+  $handler->display->display_options['fields']['expression']['prefix'] = '$';
+  $handler->display->display_options['fields']['expression']['expression'] = '[progress] / 100';
   /* Sort criterion: RedHen Campaign Page: Progress */
   $handler->display->display_options['sorts']['progress']['id'] = 'progress';
   $handler->display->display_options['sorts']['progress']['table'] = 'redhen_campaign_page';

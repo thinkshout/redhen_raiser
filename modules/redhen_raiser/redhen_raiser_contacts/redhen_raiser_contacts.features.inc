@@ -23,8 +23,7 @@ function redhen_raiser_contacts_default_redhen_contact_type() {
     "label" : "Contact",
     "locked" : "0",
     "weight" : "0",
-    "data" : null,
-    "rdf_mapping" : []
+    "data" : null
   }');
   return $items;
 }

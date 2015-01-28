@@ -34,8 +34,7 @@ function redhen_raiser_campaign_pages_default_redhen_campaign_page_type() {
     "locked" : "0",
     "data" : null,
     "page_type" : "1",
-    "weight" : "0",
-    "rdf_mapping" : []
+    "weight" : "0"
   }');
   $items['team'] = entity_import('redhen_campaign_page_type', '{
     "name" : "team",
@@ -43,8 +42,7 @@ function redhen_raiser_campaign_pages_default_redhen_campaign_page_type() {
     "locked" : "0",
     "data" : null,
     "page_type" : "2",
-    "weight" : "0",
-    "rdf_mapping" : []
+    "weight" : "0"
   }');
   return $items;
 }

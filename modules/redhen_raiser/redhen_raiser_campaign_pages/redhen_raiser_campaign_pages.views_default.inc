@@ -256,6 +256,12 @@ function redhen_raiser_campaign_pages_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'snippet';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['format'] = 'email';
   /* Relationship: RedHen Campaign Page: Parent Campaign */
   $handler->display->display_options['relationships']['campaign']['id'] = 'campaign';
   $handler->display->display_options['relationships']['campaign']['table'] = 'redhen_campaign_page';

@@ -148,6 +148,10 @@ projects[media][patch][] = "https://www.drupal.org/files/issues/change_select_bu
 projects[media_youtube][version] = "2.0-rc4"
 projects[media_youtube][subdir] = "contrib"
 
+; metatag
+projects[metatag][version] = "1.4"
+projects[metatag][subdir] = "contrib"
+
 ; module_filter
 projects[module_filter][version] = "2.0-alpha2"
 projects[module_filter][subdir] = "contrib"

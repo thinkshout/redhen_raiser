@@ -148,3 +148,63 @@ function redhen_raiser_campaign_pages_form_redhen_campaign_campaign_page_form_al
     $form['field_teaser'][$form['field_teaser']['#language']][0]['value']['#maxlength'] = 128;
   }
 }
+
+/**
+ * Implements hook_metatag_metatags_view_alter().
+ */
+function redhen_raiser_campaign_pages_metatag_metatags_view_alter(&$output, $instance, $options) {
+  // The user register page needs customized metatags when there is a query
+  // parameter, so that "join my team" links show up with rich content on
+  // Facebook.
+  if ($instance == 'global' && $_GET['q'] == 'user/register') {
+    if (isset($_GET['destination'])) {
+      $urlements = parse_url($_GET['destination']);
+      // Check if our destination includes a team-specified campaign creation.
+      if ($urlements['path'] == 'redhen_campaign_page/add' && isset($urlements['query'])) {
+        $args = array();
+        parse_str($urlements['query'], $args);
+        if (isset($args['team'])) {
+          // Okay, we have isolated a team creation page. Add some rich data:
+          $output['og:url']['#attached']['drupal_add_html_head'][0][0]['#value'] .= '?' . $urlements['query'];
+          $team = redhen_campaign_page_load($args['team']);
+          $wrapper = entity_metadata_wrapper('redhen_campaign_page', $team);
+
+          // Custom Title:
+          $output['og:title']['#attached']['drupal_add_html_head'][0][0]['#value'] = t('Join @teamname to fundraise for @campaign!',
+            array(
+              '@teamname' => $team->label,
+              '@campaign' => $wrapper->campaign->label(),
+            ));
+          // Find a sensible image to use:
+          if ($media = $wrapper->field_story_media->value()) {
+            $media_path = $wrapper->field_story_media->file->url->value();
+          }
+          else {
+            $media = $wrapper->campaign->field_banner_image->value();
+            $media_path = $wrapper->campaign->field_banner_image->file->url->value();
+          }
+          // Add the image:
+          $output['og:image']['#attached']['drupal_add_html_head'][0] = array(
+            array(
+              '#theme' => 'metatag_property',
+              '#tag' => 'meta',
+              '#id' => $media['type'] == 'image' ? 'metatag_og:image_0' : 'metatag_og:video_0',
+              '#name' => $media['type'] == 'image' ? 'og:image' : 'og:video',
+              '#value' => $media_path,
+              '#weight' => 34.1,
+            ),
+            'metatag_og:image_0',
+          );
+          // Add a related link for the campaign, structure based on the URL
+          // property:
+          $output['og:see_also'] = $output['og:url'];
+          $output['og:see_also']['#attached']['drupal_add_html_head'][0][0]['#value'] = $wrapper->url->value();
+          $output['og:see_also']['#attached']['drupal_add_html_head'][0][1] = 'metatag_og:see_also_0';
+          $output['og:see_also']['#attached']['drupal_add_html_head'][0][0]['#id'] = 'metatag_og:see_also_0';
+          $output['og:see_also']['#attached']['drupal_add_html_head'][0][0]['#name'] = 'og:see_also';
+          $output['og:see_also']['#attached']['drupal_add_html_head'][0][0]['#weight'] = 33.1;
+        }
+      }
+    }
+  }
+}

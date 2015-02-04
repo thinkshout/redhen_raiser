@@ -150,6 +150,47 @@ function redhen_raiser_campaign_pages_form_redhen_campaign_campaign_page_form_al
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Implements hook_form_redhen_campaign_invite_form_alter().
+ *  Adds Facebook and other social media invitation options.
+ */
+function redhen_raiser_campaign_pages_form_redhen_campaign_invite_form_alter(&$form, &$form_state, $form_id) {
+  $form['instructions'] = array(
+    '#type' => 'markup',
+    '#markup' => "<p>You can invite your friends or coworkers to join your fundraising team via Email or Facebook using the form and buttons below.</p>"
+      . "<p>Click the Facebook button to create Facebook post with a link for your friends join your team.</p>"
+      . "<p>To send an email invitation, fill out the email address fields and customize your message, which will be sent along with the link to join the team.</p>",
+    '#weight' => 0,
+  );
+  $join_link = url('user/register',
+    array(
+      'query' => array(
+        'campaign' => $form_state['redhen_campaign_page']->campaign,
+        'team' => $form_state['redhen_campaign_page']->page_id,
+      ),
+      'absolute' => TRUE,
+    ));
+  $facebook_link = url("https://www.facebook.com/sharer/sharer.php",
+    array(
+      'query' => array(
+        'u' => $join_link,
+      ),
+      'absolute' => TRUE,
+    ));
+  $form['facebook'] = array(
+    '#type' => 'markup',
+    '#markup' => 'Invite via: ' . l('Facebook', $facebook_link,
+          array(
+            'attributes' => array(
+              'target' => '_blank',
+              'class' => array('facebook-invite', 'popup'),
+            ))),
+    '#weight' => 1,
+  );
+}
+
+/**
  * Implements hook_metatag_metatags_view_alter().
  */
 function redhen_raiser_campaign_pages_metatag_metatags_view_alter(&$output, $instance, $options) {

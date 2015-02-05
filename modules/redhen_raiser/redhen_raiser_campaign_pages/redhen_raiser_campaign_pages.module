@@ -163,18 +163,32 @@ function redhen_raiser_campaign_pages_form_redhen_campaign_invite_form_alter(&$f
       . "<p>To send an email invitation, fill out the email address fields and customize your message, which will be sent along with the link to join the team.</p>",
     '#weight' => 0,
   );
-  $join_link = url('user/register',
+  $join_link = url('redhen_campaign_page/add',
     array(
       'query' => array(
         'campaign' => $form_state['redhen_campaign_page']->campaign,
         'team' => $form_state['redhen_campaign_page']->page_id,
+      ),
+      'absolute' => FALSE,
+    ));
+  $register_link = url('user/register',
+    array(
+      'query' => array(
+        'destination' => $join_link,
       ),
       'absolute' => TRUE,
     ));
   $facebook_link = url("https://www.facebook.com/sharer/sharer.php",
     array(
       'query' => array(
-        'u' => $join_link,
+        'u' => $register_link,
+      ),
+      'absolute' => TRUE,
+    ));
+  $googleplus_link = url("https://plus.google.com/share",
+    array(
+      'query' => array(
+        'url' => $register_link,
       ),
       'absolute' => TRUE,
     ));
@@ -201,7 +215,7 @@ function redhen_raiser_campaign_pages_metatag_metatags_view_alter(&$output, $ins
     if (isset($_GET['destination'])) {
       $urlements = parse_url($_GET['destination']);
       // Check if our destination includes a team-specified campaign creation.
-      if ($urlements['path'] == 'redhen_campaign_page/add' && isset($urlements['query'])) {
+      if (strpos($urlements['path'], 'redhen_campaign_page/add') !== FALSE && isset($urlements['query'])) {
         $args = array();
         parse_str($urlements['query'], $args);
         if (isset($args['team'])) {

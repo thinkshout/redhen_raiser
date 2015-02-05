@@ -227,7 +227,13 @@ function redhen_raiser_campaign_pages_metatag_metatags_view_alter(&$output, $ins
         parse_str($urlements['query'], $args);
         if (isset($args['team'])) {
           // Okay, we have isolated a team creation page. Add some rich data:
-          $output['og:url']['#attached']['drupal_add_html_head'][0][0]['#value'] .= '?' . $urlements['query'];
+          $output['og:url']['#attached']['drupal_add_html_head'][0][0]['#value'] = url($output['og:url']['#attached']['drupal_add_html_head'][0][0]['#value'],
+            array(
+              'query' => array(
+                'destination' => $_GET['destination'],
+              ),
+              'absolute' => TRUE,
+            ));
           $team = redhen_campaign_page_load($args['team']);
           $wrapper = entity_metadata_wrapper('redhen_campaign_page', $team);
 

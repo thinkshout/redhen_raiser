@@ -199,7 +199,14 @@ function redhen_raiser_campaign_pages_form_redhen_campaign_invite_form_alter(&$f
             'attributes' => array(
               'target' => '_blank',
               'class' => array('facebook-invite', 'popup'),
-            ))),
+            ))) 
+        . ' ' .
+      l('Google+', $googleplus_link,
+        array(
+          'attributes' => array(
+            'target' => '_blank',
+            'class' => array('google-invite', 'popup'),
+          ))),
     '#weight' => 1,
   );
 }

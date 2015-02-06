@@ -196,7 +196,7 @@ projects[redhen_donation][subdir] = "contrib"
 ; redhen_campaign
 projects[redhen_campaign][download][type] = "git"
 projects[redhen_campaign][download][branch] = "7.x-1.x"
-projects[redhen_campaign][download][revision] = "59378e3"
+projects[redhen_campaign][download][revision] = "22c5c27"
 projects[redhen_campaign][subdir] = "contrib"
 
 ; rules

@@ -88,6 +88,41 @@ function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
           _redhen_raiser_core_colectomify($build['team']);
           $build['team']['#label'] = 'with';
         }
+        // If the user arrived via a team invitation link, post a notice.
+        $entity_uri = $build['#entity']->uri();
+        if (!empty($_SESSION['redhen_campaign_team_invitations'][$build['#entity']->page_id])) {
+          if (isset($_GET['dismiss']) && $_GET['dismiss']) {
+            unset($_SESSION['redhen_campaign_team_invitations'][$build['#entity']->page_id]);
+          }
+          else {
+            $join_link = url('redhen_campaign_page/add',
+              array(
+                'query' => array(
+                  'campaign' => $build['#entity']->campaign,
+                  'team' => $build['#entity']->page_id,
+                ),
+                'absolute' => FALSE,
+              ));
+            drupal_set_message(t('You have been invited to join %teamname! <a href=@link>Get started now</a>! (<a href=@dismiss>dismiss</a>)',
+              array(
+                '%teamname' => $build['#entity']->label,
+                '@link' => url('user/register',
+                  array(
+                    'query' => array(
+                      'destination' => $join_link,
+                    ),
+                  )
+                ),
+                '@dismiss' => url($entity_uri['path'],
+                  array(
+                    'query' => array(
+                      'dismiss' => '1',
+                    ),
+                  )
+                ),
+              )), 'status', FALSE);
+          }
+        }
         break;
 
       case 'promotion':

@@ -198,52 +198,44 @@ function redhen_raiser_campaign_pages_form_redhen_campaign_invite_form_alter(&$f
       . "<p>To send an email invitation, fill out the email address fields and customize your message, which will be sent along with the link to join the team.</p>",
     '#weight' => 0,
   );
-  $join_link = url('redhen_campaign_page/add',
-    array(
-      'query' => array(
-        'campaign' => $form_state['redhen_campaign_page']->campaign,
-        'team' => $form_state['redhen_campaign_page']->page_id,
+  $form['invite_options'] = array(
+    '#type' => 'container',
+  );
+  $form['invite_options']['use_email'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Email',
+    '#attributes' => array(
+      'class' => array(
+        'invite_option',
       ),
-      'absolute' => FALSE,
-    ));
-  $register_link = url('user/register',
-    array(
-      'query' => array(
-        'destination' => $join_link,
-      ),
-      'absolute' => TRUE,
-    ));
-  $facebook_link = url("https://www.facebook.com/sharer/sharer.php",
-    array(
-      'query' => array(
-        'u' => $register_link,
-      ),
-      'absolute' => TRUE,
-    ));
-  $googleplus_link = url("https://plus.google.com/share",
-    array(
-      'query' => array(
-        'url' => $register_link,
-      ),
-      'absolute' => TRUE,
-    ));
-  $form['facebook'] = array(
-    '#type' => 'markup',
-    '#markup' => 'Invite via: ' . l('Facebook', $facebook_link,
-          array(
-            'attributes' => array(
-              'target' => '_blank',
-              'class' => array('facebook-invite', 'popup'),
-            ))) 
-        . ' ' .
-      l('Google+', $googleplus_link,
-        array(
-          'attributes' => array(
-            'target' => '_blank',
-            'class' => array('google-invite', 'popup'),
-          ))),
+    ),
     '#weight' => 1,
   );
+  $form['emails']['#states']['invisible'][] = 
+  $form['message']['#states']['invisible'][] = 
+  $form['actions']['#states']['invisible'][] = array(
+    ':input[name="use_email"]' => array('checked' => FALSE),
+  );
+  $join_link = url('redhen_campaign/page/' .  $form_state['redhen_campaign_page']->page_id . '/join',
+    array(
+      'absolute' => TRUE,
+    )
+  );
+  $form['invite_options']['facebook'] = array(
+    '#type' => 'markup',
+    '#markup' => "<a href=\"javascript:raiserShare('http://www.facebook.com/sharer.php?u=','" .
+      $join_link .
+      "', 520, 350)\" class='invite_option'>Facebook</a>",
+    '#weight' => 2,
+  );
+  $form['invite_options']['google+'] = array(
+    '#type' => 'markup',
+    '#markup' => "<a href=\"javascript:raiserShare('https://plus.google.com/share?url=','" .
+      $join_link .
+      "', 520, 350)\" class='invite_option'>Google+</a> ",
+    '#weight' => 3,
+  );
+  drupal_add_js(drupal_get_path('module', 'redhen_raiser_campaign_pages') . '/js/redhen_raiser_share.js');
 }
 
 /**

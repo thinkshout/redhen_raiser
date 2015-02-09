@@ -1,6 +1,14 @@
 #footer-wrapper {
   background: $primary;
 
+  #main-menu { 
+    float: left; 
+    
+    @include xsmall {
+      float: none;
+    }
+  }
+
   #main-menu h2 { display: none; }
 
   footer {
@@ -84,6 +92,31 @@
         color: $action;
       }
     }
+  }
+}
+
+#block-redhen-raiser-blocks-copyright-statement {
+  float: right;
+  margin-top: -1.5em;
+
+  @include xsmall {
+    float: none;
+    margin-top: 1em;
+  }
+}
+
+#block-redhen-raiser-blocks-tax-exempt-status {
+  clear: both;
+  color: $black;
+  left: 0;
+  margin-top: 0.5em;
+  position: absolute;
+  padding-left: 1em;
+  width: 100%;
+
+  @include xsmall {
+    float: none;
+    padding-left: 0;
   }
 }
 

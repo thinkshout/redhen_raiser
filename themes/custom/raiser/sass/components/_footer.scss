@@ -1,5 +1,6 @@
 #footer-wrapper {
   background: $primary;
+  position: relative;
 
   #main-menu { 
     float: left; 
@@ -83,7 +84,7 @@
 
   #colophon {
     color: $white;
-    padding: 0.2em 1em;
+    padding: 0.2em 1em 0 1em;
     text-align: center;
 
     a {
@@ -97,7 +98,7 @@
 
 #block-redhen-raiser-blocks-copyright-statement {
   float: right;
-  margin-top: -1.5em;
+  margin-bottom: 0;
 
   @include xsmall {
     float: none;
@@ -106,17 +107,24 @@
 }
 
 #block-redhen-raiser-blocks-tax-exempt-status {
+  background: #e5e5e5;
+  //bottom: -25px;
   clear: both;
   color: $black;
   left: 0;
+  margin-bottom: 0;
+  margin-left: -1em;
   margin-top: 0.5em;
-  position: absolute;
   padding-left: 1em;
-  width: 100%;
+  width: 102.5%;
 
   @include xsmall {
+    color: $white;
     float: none;
     padding-left: 0;
+    background: none;
+    margin-left: 0;
+    position: relative;
   }
 }
 

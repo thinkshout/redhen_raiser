@@ -51,6 +51,12 @@ function redhen_raiser_views_views_default_views() {
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['table'] = 'redhen_campaign';
   $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
+  /* Filter criterion: RedHen Campaign: Promote */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'redhen_campaign';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['value']['value'] = '1';
 
   /* Display: Featured Block */
   $handler = $view->new_display('block', 'Featured Block', 'block');

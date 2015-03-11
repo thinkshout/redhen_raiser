@@ -15,7 +15,7 @@ projects[addressfield][version] = "1.0"
 projects[addressfield][subdir] = "contrib"
 
 ; bean
-projects[bean][version] = "1.8"
+projects[bean][version] = "1.9"
 projects[bean][subdir] = "contrib"
 
 ; bean_entity_view

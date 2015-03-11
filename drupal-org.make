@@ -215,7 +215,7 @@ projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
 
 ; token
-projects[token][version] = "1.5"
+projects[token][version] = "1.6"
 projects[token][subdir] = "contrib"
 
 ; views

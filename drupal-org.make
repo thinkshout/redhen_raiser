@@ -107,7 +107,7 @@ projects[entityreference][version] = "1.1"
 projects[entityreference][subdir] = "contrib"
 
 ; features
-projects[features][version] = "2.3"
+projects[features][version] = "2.4"
 projects[features][subdir] = "contrib"
 
 ; field_group

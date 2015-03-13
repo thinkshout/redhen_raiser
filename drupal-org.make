@@ -157,7 +157,7 @@ projects[module_filter][version] = "2.0"
 projects[module_filter][subdir] = "contrib"
 
 ; navbar
-projects[navbar][version] = "1.6"
+projects[navbar][version] = "1.5"
 projects[navbar][subdir] = "contrib"
 ; Patch to add top-level icons for commerce menu, etc.
 projects[navbar][patch][] = "https://www.drupal.org/files/issues/navbar-contrib-icons-1954912-20.patch"

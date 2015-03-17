@@ -17,7 +17,6 @@ function redhen_raiser_campaigns_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_allow_dedication',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -43,14 +42,6 @@ function redhen_raiser_campaigns_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'redhen_campaign_donation_type',
-    'foreign keys' => array(
-      'redhen_donation_type' => array(
-        'columns' => array(
-          'redhen_donation_type' => 'name',
-        ),
-        'table' => 'redhen_donation_type',
-      ),
-    ),
     'indexes' => array(
       'redhen_donation_type' => array(
         0 => 'redhen_donation_type',

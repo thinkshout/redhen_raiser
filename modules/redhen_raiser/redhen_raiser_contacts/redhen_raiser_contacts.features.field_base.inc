@@ -17,7 +17,6 @@ function redhen_raiser_contacts_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_billing_address',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'addressfield',
@@ -33,14 +32,6 @@ function redhen_raiser_contacts_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_organization',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -62,7 +53,6 @@ function redhen_raiser_contacts_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'redhen_contact_email',
-    'foreign keys' => array(),
     'indexes' => array(
       'redhen_email_address' => array(
         0 => 'value',

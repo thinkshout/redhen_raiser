@@ -77,6 +77,7 @@ function redhen_raiser_donations_field_default_field_instances() {
       'module' => 'addressfield',
       'settings' => array(
         'available_countries' => array(),
+        'default_country' => '',
         'format_handlers' => array(
           'address' => 'address',
           'name-oneline' => 'name-oneline',
@@ -420,6 +421,7 @@ function redhen_raiser_donations_field_default_field_instances() {
       'module' => 'addressfield',
       'settings' => array(
         'available_countries' => array(),
+        'default_country' => '',
         'format_handlers' => array(
           'address' => 'address',
           'name-oneline' => 'name-oneline',

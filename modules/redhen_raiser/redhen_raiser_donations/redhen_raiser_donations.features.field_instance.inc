@@ -382,17 +382,7 @@ function redhen_raiser_donations_field_default_field_instances() {
   // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_tribute_address'
   $field_instances['redhen_donation-redhen_raiser_donation-field_tribute_address'] = array(
     'bundle' => 'redhen_raiser_donation',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'redhen_donation|redhen_raiser_donation|field_tribute_address|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'administrative_area' => '',
-        'postal_code' => '',
-        'country' => 'US',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'To whom should the tribute notification letter be sent?',
     'display' => array(
@@ -425,9 +415,12 @@ function redhen_raiser_donations_field_default_field_instances() {
         'format_handlers' => array(
           'address' => 'address',
           'name-oneline' => 'name-oneline',
+          'address-hide-postal-code' => 0,
+          'address-hide-street' => 0,
           'address-hide-country' => 0,
           'organisation' => 0,
           'name-full' => 0,
+          'address-optional' => 0,
         ),
       ),
       'type' => 'addressfield_standard',

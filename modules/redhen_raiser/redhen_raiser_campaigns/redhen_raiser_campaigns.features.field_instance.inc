@@ -932,6 +932,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
             250 => '$250',
             500 => '$500',
           ),
+          'donation_amounts_label' => 'Donation Amounts (@cur)',
           'donation_entry' => 'radio_other',
           'maximum_donation' => '',
           'minimum_donation' => '',

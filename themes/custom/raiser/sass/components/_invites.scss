@@ -1,0 +1,22 @@
+#edit-invite-options {
+  overflow: hidden;
+  width: 100%;
+
+  .invite_option,
+  .form-item-use-email {
+    display: block;
+    float: left;
+    margin-right: 0.5em;
+    vertical-align: top;
+
+    @include clear-btn;
+  }
+
+  .form-item {
+    margin-top: 0;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+}

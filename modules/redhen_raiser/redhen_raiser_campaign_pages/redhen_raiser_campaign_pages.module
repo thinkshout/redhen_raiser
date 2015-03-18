@@ -92,6 +92,41 @@ function redhen_raiser_campaign_pages_entity_view_alter(&$build, $type) {
           _redhen_raiser_core_colectomify($build['team']);
           $build['team']['#label'] = 'with';
         }
+        // If the user arrived via a team invitation link, post a notice.
+        $entity_uri = $build['#entity']->uri();
+        if (!empty($_SESSION['redhen_campaign_team_invitations'][$build['#entity']->page_id])) {
+          if (isset($_GET['dismiss']) && $_GET['dismiss']) {
+            unset($_SESSION['redhen_campaign_team_invitations'][$build['#entity']->page_id]);
+          }
+          else {
+            $join_link = url('redhen_campaign_page/add',
+              array(
+                'query' => array(
+                  'campaign' => $build['#entity']->campaign,
+                  'team' => $build['#entity']->page_id,
+                ),
+                'absolute' => FALSE,
+              ));
+            drupal_set_message(t('You have been invited to join %teamname! <a href=@link>Get started now</a>! (<a href=@dismiss>dismiss</a>)',
+              array(
+                '%teamname' => $build['#entity']->label,
+                '@link' => url('user/register',
+                  array(
+                    'query' => array(
+                      'destination' => $join_link,
+                    ),
+                  )
+                ),
+                '@dismiss' => url($entity_uri['path'],
+                  array(
+                    'query' => array(
+                      'dismiss' => '1',
+                    ),
+                  )
+                ),
+              )), 'status', FALSE);
+          }
+        }
         break;
 
       case 'promotion':
@@ -150,5 +185,107 @@ function redhen_raiser_campaign_pages_form_redhen_campaign_campaign_page_form_al
   $form['team']['#access'] = user_access('administer redhen campaign pages') || empty($form_state['team']);
   if (isset($form['field_teaser'])) {
     $form['field_teaser'][$form['field_teaser']['#language']][0]['value']['#maxlength'] = 128;
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Implements hook_form_redhen_campaign_invite_form_alter().
+ *  Adds Facebook and other social media invitation options.
+ */
+function redhen_raiser_campaign_pages_form_redhen_campaign_invite_form_alter(&$form, &$form_state, $form_id) {
+  $form['instructions'] = array(
+    '#type' => 'markup',
+    '#markup' => "<p>You can invite your friends or coworkers to join your fundraising team via Email or Facebook using the form and buttons below.</p>"
+      . "<p>Click the Facebook button to create Facebook post with a link for your friends join your team.</p>"
+      . "<p>To send an email invitation, fill out the email address fields and customize your message, which will be sent along with the link to join the team.</p>",
+    '#weight' => 0,
+  );
+  $form['invite_options'] = array(
+    '#type' => 'container',
+  );
+  $form['invite_options']['use_email'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Email',
+    '#attributes' => array(
+      'class' => array(
+        'invite_option',
+      ),
+    ),
+    '#weight' => 1,
+  );
+  $form['emails']['#states']['invisible'][] = 
+  $form['message']['#states']['invisible'][] = 
+  $form['actions']['#states']['invisible'][] = array(
+    ':input[name="use_email"]' => array('checked' => FALSE),
+  );
+  $join_link = url('redhen_campaign/page/' .  $form_state['redhen_campaign_page']->page_id . '/join',
+    array(
+      'absolute' => TRUE,
+    )
+  );
+  $form['invite_options']['facebook'] = array(
+    '#type' => 'markup',
+    '#markup' => "<a href=\"javascript:raiserShare('http://www.facebook.com/sharer.php?u=','" .
+      $join_link .
+      "', 520, 350)\" class='invite_option'>Facebook</a>",
+    '#weight' => 2,
+  );
+  $form['invite_options']['google+'] = array(
+    '#type' => 'markup',
+    '#markup' => "<a href=\"javascript:raiserShare('https://plus.google.com/share?url=','" .
+      $join_link .
+      "', 520, 350)\" class='invite_option'>Google+</a> ",
+    '#weight' => 3,
+  );
+  drupal_add_js(drupal_get_path('module', 'redhen_raiser_campaign_pages') . '/js/redhen_raiser_share.js');
+}
+
+/**
+ * Implements hook_metatag_metatags_view_alter().
+ */
+function redhen_raiser_campaign_pages_metatag_metatags_view_alter(&$output, $instance, $options) {
+  // The user register page needs customized metatags when there is a query
+  // parameter, so that "join my team" links show up with rich content on
+  // Facebook.
+  if ($instance == 'global' && preg_match('/^redhen_campaign\/page\/[0-9]+\/join$/', $_GET['q'])) {
+    $urlements = explode('/', $_GET['q']);
+    $team = redhen_campaign_page_load($urlements['2']);
+    $wrapper = entity_metadata_wrapper('redhen_campaign_page', $team);
+    // Custom Title:
+    $output['og:title']['#attached']['drupal_add_html_head'][0][0]['#value'] = t('Join @teamname to fundraise for @campaign!',
+      array(
+        '@teamname' => $team->label,
+        '@campaign' => $wrapper->campaign->label(),
+      ));
+    // Find a sensible image to use:
+    if ($media = $wrapper->field_story_media->value()) {
+      $media_path = $wrapper->field_story_media->file->url->value();
+    }
+    else {
+      $media = $wrapper->campaign->field_banner_image->value();
+      $media_path = $wrapper->campaign->field_banner_image->file->url->value();
+    }
+    // Add the image:
+    $output['og:image']['#attached']['drupal_add_html_head'][0] = array(
+      array(
+        '#theme' => 'metatag_property',
+        '#tag' => 'meta',
+        '#id' => $media['type'] == 'image' ? 'metatag_og:image_0' : 'metatag_og:video_0',
+        '#name' => $media['type'] == 'image' ? 'og:image' : 'og:video',
+        '#value' => $media_path,
+        '#weight' => 34.1,
+      ),
+      'metatag_og:image_0',
+    );
+    // Add a related link for the campaign, structure based on the URL
+    // property:
+    $output['og:see_also'] = $output['og:url'];
+    $output['og:see_also']['#attached']['drupal_add_html_head'][0][0]['#value'] = $wrapper->url->value();
+    $output['og:see_also']['#attached']['drupal_add_html_head'][0][1] = 'metatag_og:see_also_0';
+    $output['og:see_also']['#attached']['drupal_add_html_head'][0][0]['#id'] = 'metatag_og:see_also_0';
+    $output['og:see_also']['#attached']['drupal_add_html_head'][0][0]['#name'] = 'og:see_also';
+    $output['og:see_also']['#attached']['drupal_add_html_head'][0][0]['#weight'] = 33.1;
   }
 }

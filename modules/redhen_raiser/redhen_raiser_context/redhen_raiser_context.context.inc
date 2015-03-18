@@ -367,6 +367,18 @@ function redhen_raiser_context_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'redhen_raiser_blocks-copyright_statement' => array(
+          'module' => 'redhen_raiser_blocks',
+          'delta' => 'copyright_statement',
+          'region' => 'navigation',
+          'weight' => '-10',
+        ),
+        'redhen_raiser_blocks-tax_exempt_status' => array(
+          'module' => 'redhen_raiser_blocks',
+          'delta' => 'tax_exempt_status',
+          'region' => 'navigation',
+          'weight' => '-9',
+        ),
         'redhen_raiser_blocks-branding' => array(
           'module' => 'redhen_raiser_blocks',
           'delta' => 'branding',

@@ -152,6 +152,10 @@ projects[media_vimeo][subdir] = "contrib"
 projects[media_youtube][version] = "2.0-rc4"
 projects[media_youtube][subdir] = "contrib"
 
+; metatag
+projects[metatag][version] = "1.4"
+projects[metatag][subdir] = "contrib"
+
 ; module_filter
 projects[module_filter][version] = "2.0"
 projects[module_filter][subdir] = "contrib"

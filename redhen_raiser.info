@@ -14,7 +14,6 @@ dependencies[] = menu
 dependencies[] = number
 dependencies[] = options
 dependencies[] = path
-dependencies[] = rdf
 dependencies[] = taxonomy
 
 ; Contrib
@@ -69,6 +68,8 @@ dependencies[] = interval
 dependencies[] = libraries
 dependencies[] = link
 dependencies[] = list
+dependencies[] = metatag
+dependencies[] = metatag_opengraph
 dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_vimeo

@@ -41,6 +41,14 @@ function redhen_raiser_donations_install() {
         'product_options' => array(
           'one_time_product' => '1',
         ),
+        'payment_methods' => array(
+          array(
+            "payment_method" => "commerce_payment_example|commerce_payment_commerce_payment_example",
+            "label" => "",
+            "currency" => "USD",
+            "delete" => "Delete",
+          ),
+        ),        
       ),
     ),
   );

@@ -203,7 +203,7 @@ projects[redhen_campaign][subdir] = "contrib"
 
 ; rules
 ; Note that pending https://www.drupal.org/node/2403851 Rules 2.8 doesn't work with Commerce.
-projects[rules][version] = "2.7"
+projects[rules][version] = "2.9"
 projects[rules][subdir] = "contrib"
 
 ; select_or_other

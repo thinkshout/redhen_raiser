@@ -48,6 +48,12 @@ function redhen_raiser_custom_install(&$install_state) {
   redhen_raiser_blocks_create_default_blocks();
   module_enable(array('redhen_raiser_defaults'), TRUE);
   module_enable(array('redhen_raiser_custom_config'), TRUE);
+
+  // Turn off the theme rebuild registry setting.
+  $theme_settings = variable_get('theme_raiser_settings');
+  $theme_settings['zen_rebuild_registry'] = 0;
+  variable_set('theme_raiser_settings', $theme_settings);
+
   drupal_flush_all_caches();
   features_revert();
 }

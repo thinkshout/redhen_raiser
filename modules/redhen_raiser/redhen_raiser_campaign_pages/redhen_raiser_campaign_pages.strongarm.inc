@@ -312,7 +312,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'snippet' => array(
-            'weight' => '-10',
+            'weight' => '0',
             'visible' => TRUE,
           ),
           'default' => array(
@@ -346,7 +346,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => TRUE,
           ),
           'snippet' => array(
-            'weight' => '-10',
+            'weight' => '3',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -380,7 +380,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'snippet' => array(
-            'weight' => '-10',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -414,7 +414,7 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'snippet' => array(
-            'weight' => '-10',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -448,8 +448,8 @@ function redhen_raiser_campaign_pages_strongarm() {
             'visible' => FALSE,
           ),
           'snippet' => array(
-            'weight' => '-10',
-            'visible' => TRUE,
+            'weight' => '6',
+            'visible' => FALSE,
           ),
           'default' => array(
             'weight' => '-10',

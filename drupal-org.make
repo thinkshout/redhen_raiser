@@ -198,7 +198,7 @@ projects[redhen_donation][version] = "1.2"
 projects[redhen_donation][subdir] = "contrib"
 
 ; redhen_campaign
-projects[redhen_campaign][version] = "1.1"
+projects[redhen_campaign][version] = "1.2"
 projects[redhen_campaign][subdir] = "contrib"
 
 ; rules

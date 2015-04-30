@@ -87,7 +87,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
   $field_instances['redhen_campaign-general-field_banner_image'] = array(
     'bundle' => 'general',
     'deleted' => 0,
-    'description' => '(recommended size: 800x320)',
+    'description' => '(recommended size: 820x300)',
     'display' => array(
       'banner' => array(
         'label' => 'hidden',
@@ -1046,7 +1046,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('(recommended size: 603x263)');
-  t('(recommended size: 800x320)');
+  t('(recommended size: 820x300)');
   t('Allow Dedication');
   t('Banner Image');
   t('Campaign Teaser');

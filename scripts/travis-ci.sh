@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ev
 
 COMMAND=$1
 BUILD_TOP=`dirname $TRAVIS_BUILD_DIR`

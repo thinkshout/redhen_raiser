@@ -198,6 +198,10 @@ case $COMMAND in
   after-tests)
   run_command after_tests
   ;;
+
+  after-success)
+  run_command after_success
+  ;;
 esac
 
 exit $EXIT_VALUE

@@ -11,7 +11,7 @@ core = 7.x
 
 
 ; addressfield
-projects[addressfield][version] = "1.0"
+projects[addressfield][version] = "1.1"
 projects[addressfield][subdir] = "contrib"
 
 ; bean

@@ -207,7 +207,7 @@ projects[rules][version] = "2.9"
 projects[rules][subdir] = "contrib"
 
 ; select_or_other
-projects[select_or_other][version] = "2.20"
+projects[select_or_other][version] = "2.21"
 projects[select_or_other][subdir] = "contrib"
 
 ; short_scale_formatter

@@ -10,6 +10,11 @@ language: php
 php:
   - 5.4
 
+before_install:
+    # Place a passphrase-free ssh key to push to git repositories.
+    - openssl aes-256-cbc -K $encrypted_dfede703c127_key -iv $encrypted_dfede703c127_iv -in travis-ci-key.enc -out ~/.ssh/id_rsa -d
+    - chmod 0600 ~/.ssh/id_rsa
+
 install:
   # Start by doing system installation.
   - scripts/travis-ci.sh system-install

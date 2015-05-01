@@ -1,5 +1,4 @@
 #!/bin/bash
-set -ev
 
 COMMAND=$1
 BUILD_TOP=`dirname $TRAVIS_BUILD_DIR`
@@ -114,7 +113,8 @@ run_tests() {
 # Clean up after the tests.
 #
 after_tests() {
-
+  header Cleaning up after tests.
+  # Nothing yet.
 }
 
 # after_success

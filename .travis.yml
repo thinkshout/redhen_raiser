@@ -13,6 +13,7 @@ php:
 before_install:
     # Place a passphrase-free ssh key to push to git repositories.
     - openssl aes-256-cbc -K $encrypted_dfede703c127_key -iv $encrypted_dfede703c127_iv -in travis-ci-key.enc -out ~/.ssh/id_rsa -d
+    - openssl aes-256-cbc -K $encrypted_0a7d495c5716_key -iv $encrypted_0a7d495c5716_iv -in travis-ci-key.enc -out ~/.ssh/id_rsa -d
     - chmod 0600 ~/.ssh/id_rsa
 
 install:

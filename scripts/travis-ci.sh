@@ -114,10 +114,23 @@ run_tests() {
 # Clean up after the tests.
 #
 after_tests() {
-  header Cleaning up after tests
 
-  # Nothing yet
+}
 
+# after_success
+#
+# Deploy to Drupal.org and Pantheon Drop.
+#
+after_success() {
+  header Pushing to Drupal.org repository
+
+  echo "StrictHostKeyChecking no" > ~/.ssh/config
+
+  # Back to repository directory
+  cd -
+
+  git remote add drupal git@git.drupal.org:project/redhen_raiser.git
+  git push drupal 7.x-1.x
 }
 
 ##

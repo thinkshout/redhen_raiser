@@ -225,8 +225,6 @@ projects[token][subdir] = "contrib"
 ; views
 projects[views][version] = "3.11"
 projects[views][subdir] = "contrib"
-; Clean up the restore_headers() notice per https://www.drupal.org/node/2018737
-projects[views][patch][] = "https://www.drupal.org/files/issues/views-asset-diff-2018737-37.patch"
 
 ; views_data_export
 projects[views_data_export][version] = "3.0-beta8"

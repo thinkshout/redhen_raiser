@@ -22,12 +22,6 @@ function redhen_raiser_context_context_default_contexts() {
         'redhen_campaign/*/*' => 'redhen_campaign/*/*',
       ),
     ),
-    'query_param' => array(
-      'values' => array(
-        'parameters' => 'a:1:{i:0;a:2:{s:4:"name";s:13:"campaign_page";s:8:"operator";s:7:"not_set";}}',
-        'require_all_params' => 1,
-      ),
-    ),
   );
   $context->reactions = array(
     'block' => array(

@@ -186,7 +186,7 @@ projects[pathauto_entity][version] = "1.0"
 projects[pathauto_entity][subdir] = "contrib"
 
 ; picture
-projects[picture][version] = "2.9"
+projects[picture][version] = "2.10"
 projects[picture][subdir] = "contrib"
 
 ; redhen

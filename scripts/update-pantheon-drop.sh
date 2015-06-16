@@ -2,6 +2,7 @@
 
 DROP_REPO="git@github.com:thinkshout/redhenraiser-drops-7.git"
 RAISER_REPO="git@github.com:thinkshout/redhen_raiser.git"
+ORIGIN=$(pwd)
 
 confirmpush () {
   echo "Git add & commit completed. Ready to push to Repo at $DROP_REPO."
@@ -66,7 +67,7 @@ cd redhen_raiser
 # Gather commits.
 RAISER_COMMITS=`(git log --pretty=format:"%h %s" --no-merges --since="$COMMITDATE")`
 echo "RedHen Raiser updates since $COMMITDATE." > $TEMP_BUILD/commitmessage
-echo RAISER_COMMITS >> $TEMP_BUILD/commitmessage
+echo $RAISER_COMMITS >> $TEMP_BUILD/commitmessage
 
 if [[ -z $EDITOR ]]; then
   echo "Running vi to customize commit message: close editor to continue script."
@@ -80,6 +81,8 @@ if confirmcommitmsg; then
 echo "Commit message approved."
 else
 echo "Commit message not approved."
+  rm -rf $TEMP_BUILD
+  cd $ORIGIN
   exit 1
 fi
 
@@ -107,7 +110,7 @@ else
   echo "Changes have not been pushed to the Git Repository."
 fi
 
-cd $(pwd)
+cd $ORIGIN
 
 echo "Deleting temp directory."
 rm -rf $TEMP_BUILD

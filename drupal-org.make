@@ -45,7 +45,7 @@ projects[colectomy][version] = "1.0-beta2"
 projects[colectomy][subdir] = "contrib"
 
 ; commerce_features
-projects[commerce_features][version] = "1.0"
+projects[commerce_features][version] = "1.1"
 projects[commerce_features][subdir] = "contrib"
 
 ; commerce_cardonfile

@@ -115,7 +115,7 @@ projects[field_group][version] = "1.4"
 projects[field_group][subdir] = "contrib"
 
 ; honeypot
-projects[honeypot][version] = "1.17"
+projects[honeypot][version] = "1.21"
 projects[honeypot][subdir] = "contrib"
 
 ; html5_tools

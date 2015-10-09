@@ -95,7 +95,7 @@ projects[elements][version] = "1.4"
 projects[elements][subdir] = "contrib"
 
 ; email_registration
-projects[email_registration][version] = "1.2"
+projects[email_registration][version] = "1.3"
 projects[email_registration][subdir] = "contrib"
 
 ; entity

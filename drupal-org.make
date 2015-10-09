@@ -284,5 +284,7 @@ libraries[modernizr][download][url] = "https://github.com/Modernizr/Modernizr/ar
 ;-----------------------------------------
 projects[zen][subdir] = 'contrib'
 projects[zen][version] = 5.5
+projects[zen][type] = 'theme'
 projects[shiny][subdir] = 'contrib'
 projects[shiny][version] = 1.7
+projects[shiny][type] = 'theme'

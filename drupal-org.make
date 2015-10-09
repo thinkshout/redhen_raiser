@@ -178,7 +178,7 @@ projects[options_element][version] = "1.12"
 projects[options_element][subdir] = "contrib"
 
 ; pathauto requires token
-projects[pathauto][version] = "1.2"
+projects[pathauto][version] = "1.3"
 projects[pathauto][subdir] = "contrib"
 
 ; pathauto_entity

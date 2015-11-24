@@ -226,7 +226,7 @@ projects[views][version] = "3.13"
 projects[views][subdir] = "contrib"
 
 ; views_data_export
-projects[views_data_export][version] = "3.0-beta8"
+projects[views_data_export][version] = "3.0-beta9"
 projects[views_data_export][subdir] = "contrib"
 
 ; views_infinite_scroll

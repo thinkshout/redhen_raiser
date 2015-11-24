@@ -222,7 +222,7 @@ projects[token][version] = "1.6"
 projects[token][subdir] = "contrib"
 
 ; views
-projects[views][version] = "3.11"
+projects[views][version] = "3.13"
 projects[views][subdir] = "contrib"
 
 ; views_data_export

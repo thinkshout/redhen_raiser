@@ -118,7 +118,7 @@ projects[honeypot][version] = "1.21"
 projects[honeypot][subdir] = "contrib"
 
 ; html5_tools
-projects[html5_tools][version] = "1.2"
+projects[html5_tools][version] = "1.3"
 projects[html5_tools][subdir] = "contrib"
 
 ; interval

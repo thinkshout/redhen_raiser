@@ -10,7 +10,7 @@
 function redhen_raiser_defaults_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: user-menu_create-account:user/register
+  // Exported menu link: user-menu_create-account:user/register.
   $menu_links['user-menu_create-account:user/register'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/register',
@@ -27,7 +27,7 @@ function redhen_raiser_defaults_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: user-menu_fundraise-now:fundraise
+  // Exported menu link: user-menu_fundraise-now:fundraise.
   $menu_links['user-menu_fundraise-now:fundraise'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'fundraise',
@@ -47,7 +47,7 @@ function redhen_raiser_defaults_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: user-menu_log-out:user/logout
+  // Exported menu link: user-menu_log-out:user/logout.
   $menu_links['user-menu_log-out:user/logout'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/logout',
@@ -65,7 +65,7 @@ function redhen_raiser_defaults_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: user-menu_login:user/login
+  // Exported menu link: user-menu_login:user/login.
   $menu_links['user-menu_login:user/login'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/login',
@@ -86,7 +86,7 @@ function redhen_raiser_defaults_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: user-menu_user-account:user
+  // Exported menu link: user-menu_user-account:user.
   $menu_links['user-menu_user-account:user'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user',
@@ -104,6 +104,7 @@ function redhen_raiser_defaults_menu_default_menu_links() {
     'weight' => -46,
     'customized' => 1,
   );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Create Account');
@@ -111,7 +112,6 @@ function redhen_raiser_defaults_menu_default_menu_links() {
   t('Log out');
   t('Login');
   t('User account');
-
 
   return $menu_links;
 }

@@ -34,7 +34,7 @@ function redhen_raiser_defaults_metatag_export_default() {
       'og:image' => array(
         'value' => '[redhen_campaign:field_banner_image]',
       ),
-      'og:video' => array(
+      'og:video:url' => array(
         'value' => '[redhen_campaign:field_story_media]',
       ),
     ),
@@ -53,7 +53,7 @@ function redhen_raiser_defaults_metatag_export_default() {
       'og:image' => array(
         'value' => '[redhen_campaign_page:field_story_media],[redhen_campaign_page:campaign:field_banner_image]',
       ),
-      'og:video' => array(
+      'og:video:url' => array(
         'value' => '[redhen_campaign_page:field_story_media]',
       ),
     ),

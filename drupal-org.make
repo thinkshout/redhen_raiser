@@ -28,7 +28,7 @@ projects[better_formats][version] = "1.0-beta1"
 projects[better_formats][subdir] = "contrib"
 
 ; breakpoints
-projects[breakpoints][version] = "1.3"
+projects[breakpoints][version] = "1.4"
 projects[breakpoints][subdir] = "contrib"
 
 ; commerce
@@ -37,7 +37,7 @@ projects[commerce][subdir] = "contrib"
 projects[commerce][patch][] = "https://www.drupal.org/files/issues/commerce_payment_method_callback_comment_fix.patch"
 
 ; ckeditor
-projects[ckeditor][version] = "1.16"
+projects[ckeditor][version] = "1.17"
 projects[ckeditor][subdir] = "contrib"
 
 ; colectomy
@@ -110,7 +110,7 @@ projects[features][version] = "2.7"
 projects[features][subdir] = "contrib"
 
 ; field_group
-projects[field_group][version] = "1.4"
+projects[field_group][version] = "1.5"
 projects[field_group][subdir] = "contrib"
 
 ; honeypot
@@ -130,7 +130,7 @@ projects[libraries][version] = "2.2"
 projects[libraries][subdir] = "contrib"
 
 ; link
-projects[link][version] = "1.3"
+projects[link][version] = "1.4"
 projects[link][subdir] = "contrib"
 
 ; login_destination
@@ -152,7 +152,7 @@ projects[media_youtube][version] = "3.0"
 projects[media_youtube][subdir] = "contrib"
 
 ; metatag
-projects[metatag][version] = "1.7"
+projects[metatag][version] = "1.8"
 projects[metatag][subdir] = "contrib"
 
 ; module_filter
@@ -189,7 +189,7 @@ projects[picture][version] = "2.13"
 projects[picture][subdir] = "contrib"
 
 ; redhen
-projects[redhen][version] = "1.10"
+projects[redhen][version] = "1.11"
 projects[redhen][subdir] = "contrib"
 
 ; redhen_donation

@@ -152,7 +152,7 @@ projects[media_youtube][version] = "3.0"
 projects[media_youtube][subdir] = "contrib"
 
 ; metatag
-projects[metatag][version] = "1.8"
+projects[metatag][version] = "1.10"
 projects[metatag][subdir] = "contrib"
 
 ; module_filter

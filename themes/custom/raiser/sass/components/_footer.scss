@@ -1,6 +1,17 @@
+
+// Make the page full height, so the footer can be positioned at the bottom
+#page {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 100px;
+}
+
 #footer-wrapper {
   background: $primary;
-  position: relative;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 
   #main-menu { 
     float: left; 

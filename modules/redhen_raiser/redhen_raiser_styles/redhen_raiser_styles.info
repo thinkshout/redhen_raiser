@@ -55,3 +55,4 @@ features[variable][] = field_bundle_settings_file__default
 features[variable][] = field_bundle_settings_file__image
 features[variable][] = field_bundle_settings_file__video
 project path = profiles/redhen_raiser/modules/redhen_raiser/
+stylesheets[all][] = css/redhen_raiser_styles.css

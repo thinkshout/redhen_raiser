@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Raiser specific css that should work across all themes
+ */
+
+/* Style the icon added to the navbar in redhen_raiser_defaults.module */
+.navbar-bar .navbar-icon-redhen:before {
+    background-image: url("../icons/redhen.png");
+    opacity: .8;
+}
+.navbar-bar .navbar-icon-redhen.navbar-active:before {
+    opacity: 1;
+}
+
+
+/* Use a lighter background to show active, rather than a left border on focus */
+#navbar-administration .navbar-tab a {
+	border: 0px;
+}
+#navbar-administration .navbar-tab .navbar-active {
+	background-color: #444;
+}

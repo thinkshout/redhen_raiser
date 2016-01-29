@@ -42,8 +42,7 @@ function redhen_raiser_defaults_navbar() {
       '#options' => array(
         'attributes' => array(
           'title' => t('RedHen CRM'),
-          // @todo: create an icon to load for "navbar-icon-crm-dashboard" instead:
-          'class' => array('navbar-icon', 'navbar-icon-people'),
+          'class' => array('navbar-icon', 'navbar-icon-redhen'), // icon is styled in redhen_raiser_styles
         ),
       ),
     ),

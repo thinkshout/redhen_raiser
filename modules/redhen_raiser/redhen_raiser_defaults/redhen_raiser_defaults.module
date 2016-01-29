@@ -52,7 +52,7 @@ function redhen_raiser_defaults_navbar() {
       'navbar_administration' => array(
         '#type' => 'container',
         '#attributes' => array(
-          'class' => array('navbar-menu-user'),
+          'class' => array('navbar-menu', 'navbar-menu-user'),
         ),
         'administration_menu' => menu_tree_output($tree_element),
       ),

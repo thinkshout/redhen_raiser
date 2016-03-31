@@ -12,9 +12,12 @@ default:
     Behat\MinkExtension:
       goutte: ~
       selenium2: ~
-      base_url: http://redhen_raiser.dev
+      base_url: http://raiser.dev
     Drupal\DrupalExtension:
       blackbox: ~
       drush:
         root: '/users/nancyrackleff/sites/redhen_raiser'
       api_driver: 'drupal'
+      subcontexts:
+        paths:
+          - "./steps"

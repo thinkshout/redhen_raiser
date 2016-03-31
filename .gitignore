@@ -2,6 +2,7 @@ modules/libraries
 modules/developer
 modules/contrib
 themes/contrib
+tests/composer.lock
 libraries
 Gemfile.lock
 .sass-cache

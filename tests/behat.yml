@@ -12,9 +12,11 @@ default:
     Behat\MinkExtension:
       goutte: ~
       selenium2: ~
-      base_url: http://redhen_raiser.dev
+      base_url: http://redhen.dev
     Drupal\DrupalExtension:
       blackbox: ~
       drush:
-        root: '/users/nancyrackleff/sites/redhen_raiser'
+        root: '/users/toto/sites/redhen'
       api_driver: 'drupal'
+      drupal:
+        drupal_root: '/users/toto/sites/redhen'

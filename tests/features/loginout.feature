@@ -9,11 +9,12 @@ Feature: Log in and out of the site
       | TestUser | ChangeMe! | foo@example.com  | editor   |
 
 
-  #@javascript
+  @standard_login @api
   Scenario: Logs in to the site
   Given I am on "/"
+    And I am not logged in
   When I follow "Login"
-  Then I should see "Log In"
+  Then I should see "Password"
 
   @standard_login @api
   Scenario: Editor is able to login

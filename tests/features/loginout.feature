@@ -19,18 +19,14 @@ Feature: Log in and out of the site
   @standard_login @api
   Scenario: Editor is able to login
     Given I am on "/user"
-    When I fill in "TestUser" for "edit-name"
-    And I fill in "ChangeMe!" for "edit-pass"
-    And I press "Log In"
-    Then I should see "Log out"
-    And I should see "My account"
-
-  @standard_login @api
-  Scenario: Logs out of the site
-    Given I am logged in as "TestUser"
-    And I follow "Log out"
-  Then I should see "Login"
-    And I should not see "My account"
+      When I fill in "TestUser" for "edit-name"
+        And I fill in "ChangeMe!" for "edit-pass"
+        And I press "Log In"
+        Then I should see "Log out"
+          And I should see "My account"
+          And I follow "Log out"
+        Then I should see "Login"
+          And I should not see "My account"
 
   @standard_login @api
   Scenario: Attempts login with wrong credentials.

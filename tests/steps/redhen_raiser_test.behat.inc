@@ -14,6 +14,9 @@ class TestRedhenRaiserSubContext extends DrupalSubContextBase implements DrupalS
    * @BeforeScenario
    */
   public function createTestCampaign($path) {
+    // This function currently depends on this fork of DrupalDriver:
+    // https://github.com/ruscoe/DrupalDriver/tree/add-create-entity
+
     $campaign = array(
       'type' => 'general',
       'label' => 'Test Campaign',

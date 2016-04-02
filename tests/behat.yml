@@ -18,6 +18,8 @@ default:
       drush:
         root: '/users/nancyrackleff/sites/redhen_raiser'
       api_driver: 'drupal'
+      drupal:
+        drupal_root: '../../../'
       subcontexts:
         paths:
           - "./steps"

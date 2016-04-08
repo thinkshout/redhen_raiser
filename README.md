@@ -67,3 +67,18 @@ allow you to run installation functions and enable default modules when the
 redhen_raiser installation profile runs.
 
 [![Build Status](https://travis-ci.org/thinkshout/redhen_raiser.svg?branch=7.x-1.x)](https://travis-ci.org/thinkshout/redhen_raiser)
+
+# Behat Tests
+Behat tests live in the tests directory. We are currently using Behat version 3.1-dev. Documentation is at http://docs.behat.org/en/v3.0/.
+
+To get started, in the tests directory, run 
+`composer install`
+
+To run all behat tests, cd into the tests directory, then run 
+`bin/behat`
+
+To run a specific test, run 
+`bin/behat/ features/[FEATURENAME].feature`
+
+To re-initialize registered test suites, run
+`bin/behat --init`

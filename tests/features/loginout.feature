@@ -8,7 +8,6 @@ Feature: Log in and out of the site
       | name     | pass      | mail             | roles    |
       | TestUser | ChangeMe! | foo@example.com  | editor   |
 
-
   @standard_login @api
   Scenario: Logs in to the site
   Given I am on "/"

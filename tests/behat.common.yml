@@ -1,7 +1,5 @@
 # behat.yml
 default:
-  paths:
-    features: 'features'
   suites:
     default:
       contexts:
@@ -15,7 +13,7 @@ default:
       goutte: ~
       selenium2: ~
       base_url: http://example.com/
-    Drupal\DrupalExtension\Extension:
+    Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal'
       drupal:

@@ -82,3 +82,5 @@ To run a specific test, run
 
 To re-initialize registered test suites, run
 `bin/behat --init`
+
+We're still working out how best to include paths in behat.yml. For now, if you get errors, behat.yml is a good place to look at adding your own drupal_root path, for example.

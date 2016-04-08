@@ -19,7 +19,7 @@ default:
         root: '/users/toto/sites/redhen'
       api_driver: 'drupal'
       drupal:
-        drupal_root: '/users/toto/sites/redhen'
+        drupal_root: '../../../'
       subcontexts:
         paths:
           - "./steps"

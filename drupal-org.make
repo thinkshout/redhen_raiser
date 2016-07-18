@@ -195,10 +195,15 @@ projects[redhen][subdir] = "contrib"
 ; redhen_donation
 projects[redhen_donation][version] = "1.2"
 projects[redhen_donation][subdir] = "contrib"
+; Add the ability to edit fields on existing donations.
+projects[redhen_donation][patch][] = https://www.drupal.org/files/issues/redhen_donation-2707457-2-edit_donation_field_data.patch
 
 ; redhen_campaign
 projects[redhen_campaign][version] = "1.2"
 projects[redhen_campaign][subdir] = "contrib"
+; Add the ability to re-allocate donations to different campaign pages.
+projects[redhen_campaign][patch][] = "https://www.drupal.org/files/issues/redhen_campaign-2708871-5-campaign_add_edit_recalculate.patch"
+projects[redhen_campaign][patch][] = "https://www.drupal.org/files/issues/dont-overwrite-author-2768803-1.patch"
 
 ; rules
 ; Note that pending https://www.drupal.org/node/2403851 Rules 2.8 doesn't work with Commerce.

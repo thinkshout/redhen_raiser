@@ -189,7 +189,7 @@ projects[picture][version] = "2.13"
 projects[picture][subdir] = "contrib"
 
 ; redhen
-projects[redhen][version] = "1.11"
+projects[redhen][version] = "1.12"
 projects[redhen][subdir] = "contrib"
 
 ; redhen_donation

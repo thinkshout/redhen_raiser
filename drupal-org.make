@@ -75,7 +75,7 @@ projects[context_query_param][version] = "1.3"
 projects[context_query_param][subdir] = "contrib"
 
 ; ctools
-projects[ctools][version] = "1.9"
+projects[ctools][version] = "1.10"
 projects[ctools][subdir] = "contrib"
 
 ; date
@@ -106,7 +106,7 @@ projects[entityreference][version] = "1.1"
 projects[entityreference][subdir] = "contrib"
 
 ; features
-projects[features][version] = "2.9"
+projects[features][version] = "2.10"
 projects[features][subdir] = "contrib"
 
 ; field_group
@@ -126,7 +126,7 @@ projects[interval][version] = "1.0"
 projects[interval][subdir] = "contrib"
 
 ; libraries
-projects[libraries][version] = "2.2"
+projects[libraries][version] = "2.3"
 projects[libraries][subdir] = "contrib"
 
 ; link
@@ -166,10 +166,7 @@ projects[navbar][subdir] = "contrib"
 projects[navbar][patch][] = "https://www.drupal.org/files/issues/navbar-contrib-icons-1954912-20.patch"
 
 ; navbar_flush_cache
-projects[navbar_flush_cache][download][type] = "git"
-projects[navbar_flush_cache][download][url] = "http://git.drupal.org/project/navbar_flush_cache.git"
-projects[navbar_flush_cache][download][branch] = "7.x-1.x"
-projects[navbar_flush_cache][download][revision] = "a3624ba"
+projects[navbar_flush_cache][version] = "1.x-dev"
 projects[navbar_flush_cache][subdir] = "contrib"
 
 ; options_element
@@ -227,7 +224,7 @@ projects[token][version] = "1.6"
 projects[token][subdir] = "contrib"
 
 ; views
-projects[views][version] = "3.13"
+projects[views][version] = "3.14"
 projects[views][subdir] = "contrib"
 
 ; views_data_export

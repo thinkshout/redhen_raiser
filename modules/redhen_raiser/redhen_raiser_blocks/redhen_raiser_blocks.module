@@ -145,7 +145,7 @@ function redhen_raiser_blocks_block_view($delta = '') {
 
     case 'copyright_statement':
       $sitename = variable_get('site_name', '');
-      $block['content'] = variable_get('redhen_raiser_copyright_statement', 'Copyright © 2015 ' . $sitename . '. All Rights Reserved.');
+      $block['content'] = variable_get('redhen_raiser_copyright_statement', 'Copyright © ' . date('Y') . ' '. $sitename . '. All Rights Reserved.');
       break;
 
     case 'tax_exempt_status':

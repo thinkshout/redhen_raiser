@@ -261,7 +261,7 @@ projects[ftools][subdir] = "developer"
 
 ; autopager
 libraries[autopager][download][type] = get
-libraries[autopager][download][url] = https://jquery-autopager.googlecode.com/files/jquery.autopager-1.0.0.js
+libraries[autopager][download][url] = https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/jquery-autopager/jquery.autopager-1.0.0.js
 libraries[autopager][directory_name] = "autopager"
 libraries[autopager][type] = "library"
 

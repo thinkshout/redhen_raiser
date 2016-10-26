@@ -202,10 +202,7 @@ function redhen_raiser_campaign_pages_form_alter(&$form, $form_state) {
     $result = $query
       ->entityCondition('entity_type', 'redhen_donation')
       ->propertyCondition('entity_id', $form_state['redhen_campaign']->campaign_id)
-<<<<<<< Updated upstream
-=======
       ->propertyCondition('entity_type', 'redhen_campaign')
->>>>>>> Stashed changes
       ->range(0, 1)
       ->execute();
 

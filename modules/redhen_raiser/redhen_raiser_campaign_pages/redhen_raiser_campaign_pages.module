@@ -190,6 +190,53 @@ function redhen_raiser_campaign_pages_form_redhen_campaign_campaign_page_form_al
 
 /**
  * Implements hook_form_FORM_ID_alter().
+ */
+function redhen_raiser_campaign_pages_form_alter(&$form, $form_state) {
+
+  if ($form['#form_id'] == 'redhen_campaign_campaign_delete_form') {
+    if (empty($form_state['redhen_campaign']->campaign_id)) {
+      return;
+    }
+
+    $query = new EntityFieldQuery();
+    $result = $query
+      ->entityCondition('entity_type', 'redhen_donation')
+      ->propertyCondition('entity_id', $form_state['redhen_campaign']->campaign_id)
+      ->range(0, 1)
+      ->execute();
+
+    if (!empty($result['redhen_donation'])) {
+      $has_donations = TRUE;
+    }
+
+    //Get child menu items array for this node
+    if ($has_donations) {
+
+      //Construct explanatory message
+      $msg = '<p>';
+      $msg .= t("You can't delete this campaign because it has donations.");
+      $msg .= '</p>';
+
+
+      //Set explanatory message
+      $form['redhen_raiser_exist_warning'] = array(
+        '#markup' => $msg,
+        '#weight' => -10,
+      );
+
+      //Remove the 'This action cannot be undone' message
+      unset($form['description']);
+
+      //Remove the delete button
+      unset($form['actions']['submit']);
+    }
+  }
+}
+
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
  *
  * Implements hook_form_redhen_campaign_invite_form_alter().
  *  Adds Facebook and other social media invitation options.

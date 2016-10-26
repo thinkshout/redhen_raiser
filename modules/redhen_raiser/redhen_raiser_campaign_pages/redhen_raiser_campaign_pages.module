@@ -189,20 +189,19 @@ function redhen_raiser_campaign_pages_form_redhen_campaign_campaign_page_form_al
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
+ * Implements hook_form_FORM_alter().
  */
 function redhen_raiser_campaign_pages_form_alter(&$form, $form_state) {
 
-  if ($form['#form_id'] == 'redhen_campaign_campaign_delete_form') {
-    if (empty($form_state['redhen_campaign']->campaign_id)) {
+  if ($form['#form_id'] == 'redhen_campaign_campaign_page_delete_form') {
+    if (empty($form_state['redhen_campaign_page']->page_id)) {
       return;
     }
 
     $query = new EntityFieldQuery();
     $result = $query
       ->entityCondition('entity_type', 'redhen_donation')
-      ->propertyCondition('entity_id', $form_state['redhen_campaign']->campaign_id)
-      ->propertyCondition('entity_type', 'redhen_campaign')
+      ->propertyCondition('redhen_campaign_page_context', $form_state['redhen_campaign_page']->page_id)
       ->range(0, 1)
       ->execute();
 

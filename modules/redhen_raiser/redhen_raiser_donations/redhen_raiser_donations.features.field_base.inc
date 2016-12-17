@@ -10,7 +10,7 @@
 function redhen_raiser_donations_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_anonymous'
+  // Exported field_base: 'field_anonymous'.
   $field_bases['field_anonymous'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -35,7 +35,7 @@ function redhen_raiser_donations_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_dedication'
+  // Exported field_base: 'field_dedication'.
   $field_bases['field_dedication'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -56,7 +56,7 @@ function redhen_raiser_donations_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_donation_comment'
+  // Exported field_base: 'field_donation_comment'.
   $field_bases['field_donation_comment'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -75,7 +75,7 @@ function redhen_raiser_donations_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_letter_request'
+  // Exported field_base: 'field_letter_request'.
   $field_bases['field_letter_request'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -100,7 +100,7 @@ function redhen_raiser_donations_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_tribute_address'
+  // Exported field_base: 'field_tribute_address'.
   $field_bases['field_tribute_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -115,7 +115,7 @@ function redhen_raiser_donations_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_tribute_comments'
+  // Exported field_base: 'field_tribute_comments'.
   $field_bases['field_tribute_comments'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -136,7 +136,7 @@ function redhen_raiser_donations_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_tribute_type'
+  // Exported field_base: 'field_tribute_type'.
   $field_bases['field_tribute_type'] = array(
     'active' => 1,
     'cardinality' => 1,

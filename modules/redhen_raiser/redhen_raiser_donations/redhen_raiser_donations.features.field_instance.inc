@@ -10,7 +10,8 @@
 function redhen_raiser_donations_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'commerce_customer_profile-billing-commerce_customer_address'
+  // Exported field_instance:
+  // 'commerce_customer_profile-billing-commerce_customer_address'.
   $field_instances['commerce_customer_profile-billing-commerce_customer_address'] = array(
     'bundle' => 'billing',
     'default_value' => NULL,
@@ -83,7 +84,7 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-donation-commerce_price'
+  // Exported field_instance: 'commerce_product-donation-commerce_price'.
   $field_instances['commerce_product-donation-commerce_price'] = array(
     'bundle' => 'donation',
     'default_value' => NULL,
@@ -189,7 +190,8 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_anonymous'
+  // Exported field_instance:
+  // 'redhen_donation-redhen_raiser_donation-field_anonymous'.
   $field_instances['redhen_donation-redhen_raiser_donation-field_anonymous'] = array(
     'bundle' => 'redhen_raiser_donation',
     'default_value' => array(
@@ -226,7 +228,8 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_dedication'
+  // Exported field_instance:
+  // 'redhen_donation-redhen_raiser_donation-field_dedication'.
   $field_instances['redhen_donation-redhen_raiser_donation-field_dedication'] = array(
     'bundle' => 'redhen_raiser_donation',
     'default_value' => NULL,
@@ -282,7 +285,8 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_donation_comment'
+  // Exported field_instance:
+  // 'redhen_donation-redhen_raiser_donation-field_donation_comment'.
   $field_instances['redhen_donation-redhen_raiser_donation-field_donation_comment'] = array(
     'bundle' => 'redhen_raiser_donation',
     'default_value' => NULL,
@@ -334,7 +338,8 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_letter_request'
+  // Exported field_instance:
+  // 'redhen_donation-redhen_raiser_donation-field_letter_request'.
   $field_instances['redhen_donation-redhen_raiser_donation-field_letter_request'] = array(
     'bundle' => 'redhen_raiser_donation',
     'default_value' => array(
@@ -371,7 +376,8 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_tribute_address'
+  // Exported field_instance:
+  // 'redhen_donation-redhen_raiser_donation-field_tribute_address'.
   $field_instances['redhen_donation-redhen_raiser_donation-field_tribute_address'] = array(
     'bundle' => 'redhen_raiser_donation',
     'default_value' => NULL,
@@ -420,7 +426,8 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_tribute_comments'
+  // Exported field_instance:
+  // 'redhen_donation-redhen_raiser_donation-field_tribute_comments'.
   $field_instances['redhen_donation-redhen_raiser_donation-field_tribute_comments'] = array(
     'bundle' => 'redhen_raiser_donation',
     'default_value' => NULL,
@@ -476,7 +483,8 @@ function redhen_raiser_donations_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_donation-redhen_raiser_donation-field_tribute_type'
+  // Exported field_instance:
+  // 'redhen_donation-redhen_raiser_donation-field_tribute_type'.
   $field_instances['redhen_donation-redhen_raiser_donation-field_tribute_type'] = array(
     'bundle' => 'redhen_raiser_donation',
     'default_value' => NULL,

@@ -15,7 +15,7 @@ projects[addressfield][version] = "1.2"
 projects[addressfield][subdir] = "contrib"
 
 ; bean
-projects[bean][version] = "1.9"
+projects[bean][version] = "1.11"
 projects[bean][subdir] = "contrib"
 
 ; bean_entity_view
@@ -45,7 +45,7 @@ projects[colectomy][version] = "1.0-beta2"
 projects[colectomy][subdir] = "contrib"
 
 ; commerce_features
-projects[commerce_features][version] = "1.1"
+projects[commerce_features][version] = "1.2"
 projects[commerce_features][subdir] = "contrib"
 
 ; commerce_cardonfile
@@ -75,7 +75,7 @@ projects[context_query_param][version] = "1.3"
 projects[context_query_param][subdir] = "contrib"
 
 ; ctools
-projects[ctools][version] = "1.10"
+projects[ctools][version] = "1.12"
 projects[ctools][subdir] = "contrib"
 
 ; date
@@ -98,11 +98,11 @@ projects[email_registration][version] = "1.3"
 projects[email_registration][subdir] = "contrib"
 
 ; entity
-projects[entity][version] = "1.7"
+projects[entity][version] = "1.8"
 projects[entity][subdir] = "contrib"
 
 ; entityreference
-projects[entityreference][version] = "1.1"
+projects[entityreference][version] = "1.2"
 projects[entityreference][subdir] = "contrib"
 
 ; features
@@ -152,7 +152,7 @@ projects[media_youtube][version] = "3.0"
 projects[media_youtube][subdir] = "contrib"
 
 ; metatag
-projects[metatag][version] = "1.14"
+projects[metatag][version] = "1.18"
 projects[metatag][subdir] = "contrib"
 
 ; module_filter
@@ -228,7 +228,7 @@ projects[views][version] = "3.14"
 projects[views][subdir] = "contrib"
 
 ; views_data_export
-projects[views_data_export][version] = "3.0-beta9"
+projects[views_data_export][version] = "3.1"
 projects[views_data_export][subdir] = "contrib"
 
 ; views_infinite_scroll

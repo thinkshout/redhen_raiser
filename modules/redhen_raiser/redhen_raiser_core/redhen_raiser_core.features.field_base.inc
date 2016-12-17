@@ -10,7 +10,7 @@
 function redhen_raiser_core_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
+  // Exported field_base: 'body'.
   $field_bases['body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_banner_image'
+  // Exported field_base: 'field_banner_image'.
   $field_bases['field_banner_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -53,7 +53,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_campaign_context'
+  // Exported field_base: 'field_campaign_context'.
   $field_bases['field_campaign_context'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -90,7 +90,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_end_date'
+  // Exported field_base: 'field_end_date'.
   $field_bases['field_end_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -119,7 +119,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_logo'
+  // Exported field_base: 'field_logo'.
   $field_bases['field_logo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -141,7 +141,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_page_context'
+  // Exported field_base: 'field_page_context'.
   $field_bases['field_page_context'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -179,7 +179,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_promotion'
+  // Exported field_base: 'field_promotion'.
   $field_bases['field_promotion'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -216,7 +216,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_start_date'
+  // Exported field_base: 'field_start_date'.
   $field_bases['field_start_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -245,7 +245,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_story'
+  // Exported field_base: 'field_story'.
   $field_bases['field_story'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -264,7 +264,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_story_media'
+  // Exported field_base: 'field_story_media'.
   $field_bases['field_story_media'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -286,7 +286,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_teaser'
+  // Exported field_base: 'field_teaser'.
   $field_bases['field_teaser'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -305,7 +305,7 @@ function redhen_raiser_core_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'redhen_campaign_goal'
+  // Exported field_base: 'redhen_campaign_goal'.
   $field_bases['redhen_campaign_goal'] = array(
     'active' => 1,
     'cardinality' => 1,

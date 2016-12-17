@@ -13,6 +13,7 @@ function redhen_raiser_defaults_metatag_export_default() {
   // Exported Metatag config instance: redhen_campaign:general.
   $config['redhen_campaign:general'] = array(
     'instance' => 'redhen_campaign:general',
+    'disabled' => FALSE,
     'config' => array(
       'robots' => array(
         'value' => array(
@@ -43,6 +44,7 @@ function redhen_raiser_defaults_metatag_export_default() {
   // Exported Metatag config instance: redhen_campaign_page.
   $config['redhen_campaign_page'] = array(
     'instance' => 'redhen_campaign_page',
+    'disabled' => FALSE,
     'config' => array(
       'og:description' => array(
         'value' => '[redhen_campaign_page:field_story]',

@@ -10,7 +10,7 @@
 function redhen_raiser_contacts_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'redhen_contact-contact-field_billing_address'
+  // Exported field_instance: 'redhen_contact-contact-field_billing_address'.
   $field_instances['redhen_contact-contact-field_billing_address'] = array(
     'bundle' => 'contact',
     'default_value' => array(
@@ -96,7 +96,7 @@ function redhen_raiser_contacts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_contact-contact-field_organization'
+  // Exported field_instance: 'redhen_contact-contact-field_organization'.
   $field_instances['redhen_contact-contact-field_organization'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -160,7 +160,7 @@ function redhen_raiser_contacts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_contact-contact-redhen_contact_email'
+  // Exported field_instance: 'redhen_contact-contact-redhen_contact_email'.
   $field_instances['redhen_contact-contact-redhen_contact_email'] = array(
     'bundle' => 'contact',
     'deleted' => 0,

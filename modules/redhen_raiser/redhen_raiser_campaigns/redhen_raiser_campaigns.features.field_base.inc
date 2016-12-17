@@ -10,7 +10,7 @@
 function redhen_raiser_campaigns_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_allow_dedication'
+  // Exported field_base: 'field_allow_dedication'.
   $field_bases['field_allow_dedication'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -35,7 +35,7 @@ function redhen_raiser_campaigns_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'redhen_campaign_donation_type'
+  // Exported field_base: 'redhen_campaign_donation_type'.
   $field_bases['redhen_campaign_donation_type'] = array(
     'active' => 1,
     'cardinality' => 1,

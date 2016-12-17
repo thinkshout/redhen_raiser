@@ -10,7 +10,7 @@
 function redhen_raiser_blocks_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'bean-link_group-field_links'
+  // Exported field_instance: 'bean-link_group-field_links'.
   $field_instances['bean-link_group-field_links'] = array(
     'bundle' => 'link_group',
     'default_value' => NULL,
@@ -61,7 +61,7 @@ function redhen_raiser_blocks_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-promo-field_promo_image'
+  // Exported field_instance: 'bean-promo-field_promo_image'.
   $field_instances['bean-promo-field_promo_image'] = array(
     'bundle' => 'promo',
     'deleted' => 0,
@@ -114,7 +114,7 @@ function redhen_raiser_blocks_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-promo-field_promo_image_link'
+  // Exported field_instance: 'bean-promo-field_promo_image_link'.
   $field_instances['bean-promo-field_promo_image_link'] = array(
     'bundle' => 'promo',
     'default_value' => NULL,
@@ -164,7 +164,7 @@ function redhen_raiser_blocks_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-promo-field_promo_text'
+  // Exported field_instance: 'bean-promo-field_promo_text'.
   $field_instances['bean-promo-field_promo_text'] = array(
     'bundle' => 'promo',
     'default_value' => NULL,

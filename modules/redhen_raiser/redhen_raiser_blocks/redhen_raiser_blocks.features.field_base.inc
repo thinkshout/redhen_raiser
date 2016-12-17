@@ -10,7 +10,7 @@
 function redhen_raiser_blocks_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_links'
+  // Exported field_base: 'field_links'.
   $field_bases['field_links'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -39,7 +39,7 @@ function redhen_raiser_blocks_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_promo_image'
+  // Exported field_base: 'field_promo_image'.
   $field_bases['field_promo_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -61,7 +61,7 @@ function redhen_raiser_blocks_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_promo_image_link'
+  // Exported field_base: 'field_promo_image_link'.
   $field_bases['field_promo_image_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -90,7 +90,7 @@ function redhen_raiser_blocks_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_promo_text'
+  // Exported field_base: 'field_promo_text'.
   $field_bases['field_promo_text'] = array(
     'active' => 1,
     'cardinality' => 1,

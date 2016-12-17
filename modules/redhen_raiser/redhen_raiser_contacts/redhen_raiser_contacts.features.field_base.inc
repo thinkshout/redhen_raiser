@@ -10,7 +10,7 @@
 function redhen_raiser_contacts_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_billing_address'
+  // Exported field_base: 'field_billing_address'.
   $field_bases['field_billing_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -25,7 +25,7 @@ function redhen_raiser_contacts_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_organization'
+  // Exported field_base: 'field_organization'.
   $field_bases['field_organization'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -46,7 +46,7 @@ function redhen_raiser_contacts_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'redhen_contact_email'
+  // Exported field_base: 'redhen_contact_email'.
   $field_bases['redhen_contact_email'] = array(
     'active' => 1,
     'cardinality' => -1,

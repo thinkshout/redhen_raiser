@@ -10,7 +10,7 @@
 function redhen_raiser_campaigns_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'redhen_campaign-general-field_allow_dedication'
+  // Exported field_instance: 'redhen_campaign-general-field_allow_dedication'.
   $field_instances['redhen_campaign-general-field_allow_dedication'] = array(
     'bundle' => 'general',
     'default_value' => array(
@@ -83,7 +83,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_campaign-general-field_banner_image'
+  // Exported field_instance: 'redhen_campaign-general-field_banner_image'.
   $field_instances['redhen_campaign-general-field_banner_image'] = array(
     'bundle' => 'general',
     'deleted' => 0,
@@ -103,6 +103,8 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           ),
           'fallback_image_style' => 'banner_xl',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'picture_mapping' => 'banner_image',
         ),
         'type' => 'picture',
@@ -122,6 +124,8 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           ),
           'fallback_image_style' => 'banner_xl',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'picture_mapping' => 'banner_image',
         ),
         'type' => 'picture',
@@ -141,6 +145,8 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           ),
           'fallback_image_style' => 'banner_xl',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'picture_mapping' => 'banner_image',
         ),
         'type' => 'picture',
@@ -211,7 +217,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_campaign-general-field_end_date'
+  // Exported field_instance: 'redhen_campaign-general-field_end_date'.
   $field_instances['redhen_campaign-general-field_end_date'] = array(
     'bundle' => 'general',
     'deleted' => 0,
@@ -238,6 +244,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 9,
@@ -351,7 +358,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_campaign-general-field_promotion'
+  // Exported field_instance: 'redhen_campaign-general-field_promotion'.
   $field_instances['redhen_campaign-general-field_promotion'] = array(
     'bundle' => 'general',
     'default_value' => NULL,
@@ -396,6 +403,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'default',
         ),
         'type' => 'entityreference_entity_view',
@@ -428,7 +436,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_campaign-general-field_start_date'
+  // Exported field_instance: 'redhen_campaign-general-field_start_date'.
   $field_instances['redhen_campaign-general-field_start_date'] = array(
     'bundle' => 'general',
     'deleted' => 0,
@@ -455,6 +463,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 8,
@@ -568,7 +577,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_campaign-general-field_story'
+  // Exported field_instance: 'redhen_campaign-general-field_story'.
   $field_instances['redhen_campaign-general-field_story'] = array(
     'bundle' => 'general',
     'default_value' => NULL,
@@ -661,7 +670,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_campaign-general-field_story_media'
+  // Exported field_instance: 'redhen_campaign-general-field_story_media'.
   $field_instances['redhen_campaign-general-field_story_media'] = array(
     'bundle' => 'general',
     'deleted' => 0,
@@ -753,7 +762,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_campaign-general-field_teaser'
+  // Exported field_instance: 'redhen_campaign-general-field_teaser'.
   $field_instances['redhen_campaign-general-field_teaser'] = array(
     'bundle' => 'general',
     'default_value' => NULL,
@@ -847,7 +856,8 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_campaign-general-redhen_campaign_donation_type'
+  // Exported field_instance:
+  // 'redhen_campaign-general-redhen_campaign_donation_type'.
   $field_instances['redhen_campaign-general-redhen_campaign_donation_type'] = array(
     'bundle' => 'general',
     'default_value' => array(
@@ -940,6 +950,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
         ),
         'status' => 1,
       ),
+      'donate_tab' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -951,7 +962,7 @@ function redhen_raiser_campaigns_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'redhen_campaign-general-redhen_campaign_goal'
+  // Exported field_instance: 'redhen_campaign-general-redhen_campaign_goal'.
   $field_instances['redhen_campaign-general-redhen_campaign_goal'] = array(
     'bundle' => 'general',
     'default_value' => NULL,

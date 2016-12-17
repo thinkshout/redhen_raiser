@@ -10,7 +10,7 @@
 function redhen_raiser_campaign_updates_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-campaign_update-body'
+  // Exported field_instance: 'node-campaign_update-body'.
   $field_instances['node-campaign_update-body'] = array(
     'bundle' => 'campaign_update',
     'default_value' => NULL,
@@ -77,7 +77,7 @@ function redhen_raiser_campaign_updates_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-campaign_update-field_campaign_context'
+  // Exported field_instance: 'node-campaign_update-field_campaign_context'.
   $field_instances['node-campaign_update-field_campaign_context'] = array(
     'bundle' => 'campaign_update',
     'default_value' => NULL,
@@ -113,7 +113,7 @@ function redhen_raiser_campaign_updates_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-campaign_update-field_page_context'
+  // Exported field_instance: 'node-campaign_update-field_page_context'.
   $field_instances['node-campaign_update-field_page_context'] = array(
     'bundle' => 'campaign_update',
     'default_value' => NULL,

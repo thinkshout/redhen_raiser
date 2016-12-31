@@ -166,7 +166,10 @@ projects[navbar][subdir] = "contrib"
 projects[navbar][patch][] = "https://www.drupal.org/files/issues/navbar-contrib-icons-1954912-20.patch"
 
 ; navbar_flush_cache
-projects[navbar_flush_cache][version] = "1.x-dev"
+projects[navbar_flush_cache][download][type] = "git"
+projects[navbar_flush_cache][download][url] = "http://git.drupal.org/project/navbar_flush_cache.git"
+projects[navbar_flush_cache][download][branch] = "7.x-1.x"
+projects[navbar_flush_cache][download][revision] = "a3624ba"
 projects[navbar_flush_cache][subdir] = "contrib"
 
 ; options_element

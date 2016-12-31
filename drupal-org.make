@@ -58,6 +58,7 @@ projects[commerce_recurring][download][type] = "git"
 projects[commerce_recurring][download][url] = "http://git.drupal.org/project/commerce_recurring.git"
 projects[commerce_recurring][download][branch] = "7.x-2.x"
 projects[commerce_recurring][download][revision] = "007e2ed"
+; 2af5162
 projects[commerce_recurring][subdir] = "contrib"
 projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/commerce_recurring-custom_order_types-2273443-1.patch"
 projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/commerce_recurring-Alter_recurring_price-2263371-1.patch"
@@ -87,6 +88,7 @@ projects[date_restrictions][download][type] = "git"
 projects[date_restrictions][download][url] = "http://git.drupal.org/project/date_restrictions.git"
 projects[date_restrictions][download][branch] = "7.x-1.x"
 projects[date_restrictions][download][revision] = "c6dc62f"
+; e2de47a
 projects[date_restrictions][subdir] = "contrib"
 
 ; elements
@@ -261,7 +263,7 @@ projects[ftools][subdir] = "developer"
 
 ; autopager
 libraries[autopager][download][type] = get
-libraries[autopager][download][url] = https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/jquery-autopager/jquery.autopager-1.0.0.js
+libraries[autopager][download][url] = https://github.com/sagotsky/jquery-autopager/blob/master/jquery.autopager-1.0.0.js
 libraries[autopager][directory_name] = "autopager"
 libraries[autopager][type] = "library"
 

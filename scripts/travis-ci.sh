@@ -21,7 +21,7 @@ system_install() {
 
   # Install the latest Drush 7.
   header Installing Drush
-  composer global require drush/drush:dev-master
+  composer global require drush/drush:7.*
   # drupalorg_drush not currently used
   drush dl -y drupalorg_drush-7.x-1.x-dev --destination=$HOME/.drush
   drush cc drush

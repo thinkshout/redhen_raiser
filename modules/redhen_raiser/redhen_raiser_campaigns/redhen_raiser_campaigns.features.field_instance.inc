@@ -946,6 +946,25 @@ function redhen_raiser_campaigns_field_default_field_instances() {
           'donation_entry' => 'radio_other',
           'maximum_donation' => '',
           'minimum_donation' => '',
+          'other_label' => 'Other',
+          'recurring_donation_amounts' => array(
+            'default_value' => NULL,
+            'default_value_field' => '',
+            'default_value_text' => '',
+            'options' => array(
+              5 => '$5',
+              20 => '$20',
+              50 => '$50',
+            ),
+            'options_field' => '5|$5
+20|$20
+50|$50
+',
+            'options_text' => '5|$5
+20|$20
+50|$50
+',
+          ),
           'submit_label' => 'Donate',
         ),
         'status' => 1,

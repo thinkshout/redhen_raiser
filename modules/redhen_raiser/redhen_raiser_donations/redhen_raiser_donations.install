@@ -39,7 +39,7 @@ function redhen_raiser_donations_install() {
         'one_time_product_type' => 'donation',
         'line_item_type' => 'redhen_raiser_donation',
         'product_options' => array(
-          'one_time_product' => '1',
+          'one_time_product' => '501c3GIFT',
         ),
         'payment_methods' => array(
           array(
@@ -48,7 +48,7 @@ function redhen_raiser_donations_install() {
             "currency" => "USD",
             "delete" => "Delete",
           ),
-        ),        
+        ),
       ),
     ),
   );

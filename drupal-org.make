@@ -186,14 +186,12 @@ projects[picture][version] = "2.13"
 projects[picture][subdir] = "contrib"
 
 ; redhen
-projects[redhen][version] = "1.12"
+projects[redhen][version] = "1.13"
 projects[redhen][subdir] = "contrib"
 
 ; redhen_donation
-projects[redhen_donation][version] = "1.2"
+;projects[redhen_donation][version] = "1.3"
 projects[redhen_donation][subdir] = "contrib"
-; Add the ability to edit fields on existing donations.
-projects[redhen_donation][patch][] = https://www.drupal.org/files/issues/redhen_donation-2707457-2-edit_donation_field_data.patch
 
 ; redhen_campaign
 projects[redhen_campaign][version] = "1.2"

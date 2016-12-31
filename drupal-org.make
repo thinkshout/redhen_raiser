@@ -263,7 +263,7 @@ projects[ftools][subdir] = "developer"
 
 ; autopager
 libraries[autopager][download][type] = get
-libraries[autopager][download][url] = https://github.com/sagotsky/jquery-autopager/blob/master/jquery.autopager-1.0.0.js
+libraries[autopager][download][url] = https://raw.githubusercontent.com/sagotsky/jquery-autopager/a4d6fb272c9f1fd51ed7e0f04d82499552577211/jquery.autopager-1.0.0.js
 libraries[autopager][directory_name] = "autopager"
 libraries[autopager][type] = "library"
 

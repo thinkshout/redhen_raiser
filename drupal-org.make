@@ -63,7 +63,7 @@ projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/com
 projects[commerce_recurring][patch][] = "https://www.drupal.org/files/issues/commerce_recurring-Alter_recurring_price-2263371-1.patch"
 
 ; context requires ctools (jquery_ui & admin recommended)
-projects[context][version] = "3.6"
+projects[context][version] = "3.7"
 projects[context][subdir] = "contrib"
 
 ; context_condition_admin_theme
@@ -200,11 +200,10 @@ projects[redhen_donation][subdir] = "contrib"
 projects[redhen_campaign][version] = "1.2"
 projects[redhen_campaign][subdir] = "contrib"
 ; Add the ability to re-allocate donations to different campaign pages.
-projects[redhen_campaign][patch][] = "https://www.drupal.org/files/issues/redhen_campaign-2708871-5-campaign_add_edit_recalculate.patch"
+projects[redhen_campaign][patch][] = "https://www.drupal.org/files/issues/redhen_campaign-2708871-6-campaign_add_edit_recalculate.patch"
 projects[redhen_campaign][patch][] = "https://www.drupal.org/files/issues/dont-overwrite-author-2768803-1.patch"
 
 ; rules
-; Note that pending https://www.drupal.org/node/2403851 Rules 2.8 doesn't work with Commerce.
 projects[rules][version] = "2.9"
 projects[rules][subdir] = "contrib"
 
@@ -245,15 +244,15 @@ projects[views_conditional][subdir] = "contrib"
 ;-----------------------------------------
 
 ; devel
-;projects[devel][version] = ""
+projects[devel][version] = "1.5"
 projects[devel][subdir] = "developer"
 
 ; diff
-;projects[diff][version] = ""
+projects[diff][version] = "3.3"
 projects[diff][subdir] = "developer"
 
 ; ftools
-;projects[ftools][version] = ""
+projects[ftools][version] = "1.6"
 projects[ftools][subdir] = "developer"
 
 ;-----------------------------------------

@@ -154,7 +154,7 @@ projects[media_youtube][version] = "3.0"
 projects[media_youtube][subdir] = "contrib"
 
 ; metatag
-projects[metatag][version] = "1.18"
+projects[metatag][version] = "1.21"
 projects[metatag][subdir] = "contrib"
 
 ; module_filter
@@ -226,7 +226,7 @@ projects[token][version] = "1.6"
 projects[token][subdir] = "contrib"
 
 ; views
-projects[views][version] = "3.14"
+projects[views][version] = "3.15"
 projects[views][subdir] = "contrib"
 
 ; views_data_export

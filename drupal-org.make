@@ -195,7 +195,7 @@ projects[redhen][version] = "1.13"
 projects[redhen][subdir] = "contrib"
 
 ; redhen_donation
-;projects[redhen_donation][version] = "1.3"
+projects[redhen_donation][version] = "1.3"
 projects[redhen_donation][subdir] = "contrib"
 
 ; redhen_campaign

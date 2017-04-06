@@ -288,12 +288,6 @@ function redhen_raiser_context_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'bean-campaign-page-context-banner' => array(
-          'module' => 'bean',
-          'delta' => 'campaign-page-context-banner',
-          'region' => 'highlighted',
-          'weight' => '-10',
-        ),
         'bean-campaign-page-progress-query-con' => array(
           'module' => 'bean',
           'delta' => 'campaign-page-progress-query-con',

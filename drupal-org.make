@@ -226,7 +226,7 @@ projects[token][version] = "1.6"
 projects[token][subdir] = "contrib"
 
 ; views
-projects[views][version] = "3.15"
+projects[views][version] = "3.18"
 projects[views][subdir] = "contrib"
 
 ; views_data_export

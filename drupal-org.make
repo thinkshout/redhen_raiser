@@ -104,7 +104,7 @@ projects[entity][version] = "1.8"
 projects[entity][subdir] = "contrib"
 
 ; entityreference
-projects[entityreference][version] = "1.2"
+projects[entityreference][version] = "1.5"
 projects[entityreference][subdir] = "contrib"
 
 ; features

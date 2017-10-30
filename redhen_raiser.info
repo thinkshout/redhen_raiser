@@ -3,7 +3,7 @@ description = Team Based Fundraising
 core = 7.x
 distribution_name = RedHen Raiser
 exclusive = TRUE
-version = 1.0
+version = 1.14
 
 ; Core
 dependencies[] = block

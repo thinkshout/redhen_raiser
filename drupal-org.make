@@ -141,7 +141,7 @@ projects[login_destination][subdir] = "contrib"
 projects[login_destination][patch][] = "https://www.drupal.org/files/issues/login_destination-add_ctools_exportables-1645260-23.patch"
 
 ; media
-projects[media][version] = "1.5"
+projects[media][version] = "1.6"
 projects[media][subdir] = "contrib"
 projects[media][patch][] = "https://www.drupal.org/files/issues/change_select_button_when_value_exists.patch"
 

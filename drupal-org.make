@@ -147,9 +147,6 @@ projects[login_destination][patch][] = "https://www.drupal.org/files/issues/logi
 ; media
 projects[media][version] = "2.13"
 projects[media][subdir] = "contrib"
-; Change text of the select button when the field has an existing value
-; https://www.drupal.org/node/2368515
-projects[media][patch][] = "https://www.drupal.org/files/issues/change_select_button_when_value_exists.patch"
 
 ; media_vimeo
 projects[media_vimeo][version] = "2.1"

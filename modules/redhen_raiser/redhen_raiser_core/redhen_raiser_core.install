@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Installation hooks for redhen_raiser_core module.
+ */
+
+/**
+ * Enable the file_entity module.
+ */
+function redhen_raiser_blocks_update_7000(&$sandbox) {
+  module_enable(array('file_entity'));
+}

@@ -115,6 +115,10 @@ projects[features][subdir] = "contrib"
 projects[field_group][version] = "1.5"
 projects[field_group][subdir] = "contrib"
 
+; file_entity
+projects[file_entity][subdir] = 'contrib'
+projects[file_entity][version] = '2.11'
+
 ; honeypot
 projects[honeypot][version] = "1.22"
 projects[honeypot][subdir] = "contrib"
@@ -141,7 +145,7 @@ projects[login_destination][subdir] = "contrib"
 projects[login_destination][patch][] = "https://www.drupal.org/files/issues/login_destination-add_ctools_exportables-1645260-23.patch"
 
 ; media
-projects[media][version] = "1.6"
+projects[media][version] = "2.13"
 projects[media][subdir] = "contrib"
 ; Change text of the select button when the field has an existing value
 ; https://www.drupal.org/node/2368515

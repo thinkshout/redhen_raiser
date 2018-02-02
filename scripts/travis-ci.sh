@@ -130,7 +130,7 @@ after_success() {
   cd -
 
   git remote add drupal git@git.drupal.org:project/redhen_raiser.git
-  git push drupal 7.x-1.x
+  git push drupal 7.x-1.x --tags
 
   #MM: First attempt at updating the pantheon repository as well
   git clone git@github.com:thinkshout/redhenraiser-drops-7.git ../redhenraiser-drops-7

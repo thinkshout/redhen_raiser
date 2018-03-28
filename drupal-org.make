@@ -100,7 +100,7 @@ projects[email_registration][version] = "1.3"
 projects[email_registration][subdir] = "contrib"
 
 ; entity
-projects[entity][version] = "1.8"
+projects[entity][version] = "1.9"
 projects[entity][subdir] = "contrib"
 
 ; entityreference

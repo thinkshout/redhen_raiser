@@ -145,7 +145,7 @@ projects[login_destination][subdir] = "contrib"
 projects[login_destination][patch][] = "https://www.drupal.org/files/issues/login_destination-add_ctools_exportables-1645260-23.patch"
 
 ; media
-projects[media][version] = "2.13"
+projects[media][version] = "2.19"
 projects[media][subdir] = "contrib"
 
 ; media_vimeo
